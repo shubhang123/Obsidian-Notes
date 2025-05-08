@@ -1,8 +1,5 @@
 ## Problem Statement
 
-
-[
-
 You are given an array of `n` integers. Determine the number of distinct subsets of the array that sum exactly to a target value `x`.
 
 ## Input
