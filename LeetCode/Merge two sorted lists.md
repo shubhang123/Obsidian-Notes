@@ -1,3 +1,4 @@
+#linkedlist
 ```cpp
 Node* mergeTwoLists(Node* l1, Node* l2) {
     Node dummy(0); // Dummy node to simplify merging

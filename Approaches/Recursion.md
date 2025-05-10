@@ -1,3 +1,4 @@
+#recursion
 Below is a comprehensive learning document on recursion in C++, covering its core concepts, a classical recursion template, and several detailed examples from common algorithmic problems (beyond Fibonacci and factorial). These examples are inspired by problems on platforms like LeetCode and Codeforces.
 
 ---

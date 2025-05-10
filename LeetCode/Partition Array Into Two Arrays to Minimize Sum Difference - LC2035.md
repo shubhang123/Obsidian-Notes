@@ -1,4 +1,4 @@
-
+#bit #meetInTheMiddle
 We want to **minimize** the difference between the sums of two equal-sized subsets.
 
 Let’s say:

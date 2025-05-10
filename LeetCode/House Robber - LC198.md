@@ -1,3 +1,4 @@
+#dp #recursion
 Below is a comprehensive explanation of the **House Robber** problem solved by **recursion + memoization** (a top-down dynamic programming approach). We will walk through the following:
 
 1. **Problem Statement**
