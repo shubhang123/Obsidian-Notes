@@ -1,3 +1,4 @@
+#dp #recursion
 Below is a comprehensive learning document on dynamic programming (DP) in C++, covering its core concepts, a classical DP template, key techniques, and several detailed examples from common algorithmic problems on platforms like LeetCode and Codeforces.
 
 ---
