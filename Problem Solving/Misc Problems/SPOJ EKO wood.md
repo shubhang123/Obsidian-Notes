@@ -34,4 +34,4 @@ The first and only line of output must contain the required height setting.
 # Solution
 this is done using predicate function [[Predicate function (Binary Search)]] given in detail here, we found out that there is a predicate function for it so therefore we will be able to solve it in nlogn time complexity.
 
-we will use binary search to find the last true value for which the amount of wood collected will satisfy
+we will use binary search on height to find the last true value for which the amount of wood collected will satisfy
