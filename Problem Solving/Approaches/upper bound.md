@@ -1,3 +1,4 @@
+#binarysearch
 Sure, let's combine the explanations for `lower_bound` and `upper_bound` and provide an implementation that works with a `std::vector<int>` and a target `int` value.
 
 ### `lower_bound` and `upper_bound` Explanation
