@@ -1,3 +1,4 @@
+#binarysearch
 # 📘 Notes on Binary Search Using Predicate Functions
 
 ---

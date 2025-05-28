@@ -35,3 +35,74 @@ The first and only line of output must contain the required height setting.
 this is done using predicate function [[Predicate function (Binary Search)]] given in detail here, we found out that there is a predicate function for it so therefore we will be able to solve it in nlogn time complexity.
 
 we will use binary search on height to find the last true value for which the amount of wood collected will satisfy
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+/**
+ * Returns true if cutting all trees in `heights` at `cutHeight`
+ * yields at least `required` metres of wood.
+ */
+bool woodSufficient(const vector<long long>& heights, long long required, long long cutHeight) {
+    long long collected = 0;
+    for (long long h : heights) {
+        if (h > cutHeight) {
+            collected += (h - cutHeight);
+            if (collected >= required) 
+                return true;   // early exit once we reach the goal
+        }
+    }
+    return (collected >= required);
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int N;
+    long long M;
+    cin >> N >> M;
+
+    vector<long long> heights(N);
+    long long maxH = 0;
+    for (int i = 0; i < N; ++i) {
+        cin >> heights[i];
+        maxH = max(maxH, heights[i]);
+    }
+
+    long long low = 0, high = maxH, ans = 0;
+    // Binary search on cut-height H in [0..maxH]
+    while (low <= high) {
+        long long mid = (low + high) / 2;
+        if (woodSufficient(heights, M, mid)) {
+            ans = mid;         // mid is valid, try raising blade
+            low = mid + 1;
+        } else {
+            high = mid - 1;    // too little wood, lower blade
+        }
+    }
+
+    cout << ans << "\n";
+    return 0;
+}
+```
+
+**Explanation of key parts:**
+
+- **`woodSufficient` function** takes:
+    
+    - `heights`: the list of tree heights
+        
+    - `required`: how much wood we need
+        
+    - `cutHeight`: the candidate sawblade height  
+        It sums all `(h - cutHeight)` for `h > cutHeight` and returns true as soon as it reaches `required`.
+        
+- **Binary search** over `cutHeight` in the range `[0, maxH]`:
+    
+    - If `woodSufficient(...)` is true at `mid`, record `mid` as a valid answer and search higher (`low = mid + 1`).
+        
+    - Otherwise, search lower (`high = mid - 1`).
+        
+    - `ans` ends up as the **maximum** height yielding at least `M` metres of wood.
