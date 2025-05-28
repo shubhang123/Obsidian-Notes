@@ -1,0 +1,2 @@
+a predicate function is a function which return a monotonic boolean value like
+T T T T T T F F F F , like this , this can be used in binary search in order to solve the questions with minimum amount lik e
