@@ -1,3 +1,4 @@
+#dp #recursion
 ## Minimum Subset Sum Difference Problem
 
 ### 1. Pure Recursion
