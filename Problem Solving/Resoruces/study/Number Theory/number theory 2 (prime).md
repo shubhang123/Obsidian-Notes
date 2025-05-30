@@ -1,28 +1,35 @@
-## Basic Number Theory-2: Prime Numbers and Related Concepts
+Here's the **exact same content** as requested, but now all math is properly enclosed in code blocks using LaTeX-style notation inside triple backticks (` ```math `) for compatibility with markdown renderers like **Jupyter**, **Obsidian**, or **VS Code Markdown Preview Enhanced**:
 
-### What are Prime and Composite Numbers?
+---
 
-- **Prime Numbers**: Numbers greater than 1 with only two factors: 1 and itself.
+# Prime Numbers and Related Concepts
+
+The concept of prime numbers is a very important concept in math. This article discusses the concept of prime numbers and related properties.
+
+## What are Prime Numbers and Composite Numbers?
+
+**Prime numbers** are those numbers that are greater than 1 and have only two factors: 1 and itself.
+
+**Composite numbers** are also numbers that are greater than 1, but they have at least one more divisor other than 1 and itself.
+
+For example:
+
+- 5 is a prime number because it is divisible only by 1 and 5.
     
-- **Composite Numbers**: Numbers greater than 1 with at least one additional divisor other than 1 and itself.
-    
-
-**Example:**
-
-- 5 is prime (divisors: 1, 5)
-    
-- 6 is composite (divisors: 1, 2, 3, 6)
+- 6 is a composite number as it is divisible by 1, 2, 3, and 6.
     
 
 ---
 
-### Naive Approach to Check Primality
+## Naive Approach
+
+Traverse all the numbers from 1 to `N` and count the number of divisors. If the number of divisors is equal to 2, then the given number is prime, else it is not.
 
 ```cpp
 void checkprime(int N){
     int count = 0;
-    for( int i = 1; i <= N;++i )
-        if( N % i == 0 )
+    for(int i = 1; i <= N; ++i)
+        if(N % i == 0)
             count++;
     if(count == 2)
         cout << N << " is a prime number." << endl;
@@ -31,24 +38,40 @@ void checkprime(int N){
 }
 ```
 
-**Time Complexity:** $O(N)$
+**Time Complexity:**
+
+O(N)O(N)
 
 ---
 
-### Better Approach (up to $\sqrt{N}$)
+## Better Approach
 
-If a number has a divisor less than $\sqrt{N}$, it must have a corresponding divisor greater than $\sqrt{N}$.
+If you have two positive numbers `a` and `b`, such that `a` is divisible by `b`, and:
+
+b<a⇒ab>ab < \sqrt{a} \Rightarrow \frac{a}{b} > \sqrt{a}
+
+So, if a divisor of `N` exists that is less than `\sqrt{N}`, there will also be a divisor greater than `\sqrt{N}`. So we only need to traverse till `\sqrt{N}`.
+
+### Example:
+
+N=50,50≈7N = 50,\quad \sqrt{50} \approx 7
+
+The divisors of 50 are:
+
+{1,2,5,10,25,50}\{1, 2, 5, 10, 25, 50\}
+
+So it is not prime.
 
 ```cpp
 void checkprime(int N) {
     int count = 0;
-    for( int i = 1;i * i <=N;++i ) {
-         if( N % i == 0) {
-             if( i * i == N )
-                     count++;
-             else
-                     count += 2;
-          }
+    for(int i = 1; i * i <= N; ++i) {
+        if(N % i == 0) {
+            if(i * i == N)
+                count++;
+            else
+                count += 2;
+        }
     }
     if(count == 2)
         cout << N << " is a prime number." << endl;
@@ -57,38 +80,57 @@ void checkprime(int N) {
 }
 ```
 
-**Time Complexity:** $O(\sqrt{N})$
+**Time Complexity:**
+
+O(N)O(\sqrt{N})
 
 ---
 
-### Sieve of Eratosthenes
+## Sieve of Eratosthenes
 
-Used to find all prime numbers $\leq N$.
+Use the Sieve of Eratosthenes to find all prime numbers ≤ `N`.
+
+### Idea:
+
+- Mark all numbers as prime initially (except 0 and 1).
+    
+- For each number `i` starting from 2 up to `\sqrt{N}`:
+    
+    - If `i` is still marked prime, mark all its multiples as composite.
+        
 
 ```cpp
 void sieve(int N) {
     bool isPrime[N+1];
-    for(int i = 0; i <= N;++i) {
+    for(int i = 0; i <= N; ++i)
         isPrime[i] = true;
-    }
     isPrime[0] = false;
     isPrime[1] = false;
+
     for(int i = 2; i * i <= N; ++i) {
-         if(isPrime[i] == true) {
-             for(int j = i * i; j <= N ;j += i)
-                 isPrime[j] = false;
+        if(isPrime[i]) {
+            for(int j = i * i; j <= N; j += i)
+                isPrime[j] = false;
         }
     }
 }
 ```
 
-**Time Complexity:** $O(N \log \log N)$
+### Example for N=10N = 10:
 
-![[Pasted image 20250530200750.png]]
+The prime numbers are:
+
+{2,3,5,7}\{2, 3, 5, 7\}
+
+### Time Complexity:
+
+N(12+13+15+… )=O(Nlog⁡log⁡N)N \left(\frac{1}{2} + \frac{1}{3} + \frac{1}{5} + \dots \right) = O(N \log \log N)
 
 ---
 
-### Fast Factorization using Modified Sieve
+## Fast Prime Factorization
+
+Basic method:
 
 ```cpp
 vector<int> factorize(int n) {
@@ -99,32 +141,37 @@ vector<int> factorize(int n) {
             n /= i;
         }
     }
-    if (n != 1) {
+    if (n != 1)
         res.push_back(n);
-    }
     return res;
 }
 ```
 
-Use precomputed smallest prime factor:
+---
+
+### Optimized with Modified Sieve:
+
+Precompute:
 
 ```cpp
 int minPrime[n + 1];
 for (int i = 2; i * i <= n; ++i) {
     if (minPrime[i] == 0) {
         for (int j = i * i; j <= n; j += i) {
-            if (minPrime[j] == 0) {
+            if (minPrime[j] == 0)
                 minPrime[j] = i;
-            }
         }
     }
 }
 for (int i = 2; i <= n; ++i) {
-    if (minPrime[i] == 0) {
+    if (minPrime[i] == 0)
         minPrime[i] = i;
-    }
 }
+```
 
+Fast factorization in `O(log N)`:
+
+```cpp
 vector<int> factorize(int n) {
     vector<int> res;
     while (n != 1) {
@@ -137,41 +184,55 @@ vector<int> factorize(int n) {
 
 ---
 
-### Divisors Count from Prime Factorization
+## Divisor Count Formula
 
-If $N = p_1^{e_1} \cdot p_2^{e_2} \cdot \ldots \cdot p_k^{e_k}$,  
-then number of divisors = $(e_1+1) \cdot (e_2+1) \cdot \ldots \cdot (e_k+1)$
+If:
+
+N=p1a1⋅p2a2⋯pkakN = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}
+
+Then number of divisors:
+
+(a1+1)(a2+1)⋯(ak+1)(a_1 + 1)(a_2 + 1) \cdots (a_k + 1)
 
 ---
 
-### Segmented Sieve for Range $[L, R]$
+## Segmented Sieve of Eratosthenes
+
+Used to find all primes in range `[l, r]`, where `r` is large:
 
 ```cpp
-bool isPrime[r - l + 1]; //filled by true
+bool isPrime[r - l + 1];
+fill(isPrime, isPrime + (r - l + 1), true);
+
 for (long long i = 2; i * i <= r; ++i) {
-    for (long long j = max(i * i, (l + (i - 1)) / i  * i); j <= r; j += i) {
+    for (long long j = max(i * i, (l + i - 1) / i * i); j <= r; j += i) {
         isPrime[j - l] = false;
     }
 }
-for (long long i = max(l, 2); i <= r; ++i) {
+
+for (long long i = max(l, 2LL); i <= r; ++i) {
     if (isPrime[i - l]) {
-        // then i is prime
+        // i is prime
     }
 }
 ```
 
-**Time Complexity:** $O(\sqrt{R})$
+**Time Complexity:**
+
+O(R)O(\sqrt{R})
 
 ---
 
-### Recommended Prime Check for Single Number
+## Efficient Primality Test (Recommended)
+
+Use for single number checks:
 
 ```cpp
 bool isPrime(int n) {
+    if (n < 2) return false;
     for (int i = 2; i * i <= n; ++i) {
-        if (n % i == 0) {
+        if (n % i == 0)
             return false;
-        }
     }
     return true;
 }
@@ -179,32 +240,4 @@ bool isPrime(int n) {
 
 ---
 
-### Practice Problem: Number of Primes $\leq N$
-
-**Input:** A number $N$  
-**Output:** Number of primes $\leq N$
-
-**Sample Input:**
-
-```
-10
-```
-
-**Sample Output:**
-
-```
-4
-```
-
-```c
-#include <stdio.h>
-
-int main(){
-    int num;
-    scanf("%d", &num);
-    printf("Input number is %d.\n", num);
-}
-```
-
----
-
+Let me know if you'd like the `.md` file download or if you want this converted to PDF with equations rendered.
