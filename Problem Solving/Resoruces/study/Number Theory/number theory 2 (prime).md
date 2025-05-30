@@ -1,7 +1,3 @@
-Here's the **exact same content** as requested, but now all math is properly enclosed in code blocks using LaTeX-style notation inside triple backticks (` ```math `) for compatibility with markdown renderers like **Jupyter**, **Obsidian**, or **VS Code Markdown Preview Enhanced**:
-
----
-
 # Prime Numbers and Related Concepts
 
 The concept of prime numbers is a very important concept in math. This article discusses the concept of prime numbers and related properties.
@@ -15,9 +11,7 @@ The concept of prime numbers is a very important concept in math. This article d
 For example:
 
 - 5 is a prime number because it is divisible only by 1 and 5.
-    
 - 6 is a composite number as it is divisible by 1, 2, 3, and 6.
-    
 
 ---
 
@@ -39,8 +33,9 @@ void checkprime(int N){
 ```
 
 **Time Complexity:**
-
-O(N)O(N)
+```math
+O(N)
+```
 
 ---
 
@@ -48,17 +43,21 @@ O(N)O(N)
 
 If you have two positive numbers `a` and `b`, such that `a` is divisible by `b`, and:
 
-b<a⇒ab>ab < \sqrt{a} \Rightarrow \frac{a}{b} > \sqrt{a}
+```math
+b < \sqrt{a} \Rightarrow \frac{a}{b} > \sqrt{a}
+```
 
 So, if a divisor of `N` exists that is less than `\sqrt{N}`, there will also be a divisor greater than `\sqrt{N}`. So we only need to traverse till `\sqrt{N}`.
 
 ### Example:
-
-N=50,50≈7N = 50,\quad \sqrt{50} \approx 7
+```math
+N = 50,\quad \sqrt{50} \approx 7
+```
 
 The divisors of 50 are:
-
-{1,2,5,10,25,50}\{1, 2, 5, 10, 25, 50\}
+```math
+\{1, 2, 5, 10, 25, 50\}
+```
 
 So it is not prime.
 
@@ -81,8 +80,9 @@ void checkprime(int N) {
 ```
 
 **Time Complexity:**
-
-O(N)O(\sqrt{N})
+```math
+O(\sqrt{N})
+```
 
 ---
 
@@ -91,13 +91,9 @@ O(N)O(\sqrt{N})
 Use the Sieve of Eratosthenes to find all prime numbers ≤ `N`.
 
 ### Idea:
-
 - Mark all numbers as prime initially (except 0 and 1).
-    
 - For each number `i` starting from 2 up to `\sqrt{N}`:
-    
-    - If `i` is still marked prime, mark all its multiples as composite.
-        
+  - If `i` is still marked prime, mark all its multiples as composite.
 
 ```cpp
 void sieve(int N) {
@@ -116,15 +112,16 @@ void sieve(int N) {
 }
 ```
 
-### Example for N=10N = 10:
-
+### Example for \( N = 10 \):
 The prime numbers are:
-
-{2,3,5,7}\{2, 3, 5, 7\}
+```math
+\{2, 3, 5, 7\}
+```
 
 ### Time Complexity:
-
-N(12+13+15+… )=O(Nlog⁡log⁡N)N \left(\frac{1}{2} + \frac{1}{3} + \frac{1}{5} + \dots \right) = O(N \log \log N)
+```math
+N \left(\frac{1}{2} + \frac{1}{3} + \frac{1}{5} + \dots \right) = O(N \log \log N)
+```
 
 ---
 
@@ -152,7 +149,6 @@ vector<int> factorize(int n) {
 ### Optimized with Modified Sieve:
 
 Precompute:
-
 ```cpp
 int minPrime[n + 1];
 for (int i = 2; i * i <= n; ++i) {
@@ -187,12 +183,14 @@ vector<int> factorize(int n) {
 ## Divisor Count Formula
 
 If:
-
-N=p1a1⋅p2a2⋯pkakN = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}
+```math
+N = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}
+```
 
 Then number of divisors:
-
-(a1+1)(a2+1)⋯(ak+1)(a_1 + 1)(a_2 + 1) \cdots (a_k + 1)
+```math
+(a_1 + 1)(a_2 + 1) \cdots (a_k + 1)
+```
 
 ---
 
@@ -218,8 +216,9 @@ for (long long i = max(l, 2LL); i <= r; ++i) {
 ```
 
 **Time Complexity:**
-
-O(R)O(\sqrt{R})
+```math
+O(\sqrt{R})
+```
 
 ---
 
@@ -237,7 +236,3 @@ bool isPrime(int n) {
     return true;
 }
 ```
-
----
-
-Let me know if you'd like the `.md` file download or if you want this converted to PDF with equations rendered.
