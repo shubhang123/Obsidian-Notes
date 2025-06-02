@@ -172,77 +172,63 @@ An adjacency list represents a graph as an array of lists. Each vertex has a lis
 #include <vector>
 using namespace std;
 
-// Global graph representation
-int vertices;
-vector<vector<pair<int, int>>> adjList; // Each pair is {neighbor, weight}
+const int N = 1e5 + 10; // max number of vertices
+vector<int> graph[N];   // graph[u] holds neighbors of node u
+int n, m;               // n = number of vertices, m = number of edges
 
-// Add unweighted edge (default weight = 1)
-void addEdge(int src, int dest) {
-    adjList[src].push_back({dest, 1});
-    adjList[dest].push_back({src, 1}); // Undirected
+// Add edge (undirected)
+void addEdge(int u, int v) {
+    graph[u].push_back(v);
+    graph[v].push_back(u);
 }
 
-// Add weighted edge
-void addWeightedEdge(int src, int dest, int weight) {
-    adjList[src].push_back({dest, weight});
-    adjList[dest].push_back({src, weight}); // Undirected
+// Print neighbors of a node
+void printNeighbors(int u) {
+    cout << "Neighbors of " << u << ": ";
+    for (int v : graph[u]) {
+        cout << v << " ";
+    }
+    cout << endl;
 }
 
-// Remove edge (slower than list, but works)
-void removeEdge(int src, int dest) {
-    // Remove from src's list
-    for (int i = 0; i < adjList[src].size(); ++i) {
-        if (adjList[src][i].first == dest) {
-            adjList[src].erase(adjList[src].begin() + i);
-            break; // Exit after removing one occurrence
+// Print full adjacency list
+void printGraph() {
+    for (int i = 0; i < n; ++i) {
+        cout << i << ": ";
+        for (int v : graph[i]) {
+            cout << v << " ";
+        }
+        cout << endl;
+    }
+}
+
+// Check if edge exists between u and v
+bool hasEdge(int u, int v) {
+    for (int x : graph[u]) {
+        if (x == v) return true;
+    }
+    return false;
+}
+
+// Remove edge (undirected)
+void removeEdge(int u, int v) {
+    // remove v from u's list
+    for (int i = 0; i < graph[u].size(); ++i) {
+        if (graph[u][i] == v) {
+            graph[u].erase(graph[u].begin() + i);
+            break;
         }
     }
 
-    // Remove from dest's list (for undirected graph)
-    for (int i = 0; i < adjList[dest].size(); ++i) {
-        if (adjList[dest][i].first == src) {
-            adjList[dest].erase(adjList[dest].begin() + i);
+    // remove u from v's list
+    for (int i = 0; i < graph[v].size(); ++i) {
+        if (graph[v][i] == u) {
+            graph[v].erase(graph[v].begin() + i);
             break;
         }
     }
 }
 
-
-// Check if edge exists
-bool hasEdge(int src, int dest) {
-    for (const auto& p : adjList[src]) {
-        if (p.first == dest) return true;
-    }
-    return false;
-}
-
-// Get weight of edge
-int getWeight(int src, int dest) {
-    for (const auto& p : adjList[src]) {
-        if (p.first == dest) return p.second;
-    }
-    return -1; // Not found
-}
-
-// Print neighbors
-void printNeighbors(int vertex) {
-    cout << "Neighbors of " << vertex << ": ";
-    for (const auto& p : adjList[vertex]) {
-        cout << p.first << "(" << p.second << ") ";
-    }
-    cout << endl;
-}
-
-// Print the entire adjacency list
-void printList() {
-    for (int i = 0; i < vertices; i++) {
-        cout << i << ": ";
-        for (const auto& p : adjList[i]) {
-            cout << p.first << "(" << p.second << ") ";
-        }
-        cout << endl;
-    }
-}
 
 ```
 
@@ -255,3 +241,105 @@ For a graph with 1000 vertices:
 - **Adjacency List:** Uses only 2 × (number of edges) entries
 
 If the graph has only 5,000 edges, the adjacency list uses 200 times less memory than the adjacency matrix.
+
+## 🧠 What is `vector<int> g[N]`?
+
+It is an **array of vectors**, where:
+
+- `N` is a constant (e.g., `1e5 + 10`)
+    
+- Each `g[i]` is a `vector<int>` that stores the **neighbors** of vertex `i`.
+    
+
+This is a way to represent an **adjacency list** for an **unweighted graph**.
+
+---
+
+## 🔍 Visual Example
+
+### Suppose we have this **undirected graph**:
+
+```
+     0
+    / \
+   1   2
+        \
+         3
+```
+
+### Edges:
+
+```
+(0, 1)
+(0, 2)
+(2, 3)
+```
+
+### Code to Build It:
+
+```cpp
+addEdge(0, 1);
+addEdge(0, 2);
+addEdge(2, 3);
+```
+
+### Then `g[]` will look like:
+
+```
+g[0] = [1, 2]      // 0 is connected to 1 and 2
+g[1] = [0]         // 1 is connected to 0
+g[2] = [0, 3]      // 2 is connected to 0 and 3
+g[3] = [2]         // 3 is connected to 2
+g[4] = []          // unused vertex
+g[5] = []          // unused vertex
+...
+```
+
+---
+
+## 🔧 Visualization as a Table
+
+|Index `i` (Node)|`g[i]` (Neighbors)|
+|---|---|
+|`0`|`1, 2`|
+|`1`|`0`|
+|`2`|`0, 3`|
+|`3`|`2`|
+|`4`|(empty)|
+|...|(empty)|
+
+---
+
+## 🖼 Visual Graph ↔ Adjacency List
+
+### Graph:
+
+```
+0 —— 1
+|
+2 —— 3
+```
+
+### Adjacency List via `g[N]`:
+
+```cpp
+g[0]: 1 2
+g[1]: 0
+g[2]: 0 3
+g[3]: 2
+```
+
+---
+
+## 📌 Important Notes
+
+- The order in `g[i]` depends on the order of `addEdge()`.
+    
+- It's ideal for DFS, BFS, and other graph algorithms.
+    
+- Memory-efficient for sparse graphs (i.e., when number of edges is much less than `n²`).
+    
+
+---
+
+Would you like a **visual image-style diagram** or perhaps a **console-based simulation of adding and printing edges**? I can provide both.
