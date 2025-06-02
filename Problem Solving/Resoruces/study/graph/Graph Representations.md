@@ -170,127 +170,82 @@ An adjacency list represents a graph as an array of lists. Each vertex has a lis
 ```cpp
 #include <iostream>
 #include <vector>
-#include <list>
 using namespace std;
 
-// For weighted graphs
-struct Edge {
-    int dest;
-    int weight;
-    Edge(int d, int w) : dest(d), weight(w) {}
-};
+// Global graph representation
+int vertices;
+vector<vector<pair<int, int>>> adjList; // Each pair is {neighbor, weight}
 
-class AdjacencyList {
-private:
-    int vertices;
-    vector<list<Edge>> adjList;
-    
-public:
-    // Constructor
-    AdjacencyList(int v) {
-        vertices = v;
-        adjList.resize(v);
-    }
-    
-    // Add edge (unweighted) - O(1)
-    void addEdge(int src, int dest) {
-        adjList[src].push_back(Edge(dest, 1));
-        adjList[dest].push_back(Edge(src, 1)); // For undirected graph
-    }
-    
-    // Add weighted edge - O(1)
-    void addWeightedEdge(int src, int dest, int weight) {
-        adjList[src].push_back(Edge(dest, weight));
-        adjList[dest].push_back(Edge(src, weight)); // For undirected graph
-    }
-    
-    // Remove edge - O(degree of vertex)
-    void removeEdge(int src, int dest) {
-        adjList[src].remove_if([dest](const Edge& e) { 
-            return e.dest == dest; 
-        });
-        adjList[dest].remove_if([src](const Edge& e) { 
-            return e.dest == src; 
-        });
-    }
-    
-    // Check if edge exists - O(degree of vertex)
-    bool hasEdge(int src, int dest) {
-        for (const Edge& e : adjList[src]) {
-            if (e.dest == dest) return true;
+// Add unweighted edge (default weight = 1)
+void addEdge(int src, int dest) {
+    adjList[src].push_back({dest, 1});
+    adjList[dest].push_back({src, 1}); // Undirected
+}
+
+// Add weighted edge
+void addWeightedEdge(int src, int dest, int weight) {
+    adjList[src].push_back({dest, weight});
+    adjList[dest].push_back({src, weight}); // Undirected
+}
+
+// Remove edge (slower than list, but works)
+void removeEdge(int src, int dest) {
+    // Remove from src's list
+    for (int i = 0; i < adjList[src].size(); ++i) {
+        if (adjList[src][i].first == dest) {
+            adjList[src].erase(adjList[src].begin() + i);
+            break; // Exit after removing one occurrence
         }
-        return false;
     }
-    
-    // Get weight of edge - O(degree of vertex)
-    int getWeight(int src, int dest) {
-        for (const Edge& e : adjList[src]) {
-            if (e.dest == dest) return e.weight;
+
+    // Remove from dest's list (for undirected graph)
+    for (int i = 0; i < adjList[dest].size(); ++i) {
+        if (adjList[dest][i].first == src) {
+            adjList[dest].erase(adjList[dest].begin() + i);
+            break;
         }
-        return -1; // Edge not found
     }
-    
-    // Print all neighbors - O(degree of vertex)
-    void printNeighbors(int vertex) {
-        cout << "Neighbors of " << vertex << ": ";
-        for (const Edge& e : adjList[vertex]) {
-            cout << e.dest << "(" << e.weight << ") ";
+}
+
+
+// Check if edge exists
+bool hasEdge(int src, int dest) {
+    for (const auto& p : adjList[src]) {
+        if (p.first == dest) return true;
+    }
+    return false;
+}
+
+// Get weight of edge
+int getWeight(int src, int dest) {
+    for (const auto& p : adjList[src]) {
+        if (p.first == dest) return p.second;
+    }
+    return -1; // Not found
+}
+
+// Print neighbors
+void printNeighbors(int vertex) {
+    cout << "Neighbors of " << vertex << ": ";
+    for (const auto& p : adjList[vertex]) {
+        cout << p.first << "(" << p.second << ") ";
+    }
+    cout << endl;
+}
+
+// Print the entire adjacency list
+void printList() {
+    for (int i = 0; i < vertices; i++) {
+        cout << i << ": ";
+        for (const auto& p : adjList[i]) {
+            cout << p.first << "(" << p.second << ") ";
         }
         cout << endl;
     }
-    
-    // Print the entire adjacency list
-    void printList() {
-        for (int i = 0; i < vertices; i++) {
-            cout << i << ": ";
-            for (const Edge& e : adjList[i]) {
-                cout << e.dest << "(" << e.weight << ") ";
-            }
-            cout << endl;
-        }
-    }
-};
-```
-
-### Usage Example
-
-```cpp
-int main() {
-    // Adjacency Matrix Example
-    cout << "=== Adjacency Matrix ===" << endl;
-    AdjacencyMatrix matrixGraph(4);
-    
-    matrixGraph.addWeightedEdge(0, 1, 5);
-    matrixGraph.addWeightedEdge(0, 2, 3);
-    matrixGraph.addWeightedEdge(1, 3, 7);
-    matrixGraph.addWeightedEdge(2, 3, 2);
-    
-    cout << "Matrix representation:" << endl;
-    matrixGraph.printMatrix();
-    
-    cout << "Edge (0,1) exists: " << matrixGraph.hasEdge(0, 1) << endl;
-    cout << "Weight of edge (0,1): " << matrixGraph.getWeight(0, 1) << endl;
-    matrixGraph.printNeighbors(0);
-    
-    // Adjacency List Example
-    cout << "\n=== Adjacency List ===" << endl;
-    AdjacencyList listGraph(4);
-    
-    listGraph.addWeightedEdge(0, 1, 5);
-    listGraph.addWeightedEdge(0, 2, 3);
-    listGraph.addWeightedEdge(1, 3, 7);
-    listGraph.addWeightedEdge(2, 3, 2);
-    
-    cout << "List representation:" << endl;
-    listGraph.printList();
-    
-    cout << "Edge (0,1) exists: " << listGraph.hasEdge(0, 1) << endl;
-    cout << "Weight of edge (0,1): " << listGraph.getWeight(0, 1) << endl;
-    listGraph.printNeighbors(0);
-    
-    return 0;
 }
+
 ```
+
 
 ## Example Comparison
 
