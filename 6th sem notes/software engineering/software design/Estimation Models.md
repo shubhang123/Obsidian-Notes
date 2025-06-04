@@ -4,7 +4,9 @@
  decomposition based estimation
 	 direct estimation
 	 indicrect estimation
-	 
+
+function point based mesaures
+	
 formulas for estimation
 	effort 
 	productivity 
