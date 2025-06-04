@@ -2,3 +2,7 @@ srs is given as input and requires a SDD as oputput this is called designing pha
 
 characterstics of good sdd
 
+steps of design
+- interface design
+- arch design
+- detail design
