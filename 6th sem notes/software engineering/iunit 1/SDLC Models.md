@@ -115,3 +115,8 @@ Let me know if you want a visual diagram or side-by-side comparison between the 
 
 spiral model 
 recogniziton of risk factiors in the cycle model presentaed in 1986 
+
+radial dimensions o the model reporeetnt cumulative costs 
+each path around the sipar is indicative of the increased cost
+the angular dimensions represent the progress made in completing each cycle , each loop of trhe spiral from x axis colckwise through 360 represent one phase , which is divided into 4 sectors
+
