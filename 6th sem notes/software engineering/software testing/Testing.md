@@ -124,3 +124,37 @@ The overall strategy for software testing can be viewed as a series of four sequ
     2. **Behavioral testing**: Tests examine the behavior of the system as a consequence of events (e.g., user interrupts, mechanical interrupts, system interrupts, failure modes).
     3. **Intertask testing**: Focuses on time-related errors, testing asynchronous tasks with different data rates and processing loads to uncover synchronization errors or issues with message queues/data storage sizing.
     4. **System testing (Real-Time specific)**: Software and hardware are integrated, and tests are conducted to uncover errors at their interface, focusing on how interrupts are handled (priorities, processing).
+
+## Other type of testing
+
+# Regression Testing
+**Regression testing** is a crucial software engineering activity focused on ensuring that **changes made to software do not introduce unintended side effects or new errors**. It involves the **re-execution of a subset of tests** that have already been conducted.
+
+Here's a breakdown of regression testing based on the sources:
+
+- **Purpose and Importance**
+    
+    - Its primary goal is to **ensure that changes (whether due to testing or other reasons) have not propagated unintended side effects**.
+    - It helps to **ensure that new errors have not been introduced** into the software.
+    - It is used to **check system behavior after changes are applied** to a software product.
+    - The strategy is vital for **reducing "side effects"**.
+- **When it is Conducted**
+    
+    - Regression testing may be performed **each time a new module is added** as part of integration testing.
+    - It is recommended to run regression tests **every time a major change is made** to the software, including the integration of new components.
+    - In agile development processes, such as those with daily build cycles, regression testing is **mandated** to prevent changes from producing unintended side effects.
+    - For continuously evolving WebApps, testing, including regression tests, is an **ongoing activity**.
+    - In Test-Driven Development (TDD), a **regression test suite** is run **with every change** to ensure that new code has not generated side effects in older code. When an error is found in TDD and the code is refactored (corrected), **all tests created to that point are re-executed**.
+- **How it is Conducted**
+    
+    - Regression testing can be conducted **manually**, by re-executing a subset of all test cases.
+    - **Automated capture/playback tools** can be used. These tools allow software engineers to capture test cases and their results for subsequent playback and comparison.
+    - A **regression test suite** is formed by selecting a subset of tests to be executed. This suite typically includes three classes of test cases:
+        - A **representative sample of tests** that will exercise all software functions.
+        - **Additional tests that focus on software functions that are likely to be affected by the change**.
+        - **Tests that focus on the software components that have been changed**.
+    - As integration testing progresses, the number of regression tests can grow quite large. Therefore, the regression test suite should be designed to **include only those tests that address one or more classes of errors in each of the major program functions**.
+- **Related Concepts**
+    
+    - Extreme Programming (XP) encourages a **regression testing strategy**.
+    - The concept is directly linked to **Test-Driven Development (TDD)** as an iterative flow where tests are created before code, and all tests are rerun after any code change or correction.
