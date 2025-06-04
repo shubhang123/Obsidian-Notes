@@ -203,3 +203,15 @@ Here's a breakdown of regression testing based on the sources:
 - **Orthogonal Array Testing**: Applicable when the input domain is relatively small but too large for exhaustive testing. It is particularly useful for finding **"region faults"** and enables the design of test cases that provide **maximum test coverage with a reasonable number of test cases**. This method can detect and isolate all **single mode faults** and all **double mode faults**, and often many **multi-mode faults** as well.
 - **Scenario-Based Test Design**: After unit and integration tests, this approach is used to determine if the software will perform in a manner that satisfies users. It aims to uncover errors associated with incorrect specifications and interactions among subsystems. In object-oriented systems, it dominates validation testing, making the **use case a primary driver** for these tests.
 
+# **Stress testing** 
+is a specialised software engineering activity designed to determine the **robustness of software by confronting programs with abnormal situations** [i]. The main goal is to understand **how a system fails when stressed beyond its operational limits**, rather than degrading gently or shutting down abruptly [i].
+
+Key aspects include:
+
+- **Purpose**: To find out at what point (users, transactions, data) performance becomes unacceptable, which components cause degradation, and how the system fails [i]. It also checks if transactions are lost or data integrity is affected when capacity is exceeded [i].
+- **Methodology**: It involves **executing a system in a manner that demands resources in abnormal quantity, frequency, or volume** [i]. This can mean generating high interrupt rates, increasing input data rates significantly, or demanding maximum memory [i].
+- **Relationship to other testing**: Stress testing is a **continuation of load testing**, pushing variables beyond normal operational limits, whereas load testing examines real-world loading within normal bounds [i]. Both are part of performance testing [i].
+- **Specific applications**:
+    - **WebApps**: Assesses response time and reliability as demands on server-side resource capacity increase [i].
+    - **MobileApps**: Aims to find errors under extreme conditions unique to mobile, such as running multiple apps concurrently, processing many transactions, or storing excessively large data [i]. It also checks for graceful degradation without compromising security [i]. Ideally, it's performed "in the wild" on actual user devices [i].
+
