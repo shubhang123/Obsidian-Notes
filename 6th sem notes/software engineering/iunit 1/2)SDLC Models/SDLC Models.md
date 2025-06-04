@@ -533,7 +533,7 @@ The main features of RAD modeling are that it **focuses on the reuse of template
 *   Testing and Turnover
 
 
-
+![[Pasted image 20250604151954.png]]
 ### (A) Business Modeling
 The business model for the product under development is designed on basis of the **flow of information and distribution between various business channels.**
 The **information flow among business functions is defined by answering questions like** what data drives the business process, what data is generated, who generates it, where does the information go, who process it and so on.
