@@ -195,3 +195,27 @@ XP is structured around **four core framework activities**: planning, design, co
     
     - **Unit Tests**: As mentioned, these are developed for each class as it is being created, to exercise each operation according to its specified functionality.
     - **Acceptance Tests**: These tests are derived directly from the user stories that have been implemented as part of a software release. Their purpose is to provide feedback on the degree to which the software implements the specified output, function, and behaviour.
+
+
+- **Crystal Methodologies** The provided sources do not contain specific information about "Crystal Methodologies" [n/a].
+    
+- **Dynamic Systems Development Method (DSDM)** The Dynamic Systems Development Method (DSDM) is an **agile software development approach**. It aims to provide a **framework for building and maintaining systems that meet tight time constraints** through the use of an incremental approach. DSDM is described as a **process framework** that has the flexibility to **adopt the tactics of other agile approaches**, such as Extreme Programming (XP). Further resources for DSDM can be found at www.dsdm.org.
+    
+- **Feature Driven Development (FDD)** The provided sources do not contain specific information about "Feature Driven Development (FDD)" [n/a].
+    
+- **Lean Software Development** The sources mention "Lean Requirements Practices" in the context of "Agile Software Requirements". Specifically, a book titled _Agile Software Requirements: Lean Requirements Practices for Teams, Programs, and the Enterprise_ by Leffingwell is listed in the further readings for agile development. While this suggests a connection between lean principles and agile practices, the sources do not provide a detailed explanation or definition of "Lean Software Development" as a distinct methodology [n/a].
+    
+- **KANBAN** .
+    
+- **Agile Metrics** While the sources do not explicitly feature a section titled "Agile metrics," they discuss **software metrics** extensively, and these concepts are applicable and highly relevant to agile development, which emphasizes **continuous attention to technical excellence and good design**, and regular reflection by the team on how to **become more effective**.
+    
+    General concepts of metrics discussed in the sources include:
+    
+    - **Purpose**: Metrics help in delivering software that meets stakeholders’ needs and can be used to assist the team in managing the software process. They allow for the **real-time assessment of the quality of software engineering work products** in objective ways.
+    - **Types of Metrics**: The sources distinguish between **process metrics and project metrics**. **Product metrics** are also discussed for evaluating the quality of software. There are also **metrics for source code** and **metrics for testing**, including those for object-oriented testing.
+    - **Quality Focus**: A key goal for metrics should be to **focus on quality** and to **minimise the number of errors** passed from one software engineering activity to the next, and to reduce the number of defects released with the product to as close to zero as possible. Measuring **Defect Removal Efficiency** is a way to reduce rework.
+    - **Application**: Metrics can be integrated within the software process. While few product metrics are proposed directly for testing and maintenance, many can **guide the testing process** and assess maintainability.
+    - **Attributes of Effective Metrics**: Effective software metrics should conform to **measurement principles** and have specific attributes, although many proposed metrics are impractical or too complex.
+    - **Data Collection**: Private metrics collected by individual software engineers can be combined to provide **project-level results**.
+    
+    In essence, the agile philosophy of continuous improvement and adaptation aligns well with the use of various software metrics to track progress, identify issues, and enhance the quality of software.
