@@ -393,3 +393,134 @@ Reverse engineering can operate at different levels:
 *   **Effort and Cost:** Can be a very time-consuming and expensive undertaking.
 
 This detailed conceptual overview should provide a strong foundation for your understanding of Unit II.
+
+Below are the canonical **COCOMO formulas** with the coefficient tables you need for both the original _COCOMO ’81_ family and the modern _COCOMO II_ family.  
+(Values are those published by Barry Boehm’s research group; organisations sometimes calibrate them to their own history.)
+
+---
+
+## 1 COCOMO ’81
+
+### 1.1 Basic model (three development “modes”)
+
+|Mode|Effort coefficient **a**|Effort exponent **b**|Schedule coefficient **c**|Schedule exponent **d**|When this mode applies|
+|---|---|---|---|---|---|
+|**Organic**|2.4|1.05|2.5|0.38|Small, stable, well-understood business apps; cohesive team, little innovation needed|
+|**Semi-detached**|3.0|1.12|2.5|0.35|Medium-sized systems, mixed experience levels, some constraints|
+|**Embedded**|3.6|1.20|2.5|0.32|Real-time or mission-critical systems with tight hardware/regulation constraints|
+
+**Formulas**
+
+```text
+Effort (Person-Months)        E  = a · (KLOC)^b
+Development Time (Months)     T  = c · (E)^d
+Average Staff                 P  = E / T
+Productivity                  = KLOC / E
+```
+
+---
+
+### 1.2 Intermediate model
+
+Adds a single **EAF (Effort-Adjustment Factor)**—the product of 15 cost-driver multipliers that cover Product, Platform, Personnel and Project attributes.
+
+```
+E  = a · (KLOC)^b · EAF
+T  = c · (E)^d
+```
+
+Cost-driver snapshot (full table has six rating levels each):
+
+|Driver|V. Low|Low|Nom|High|V. High|X-High|
+|---|---|---|---|---|---|---|
+|RELY – Required reliability|0.75|0.88|**1.00**|1.15|1.40|–|
+|DATA – Data size|–|0.94|**1.00**|1.08|1.16|–|
+|PCAP – Programmer capability|1.46|1.19|**1.00**|0.86|0.71|–|
+|…|||||||
+
+_Multiply all the chosen multipliers together to get EAF._
+
+---
+
+### 1.3 Detailed model
+
+_Same core equations_ but applies the cost drivers **phase-by-phase** (requirements, design, code & unit test, integration, etc.) and allocates the resulting effort across each phase using distribution tables supplied by Boehm.
+
+---
+
+## 2 COCOMO II
+
+COCOMO II has two operational forms:
+
+- **Early-Design** (model when you only know major system pieces).
+    
+- **Post-Architecture** (model after full architecture is fixed).
+    
+
+Both share the general equation
+
+```text
+Effort (PM)  = A · Size^E · Π  EM_i
+Schedule (M) = 3.67 · Effort^F
+```
+
+### 2.1 Parameters and drivers
+
+|Symbol|Meaning|Default value|
+|---|---|---|
+|**A**|Calibration constant (industry default)|**2.94**|
+|**Size**|KSLOC _or_ equivalent KSLOC from Function-Point “back-firing”|—|
+|**E**|Economy-of-scale exponent|B + 0.01 Σ **SF**j|
+|**B**|Baseline exponent offset|**0.91**|
+|**Σ SFj**|Sum of the 5 **Scale Factors**|5 × (1 – 5) → 0–25|
+|**EMi**|17 Effort Multipliers (Post-Arch) or 7 (ED)|0.7 – 1.74|
+|**F**|Schedule exponent|0.28 + 0.2 (E – B)|
+
+#### 2.1.1 Scale Factors (affect **E**)
+
+|SF|Very Low|Low|Nominal|High|Very High|Extra High|
+|---|---|---|---|---|---|---|
+|**PREC** – precedentedness|6.20|4.96|**3.72**|2.48|1.24|–|
+|**FLEX** – development flexibility|5.07|4.05|**3.04**|2.03|1.01|–|
+|**RESL** – architecture & risk resolution|7.07|5.65|**4.24**|2.83|1.41|–|
+|**TEAM** – team cohesion|5.48|4.38|**3.29**|2.19|1.10|–|
+|**PMAT** – process maturity|7.80|6.24|**4.68**|3.12|1.56|–|
+
+_(Add the chosen numeric values, then plug into E = B + 0.01 ΣSF.)_
+
+#### 2.1.2 Effort Multipliers (snapshot)
+
+|Category|EM|VL|L|N|H|VH|XH|
+|---|---|---|---|---|---|---|---|
+|Product|**RELY** – required reliability|0.82|0.92|**1.00**|1.10|1.26|1.39|
+|Platform|**TIME** – execution time constraint|–|–|**1.00**|1.11|1.30|1.66|
+|Personnel|**PCAP** – programmer capability|1.42|1.17|**1.00**|0.86|0.70|–|
+|Project|**SCED** – schedule compression|–|1.14|**1.00**|1.00|1.00|1.00|
+|…||||||||
+
+_Multiply all selected EMs; substitute into the main effort formula._
+
+### 2.2 Schedule exponent **F**
+
+```
+F = 0.28 + 0.2 · (E – B)
+```
+
+As E rises (from high scale-factor ratings), F rises, reflecting diseconomies-of-scale that lengthen schedules.
+
+---
+
+## 3 Using the tables
+
+1. **Size the system** in _KSLOC_ or _Function Points → back-firing_ → KSLOC.
+    
+2. Pick the development **mode** (’81) _or_ rate the **scale factors** (II).
+    
+3. Select cost-driver / EM ratings.
+    
+4. Plug into the formulas to compute **Effort**, **Time**, **Avg Staff**, **Productivity**.
+    
+5. Calibrate **a, A, etc.** with local historical data for ±20 % accuracy.
+    
+
+These tables and equations form the backbone of most commercial parametric-estimation tools and remain the industry baseline for scope-/effort-/cost planning.
