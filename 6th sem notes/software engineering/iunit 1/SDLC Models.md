@@ -185,4 +185,44 @@ Each loop of the spiral (starting from the x-axis and moving **clockwise through
 
 ---
 
+Here is the **corrected and organized version** of your content, along with a **tabular comparison** between **Evolutionary Development Models** and **Iterative Enhancement Models**:
 
+---
+
+## 📘 Chapter 1: Introduction to Evolutionary Development Models
+
+### 🧩 **Aspect**: Evolutionary Development Models
+
+|**Feature**|**Details**|
+|---|---|
+|**Focus**|Adaptation and evolution of software based on changing requirements and user feedback.|
+|**Initial Release**|Often starts with a basic prototype or partially functional system.|
+|**Development Approach**|Develops through repeated cycles, refining and expanding with each iteration.|
+|**Feedback Integration**|Strong emphasis on user feedback, often leading to major changes between stages.|
+|**Examples**|Prototyping Model, Spiral Model, Agile Development, RAD.|
+
+---
+
+## 🔁 Iterative Enhancement Models
+
+|**Feature**|**Details**|
+|---|---|
+|**Focus**|Continuous improvement and refinement of a working software system.|
+|**Initial Release**|Starts with a functional version having basic features.|
+|**Development Approach**|Enhances the system through successive iterations, each adding improvements.|
+|**Feedback Integration**|Uses feedback in each iteration to make small, incremental changes.|
+|**Examples**|Agile Development (focused on refinement), Iterative Development Model.|
+
+---
+
+## ✅ Difference Between Evolutionary and Iterative Enhancement Models
+
+|**Criteria**|**Evolutionary Development Models**|**Iterative Enhancement Models**|
+|---|---|---|
+|**Purpose**|Focus on adapting to changing requirements from the beginning.|Focus on refining an already working system.|
+|**Initial Output**|Prototype or partial system.|Functional system with basic capabilities.|
+|**Nature of Changes**|Often major changes between stages.|Typically small, incremental improvements.|
+|**Feedback Usage**|Guides direction and structure of the product.|Used to refine and improve specific parts of the product.|
+|**Examples**|Prototyping, Spiral, RAD, Agile.|Agile (enhancement-centric), Iterative Development Model.|
+
+Let me know if you'd like this in a printable or presentation-ready format!
