@@ -7,7 +7,7 @@ steps of design
 - arch design
 - detail design
 
-coupling and cohesion
+coupling and cohesion and their types
 
 modularity, advantages of modularity
 
