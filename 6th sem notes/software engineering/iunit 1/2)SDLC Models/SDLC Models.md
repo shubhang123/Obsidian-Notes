@@ -206,7 +206,7 @@ Each loop of the spiral (starting from the x-axis and moving **clockwise through
 
 ---
 
-# #Iterative Model
+# Iterative Model
 
 *[Image: Diagram of the Iterative Model]*
 
@@ -318,7 +318,7 @@ Instead of delivering the complete software at once, it is developed in **small,
 
 
 
-## 📘 Chapter 1: Introduction to Evolutionary Development Models
+# Differences
 
 ### 🧩 **Aspect**: Evolutionary Development Models
 
@@ -355,3 +355,82 @@ Instead of delivering the complete software at once, it is developed in **small,
 |**Examples**|Prototyping, Spiral, RAD, Agile.|Agile (enhancement-centric), Iterative Development Model.|
 
 Let me know if you'd like this in a printable or presentation-ready format!
+
+# Iterative Incremental model
+
+*[Image: Diagram of the Iterative Incremental Model combining both approaches]*
+
+The Iterative methodology was an early precursor to Agile. It **emphasized iterative and incremental action**.
+Its earliest reported use was as part of NASA’s Project Mercury in the early 1960s.
+The Iterative model is repetition incarnate.
+Instead of starting with fully known requirements, **implement a set of software requirements**, then test, evaluate and pinpoint further requirements.
+A new version of the software is produced with each phase, or iteration. Rinse and repeat until the complete system is ready.
+
+*[Image: Another representation of Iterative Incremental Model phases]*
+
+### Advantage / Disadvantage
+*   **Advantage**: This model gives you a **working version early** in the process and makes it **less expensive to implement changes.**
+*   **Disadvantage**: **Resources can quickly be eaten up** by repeating the process again and again.
+
+### The various phases of incremental model are as follows:
+1.  **Requirement analysis**: crucial role. The product analysis expert identifies the requirements, and the system functional requirements are understood by the requirement analysis team.
+2.  **Design & Development**: the design of the system functionality and the development method are finished with success. When software develops new practicality, the incremental model uses style and development phase.
+3.  **Testing**: the testing phase **checks the performance of each existing function as well as additional functionality**. In the testing phase, the various methods are used to test the behavior of each task.
+4.  **Implementation**: Implementation phase **enables the coding phase of the development system.** It involves the final coding that design in the designing and development phase and tests the functionality in the testing phase. After completion of this phase, the number of the product working is enhanced and upgraded up to the final system product.
+
+### When to use Iterative Incremental Model:
+*   The **Requirements should be known clearly and understood**, when there is a **demand for the early release** of the product is there, when there are **high-risk features** and **requirement goals are present in the objective of the software**.
+*   This kind of methodologies are mainly followed by **product-based companies** as the defects risk in the developed software are quite minimum and used in developing software in web applications.
+*   This model is also preferred when the **project has lengthy development schedules.**
+*   Also, if the development is adopting **new technology** in the software development, then also this method is preferred as the **developers are new to the technology**.
+*   When the **requirements are superior**.
+*   A project has a **lengthy development schedule**.
+*   When Software **team are not very well skilled or trained**.
+*   When the customer demands a **quick release** of the product.
+*   You can **develop prioritized requirements first.**
+
+### Advantages of Iterative Incremental Model:
+*   Since the object will be divided into incremental stages, it will be made sure that **100% requirements are achieved** and **100% objective of the software**.
+*   Since there is testing at each incremental phase there will be **multiple testing for the software** and **more the testing better the result and fewer defects**.
+*   By adopting this approach, we can **lower the initial delivery cost**.
+*   This model is **flexible** and **incurs less cost** when there is a change in the requirement or the scope.
+*   The user or the **customer can provide feedback on each stage** so work effort will be valued and sudden changes in the requirement can be prevented.
+*   By following this model **errors can be identified quiet easily**.
+*   Easier to test and debug.
+*   Simple to manage risk because it handled during its iteration.
+*   The Client gets important functionality early.
+
+### Disadvantages of Iterative Incremental Model:
+*   Need for good **planning**.
+*   Total Cost is **high**.
+*   Well defined module interfaces are needed.
+
+---
+# Evolutionary Process Model
+The evolutionary model is a combination of the **Iterative** and **Incremental models** of the software development life cycle.
+Source: [https://artoftesting.com/evolutionary-model-in-software-engineering](https://artoftesting.com/evolutionary-model-in-software-engineering)
+
+Resembles the **iterative enhancement model**.
+This model differs from the iterative enhancement model in the sense that **this does not require a useful product at the end of each cycle.**
+In evolutionary development, requirements are **implemented by category rather than by priority**.
+
+*[Image: Diagram of the Evolutionary Process Model]*
+
+For example, in a **simple database application**:
+*   one cycle might implement the graphical user Interface (**GUI**),
+*   another **file** manipulation,
+*   another **queries** and
+*   another **updates**.
+All four cycles must complete before there is a working product available.
+GUI allows the users to interact with the system, file manipulation allow the data to be saved and retrieved, queries allow user to get out of the system, and updates allows users to put data into the system.
+
+### Benefits of Evolutionary Process Model
+*   Use of EVO brings a **significant reduction in risk** for software projects.
+*   EVO can **reduce costs** by providing a structured, disciplined avenue for experimentation.
+*   EVO allows the marketing department access to early deliveries, facilitating the development of documentation and demonstration.
+*   Better fit the product to **user needs and market requirements.**
+*   Manage **project risk with the definition of early cycle content.**
+*   **Uncover key issues early and focus attention appropriately**.
+*   Increase the opportunity to hit market windows.
+*   **Accelerate sales cycles with early customer exposure**.
+*   **Increase management visibility of project progress**.

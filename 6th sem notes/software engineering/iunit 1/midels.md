@@ -60,56 +60,7 @@ At each incremental stage there will be **thorough review based on which the dec
 
 ---
 
-## Software Life cycle models: Iterative Incremental model
-
-*[Image: Diagram of the Iterative Incremental Model combining both approaches]*
-
-The Iterative methodology was an early precursor to Agile. It **emphasized iterative and incremental action**.
-Its earliest reported use was as part of NASA’s Project Mercury in the early 1960s.
-The Iterative model is repetition incarnate.
-Instead of starting with fully known requirements, **implement a set of software requirements**, then test, evaluate and pinpoint further requirements.
-A new version of the software is produced with each phase, or iteration. Rinse and repeat until the complete system is ready.
-
-*[Image: Another representation of Iterative Incremental Model phases]*
-
-### Advantage / Disadvantage
-*   **Advantage**: This model gives you a **working version early** in the process and makes it **less expensive to implement changes.**
-*   **Disadvantage**: **Resources can quickly be eaten up** by repeating the process again and again.
-
-### The various phases of incremental model are as follows:
-1.  **Requirement analysis**: crucial role. The product analysis expert identifies the requirements, and the system functional requirements are understood by the requirement analysis team.
-2.  **Design & Development**: the design of the system functionality and the development method are finished with success. When software develops new practicality, the incremental model uses style and development phase.
-3.  **Testing**: the testing phase **checks the performance of each existing function as well as additional functionality**. In the testing phase, the various methods are used to test the behavior of each task.
-4.  **Implementation**: Implementation phase **enables the coding phase of the development system.** It involves the final coding that design in the designing and development phase and tests the functionality in the testing phase. After completion of this phase, the number of the product working is enhanced and upgraded up to the final system product.
-
-### When to use Iterative Incremental Model:
-*   The **Requirements should be known clearly and understood**, when there is a **demand for the early release** of the product is there, when there are **high-risk features** and **requirement goals are present in the objective of the software**.
-*   This kind of methodologies are mainly followed by **product-based companies** as the defects risk in the developed software are quite minimum and used in developing software in web applications.
-*   This model is also preferred when the **project has lengthy development schedules.**
-*   Also, if the development is adopting **new technology** in the software development, then also this method is preferred as the **developers are new to the technology**.
-*   When the **requirements are superior**.
-*   A project has a **lengthy development schedule**.
-*   When Software **team are not very well skilled or trained**.
-*   When the customer demands a **quick release** of the product.
-*   You can **develop prioritized requirements first.**
-
-### Advantages of Iterative Incremental Model:
-*   Since the object will be divided into incremental stages, it will be made sure that **100% requirements are achieved** and **100% objective of the software**.
-*   Since there is testing at each incremental phase there will be **multiple testing for the software** and **more the testing better the result and fewer defects**.
-*   By adopting this approach, we can **lower the initial delivery cost**.
-*   This model is **flexible** and **incurs less cost** when there is a change in the requirement or the scope.
-*   The user or the **customer can provide feedback on each stage** so work effort will be valued and sudden changes in the requirement can be prevented.
-*   By following this model **errors can be identified quiet easily**.
-*   Easier to test and debug.
-*   Simple to manage risk because it handled during its iteration.
-*   The Client gets important functionality early.
-
-### Disadvantages of Iterative Incremental Model:
-*   Need for good **planning**.
-*   Total Cost is **high**.
-*   Well defined module interfaces are needed.
-
----
+## Software Life cycle models: 
 
 ## Software Life cycle models: The Prototyping Model
 
