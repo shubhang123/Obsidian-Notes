@@ -6,3 +6,8 @@ steps of design
 - interface design
 - arch design
 - detail design
+
+coupling and cohesion
+
+modularity, advantages of modularity
+
