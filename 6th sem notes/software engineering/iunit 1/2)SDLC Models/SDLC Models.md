@@ -16,7 +16,6 @@
         *   Extreme Programming
         *   Lean
         *   DevOps
-
 ---
 
 # Waterfall Model
@@ -26,11 +25,17 @@ It is called the **Waterfall Model** because its diagrammatic representation res
 
 This model is mainly used for **small to medium-sized projects** with **clear, well-defined requirements**, where the technology and tools to be used are **well-known and stable**.  
 It is suitable for projects where **minimal changes are expected** during development and where **predictability** is prioritized.
-
-
-
+### When to use the waterfall model:
+*   This model is used only when the **requirements** are very well **known, clear and fixed**.
+*   Product definition is **stable**.
+*   Technology is understood.
+*   There are **no ambiguous requirements**.
+*   **Ample resources** with required **expertise** are available freely.
+*   The project is **short**.
+*   Very less customer interaction is involved during the development of the product.
+*   Once the product is ready then only it can be demoted to the end users.
+*   Once the product is developed and if any failure occurs then the **cost of fixing such issues are very high**, because we need to update everywhere from document till the logic.
 ---
-
 ### Advantages
 
 - Easy to understand and implement, with well-defined stages and clear milestones.
@@ -41,7 +46,6 @@ It is suitable for projects where **minimal changes are expected** during develo
     
 
 ---
-
 ### Disadvantages
 
 - Not suitable for accommodating changes or iterations once development has started.
