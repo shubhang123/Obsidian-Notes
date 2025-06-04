@@ -6,11 +6,11 @@
 	 indicrect estimation
 	 
 formulas for estimation
-effort 
-productivity 
-size
-cost
-duration
-team size
-effort
+	effort 
+	productivity 
+	size
+	cost
+	duration
+	team size
+	effort
 
