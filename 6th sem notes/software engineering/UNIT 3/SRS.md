@@ -7,4 +7,7 @@ types of requirement:
 
 ![[Pasted image 20250604161953.png]]
 
-steps
+steps![[Pasted image 20250604162037.png]]
+
+methods of requirement elicitation
+
