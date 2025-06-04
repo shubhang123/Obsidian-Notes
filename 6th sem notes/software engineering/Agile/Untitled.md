@@ -151,9 +151,6 @@ Key agile testing methods and principles include:
     - While executable tests are used, MobileApp requirements and design models are also subjected to **technical reviews** and **usability testing**, especially given the complexity of configurations.
 - **Focus on Feedback**: Feedback is derived from various sources, including the implemented software (via test results), the customer, and other software team members. Rapid feedback regarding cost and schedule impact is provided as new requirements emerge.
 - **Evolutionary Testing**: In evolutionary models, testing of increasingly complete versions of the engineered system is performed iteratively. The early creation and testing of working prototypes are encouraged.
-The Agile Model, a modern approach to software development, focuses on delivering successful systems quickly, particularly in environments with continuous change and tight timelines. It stands as a reasonable alternative to conventional software engineering for certain project types.
-
-Here is a comprehensive overview of Scrum and Extreme Programming (XP), drawing from the provided sources:
 
 ### Scrum
 
