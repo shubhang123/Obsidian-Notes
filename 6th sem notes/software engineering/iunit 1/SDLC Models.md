@@ -46,11 +46,16 @@ The **Prototype Model** is an **iterative** approach that involves developing an
 The prototype is refined through **user feedback** and the process is repeated until a **satisfactory solution** is achieved.
 
 Then shown to the user, as per the feedback of the user prototype is rebuilt and modified and again shown to the user, the process continue till the customer is not satisfied.
+
 After this process the final SRS document is developed.
+
 Developing the prototype help in building the actual design.
+
 Prototype model is of two types
-Evolutionary prototype
-Throwaway prototype
+- Evolutionary prototype
+- Throwaway prototype
+
+Evolutionary prototype is bascially when we keep incrementing over the prototype showed to the customer and work on that particular prototype over and over in iterative
 
 ### 
 ![[prototype.png]]
