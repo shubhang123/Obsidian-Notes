@@ -1,4 +1,4 @@
-## Software Life cycle models
+# Software Life cycle models
 1.  Classical Waterfall Model
 2.  Iterative waterfall model
 3.  Iterative Incremental model
@@ -206,7 +206,45 @@ Each loop of the spiral (starting from the x-axis and moving **clockwise through
 
 ---
 
-# 📦 Incremental Model
+# #Iterative Model
+
+*[Image: Diagram of the Iterative Model]*
+
+In this Model, you can **start with** some of the software specifications and **develop the first version of the software.**
+After the first version if there is a need to change the software, then a **new version of the software is created with a new iteration.**
+Every release of the Iterative Model finishes in an exact and fixed period that is called iteration.
+
+The Iterative Model allows the **accessing earlier phases, in which the variations made respectively.**
+The final output of the project renewed at the end of the Software Development Life Cycle (SDLC) process.
+
+### The various phases of Iterative model are as follows:
+1.  **Requirement gathering & analysis**: Requirements are **gathered** from customers and **check by an analyst** whether requirements **will fulfil or not**. Analyst checks that need will **achieve within budget or not**.
+2.  **Design**: Team design the software by the different diagrams like Data Flow diagram, activity diagram, class diagram, state transition diagram, etc.
+3.  **Implementation**: In the implementation, requirements are written in the coding language and transformed into computer programmes which are called Software.
+4.  **Testing**: software testing starts using different test methods : white box, black box, and grey box test methods.
+5.  **Deployment**: After completing all the phases, software is deployed to its work environment.
+6.  **Review**: In this phase, after the product deployment, review phase is performed **to check the behaviour and validity of the developed product**. And if there are **any error found** then the **process starts again from the requirement gathering**.
+7.  **Maintenance**: In the maintenance phase, after deployment of the software in the working environment there may be some bugs, some errors or new updates are required. Maintenance involves debugging and new addition options.
+
+### When to use the Iterative Model?
+*   When **requirements** are defined **clearly and easy** to understand.
+*   When the **software application is large**.
+*   When there is a **requirement of changes in future**.
+
+### Advantage (Pros) of Iterative Model:
+*   Testing and debugging during smaller iteration is easy.
+*   A **Parallel development** can plan.
+*   It is **easily acceptable to ever-changing needs** of the project.
+*   **Risks are identified and resolved during iteration**.
+*   Limited time spent on documentation and extra time on designing.
+
+### Disadvantage (Cons) of Iterative Model:
+*   It is **not suitable for smaller projects**.
+*   **More Resources** may be required.
+*   **Design can be changed again and again** because of imperfect requirements.
+*   **Requirement changes** can cause **over budget**.
+*   Project **completion date not confirmed** because of changing requirements.
+# Incremental Model
 
 The **Incremental Model** is a software development approach where the product is designed, implemented, and tested **incrementally** (a little more is added each time) until the complete system is ready.
 
