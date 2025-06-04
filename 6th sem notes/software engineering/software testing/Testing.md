@@ -158,3 +158,48 @@ Here's a breakdown of regression testing based on the sources:
     
     - Extreme Programming (XP) encourages a **regression testing strategy**.
     - The concept is directly linked to **Test-Driven Development (TDD)** as an iterative flow where tests are created before code, and all tests are rerun after any code change or correction.
+
+# White-Box Testing
+
+**White-box testing**, also known as **glass-box testing** or **structural testing**, is a test-case design philosophy that relies on the **internal logical structure** of the software to derive test cases. It is considered "testing in the small" and is typically applied to small program components, such as modules or small groups of modules.
+
+**Purpose and Focus**:
+
+- The primary goal is to derive test cases that **guarantee all independent paths within a module have been exercised at least once**.
+- It ensures that **all logical decisions are exercised on their true and false sides**.
+- It executes **all loops at their boundaries and within their operational bounds**.
+- It **exercises internal data structures to ensure their validity**.
+- It helps uncover errors due to erroneous computations, incorrect comparisons, or improper control flow.
+- This type of testing can only be designed **after component-level design (or source code) exists**, as it requires knowledge of the program's logical details.
+- It is generally **applied early in the testing process**.
+
+**Techniques**:
+
+- **Basis Path Testing**: A white-box technique that derives a logical complexity measure of a procedural design, using this measure to define a basis set of execution paths. Test cases from this method are guaranteed to execute every statement in the program at least once. **Cyclomatic complexity (V(G))** is a useful software metric derived from graph theory that defines the number of independent paths in the basis set, providing an upper bound for the number of tests needed to ensure all statements are executed.
+- **Control Structure Testing**: This broadens testing coverage and improves white-box testing quality, including:
+    - **Condition Testing**: Exercises the logical conditions contained within a program module.
+    - **Data Flow Testing**: Selects program test paths based on the locations where variables are defined and used.
+    - **Loop Testing**: Focuses exclusively on the validity of loop constructs. It categorises loops into simple, concatenated, nested, and unstructured types. Specific tests are applied for each type, such as covering no passes, one pass, two passes, m passes, and boundary passes (n-1, n, n+1) for simple loops. For nested loops, testing starts at the innermost loop with outer loops set to minimum values, then works outwards. Unstructured loops should ideally be redesigned for effective testing.
+
+# Black-Box Testing
+
+**Black-box testing**, also known as **behavioral testing** or **functional testing**, focuses on the **functional requirements of the software**. It takes an **external view** of the product, conducting tests at the software interface with little regard for the internal logical structure. It is a **complementary approach to white-box testing**, likely to uncover a different class of errors.
+
+**Purpose and Focus**:
+
+- It enables the derivation of **sets of input conditions that will fully exercise all functional requirements** for a program.
+- It attempts to find errors in categories such as: **incorrect or missing functions, interface errors, errors in data structures or external database access, behavior or performance errors, and initialization and termination errors**.
+- Unlike white-box testing, black-box testing tends to be **applied during later stages of testing**.
+- It disregards the control structure and focuses on the **information domain** of the software.
+- It aims to answer questions like how functional validity is tested, how system behavior and performance are tested, what classes of input make good test cases, and how sensitive the system is to certain input values.
+- The goal is to design test cases that reduce the number of additional tests needed and provide insight into the presence or absence of classes of errors.
+- It is considered "testing in the large".
+
+**Techniques**:
+
+- **Graph-Based Testing Methods**: Involves understanding objects and their relationships in the software and then defining tests to verify these relationships.
+- **Equivalence Partitioning**: Divides the input domain of a program into **classes of data** from which test cases are derived. Guidelines include defining one valid and one invalid equivalence class for ranges, members of a set, or Boolean conditions.
+- **Boundary Value Analysis (BVA)**: This technique **complements equivalence partitioning** by focusing on test cases at the **"edges" of an equivalence class**. It is based on the observation that a greater number of errors occur at the boundaries of the input domain. It derives test cases from both input and output domains, including values just above and below the specified boundaries.
+- **Orthogonal Array Testing**: Applicable when the input domain is relatively small but too large for exhaustive testing. It is particularly useful for finding **"region faults"** and enables the design of test cases that provide **maximum test coverage with a reasonable number of test cases**. This method can detect and isolate all **single mode faults** and all **double mode faults**, and often many **multi-mode faults** as well.
+- **Scenario-Based Test Design**: After unit and integration tests, this approach is used to determine if the software will perform in a manner that satisfies users. It aims to uncover errors associated with incorrect specifications and interactions among subsystems. In object-oriented systems, it dominates validation testing, making the **use case a primary driver** for these tests.
+
