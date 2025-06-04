@@ -4,5 +4,27 @@ It is called waterfall model as its diagrammatic representation resembles as lik
 This type of model is basically used for the Small to medium-sized projects with clear, well-defined requirements. When the technology and tools to be used are well-known and stable.
 Projects where minimal changes are expected during the development process, and predictability is prioritized over
 
+
 ![[Pasted image 20250604142330.png]]
+
+Advantage
+
+Easy to understand and implement, with well-defined stages and clear milestones.
+Each phase has well defined input and output, phases are processed and completed one at a time. Phases do not overlap.
+Low cost and easy to schedule, as all staff
+do not work concurrently on the same project, so can work on different projects.
+
+Disadvantage
+Not suitable to accommodate any change or iteration once development has begun. It is always difficult to acquire of the requirement in the starting.
+WaterFall Model
+Feasibility Study
+Req. Analysis
+Design
+Coding
+Testing
+Working version is produced in the last level, so not good for large size
+sophisticated projects.
+Maintenance
+High amounts of risk and uncertainty.
+
 
