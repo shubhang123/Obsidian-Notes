@@ -42,20 +42,53 @@ It is suitable for projects where **minimal changes are expected** during develo
 
 In many cases, customers are **unsure about the exact functionality** they want in the software. As a result, the final product may not match their expectations.
 
-The **Prototype Model** is an **iterative** approach that involves developing an **early working model** of the software with limited functionality, low reliability, and untrusted performance.  
-The prototype is refined through **user feedback** and the process is repeated until a **satisfactory solution** is achieved.
+The **Prototype Model** is an **iterative** software development approach that involves building an **early working model** (prototype) of the system with **limited functionality**, **low reliability**, and **unverified performance**.
 
-Then shown to the user, as per the feedback of the user prototype is rebuilt and modified and again shown to the user, the process continue till the customer is not satisfied.
+The prototype is then **shown to the user**, who provides feedback. Based on this feedback, the prototype is **modified and rebuilt**, and the updated version is again presented to the user. This **loop continues** until the customer is satisfied.
 
-After this process the final SRS document is developed.
+Once the prototype has been refined to the point where the user is satisfied, a **final Software Requirement Specification (SRS)** document is created. This document becomes the foundation for the actual system development.
 
-Developing the prototype help in building the actual design.
+Creating a prototype helps in understanding the customer’s needs more precisely and assists in developing the **actual design and architecture** of the final product.
 
-Prototype model is of two types
-- Evolutionary prototype
-- Throwaway prototype
+---
 
-Evolutionary prototype is bascially when we keep incrementing over the prototype showed to the customer and work on that particular prototype over and over in iterative
+## Types of Prototype Model
+
+### 1. **Evolutionary Prototype**
+
+- This type of prototype is **gradually refined and evolved** into the final product.
+    
+- It is **not discarded**; rather, it serves as the base upon which the final system is built.
+    
+- Useful when requirements are **incomplete or constantly changing**.
+    
+- Focuses on delivering a **working system** early and improves it with user feedback.
+    
+
+> ✅ _Use Case:_ Long-term projects where requirements are expected to evolve.
+
+---
+
+### 2. **Throwaway (Rapid) Prototype**
+
+- Also called **Rapid Prototyping**, this model creates a prototype **quickly** to understand user requirements.
+    
+- The prototype is built only to gather feedback and is **discarded after use**.
+    
+- The actual system is then developed from scratch based on the final, clarified requirements.
+    
+
+> ✅ _Use Case:_ When the goal is to understand unclear or vague requirements quickly, without reusing the prototype code.
+
+---
+
+Let me know if you want a visual diagram or side-by-side comparison between the two types.
+
+
+
+
+
+
 
 ### 
 ![[prototype.png]]
@@ -64,6 +97,16 @@ Evolutionary prototype is bascially when we keep incrementing over the prototype
 ### Advantages
 
 - Encourages **active user involvement** during early stages.
+    
+- Helps clarify **user requirements** and expectations.
+    
+- Provides **quick feedback** to developers, reducing the chances of software mismatches.
+    
+- Reduces the risk of **miscommunication** between client and developer.
+    
+### Disdvantages
+
+- Customer demand 
     
 - Helps clarify **user requirements** and expectations.
     
