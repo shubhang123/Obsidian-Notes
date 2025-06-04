@@ -16,3 +16,9 @@ training
 documentation
 verification - are we building the product right
 validation
+
+software quality factors
+two categoreis of them
+
+mccall standards
+
