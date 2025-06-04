@@ -75,6 +75,31 @@ A **software component** is a fundamental building block in software engineering
 - **Purpose**: A software team may choose to create a prototype to better understand requirements for a system, especially when uncertainty exists.
 - **Context**: Prototypes can be built during the high-level design phase, as part of the Personal Software Process (PSP), to address uncertainties.
 - **Alternative to Specification**: Prototyping can serve as an alternative to detailed specification writing, particularly when requirements are unclear or volatile.
+- ### **Phases of Rapid Prototyping Model**:
+
+1. **Requirements Gathering**:
+    
+    - Capture initial, often vague, system requirements from stakeholders.
+        
+2. **Quick Design**:
+    
+    - Create a basic mockup or UI/UX structure — **not the final architecture**.
+        
+3. **Prototype Building**:
+    
+    - Implement a functional (but not fully-featured) version using fast tools.
+        
+4. **User Evaluation**:
+    
+    - Users test the prototype and provide feedback.
+        
+5. **Refinement**:
+    
+    - Update the prototype iteratively based on feedback.
+        
+6. **Engineer Final Product**:
+    
+    - Once requirements stabilize, build the actual software product.
 
 ### Specialisation
 
