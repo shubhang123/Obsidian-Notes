@@ -215,3 +215,29 @@ Key aspects include:
     - **WebApps**: Assesses response time and reliability as demands on server-side resource capacity increase [i].
     - **MobileApps**: Aims to find errors under extreme conditions unique to mobile, such as running multiple apps concurrently, processing many transactions, or storing excessively large data [i]. It also checks for graceful degradation without compromising security [i]. Ideally, it's performed "in the wild" on actual user devices [i].
 
+# **Acceptance testing** 
+refers to tests primarily conducted by the **customer** or **end user** to validate that software meets all their requirements before formally accepting it. This crucial activity aims to uncover errors that might otherwise prevent the customer from accepting the software from the developer.
+
+Here's a breakdown of acceptance testing:
+
+- **Purpose and Focus**
+    
+    - Acceptance tests, also known as **customer tests**, are designed to **validate all requirements** from the customer's perspective.
+    - They concentrate on **overall system features and functionality** that are directly visible and reviewable by the customer.
+    - The degree to which the software correctly implements the output, function, and behaviour defined by the use case is a form of feedback gained during acceptance testing.
+    - The ultimate goal is to **uncover errors before the software is accepted** by the customer.
+- **Who Conducts It**
+    
+    - Acceptance tests are **conducted by the customer**.
+    - When custom software is built for a specific customer, the **end user**, rather than the software engineers, performs these tests.
+- **Process and Methodology**
+    
+    - Acceptance tests are typically **derived from user stories** or use cases that have been implemented as part of a software release or increment.
+    - They can range in formality from an **informal "test drive"** to a **planned and systematically executed series of tests**.
+    - For custom software, these tests can be conducted over **weeks or even months**, which helps in uncovering cumulative errors that might degrade the system over time.
+    - In the context of **Extreme Programming (XP)**, acceptance tests are specified by the customer and are derived from implemented user stories.
+- **Relationship to Other Testing Activities**
+    
+    - Acceptance testing is part of the **Deployment** generic process framework activity, where the customer evaluates the delivered product and provides feedback. This feedback can lead to suggested changes that have business implications.
+    - For software products intended for many customers, it is **impractical to perform formal acceptance tests with each one**. Instead, practices like **alpha and beta testing** are used.
+    - **Customer acceptance testing** is specifically mentioned as a variation of **beta testing** when custom software is delivered under contract. In such cases, the customer performs a series of specific tests to uncover errors before accepting the software. This type of acceptance testing can be very formal and span many days or weeks.
