@@ -1,4 +1,21 @@
-Here is your content written in **proper Markdown (MD) formatting**:
+## Software Life cycle models
+1.  Classical Waterfall Model
+2.  Iterative waterfall model
+3.  Iterative Incremental model
+4.  Prototyping model
+5.  Spiral model
+    *   Win-Win Spiral
+6.  RUP process model
+7.  V-Shape Model
+8.  RAD Model
+9.  Big bang model
+10. Agile Process model
+    *   Popular frameworks
+        *   Scrum
+        *   Kanban
+        *   Extreme Programming
+        *   Lean
+        *   DevOps
 
 ---
 
