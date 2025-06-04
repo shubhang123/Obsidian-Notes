@@ -582,3 +582,140 @@ Since most of the programming components have already been tested, it reduces th
 *   Required user involvement.
 *   **Reduced scalability** occurs because a RAD developed application begins as a prototype and evolves into a finished application.
 *   Progress and problems accustomed are hard to track as such there is **no documentation to demonstrate what has been done.**
+* RUP Model (Rational Unified Process) Model
+
+# Unified Process
+Unified process (UP) is an:
+*   **architecture-centric,**
+*   **use-case driven,**
+*   **iterative and incremental**
+development process that **leverages** unified modeling language and is **compliant with the system process engineering metamodel.**
+
+Unified process can be **applied to different software systems** with **different levels of technical and managerial complexity** across **various domains and organizational cultures**.
+UP is also referred to as the unified software development process.
+UP has the following major characteristics:
+*   It is use-case driven
+*   It is architecture-centric
+*   It is risk focused
+*   It is iterative and incremental
+
+### RUP Model
+Stands for **"Rational Unified Process."**
+*   An agile software development method.
+*   Created by Rational corporation and is designed and documented using UML (Unified Modeling Language).
+*   Software development process from Rational, a division of IBM.
+*   It **divides the development process into four distinct phases** that each involve business modeling, analysis and design, implementation, testing, and deployment.
+
+The Rational Unified Process (RUP) is **Iterative and Agile**.
+*   Iterative, meaning repeating. Iterative because all the process’s core activities repeat throughout the project.
+*   The process is agile because various components can be adjusted, and phases of the cycle can be repeated until the software meets requirements and objectives.
+
+The process should be looked at from **two dimensions**.
+*   Firstly, there is the **time dimension**, represented by the horizontal axis. The time dimension is **expressed in terms of the phases and cycles, iterations, and milestones.**
+*   The **vertical axis is the process dimension**. This dimension represents the static aspect of the process and is **described in terms of activities, artefacts, workers, and workflow.**
+
+
+
+### Rational Unified Process: time dimension
+The **time dimension means the dynamic organisation from the process over time.**
+The **software’s life cycle is itself divided further into cycles.** Each cycle corresponds to, for example, a period in which a new generation of a product is being worked on.
+Each phase is finalized with a milestone.
+A milestone is a **point in time where decisions of critical importance must to be made.**
+
+The **Rational Unified Process (RUP) divides development into the four consecutive phases:**
+*   Inception phase
+*   Elaboration phase
+*   Construction phase
+*   Transition phase
+![[Pasted image 20250604152944.png]]
+### RUP Phases Overview
+*   **Phase 1: Inception**
+    “Inception - The idea for the project is stated. The development team determines if the project is worth pursuing and what resources will be needed.”
+*   **Phase 2: Elaboration**
+    “ Elaboration - The project's architecture and required resources are further evaluated. Developers consider possible applications of the software and costs associated with the development.”
+*   **Phase 3: Construction**
+    “Construction - The project is developed and completed. The software is designed, written, and tested.”
+*   **Phase 4: Transition**
+    “Transition - The software is released to the public. Final adjustments or updates are made based on feedback from end users.”
+
+### Phase 1: Inception
+Depending on the project, the result of the first phase could be:
+*   A vision statement
+*   First use case (20% completed)
+*   Market research results
+*   Financial prognosis
+*   Risk assessment
+*   Project plan
+*   Corporate or business model
+*   Prototypes
+
+The results should then be assessed according to several criteria:
+*   Were all interested parties included and do they all agree?
+*   Are the requirements of the development reliable?
+*   Are the costs credible? What are the priorities and risks?
+
+### Phase 2: Elaboration
+“Elaboration - The project's architecture and required resources are further evaluated. Developers consider possible applications of the software and costs associated with the development.”
+During the elaboration phase, the system’s requirements and its required architecture are assessed and analysed.
+This is where the project begins to take shape.
+The objective of the elaboration phase is to analyse products and to lay a foundation for the future architecture.
+
+Results of the elaboration phase include:
+*   Use case (80% completed)
+*   Description of the feasible architecture
+*   Project development plan
+*   Prototypes for tackling risks
+*   User manual
+
+Criteria for the results:
+*   Is the architecture stable?
+*   Are important risks being tackled?
+*   Is the development plan sufficiently detailed and accurate?
+*   Do all interested parties agree on the current design?
+*   Are the expenditures acceptable?
+
+### Phase 3: Construction
+“Construction - The project is developed and completed. The software is designed, written, and tested.”
+Here the software system is constructed in its entirety.
+The majority of coding also takes place in this phase.
+In this production process, the emphasis is on managing costs and means, as well as ensuring quality.
+
+Results from the production phase include:
+*   Fully completed software system
+*   User manual
+
+To be assessed according to:
+*   Is the product stable and complete enough for use?
+*   Are all interested parties/users ready for the transition into the product’s usage?
+*   Are all the expenditures and means still in good order?
+
+### Phase 4: Transition
+“Transition - The software is released to the public. Final adjustments or updates are made based on feedback from end users.”
+The objective of the transition phase is to transfer the product to its new user.
+As soon as the user starts using the system, problems almost always arise that require changes to be made to the system.
+The goal, however, is to ensure a positive and smooth transition to the user.
+
+Results and activities in the last phase:
+*   Beta testing
+*   Conversion of existing user databases
+*   Training new users
+*   Rolling out of the project to marketing and distribution
+Input from the new users should guide the assessment here.
+
+### Advantages of RUP Model
+*   It allows us to deal with changing requirements within the project’s development life cycle as per the client or customer needs, i.e. it welcomes change.
+*   It supports incremental build the software product.
+*   It provides proper documentation of the software product.
+*   It helps to use the resources efficiently.
+*   It helps to identify issues early in the process life cycle.
+*   It improves process control and risk management.
+*   It enhances team productivity.
+*   It helps reduces unexpected development costs.
+
+### Disadvantages of RUP Model
+*   It is a complex model to implement as it has multiple stages of the workflow.
+*   It is challenging for organizations to implement which has, small team size or projects.
+*   It should be highly result-oriented from individuals or teams.
+*   It emphasizes the integration of modules throughout the software development process, so this creates trouble during the testing phase.
+
+---
