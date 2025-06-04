@@ -104,17 +104,14 @@ Let me know if you want a visual diagram or side-by-side comparison between the 
     
 - Reduces the risk of **miscommunication** between client and developer.
     
-### Disdvantages
+### Disadvantages
 
-- Customer demand 
+- Customer demand can increase after seeing prototype asking for the product early.
     
-- Helps clarify **user requirements** and expectations.
+- without proper management itreations can take lot of time
     
-- Provides **quick feedback** to developers, reducing the chances of software mismatches.
-    
-- Reduces the risk of **miscommunication** between client and developer.
-    
+- if user is not satisfied the customer can lose intrest in the project
 
----
 
-Let me know if you'd like a printable version or PDF export of this.
+spiral model 
+recogniziton of risk factiors in the cycle model presentaed in 1986 
