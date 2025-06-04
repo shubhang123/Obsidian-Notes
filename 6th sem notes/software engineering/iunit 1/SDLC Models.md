@@ -28,3 +28,11 @@ Maintenance
 High amounts of risk and uncertainty.
 
 
+# PROTOTYPE MODEL
+Most of the customer are not sure about the functionality they require from the software, as a result the final s/w is not according to exact demand.
+It is an iterative approach, which involves developing an early working model of the software based on the currently known requirements with limited functionalities, low reliability and untrusted performance.
+Refining it through user feedback, and repeating the process until a satisfactory solution is achieved.
+
+![[Pasted image 20250604142641.png]]
+
+advantages
