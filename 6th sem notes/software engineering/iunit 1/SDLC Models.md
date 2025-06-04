@@ -127,7 +127,7 @@ In this model:
     
 
 Each loop of the spiral (starting from the x-axis and moving **clockwise through 360°**) represents one phase of the development process. Each phase is divided into **four major sectors**:
-
+![[Pasted image 20250604144239.png]]
 ---
 
 ## 📐 Sectors of the Spiral Model
@@ -184,4 +184,5 @@ Each loop of the spiral (starting from the x-axis and moving **clockwise through
     
 
 ---
+
 
