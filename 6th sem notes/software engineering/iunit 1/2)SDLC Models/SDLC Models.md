@@ -769,14 +769,14 @@ Validation is the process to classify the software after the completion of the d
 *   This model does not support iteration of phases.
 *   It does not easily handle concurrent events.
 
-# Agile M
+# Agile Model
 *(Also part of Unit 5)*
 Combination of iterative and incremental process models with focus on **process adaptability and customer satisfaction** by rapid delivery of working software product.
 
 With no single methodology presenting a suitable alternative to Waterfall, which was woefully too slow and risky, 17 pioneers in software engineering gathered to create the **Agile “Software Development” Manifesto on February 11th, 2001.**
 [https://agilemanifesto.org/history.html](https://agilemanifesto.org/history.html)
 
-*[Image: The Agile Manifesto logo or a graphic representing its core values.]*
+![[Pasted image 20250604153326.png]]
 
 **Agile** is the mainstream methodology used in **modern software development,** and **expands its influence beyond coding into many aspects of product development, from ideation to customer experience.**
 
