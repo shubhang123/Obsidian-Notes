@@ -791,8 +791,7 @@ To accomplish this task agility is required.
 *   **removing activities that may not be essential for a specific project.**
 Also, anything that is wastage of time and effort is avoided.
 
-*[Image: A diagram illustrating the iterative and incremental nature of Agile development, possibly showing sprints or iterations.]*
-
+![[Pasted image 20250604153552.png]]
 ### Agile Methods
 *   Break the product into small incremental builds.
 *   These builds are provided in iterations.
@@ -814,7 +813,6 @@ At the end of the iteration, a working product is displayed to the customer and 
 
 ### The Agile Manifesto’s 4 Core Values
 
-*[Image: A visual representation of the 4 Core Values of the Agile Manifesto.]*
 
 1.  **Individuals and interactions** over processes and tools
 2.  **Working software** over comprehensive documentation
