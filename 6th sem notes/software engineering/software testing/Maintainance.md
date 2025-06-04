@@ -52,3 +52,14 @@ The core functions of software maintenance include:
 - Reverse engineering.
 - Program and data restructuring.
 - Forward engineering. The overall intent of these activities is to create versions of existing programs that exhibit higher quality and better maintainability.
+
+**Reverse engineering** in software is the **process of analysing an existing program to create a representation of it at a higher level of abstraction than its source code** [Pressman, p. 770]. Its primary goal is **design recovery**, which means extracting design information such as data, architectural, and procedural aspects from the current software [Pressman, p. 770].
+
+Key characteristics and aspects of reverse engineering include:
+
+- **Abstraction Level**: The aim is to extract design information at as high a level of sophistication as possible, moving from low-level procedural designs to higher-level object or data models [Pressman, p. 770].
+- **Completeness**: While complete procedural design is easier to derive, developing complete UML diagrams or models is more challenging, with completeness generally decreasing as abstraction level increases [Pressman, p. 770].
+- **Interactivity**: The process often requires significant human analyst involvement with automated tools, especially for achieving greater completeness at higher abstraction levels [Pressman, p. 770].
+- **Directionality**: It moves from a lower abstraction (source code) to a higher one (design representations), which is the opposite of forward engineering [Pressman, p. 770].
+
+The process typically involves **restructuring code** to improve its quality, **extracting abstractions** to develop meaningful specifications, and then **refining and simplifying** these abstractions [Pressman, p. 770]. Reverse engineering can be applied to understand a system's data (program or system level), its processing (from statement to system level), and its user interfaces, even if the re-engineered interface will be radically different [Pressman, p. 770].
