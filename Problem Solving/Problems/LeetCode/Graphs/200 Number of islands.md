@@ -1,5 +1,5 @@
 Certainly! Here's a clean, well-structured explanation (as **code comments or notes**) of your **DFS-based solution to the “Number of Islands” problem**:
-
+#dfs #graph
 ---
 
 ## 🔍 **Problem Summary:**

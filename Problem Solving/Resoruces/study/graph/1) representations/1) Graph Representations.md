@@ -1,3 +1,4 @@
+#graph
 # Graph Representations: Adjacency Matrix vs Adjacency List
 
 ## Overview
