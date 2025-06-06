@@ -5,16 +5,23 @@ class Solution {
     int m, n;
     int dfs(int i, int j, vector<vector<int>>& grid,
             vector<vector<bool>>& vis) {
+        //making sure the directions are valid
+        //and doesnt go out of boundaries
         if (i < 0 || j < 0 || i >= m || j >= n)
             return 0;
         if (vis[i][j])
             return 0;
+        //checking if the value is 0, if yes we will skip it
         if (grid[i][j] == 0)
             return 0;
 
         vis[i][j] = true;
-
+		//including the cell itself as well 
+		//that is why area is 1
         int area = 1;
+
+		//keep adding the area to the area
+		//recursively
         area += dfs(i + 1, j, grid, vis);
         area += dfs(i - 1, j, grid, vis);
         area += dfs(i, j - 1, grid, vis);
