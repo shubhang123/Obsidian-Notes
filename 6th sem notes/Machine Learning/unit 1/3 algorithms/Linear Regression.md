@@ -2,4 +2,12 @@ Linear regression is one of the simplest—and most widely used—supervised lea
 
 ![[Pasted image 20250609150627.png]]
 
-ggf
+Hypothesis fiunction fo Linear Regressio 
+y= b0 + b1x + e
+
+x - input trainig data (indepemetn variable)
+y- l;abels to data ( dependent variable)
+
+b0 - intercepty of line
+b1 - cpoefficient of x / linear regression coeff
+e - random error
