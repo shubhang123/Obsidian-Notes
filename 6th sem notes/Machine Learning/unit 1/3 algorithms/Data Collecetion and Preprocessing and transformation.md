@@ -161,4 +161,5 @@ data can be transformed through normalization / scaling, decomposition or aggreg
 
 1) normalization with examples
 		1. min max normalizton 
-		2. 
+		2. z score normalization ( zero mean normalization )
+		3. decimal scaling
