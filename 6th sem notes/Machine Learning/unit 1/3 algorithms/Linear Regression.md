@@ -2,12 +2,23 @@ Linear regression is one of the simplest—and most widely used—supervised lea
 
 ![[Pasted image 20250609150627.png]]
 
-Hypothesis fiunction fo Linear Regressio 
-y= b0 + b1x + e
+## Hypothesis Function for Simple Linear Regression
 
-x - input trainig data (indepemetn variable)
-y- l;abels to data ( dependent variable)
+The model assumes a linear relationship between an input xx and an output yy, plus random noise:
 
-b0 - intercepty of line
-b1 - cpoefficient of x / linear regression coeff
-e - random error
+y=β0+β1 x+εy = \beta_0 + \beta_1\,x + \varepsilon
+
+- **xx**  
+    Independent variable (feature) from the training data
+    
+- **yy**  
+    Dependent variable (label) we want to predict
+    
+- **β0\beta_0**  
+    Intercept: the value of yy when x=0x = 0
+    
+- **β1\beta_1**  
+    Slope (coefficient): the change in yy for a one-unit change in xx
+    
+- **ε\varepsilon**  
+    Error term: captures noise or any variation not explained by the linear model
