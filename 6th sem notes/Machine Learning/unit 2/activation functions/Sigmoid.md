@@ -3,7 +3,7 @@
 # **Formula:** $$f(x) = \frac{1}{1 + e^{-x}}$$
 
 **Output Range:** 0 to 1
-
+![[Pasted image 20250609235351.png]]
 **Key Characteristics:**
 
 - S-shaped curve that smoothly transitions between 0 and 1
