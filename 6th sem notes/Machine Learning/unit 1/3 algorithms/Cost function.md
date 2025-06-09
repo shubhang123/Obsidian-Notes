@@ -1,4 +1,4 @@
-markdown
+
 ## Cost Function Overview  
 A **cost function** (or **loss function**) quantifies how far off a model’s predictions are from the true target values. In linear regression, it measures the average squared difference between the actual outputs and the predictions.
 
@@ -34,16 +34,16 @@ $J = \frac{1}{n} \sum_{i=1}^n \bigl(y^{(i)} - h(x^{(i)})\bigr)^2$
 
 To find the best parameters ($b_0, b_1, \dots$), we minimize $J$ using **gradient descent**:
 
-```markdown
+
 $b_j := b_j - \alpha \,\frac{\partial J}{\partial b_j}$
-```
+
 
 where
 
-```markdown
+
 $\displaystyle \frac{\partial J}{\partial b_j}
 = -\frac{2}{n} \sum_{i=1}^n \bigl(y^{(i)} - h(x^{(i)})\bigr)\,x_j^{(i)}$
-```
+
 
 - $\alpha$ is the learning rate controlling the step size.
     
