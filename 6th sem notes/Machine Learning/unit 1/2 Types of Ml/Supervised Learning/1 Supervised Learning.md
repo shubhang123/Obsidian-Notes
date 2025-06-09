@@ -48,92 +48,74 @@ Supervised learning is a machine learning paradigm where an algorithm learns to 
 7. **Deployment and Monitoring**:
    - Deploy the model in a real-world application (e.g., a spam filter in an email system).
    - Monitor performance and retrain with new data as needed.
-
-Sure! Here's the entire supervised learning notation formatted in **Markdown**, perfect for pasting into **Obsidian**:
-
-```markdown
+   - 
 # 🧠 Supervised Learning - Core Notation
 
 ## 📌 Training Example
 
 Each training example is a pair:
 
-```
+$$(x^{(i)}, y^{(i)})$$
 
-(x^{(i)}, y^{(i)})
-
-```
-
-- \( x^{(i)} \in \mathbb{R}^n \): input feature vector (n features)
-- \( y^{(i)} \): output (label/target), real or categorical
-- \( i \in \{1, 2, \dots, m\} \): index of training example
+- **Input**: $$x^{(i)} \in \mathbb{R}^n$$ (n-dimensional feature vector)
+- **Output**: $$y^{(i)}$$ (label/target value)
+- **Index**: $$i \in \{1, 2, \dots, m\}$$ (example position in dataset)
 
 ---
 
 ## 📚 Training Set
 
-A training set of `m` examples is:
+A collection of m examples:
 
-```
-
-𝒟 = {(x^{(1)}, y^{(1)}), (x^{(2)}, y^{(2)}), ..., (x^{(m)}, y^{(m)})}
-
-```
+$$\mathcal{D} = \{(x^{(1)}, y^{(1)}), (x^{(2)}, y^{(2)}), \dots, (x^{(m)}, y^{(m)})\}$$
 
 ---
 
 ## 📐 Hypothesis Function (Model)
 
-We aim to learn a function `h` such that:
+Mapping from input to prediction:
 
-```
+**Regression**:
+$$h: \mathbb{R}^n \rightarrow \mathbb{R}$$
 
-h: ℝⁿ → ℝ (for regression)  
-h: ℝⁿ → {1, 2, ..., K} (for classification)
+**Classification**:
+$$h: \mathbb{R}^n \rightarrow \{1, 2, \dots, K\}$$
 
-```
-
-In words: the hypothesis `h` maps an input `x` to a predicted output `y`.
-
-**Examples**:
-- Linear Regression: `h(x) = wᵀx + b`
-- Logistic Regression: `h(x) = σ(wᵀx + b)`
-- Neural Network: `h(x) = NN(x; θ)`
+**Common implementations**:
+- Linear Regression: $$h(x) = \mathbf{w}^\top \mathbf{x} + b$$
+- Logistic Regression: $$h(x) = \sigma(\mathbf{w}^\top \mathbf{x} + b)$$
+- Neural Network: $$h(x) = \text{NN}(x; \theta)$$
 
 ---
 
-## 🎯 Objective
+## 🎯 Optimization Objective
 
-Minimize the total loss across the training set:
+Minimize empirical risk:
 
-```
+$$\min_{\theta} \frac{1}{m} \sum_{i=1}^m \mathcal{L}(h(x^{(i)}), y^{(i)})$$
 
-minimize (1/m) ∑₍ᵢ₌₁₎^ᵐ 𝓛(h(x^{(i)}), y^{(i)})
-
-```
-
-Where:
-- `𝓛` is the loss function (e.g., MSE for regression, cross-entropy for classification)
+**Key components**:
+- $$\mathcal{L}$$: Loss function (MSE, Cross-Entropy, etc.)
+- $$\theta$$: Model parameters (weights, biases)
+- $$m$$: Number of training examples
 
 ---
 
-## 📝 Summary Table
+## 📝 Notation Reference Table
 
-| Symbol/Notation                 | Meaning                                 |
-|--------------------------------|-----------------------------------------|
-| `x^{(i)}`                      | Input features for example `i`          |
-| `y^{(i)}`                      | True output for example `i`             |
-| `(x^{(i)}, y^{(i)})`           | One training example                    |
-| `𝒟 = {all (x^{(i)}, y^{(i)})}` | Training dataset                        |
-| `h: x ↦ y`                     | Hypothesis function/model               |
-| `𝓛(h(x), y)`                  | Loss function used for training         |
+| Symbol                | Meaning                          | Type               |
+|-----------------------|----------------------------------|--------------------|
+| $$x^{(i)}$$           | Input features                   | Vector $$\in \mathbb{R}^n$$ |
+| $$y^{(i)}$$           | True label                       | Scalar             |
+| $$\mathcal{D}$$       | Training dataset                 | Set of pairs       |
+| $$h(\cdot)$$          | Hypothesis function              | Function           |
+| $$\mathcal{L}(\cdot)$$| Loss function                    | $$\mathbb{R} \rightarrow \mathbb{R}$$ |
 
 ---
 
-> ✅ Use this template as a base for any supervised ML problem (classification or regression).
-```
+## 🖼️ Visual Framework
 
-Let me know if you want this exported as a `.md` file or extended with examples and visuals!
+
 ## Common Algorithms
 1. **Linear Regression**:
    - Models a linear relationship between features and a continuous output.
