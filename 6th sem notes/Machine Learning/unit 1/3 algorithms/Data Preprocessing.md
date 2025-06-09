@@ -39,4 +39,6 @@ Data preprocessing is a vital step in preparing raw data for machine learning mo
 
 data preprocessing
 1. formatting
-2. 
+2. data cleaning
+	1. ways to handle missing data during cleaning
+		1. usinbg attribute mean to fill in the missing value
