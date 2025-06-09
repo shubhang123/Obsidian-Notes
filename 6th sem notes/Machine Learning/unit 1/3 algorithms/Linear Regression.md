@@ -22,43 +22,26 @@ $$
   Error term: captures noise or any variation not explained by the linear model  
 
 
-## What Is a Regression Line?
+Linear regression is a widely used statistical method that helps to **analyse and understand the relationship between two or more variables of interest**. Its primary goal is to **construct an efficient model to predict dependent attributes from a set of independent variables**. In a linear regression problem, the **output variable is typically a real or continuous value**, such as salary, weight, or area. This statistical method is used for **prediction and forecasting** in various industries, including finance, marketing, manufacturing, and medicine.
 
-A regression line—often called the “best-fit” line—is a straight line drawn through a scatter of data points to capture the general trend between an independent variable and a dependent variable.
+In this method, the relationship between the independent and dependent variables is assumed to be **linear**. This linear relationship can be summarised by a straight line, known as the **best-fit line**. The main goal of simple linear regression is to consider the given data points and plot this best-fit line to fit the model in the best way possible. This line can then be used to make predictions based on the data.
 
-## How It’s Determined
+**Key Terminologies in Linear Regression:**
 
-Rather than connecting two extreme observations, the regression line is positioned to minimize the overall vertical distances (residuals) between the actual data points and the line itself.
+- **Dependent Variable (Y):** This is the variable that the model attempts to **understand or forecast**.
+- **Independent Variables (X):** These are the factors that **influence the dependent variable** and provide information regarding its relationship with the target.
 
-## Why It’s Useful
+**Cost Function in Linear Regression:** To determine the best-fit line, a **cost function** is used to measure how well the model's predictions align with the actual observed values. For linear regression, the most common cost function is the **Mean Squared Error (MSE)**.
 
-By summarizing complex, noisy data in this way, the regression line provides a clear, intuitive depiction of how changes in the input relate to changes in the output.
+The MSE measures the **Root Mean Squared error between the predicted value and the true value**. It is calculated as the sum of the squared differences between the predictions and the actual values, divided by the number of observations. The formula for MSE is: $\text{MSE} = \text{Sum} [ (\text{Prediction} - \text{Actual})^2 ] \times (1 / \text{num_observations})$
 
-## Practical Applications
+A **smaller MSE value indicates that the model's predictions are closer to the actual values**, meaning the line of best fit is more accurate. However, if the data is widely scattered around the regression line, it might be impossible to achieve a very small MSE. Unlike in logistic regression, where using MSE would result in a non-convex function with many local minimums, making it very difficult to minimise and find the global minimum, MSE is suitable for linear regression.
 
-Once fitted to historical data, the regression line’s slope and intercept allow you to:
+**Minimising the Cost Function:** The primary goal in training a linear regression model is to **minimise this cost function**. This is achieved by finding the optimal values for the model's parameters (weights or coefficients, often denoted as $\theta_1$ and $\theta_2$, or 'm' and 'c' which refer to coefficient 1 and coefficient 2, or weight 1 and weight 2).
 
-- **Make predictions** for new inputs
-    
-- **Measure relationship strength** between variables
-    
-- **Estimate explained variability**, showing what portion of the target’s variation the model accounts for
-    
+The process of minimising the cost function typically involves:
 
-Using a regression line offers both a powerful tool for understanding real-world phenomena and a simple, interpretable basis for forecasting.
-
-## Main Goal of Linear Regression
-
-The primary objective of the linear regression method is to find a straight-line equation that best describes the relationship between one or more input variables and a continuous target variable. In practical terms, it seeks to:
-
-- **Estimate the underlying relationship**  
-    Determine how changes in each independent variable are associated with changes in the dependent variable.
-    
-- **Minimize prediction error**  
-    Position the line so that the sum of squared vertical distances (residuals) between the observed values and the line is as small as possible.
-    
-- **Enable forecasting and inference**  
-    Once the best-fit line is established, use its slope and intercept to predict new outcomes, assess the strength of associations, and quantify how much of the target’s variability is explained by the model.
-    
-
-By accomplishing these goals, linear regression provides both an interpretable summary of past data and a straightforward mechanism for making future predictions.
+1. **Initialisation:** The model initially selects parameter values randomly.
+2. **Iterative Updates:** These parameter values are then iteratively updated to minimise the cost function until it reaches its minimum.
+3. **Gradient Descent:** The process of reducing the cost value is done using **Gradient Descent**. Gradient Descent helps to **find the global minimum of the cost function** by indicating the direction in which the parameters should be adjusted. This involves calculating the derivatives (gradients) with respect to the parameters (m and c). The 'learning rate' (L), also sometimes represented as $\alpha$ or $\eta$ or $\epsilon$, controls the step size of these updates. The parameters are updated using the following equation where L is the learning rate: $m = m - L \times (\text{derivative of cost function with respect to } m)$ $c = c - L \times (\text{derivative of cost function with respect to } c)$
+4. **Convergence:** This iterative process continues until the cost function reaches its minimum, at which point the model obtains the best parameter values for predicting the dependent variable.
