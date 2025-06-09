@@ -48,7 +48,8 @@ Supervised learning is a machine learning paradigm where an algorithm learns to 
 7. **Deployment and Monitoring**:
    - Deploy the model in a real-world application (e.g., a spam filter in an email system).
    - Monitor performance and retrain with new data as needed.
-   - 
+
+![[Pasted image 20250609141600.png]]
 # 🧠 Supervised Learning - Core Notation
 
 ## 📌 Training Example
