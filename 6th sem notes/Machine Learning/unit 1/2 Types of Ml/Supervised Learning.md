@@ -1,6 +1,4 @@
 
-# Notes on Supervised Learning
-
 ## Definition
 Supervised learning is a machine learning paradigm where an algorithm learns to map input data to corresponding output labels based on a labeled dataset. The model is trained on examples where both the input (features) and the desired output (labels) are provided, enabling it to make predictions or decisions on new, unseen data.
 
@@ -24,20 +22,7 @@ Supervised learning is a machine learning paradigm where an algorithm learns to 
 6. **Optimization**:
    - The process of minimizing the loss function by adjusting model parameters, typically using techniques like gradient descent.
 
-## Types of Supervised Learning
-1. **Classification**:
-   - Predicts discrete labels (categories).
-   - Examples:
-     - Binary Classification: Spam vs. not spam, disease vs. no disease.
-     - Multi-Class Classification: Identifying handwritten digits (0-9).
-     - Multi-Label Classification: Assigning multiple labels to an instance (e.g., tagging a photo with multiple objects).
-   - Common Algorithms: Logistic Regression, Support Vector Machines (SVM), Decision Trees, Random Forests, Neural Networks.
-2. **Regression**:
-   - Predicts continuous values.
-   - Examples:
-     - Predicting house prices based on features.
-     - Forecasting stock prices or temperature.
-   - Common Algorithms: Linear Regression, Polynomial Regression, Ridge/Lasso Regression, Gradient Boosting.
+
 
 ## Workflow of Supervised Learning
 1. **Data Collection**:
@@ -125,13 +110,6 @@ Supervised learning is a machine learning paradigm where an algorithm learns to 
 7. **Assumption of Stationarity**:
    - Assumes training and test data follow the same distribution; performance drops if data drifts over time.
 
-## Practical Considerations
-- **Feature Engineering**: Selecting or creating relevant features significantly impacts model performance.
-- **Hyperparameter Tuning**: Optimizing parameters (e.g., learning rate, tree depth) using grid search or random search.
-- **Cross-Validation**: Using k-fold cross-validation to ensure robust performance estimates.
-- **Handling Imbalanced Data**: Techniques like oversampling (SMOTE), undersampling, or class weighting for skewed datasets.
-- **Ethical Concerns**: Ensure fairness by mitigating biases in data and regularly auditing model outcomes.
-
 ## Applications
 - **Healthcare**: Predicting disease risk, diagnosing from medical images.
 - **Finance**: Credit scoring, fraud detection, stock price prediction.
@@ -146,5 +124,21 @@ Supervised learning is a machine learning paradigm where an algorithm learns to 
 4. **Training**: Minimize cross-entropy loss using gradient descent.
 5. **Evaluation**: Measure precision, recall, and F1-score on a test set.
 6. **Deployment**: Integrate the model into an email client to filter spam in real-time.
+
+
+## Types of Supervised Learning
+1. **Classification**:
+   - Predicts discrete labels (categories).
+   - Examples:
+     - Binary Classification: Spam vs. not spam, disease vs. no disease.
+     - Multi-Class Classification: Identifying handwritten digits (0-9).
+     - Multi-Label Classification: Assigning multiple labels to an instance (e.g., tagging a photo with multiple objects).
+   - Common Algorithms: Logistic Regression, Support Vector Machines (SVM), Decision Trees, Random Forests, Neural Networks.
+2. **Regression**:
+   - Predicts continuous values.
+   - Examples:
+     - Predicting house prices based on features.
+     - Forecasting stock prices or temperature.
+   - Common Algorithms: Linear Regression, Polynomial Regression, Ridge/Lasso Regression, Gradient Boosting.
 
 Supervised learning is a cornerstone of machine learning, offering robust solutions for predictive tasks when labeled data is available, but its success hinges on data quality, model selection, and careful evaluation.
