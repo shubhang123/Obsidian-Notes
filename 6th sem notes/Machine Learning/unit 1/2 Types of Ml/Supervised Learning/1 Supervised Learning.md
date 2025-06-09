@@ -126,19 +126,5 @@ Supervised learning is a machine learning paradigm where an algorithm learns to 
 6. **Deployment**: Integrate the model into an email client to filter spam in real-time.
 
 
-## Types of Supervised Learning
-1. **Classification**:
-   - Predicts discrete labels (categories).
-   - Examples:
-     - Binary Classification: Spam vs. not spam, disease vs. no disease.
-     - Multi-Class Classification: Identifying handwritten digits (0-9).
-     - Multi-Label Classification: Assigning multiple labels to an instance (e.g., tagging a photo with multiple objects).
-   - Common Algorithms: Logistic Regression, Support Vector Machines (SVM), Decision Trees, Random Forests, Neural Networks.
-2. **Regression**:
-   - Predicts continuous values.
-   - Examples:
-     - Predicting house prices based on features.
-     - Forecasting stock prices or temperature.
-   - Common Algorithms: Linear Regression, Polynomial Regression, Ridge/Lasso Regression, Gradient Boosting.
 
 Supervised learning is a cornerstone of machine learning, offering robust solutions for predictive tasks when labeled data is available, but its success hinges on data quality, model selection, and careful evaluation.
