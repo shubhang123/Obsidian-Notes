@@ -46,3 +46,19 @@ Once fitted to historical data, the regression line’s slope and intercept allo
     
 
 Using a regression line offers both a powerful tool for understanding real-world phenomena and a simple, interpretable basis for forecasting.
+
+## Main Goal of Linear Regression
+
+The primary objective of the linear regression method is to find a straight-line equation that best describes the relationship between one or more input variables and a continuous target variable. In practical terms, it seeks to:
+
+- **Estimate the underlying relationship**  
+    Determine how changes in each independent variable are associated with changes in the dependent variable.
+    
+- **Minimize prediction error**  
+    Position the line so that the sum of squared vertical distances (residuals) between the observed values and the line is as small as possible.
+    
+- **Enable forecasting and inference**  
+    Once the best-fit line is established, use its slope and intercept to predict new outcomes, assess the strength of associations, and quantify how much of the target’s variability is explained by the model.
+    
+
+By accomplishing these goals, linear regression provides both an interpretable summary of past data and a straightforward mechanism for making future predictions.
