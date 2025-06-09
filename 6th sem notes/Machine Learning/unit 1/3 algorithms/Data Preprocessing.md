@@ -42,3 +42,9 @@ data preprocessing
 2. data cleaning
 	1. ways to handle missing data during cleaning
 		1. usinbg attribute mean to fill in the missing value
+		2. rpedict the missing value using learninig algo like decition tree etc
+		3. using global constant like na
+		4. ignore the tuple
+	2. techniques to identify outlier & smooth out noisy data
+		1. binining(bin mean, bin medium, bin boundary)
+		2. 
