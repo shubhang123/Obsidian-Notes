@@ -49,23 +49,15 @@ vector<int> g[N];
 int parents[N];
 
 void dfs(int vertex, int parent) {
-    /* Take action on vertex after entering
-       the vertex
-    */
+
     parents[vertex] = parent;
     for (int child : g[vertex]) {
         if (child == parent) continue;
-        /*Take action on child before
-          entering the child node for dfs
-        */
+
         dfs(child, vertex);
-        /*Take action on child
-        after exiting the child node
-        */
+  
     }
-    /*Take action on vertex before
-    exiting the vertex
-    */
+  
 }
 
 vector<int> pathTo(int vertex) {
