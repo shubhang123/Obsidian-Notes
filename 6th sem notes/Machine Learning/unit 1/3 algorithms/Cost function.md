@@ -1,54 +1,39 @@
-## Where the Cost Function Comes In
+## Hypothesis Function
 
-In linear regression, we fit the parameters (intercept and slopes) by **minimizing** a cost function. In practice this happens during the “model training” step:
+In linear regression, we define a **hypothesis function** h(x)h(x) that represents our model’s prediction. This function maps an input variable xx to a predicted output yy. It typically takes the form of a straight line:
 
-1. **Define hypothesis**  
-   We propose  
-   $$
-   \hat y = \beta_0 + \beta_1 x + \dots + \beta_p x_p.
-   $$
-2. **Compute cost**  
-   For a given choice of parameters $\boldsymbol{\beta}$, the cost function measures how well the line explains the training data.  
-3. **Optimize parameters**  
-   We adjust $\boldsymbol{\beta}$ to find the minimum of that cost function—i.e. the parameter values that make predictions as close as possible to the actual targets.  
+```markdown
+h(x) = b₀ + b₁·x
+```
+
+where b0b₀ (the intercept) and b1b₁ (the slope) are parameters the model will learn.
 
 ---
 
-## Definition of the Cost Function
+## Goal of Linear Regression
 
-The most common cost function in linear regression is the **Mean Squared Error (MSE)**. For $m$ training examples, it’s defined as:
-
-$$
-J(\boldsymbol{\beta})
-= \frac{1}{2m}\sum_{i=1}^{m}
-  \bigl(\hat y^{(i)} - y^{(i)}\bigr)^2
-= \frac{1}{2m}\sum_{i=1}^{m}
-  \bigl(\mathbf{x}^{(i)\top}\boldsymbol{\beta} - y^{(i)}\bigr)^2.
-$$
-
-- The factor $\tfrac12$ is a convenience so that the derivative is simpler (it cancels the 2 in front).  
-- $\hat y^{(i)} = \mathbf{x}^{(i)\top}\boldsymbol{\beta}$ is the model’s prediction for the $i$-th example.  
-- $y^{(i)}$ is the true label.  
+The primary objective of linear regression is to find the best-fit line that accurately predicts the dependent variable y from the independent variable x. In other words, we want to choose b₀ and b₁ such that the difference between our predicted values h(x)h(x) and the true values y is as small as possible across all training examples.
 
 ---
 
-## Intuition Behind the Cost Function
+## Role of the Cost Function
 
-- Each term $(\hat y^{(i)} - y^{(i)})^2$ is the **squared error** for one data point.  
-- Squaring penalizes large errors more heavily and ensures the cost is always non-negative.  
-- Summing over all $m$ points gives a single measure of overall “badness of fit.”  
-- Dividing by $m$ (or $2m$) makes the scale independent of dataset size and simplifies gradient expressions.
+To quantify how “off” our predictions are, we use a **cost function**. The cost function measures the average error between the predicted values and the actual values over the entire training set. By minimizing this cost function, we guide the model toward the best parameter values.
 
 ---
 
-## How It’s Minimized
+## Mean Squared Error (MSE) Cost Function
 
-To find the best parameters, we solve:
+One of the most common cost functions in linear regression is the **Mean Squared Error** (MSE). It calculates the average of the squared differences between the predicted and actual values:
 
-$$
-\boldsymbol{\beta}^\star = \arg\min_{\boldsymbol{\beta}} J(\boldsymbol{\beta}).
-$$
+- **Why square the errors?**  
+    Squaring ensures that positive and negative errors don’t cancel out and penalizes larger errors more heavily.
+    
+- **Why take the average?**  
+    Averaging over all training examples gives a single scalar measure of overall model performance, making it easier to compare and optimize.
+    
 
+By iteratively adjusting b0b₀ and b1b₁ (e.g., via gradient descent), the algorithm seeks to minimize the MSE cost function, thereby achieving the most accurate predictions possible.
 Two common methods:
 
 1. **Normal equation (closed-form)**  
