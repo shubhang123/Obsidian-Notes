@@ -1,49 +1,54 @@
-Linear regression is one of the simplest—and most widely used—supervised learning algorithms in machine learning. It’s primarily employed for predictive analysis, modeling a continuous target variable (for example, house prices, product costs, or salaries) as a function of one or more independent (input) variables. By assuming a linear relationship between the inputs and the output, linear regression estimates the best-fit line (or hyperplane in multiple dimensions) that explains how changes in each independent variable influence the dependent variable. This straightforward approach makes it both easy to implement and highly interpretable, which is why it remains a foundational tool for forecasting and data-driven decision-making.
+# Linear Regression Overview
 
-![[Pasted image 20250609150627.png]]
+Linear regression is a fundamental supervised learning algorithm widely used in machine learning for predictive analysis. It models a continuous target variable (e.g., house prices, product costs, or salaries) as a function of one or more independent variables. By assuming a linear relationship between inputs and outputs, linear regression estimates the best-fit line (or hyperplane in higher dimensions) to describe how changes in independent variables affect the dependent variable. Its simplicity and interpretability make it a cornerstone for forecasting and data-driven decision-making.
 
 ## Hypothesis Function for Simple Linear Regression
 
-The model assumes a linear relationship between an input \(x\) and an output \(y\), plus random noise:
+The model assumes a linear relationship between an input $x$ and an output $y$, plus random noise:
 
-$$
-y = \beta_0 + \beta_1\,x + \varepsilon
-$$
+# $y = \beta_0 + \beta_1 x + \varepsilon$
 
-- **$x$**  
-  Independent variable (feature) from the training data  
-- **$y$**  
-  Dependent variable (label) we want to predict  
-- **$\beta_0$**  
-  Intercept: the value of $y$ when $x = 0$  
-- **$\beta_1$**  
-  Slope (coefficient): the change in $y$ for a one-unit change in $x$  
-- **$\varepsilon$**  
-  Error term: captures noise or any variation not explained by the linear model  
+- **$x$**: Independent variable (feature) from the training data
+- **$y$**: Dependent variable (label) to predict
+- **$\beta_0$**: Intercept, the value of $y$ when $x = 0$
+- **$\beta_1$**: Slope (coefficient), the change in $y$ for a one-unit change in $x$
+- **$\varepsilon$**: Error term, capturing noise or variation not explained by the linear model
 
+## Purpose and Applications
 
-Linear regression is a widely used statistical method that helps to **analyse and understand the relationship between two or more variables of interest**. Its primary goal is to **construct an efficient model to predict dependent attributes from a set of independent variables**. In a linear regression problem, the **output variable is typically a real or continuous value**, such as salary, weight, or area. This statistical method is used for **prediction and forecasting** in various industries, including finance, marketing, manufacturing, and medicine.
+Linear regression is a statistical method used to **analyze and understand relationships** between variables. Its primary goal is to **construct an efficient model to predict dependent attributes** from a set of independent variables. The output variable is typically a real or continuous value, such as salary, weight, or area. This method is widely applied in industries like finance, marketing, manufacturing, and medicine for **prediction and forecasting**.
 
-In this method, the relationship between the independent and dependent variables is assumed to be **linear**. This linear relationship can be summarised by a straight line, known as the **best-fit line**. The main goal of simple linear regression is to consider the given data points and plot this best-fit line to fit the model in the best way possible. This line can then be used to make predictions based on the data.
+The relationship between independent and dependent variables is assumed to be **linear**, represented by a **best-fit line**. The goal of simple linear regression is to fit this line to the data points as accurately as possible, enabling reliable predictions.
 
-**Key Terminologies in Linear Regression:**
+## Key Terminologies
 
-- **Dependent Variable (Y):** This is the variable that the model attempts to **understand or forecast**.
-- **Independent Variables (X):** These are the factors that **influence the dependent variable** and provide information regarding its relationship with the target.
+- **Dependent Variable ($y$)**: The variable the model aims to predict or understand.
+- **Independent Variables ($x$)**: Factors that influence the dependent variable, providing insights into its relationship with the target.
 
-**Cost Function in Linear Regression:** To determine the best-fit line, a **cost function** is used to measure how well the model's predictions align with the actual observed values. For linear regression, the most common cost function is the **Mean Squared Error (MSE)**.
+## Cost Function in Linear Regression
 
-The MSE measures the **Root Mean Squared error between the predicted value and the true value**. It is calculated as the sum of the squared differences between the predictions and the actual values, divided by the number of observations. The formula for MSE is: 
+To determine the best-fit line, a **cost function** measures how well the model's predictions align with actual values. The most common cost function for linear regression is the **Mean Squared Error (MSE)**, which calculates the average of the squared differences between predicted and actual values:
 
 # $\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$
 
-A **smaller MSE value indicates that the model's predictions are closer to the actual values**, meaning the line of best fit is more accurate. However, if the data is widely scattered around the regression line, it might be impossible to achieve a very small MSE. Unlike in logistic regression, where using MSE would result in a non-convex function with many local minimums, making it very difficult to minimise and find the global minimum, MSE is suitable for linear regression.
+- A **smaller MSE** indicates predictions closer to actual values, signifying a more accurate best-fit line.
+- If data is widely scattered, achieving a very small MSE may be challenging.
+- Unlike logistic regression, where MSE leads to a non-convex function with multiple local minima, MSE is suitable for linear regression as it forms a convex function, making optimization easier.
 
-**Minimising the Cost Function:** The primary goal in training a linear regression model is to **minimise this cost function**. This is achieved by finding the optimal values for the model's parameters (weights or coefficients, often denoted as $\theta_1$ and $\theta_2$, or 'm' and 'c' which refer to coefficient 1 and coefficient 2, or weight 1 and weight 2).
+## Minimizing the Cost Function
 
-The process of minimising the cost function typically involves:
+The goal of training a linear regression model is to **minimize the cost function** by finding optimal parameter values (weights or coefficients, denoted as $m$ for slope and $c$ for intercept, or sometimes $\theta_1$ and $\theta_0$). This is achieved through:
 
-1. **Initialisation:** The model initially selects parameter values randomly.
-2. **Iterative Updates:** These parameter values are then iteratively updated to minimise the cost function until it reaches its minimum.
-3. **Gradient Descent:** The process of reducing the cost value is done using **Gradient Descent**. Gradient Descent helps to **find the global minimum of the cost function** by indicating the direction in which the parameters should be adjusted. This involves calculating the derivatives (gradients) with respect to the parameters (m and c). The 'learning rate' (L), also sometimes represented as $\alpha$ or $\eta$ or $\epsilon$, controls the step size of these updates. The parameters are updated using the following equation where L is the learning rate: $m = m - L \times (\text{derivative of cost function with respect to } m)$ $c = c - L \times (\text{derivative of cost function with respect to } c)$
-4. **Convergence:** This iterative process continues until the cost function reaches its minimum, at which point the model obtains the best parameter values for predicting the dependent variable.
+1. **Initialization**: Parameters are initially set to random values.
+    
+2. **Iterative Updates**: Parameters are iteratively adjusted to reduce the cost function.
+    
+3. **Gradient Descent**: This algorithm finds the global minimum of the cost function by computing gradients (derivatives) with respect to the parameters ($m$ and $c$). The **learning rate ($L$)**, also denoted as $\alpha$ or $\eta$, controls the step size of updates. The update rules are:
+    
+    ## $m = m - L \times \frac{\partial \text{MSE}}{\partial m}$
+    
+    
+    ## $c = c - L \times \frac{\partial \text{MSE}}{\partial c}$
+
+
+4. **Convergence**: The process continues until the cost function reaches its minimum, yielding the optimal parameters for accurate predictions.
