@@ -13,7 +13,7 @@ A neural network is a multi-layer network of interconnected processing units cal
 - **Output Layer**: This is the final layer of the network, which produces the network's prediction or classification. For a digit recognition task, it would output the predicted digit.
 - **Weights (W)**: Neurons are connected by **weights**, which determine how much influence one neuron has on another. These weights are the **learning parameters** that the network optimizes during training.
 - **Biases (b)**: Hidden and output neurons also include a **bias**. The bias is added to the weighted sum of inputs for a neuron.
-
+![[Pasted image 20250609233141.png]]
 ### 2. How Neural Networks Process Data: The Forward Pass
 
 In a neural network, every neuron performs two main computations:
