@@ -159,5 +159,6 @@ last stae in preparing data for ML tasks
 
 data can be transformed through normalization / scaling, decomposition or aggregration
 
-1) normalization
-	
+1) normalization with examples
+		1. min max normalizton 
+		2. 
