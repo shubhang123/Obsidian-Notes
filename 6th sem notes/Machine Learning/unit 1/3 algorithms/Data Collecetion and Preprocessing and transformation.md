@@ -154,14 +154,110 @@ Outliers are data points that deviate significantly from the rest of the dataset
     - **Example**: In a dataset of house prices vs. size, fitting a linear regression model and flagging houses with prices far from the predicted line as outliers, or replacing noisy price values with predicted ones.
 
 
-data transformation
-last stae in preparing data for ML tasks
 
-data can be transformed through normalization / scaling, decomposition or aggregration
+## Data Transformation
 
-1) normalization with examples
-		1. min max normalizton 
-		2. z score normalization ( zero mean normalization )
-		3. decimal scaling
-2. aggregation
-3. decomposition
+Data transformation is the last stage in preparing data for machine learning tasks. It involves modifying the data’s structure, scale, or format to make it more suitable for modeling. Common techniques include **normalization/scaling**, **aggregation**, and **decomposition**, each addressing specific data characteristics to enhance model training.
+
+### 1. Normalization/Scaling
+
+- **Definition**: Normalization adjusts the values of numerical features to a common scale, typically within a specific range, without distorting their relative differences. Scaling ensures features contribute equally to the model, especially for algorithms sensitive to feature magnitudes (e.g., gradient descent-based models, SVMs, or k-NN).
+- **Purpose**: To standardize feature ranges, reduce the impact of differing scales, and improve convergence and performance of machine learning algorithms.
+- **Details**:
+    - Normalization is crucial when features have different units or ranges (e.g., age in years vs. income in dollars).
+    - Prevents features with larger ranges from dominating the model’s learning process.
+    - Common methods include min-max normalization, z-score normalization, and decimal scaling.
+
+#### 1.1 Min-Max Normalization
+
+- **Description**: Scales the data to a fixed range, typically [0, 1] or [-1, 1], by transforming each value based on the minimum and maximum values of the feature.
+- **Formula**:  
+    $$
+x' = \frac{x - \min(x)}{\max(x) - \min(x)} \times (\text{new\_max} - \text{new\_min}) + \text{new\_min}
+$$
+
+    - Where $x$ is the original value, $x'$ is the normalized value, $\min(x)$ and $\max(x)$ are the feature’s minimum and maximum values, and $\text{new_min}$ and $\text{new_max}$ define the target range (e.g., 0 and 1).
+- **Advantages**:
+    - Preserves the relationships between values.
+    - Simple and effective for bounded ranges.
+- **Disadvantages**:
+    - Sensitive to outliers, as extreme values can compress the majority of data into a small range.
+    - Requires re-computation if new data changes the min or max.
+- **Example**:
+    - Dataset: House sizes [100, 200, 300, 400, 500] (in square meters).
+    - Goal: Normalize to [0, 1].
+    - $\min(x) = 100$, $\max(x) = 500$, $\text{new_min} = 0$, $\text{new_max} = 1$.
+    - For $x = 200$:  
+        $x' = \frac{200 - 100}{500 - 100} \cdot (1 - 0) + 0 = \frac{100}{400} = 0.25$.
+    - Normalized values: [0, 0.25, 0.5, 0.75, 1].
+
+#### 1.2 Z-Score Normalization (Zero-Mean Normalization)
+
+- **Description**: Scales data to have a mean of 0 and a standard deviation of 1, transforming values based on their distance from the mean in terms of standard deviations.
+- **Formula**:  
+    $x' = \frac{x - \mu}{\sigma}$
+    - Where $x$ is the original value, $x'$ is the normalized value, $\mu$ is the mean of the feature, and $\sigma$ is the standard deviation.
+- **Advantages**:
+    - Robust to outliers compared to min-max normalization.
+    - Suitable for data with a normal distribution or when feature ranges are unknown.
+- **Disadvantages**:
+    - Assumes data follows a roughly normal distribution for best results.
+    - May produce negative values, which some algorithms may not handle well.
+- **Example**:
+    - Dataset: Exam scores [60, 70, 80, 90, 100].
+    - Mean: $\mu = \frac{60 + 70 + 80 + 90 + 100}{5} = 80$.
+    - Standard deviation: $\sigma = \sqrt{\frac{(60-80)^2 + (70-80)^2 + (80-80)^2 + (90-80)^2 + (100-80)^2}{5}} = \sqrt{\frac{400 + 100 + 0 + 100 + 400}{5}} = \sqrt{200} \approx 14.14$.
+    - For $x = 70$:  
+        $x' = \frac{70 - 80}{14.14} \approx -0.707$.
+    - Normalized values: [-1.414, -0.707, 0, 0.707, 1.414].
+
+#### 1.3 Decimal Scaling
+
+- **Description**: Scales data by moving the decimal point of values, dividing by a power of 10 based on the maximum absolute value in the feature.
+- **Formula**:  
+    $x' = \frac{x}{10^j}$
+    - Where $x$ is the original value, $x'$ is the normalized value, and $j$ is the smallest integer such that $\max(|x'|) < 1$.
+- **Advantages**:
+    - Simple and preserves the data’s relative proportions.
+    - Less sensitive to outliers than min-max normalization.
+- **Disadvantages**:
+    - May result in very small values, requiring careful handling.
+    - Less common than other normalization techniques.
+- **Example**:
+    - Dataset: Salaries [5000, 10000, 25000, 40000].
+    - Maximum absolute value: 40000, so $j = \lceil \log_{10}(40000) \rceil = 5$.
+    - For $x = 10000$:  
+        $x' = \frac{10000}{10^5} = 0.1$.
+    - Normalized values: [0.05, 0.1, 0.25, 0.4].
+
+### 2. Aggregation
+
+- **Definition**: Combining multiple data points or features into a single value or reduced set of values to summarize information or reduce dataset complexity.
+- **Purpose**: To simplify the dataset, reduce dimensionality, or extract meaningful patterns while retaining essential information for modeling.
+- **Details**:
+    - Common in time-series data, where values are aggregated over time intervals (e.g., daily, monthly).
+    - Methods include summing, averaging, taking the maximum/minimum, or counting occurrences.
+    - Reduces noise and storage requirements but may lose fine-grained details.
+    - Useful for creating higher-level features (e.g., total sales per region).
+- **Example**:
+    - Dataset: Daily sales of a store [100, 120, 110, 90, 130] for a week.
+    - Aggregation: Compute the weekly average sales.
+    - Average: $\frac{100 + 120 + 110 + 90 + 130}{5} = 110$.
+    - Result: Replace daily sales with a single value (110) for the week.
+    - Another example: Summing monthly website visits per user to get total annual visits.
+
+### 3. Decomposition
+
+- **Definition**: Breaking down complex data into simpler components or features to capture underlying patterns or reduce dimensionality.
+- **Purpose**: To simplify data representation, extract meaningful features, or transform data into a format more suitable for machine learning models.
+- **Details**:
+    - Common techniques include Principal Component Analysis (PCA), Singular Value Decomposition (SVD), or time-series decomposition (e.g., separating trend, seasonality, and residuals).
+    - Reduces dimensionality by projecting data onto a lower-dimensional space while preserving variance.
+    - Useful for high-dimensional datasets (e.g., images, text embeddings) or when features are highly correlated.
+    - May involve creating new features (e.g., principal components) that are linear combinations of original features.
+- **Example**:
+    - Dataset: 3D data points with features [length, width, height] of boxes.
+    - Decomposition: Apply PCA to reduce to 2D by finding principal components that capture most of the variance.
+    - Original features: [length, width, height] = [10, 8, 6], [12, 9, 7], etc.
+    - PCA result: New features (e.g., PC1, PC2) representing linear combinations of original features, reducing dimensionality while retaining most information.
+    - Another example: Decomposing a time-series of monthly sales into trend (overall increase/decrease), seasonal (e.g., holiday spikes), and residual components.
