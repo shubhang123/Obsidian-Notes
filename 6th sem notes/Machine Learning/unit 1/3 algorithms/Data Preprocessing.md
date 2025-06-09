@@ -7,4 +7,4 @@ Whenever the data is gathered from different in raw Sources it is collected in f
 steps -
 1) data collection
 2)  data augmentation
-3) 
+3) data labelling
