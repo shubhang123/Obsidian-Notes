@@ -145,6 +145,7 @@ Reinforcement Learning (RL) is a machine learning paradigm where an **agent** le
 7. **Deploy and Monitor**:
     - Deploy the trained agent in the target environment.
     - Monitor performance and retrain if the environment changes (e.g., concept drift).
+- ![[Pasted image 20250609145324.png]]
 
 ## Evaluation Metrics
 
