@@ -1,8 +1,1 @@
-it is a machine learning algorithm based on supervised learning
-it is the easiers tand mos tpoplar ML algorithm
-
-it is used for predfictive analysis
-
-it makes predictions for continuous real variables , such as price of producy/ house, salary etc
-
-regression model a targer pre
+Linear regression is one of the simplest—and most widely used—supervised learning algorithms in machine learning. It’s primarily employed for predictive analysis, modeling a continuous target variable (for example, house prices, product costs, or salaries) as a function of one or more independent (input) variables. By assuming a linear relationship between the inputs and the output, linear regression estimates the best-fit line (or hyperplane in multiple dimensions) that explains how changes in each independent variable influence the dependent variable. This straightforward approach makes it both easy to implement and highly interpretable, which is why it remains a foundational tool for forecasting and data-driven decision-making.
