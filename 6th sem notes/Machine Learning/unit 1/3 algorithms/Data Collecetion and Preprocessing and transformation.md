@@ -1,6 +1,5 @@
-# Data Preprocessing Overview
-
-Data preprocessing is a vital step in preparing raw data for machine learning models. The quality of the input data directly influences a model's ability to learn effectively, making preprocessing essential for transforming raw data into a clean, structured dataset suitable for analysis. Raw data, often collected from diverse sources, is typically inconsistent, incomplete, or noisy, rendering it unsuitable for direct use in modeling. Data preprocessing addresses these issues to ensure the data is ready for machine learning tasks.
+steps involved in data preparation for ML is 
+data collection -> data preprocessing -> data transformation
 
 ## Steps in Data Collection
 
@@ -153,3 +152,9 @@ Outliers are data points that deviate significantly from the rest of the dataset
         - Assumes a specific relationship (e.g., linear) that may not always apply.
         - Sensitive to the choice of regression model.
     - **Example**: In a dataset of house prices vs. size, fitting a linear regression model and flagging houses with prices far from the predicted line as outliers, or replacing noisy price values with predicted ones.
+
+
+data transformation
+last stae in preparing data for ML tasks
+
+it 
