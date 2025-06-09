@@ -21,3 +21,28 @@ $$
 - **$\varepsilon$**  
   Error term: captures noise or any variation not explained by the linear model  
 
+
+## What Is a Regression Line?
+
+A regression line—often called the “best-fit” line—is a straight line drawn through a scatter of data points to capture the general trend between an independent variable and a dependent variable.
+
+## How It’s Determined
+
+Rather than connecting two extreme observations, the regression line is positioned to minimize the overall vertical distances (residuals) between the actual data points and the line itself.
+
+## Why It’s Useful
+
+By summarizing complex, noisy data in this way, the regression line provides a clear, intuitive depiction of how changes in the input relate to changes in the output.
+
+## Practical Applications
+
+Once fitted to historical data, the regression line’s slope and intercept allow you to:
+
+- **Make predictions** for new inputs
+    
+- **Measure relationship strength** between variables
+    
+- **Estimate explained variability**, showing what portion of the target’s variation the model accounts for
+    
+
+Using a regression line offers both a powerful tool for understanding real-world phenomena and a simple, interpretable basis for forecasting.
