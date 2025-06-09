@@ -47,4 +47,5 @@ data preprocessing
 		4. ignore the tuple
 	2. techniques to identify outlier & smooth out noisy data
 		1. binining(bin mean, bin medium, bin boundary)
-		2. 
+		2. clustering
+		3. regression
