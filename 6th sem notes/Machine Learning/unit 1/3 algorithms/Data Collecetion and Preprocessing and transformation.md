@@ -157,4 +157,7 @@ Outliers are data points that deviate significantly from the rest of the dataset
 data transformation
 last stae in preparing data for ML tasks
 
-it 
+data can be transformed through normalization / scaling, decomposition or aggregration
+
+1) normalization
+	
