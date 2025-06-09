@@ -176,7 +176,8 @@ Data transformation is the last stage in preparing data for machine learning tas
 x' = \frac{x - \min(x)}{\max(x) - \min(x)} \times (\text{new\_max} - \text{new\_min}) + \text{new\_min}
 $$
 
-    - Where $x$ is the original value, $x'$ is the normalized value, $\min(x)$ and $\max(x)$ are the feature’s minimum and maximum values, and $\text{new_min}$ and $\text{new_max}$ define the target range (e.g., 0 and 1).
+    - Where $x$ is the original value, $x'$ is the normalized value, $\min(x)$ and $\max(x)$ are the feature’s minimum and maximum values, and $\text{new\_min}$
+ and $\text{new\_max}$ define the target range (e.g., 0 and 1).
 - **Advantages**:
     - Preserves the relationships between values.
     - Simple and effective for bounded ranges.
@@ -186,7 +187,7 @@ $$
 - **Example**:
     - Dataset: House sizes [100, 200, 300, 400, 500] (in square meters).
     - Goal: Normalize to [0, 1].
-    - $\min(x) = 100$, $\max(x) = 500$, $\text{new_min} = 0$, $\text{new_max} = 1$.
+    - $\min(x) = 100$, $\max(x) = 500$, $\text{new\_min} = 0$, $\text{new\_max} = 1$.
     - For $x = 200$:  
         $x' = \frac{200 - 100}{500 - 100} \cdot (1 - 0) + 0 = \frac{100}{400} = 0.25$.
     - Normalized values: [0, 0.25, 0.5, 0.75, 1].
