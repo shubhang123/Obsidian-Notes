@@ -4,21 +4,20 @@ Linear regression is one of the simplest—and most widely used—supervised lea
 
 ## Hypothesis Function for Simple Linear Regression
 
-The model assumes a linear relationship between an input xx and an output yy, plus random noise:
+The model assumes a linear relationship between an input \(x\) and an output \(y\), plus random noise:
 
-y=β0+β1 x+εy = \beta_0 + \beta_1\,x + \varepsilon
+$$
+y = \beta_0 + \beta_1\,x + \varepsilon
+$$
 
-- **xx**  
-    Independent variable (feature) from the training data
-    
-- **yy**  
-    Dependent variable (label) we want to predict
-    
-- **β0\beta_0**  
-    Intercept: the value of yy when x=0x = 0
-    
-- **β1\beta_1**  
-    Slope (coefficient): the change in yy for a one-unit change in xx
-    
-- **ε\varepsilon**  
-    Error term: captures noise or any variation not explained by the linear model
+- **$x$**  
+  Independent variable (feature) from the training data  
+- **$y$**  
+  Dependent variable (label) we want to predict  
+- **$\beta_0$**  
+  Intercept: the value of $y$ when $x = 0$  
+- **$\beta_1$**  
+  Slope (coefficient): the change in $y$ for a one-unit change in $x$  
+- **$\varepsilon$**  
+  Error term: captures noise or any variation not explained by the linear model  
+
