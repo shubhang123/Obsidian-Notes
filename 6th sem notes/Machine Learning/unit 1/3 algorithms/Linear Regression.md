@@ -33,7 +33,9 @@ In this method, the relationship between the independent and dependent variables
 
 **Cost Function in Linear Regression:** To determine the best-fit line, a **cost function** is used to measure how well the model's predictions align with the actual observed values. For linear regression, the most common cost function is the **Mean Squared Error (MSE)**.
 
-The MSE measures the **Root Mean Squared error between the predicted value and the true value**. It is calculated as the sum of the squared differences between the predictions and the actual values, divided by the number of observations. The formula for MSE is: $\text{MSE} = \text{Sum} [ (\text{Prediction} - \text{Actual})^2 ] \times (1 / \text{num_observations})$
+The MSE measures the **Root Mean Squared error between the predicted value and the true value**. It is calculated as the sum of the squared differences between the predictions and the actual values, divided by the number of observations. The formula for MSE is: 
+
+# $\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$
 
 A **smaller MSE value indicates that the model's predictions are closer to the actual values**, meaning the line of best fit is more accurate. However, if the data is widely scattered around the regression line, it might be impossible to achieve a very small MSE. Unlike in logistic regression, where using MSE would result in a non-convex function with many local minimums, making it very difficult to minimise and find the global minimum, MSE is suitable for linear regression.
 
