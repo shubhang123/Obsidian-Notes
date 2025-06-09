@@ -1,6 +1,6 @@
 
 
-# Scope of Machine Learning pixel 8
+# Scope of Machine Learning 
 
 ### 1. Machine Learning in Education
 
