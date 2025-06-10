@@ -15,7 +15,7 @@ However, standard RNNs face a critical limitation: the **vanishing gradient prob
 **LSTMs** were introduced to address this issue. They extend the RNN framework with a more sophisticated architecture that includes a **cell state** and **gates**, enabling them to selectively remember or forget information over long periods.
 
 ---
-
+![[Pasted image 20250611003252.png]]
 ## Architecture of LSTM
 
 An LSTM consists of a chain of **cells**, each designed to process one time step in a sequence. Inside each cell, there are three key components: the **cell state** and three **gates** (forget, input, and output). These components work together to regulate the flow of information, deciding what to keep, discard, or output at each step.
