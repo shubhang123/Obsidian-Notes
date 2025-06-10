@@ -43,7 +43,7 @@ Where:
 - **Too High**: May overshoot the minimum and oscillate
 - **Too Low**: Convergence will be very slow
 - **Typical Values**: 0.001 to 0.1
-
+![[Pasted image 20250610115432.png]]
 ### Gradient (∂J/∂w)
 
 - **Definition**: The slope or rate of change of the cost function
