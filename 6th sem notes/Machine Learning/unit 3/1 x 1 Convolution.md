@@ -23,7 +23,7 @@ The process of a 1x1 convolution is straightforward:
 
 Unlike larger filters that capture spatial patterns (e.g., edges or textures) by looking at a neighborhood of pixels, a 1x1 convolution focuses solely on **channel interactions** at each pixel, making it a powerful tool for adjusting the depth of the data.
 
----
+![[Pasted image 20250610213245.png]]
 
 ### Why Was It Needed?
 The 1x1 convolution was introduced to solve specific challenges in designing deep CNNs, particularly as networks grew larger and more computationally expensive. Here’s why it became essential:
