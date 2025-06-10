@@ -13,7 +13,7 @@ Here are the key formulas for Recurrent Neural Networks (RNNs) based on the prov
 1. **Hidden State Update**:  
    The hidden state at time step $t$, denoted $h_t$, is computed as:
   
-   $h_t = \tanh(W_{hh} h_{t-1} + W_{xh} x_t + b_h)$
+   ## $h_t = \tanh(W_{hh} h_{t-1} + W_{xh} x_t + b_h)$
   
    where:
    - $x_t$ is the input at time step $t$.
@@ -26,7 +26,7 @@ Here are the key formulas for Recurrent Neural Networks (RNNs) based on the prov
 2. **Output (if applicable)**:  
    For tasks requiring an output at each time step $t$, the output $y_t$ is typically computed as:
 
-   $y_t = W_{hy} h_t + b_y$
+   ## $y_t = W_{hy} h_t + b_y$
  
    where:
    - $W_{hy}$ is the weight matrix for the hidden-to-output connection.
@@ -36,7 +36,7 @@ Here are the key formulas for Recurrent Neural Networks (RNNs) based on the prov
 3. **Training with Backpropagation Through Time (BPTT)**:  
    The loss $L$ for a sequence is computed over all time steps (or a subset, depending on the task). For a sequence of length $T$, the total loss is:
 
-   $L = \sum_{t=1}^T L_t$
+   ## $L = \sum_{t=1}^T L_t$
 
    where $L_t$ is the loss at time step $t$ (e.g., cross-entropy loss for classification). Gradients are computed by "unrolling" the network and backpropagating errors through each time step to update weights $W_{hh}$, $W_{xh}$, $W_{hy}$, and biases $b_h$, $b_y$.
 
