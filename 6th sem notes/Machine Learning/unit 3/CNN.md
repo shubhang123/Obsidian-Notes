@@ -23,7 +23,7 @@ A CNN consists of several layer types, each with a specific function in feature 
 - **Purpose:** Extracts features by applying a convolution operation, where a filter slides over the input to produce a feature map.
 - **Formula:** For an input $X$ and filter $W$, the output at position $(i,j)$ of feature map $Z$ is:
   \[
-  Z[i,j] = \sum_m \sum_n X[i+m, j+n] \cdot W[m,n] + b
+  ## $Z[i,j] = \sum_m \sum_n X[i+m, j+n] \cdot W[m,n] + b$
   \]
   - **Explanation of Terms:**
     - $X[i+m, j+n]$: The input value at position $(i+m, j+n)$, typically a pixel in an image.
@@ -36,14 +36,14 @@ A CNN consists of several layer types, each with a specific function in feature 
   - **Padding:** Adds zeros around the input (e.g., "same" padding ensures $H_{\text{out}} = H_{\text{in}}$).
   - **Output Size:** For input height $H$, width $W$, filter size $k$, stride $s$, and padding $p$, the output height is:
     \[
-    H_{\text{out}} = \left\lfloor \frac{H - k + 2p}{s} \right\rfloor + 1
+    ## $H_{\text{out}} = \left\lfloor \frac{H - k + 2p}{s} \right\rfloor + 1$
     \]
 
 #### 2. Activation Layer
 - **Purpose:** Introduces non-linearity to capture complex patterns.
 - **Common Function:** ReLU (Rectified Linear Unit):
   \[
-  f(x) = \max(0, x)
+ ## $f(x) = \max(0, x)$
   \]
   - **Explanation:** Sets negative values to 0, keeping positive values unchanged. This non-linearity helps the network learn complex relationships and avoids issues with purely linear transformations.
 
@@ -54,7 +54,7 @@ A CNN consists of several layer types, each with a specific function in feature 
   - **Average Pooling:** Takes the average value in a region.
 - **Formula (Max Pooling):** For a 2x2 window with stride 2:
   \[
-  P[i,j] = \max(X[2i:2i+2, 2j:2j+2])
+  ## $P[i,j] = \max(X[2i:2i+2, 2j:2j+2])$
   \]
   - **Explanation:** For each 2x2 region, $P[i,j]$ is the largest value, reducing the spatial size by half (e.g., a 4x4 input becomes 2x2).
 - **Role:** Provides translation invariance (e.g., a feature is detected regardless of its exact position) and reduces the risk of overfitting by summarizing regions.
@@ -63,7 +63,7 @@ A CNN consists of several layer types, each with a specific function in feature 
 - **Purpose:** Combines features for tasks like classification.
 - **Operation:** Flattens the feature maps into a vector and applies a dense layer:
   \[
-  $y = W \cdot \text{flatten}(Z) + b$
+  ## $y = W \cdot \text{flatten}(Z) + b$
   \]
   - **Explanation:**
     - $\text{flatten}(Z)$: Converts the 2D feature map into a 1D vector.
