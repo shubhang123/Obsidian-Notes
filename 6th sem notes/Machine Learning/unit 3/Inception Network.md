@@ -14,7 +14,8 @@ Each **Inception module** consists of several branches operating in parallel:
 The outputs from these branches are then **concatenated** along the depth dimension to form a single output feature map that combines multi-scale information. This innovative approach is the hallmark of the Inception network.
 
 ---
-
+![[Pasted image 20250610213704.png]]
+![[Pasted image 20250610213744.png]]
 ### How Does It Process Data?
 The Inception network processes data through a series of stacked **Inception modules**, with occasional pooling layers to reduce spatial dimensions. Here’s a step-by-step overview of its data processing:
 
