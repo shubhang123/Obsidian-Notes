@@ -9,3 +9,6 @@ liner regression uses parameters coeff
 
 sue cost function as mean of sq error
 
+w' = w - n del j/del w
+
+
