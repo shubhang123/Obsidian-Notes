@@ -33,7 +33,7 @@ Where:
 - θₜ = parameters at time t
 - α = learning rate
 - ∇f(θₜ) = gradient at current position
-
+![[Pasted image 20250610172152.png]]
 ### Gradient Descent with Momentum
 
 ```
@@ -53,7 +53,7 @@ Where:
 - vₜ = velocity (momentum) at time t
 - β = momentum coefficient (typically 0.9, 0.95, or 0.99)
 - The velocity is an exponentially weighted average of past gradients
-
+![[Pasted image 20250610172134.png]]
 ## How Momentum Works
 
 ### Exponential Weighted Average
