@@ -61,6 +61,7 @@ L_δ(y, \hat{y}) = \begin{cases}
 \delta|y - \hat{y}| - \frac{1}{2}\delta^2 & \text{otherwise}
 \end{cases}
 $$
+
     
     Where: δ = threshold parameter
 - **Characteristics**: Combines MSE and MAE benefits
