@@ -15,7 +15,7 @@ Backpropagation is an optimization algorithm that computes the gradient of the l
 - Neural networks have many parameters (weights and biases) requiring optimization for accurate predictions.
 - Backpropagation efficiently computes gradients for all parameters, essential for gradient-based optimization.
 - Without it, training would rely on slow methods like finite differences, impractical for large networks.
-
+![[Pasted image 20250610120532.png]]
 ## The Complete Process of Backpropagation
 
 Backpropagation involves a **forward pass** and a **backward pass**, repeated over iterations (epochs).
