@@ -28,7 +28,7 @@ RNNs process sequences step by step, using a **hidden state** to keep track of i
    - RNNs are trained using **Backpropagation Through Time (BPTT)**, which "unrolls" the network across the sequence and computes gradients for each step to update the weights.
 
 However, standard RNNs can struggle with **long-term dependencies** due to **vanishing or exploding gradients**, where the influence of early inputs fades or becomes unstable over time. To address this, advanced variants like **Long Short-Term Memory (LSTM)** and **Gated Recurrent Unit (GRU)** networks use gates to better control the flow and retention of information.
-
+![[Pasted image 20250610225215.png]]
 ---
 
 ### Why Are RNNs Needed?
