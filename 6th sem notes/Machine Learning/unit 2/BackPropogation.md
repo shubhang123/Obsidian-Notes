@@ -1,7 +1,3 @@
-Below is a rewritten version of the backpropagation explanation, formatted with `$` for LaTeX equations to be compatible with Obsidian’s Markdown and LaTeX rendering. The content remains comprehensive, covering the purpose, process, challenges, and advantages of backpropagation, with all mathematical expressions enclosed in `$` for proper rendering in Obsidian. The structure is preserved, and the explanations are clear and concise, with formulas integrated seamlessly into the text.
-
-
-
 # Backpropagation: Detailed Notes
 
 Backpropagation, short for "backward propagation of errors," is a fundamental algorithm for training artificial neural networks, especially in supervised learning. It optimizes network weights to minimize the difference between predicted and actual outputs, serving as the cornerstone of deep learning.
