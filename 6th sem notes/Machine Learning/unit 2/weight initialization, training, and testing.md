@@ -7,6 +7,10 @@ Here are details on weight initialization, training, and testing within the cont
 - **Impact on Training**: The **initialization of the network** can be a factor contributing to performance degradation in very deep networks.
 - **Transfer Learning**: A technique like **transfer learning** reuses a pre-trained model (e.g., VGG, ResNet) as a starting point for a new task. This method leverages models where the **initial weights are already optimised**, significantly reducing training time and potentially improving performance with limited data.
 - **Batch Normalization**: While not directly about _initial_ weight initialization, **batch normalization** standardizes the inputs to a layer during training using learnable parameters (gamma and beta) that scale and shift the normalized values. This is typically placed after a convolutional or fully connected layer and before the activation function.
+the mean of the activation should be zero
+the varience of activation should be the same across every latyer value
+
+
 
 ### Training
 
