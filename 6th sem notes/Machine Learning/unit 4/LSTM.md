@@ -1,3 +1,5 @@
+Of course! Here is the detailed explanation of LSTMs with the math equations formatted for Obsidian using `$` delimiters.
+
 # Detailed Explanation of LSTM (Long Short-Term Memory)
 
 Long Short-Term Memory (LSTM) is a specialized type of **recurrent neural network (RNN)** architecture designed to process and model **sequential data**, such as time series, natural language, or speech. Unlike standard RNNs, which struggle with learning **long-term dependencies** due to the **vanishing gradient problem**, LSTMs excel at retaining and utilizing information over extended sequences. This makes them a cornerstone of deep learning for tasks requiring context from distant past inputs. Below, we’ll explore the architecture, processes, advantages, limitations, and applications of LSTMs in detail.
@@ -6,7 +8,7 @@ Long Short-Term Memory (LSTM) is a specialized type of **recurrent neural networ
 
 ## What is an RNN, and Why Do We Need LSTMs?
 
-Before diving into LSTMs, it’s helpful to understand **RNNs**. Recurrent Neural Networks are designed for sequential data by maintaining a **hidden state** that captures information from previous time steps. At each time step \( t \), an RNN takes the current input \( x_t \) and the previous hidden state \( h_{t-1} \) to produce a new hidden state \( h_t \). This looping mechanism allows RNNs to process sequences like sentences or time series.
+Before diving into LSTMs, it’s helpful to understand **RNNs**. Recurrent Neural Networks are designed for sequential data by maintaining a **hidden state** that captures information from previous time steps. At each time step $t$, an RNN takes the current input $x_t$ and the previous hidden state $h_{t-1}$ to produce a new hidden state $h_t$. This looping mechanism allows RNNs to process sequences like sentences or time series.
 
 However, standard RNNs face a critical limitation: the **vanishing gradient problem**. During training, gradients used to update weights can shrink exponentially as they are propagated backward through time, making it difficult for the network to learn dependencies between inputs that are far apart in the sequence. For example, in the sentence "The cat, which was sitting on the mat, jumped," a standard RNN might struggle to connect "cat" with "jumped" due to the intervening words.
 
@@ -19,49 +21,49 @@ However, standard RNNs face a critical limitation: the **vanishing gradient prob
 An LSTM consists of a chain of **cells**, each designed to process one time step in a sequence. Inside each cell, there are three key components: the **cell state** and three **gates** (forget, input, and output). These components work together to regulate the flow of information, deciding what to keep, discard, or output at each step.
 
 ### 1. **Cell State**
-- The **cell state** (\( C_t \)) acts as the "memory" of the LSTM, running through the entire sequence like a conveyor belt.
+- The **cell state** ($C_t$) acts as the "memory" of the LSTM, running through the entire sequence like a conveyor belt.
 - It carries information from the beginning of the sequence to the end, with minimal alteration unless modified by the gates.
 - This persistent memory enables LSTMs to retain long-term dependencies.
 
 ### 2. **Forget Gate**
-- The **forget gate** determines what information from the previous cell state (\( C_{t-1} \)) should be discarded.
-- It takes the previous hidden state (\( h_{t-1} \)) and the current input (\( x_t \)), applies a **sigmoid function** (\( \sigma \)), and outputs a value between 0 and 1 for each element in the cell state:
-  - \( 0 \) = "forget this completely."
-  - \( 1 \) = "keep this fully."
+- The **forget gate** determines what information from the previous cell state ($C_{t-1}$) should be discarded.
+- It takes the previous hidden state ($h_{t-1}$) and the current input ($x_t$), applies a **sigmoid function** ($\sigma$), and outputs a value between 0 and 1 for each element in the cell state:
+  - $0$ = "forget this completely."
+  - $1$ = "keep this fully."
 - **Equation**:
-  \[
+  $
   f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
-  \]
-  where \( W_f \) is the weight matrix and \( b_f \) is the bias for the forget gate.
+  $
+  where $W_f$ is the weight matrix and $b_f$ is the bias for the forget gate.
 
 ### 3. **Input Gate**
 - The **input gate** decides what new information from the current input should be added to the cell state.
 - It has two sub-components:
   - A **sigmoid layer** that determines which values to update:
-    \[
+    $
     i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)
-    \]
-  - A **tanh layer** that creates a vector of new candidate values (\( \tilde{C}_t \)):
-    \[
+    $
+  - A **tanh layer** that creates a vector of new candidate values ($\tilde{C}_t$):
+    $
     \tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)
-    \]
+    $
 - The cell state is updated by combining the forget and input gates:
-  \[
+  $
   C_t = f_t \cdot C_{t-1} + i_t \cdot \tilde{C}_t
-  \]
-  Here, \( f_t \cdot C_{t-1} \) removes irrelevant information, and \( i_t \cdot \tilde{C}_t \) adds new relevant information.
+  $
+  Here, $f_t \cdot C_{t-1}$ removes irrelevant information, and $i_t \cdot \tilde{C}_t$ adds new relevant information.
 
 ### 4. **Output Gate**
-- The **output gate** determines what information from the updated cell state should be output as the new hidden state (\( h_t \)).
+- The **output gate** determines what information from the updated cell state should be output as the new hidden state ($h_t$).
 - It uses a sigmoid layer to decide which parts of the cell state to output, then applies a **tanh** function to the cell state and multiplies it by the gate’s output:
   - **Equations**:
-    \[
+    $
     o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)
-    \]
-    \[
+    $
+    $
     h_t = o_t \cdot \tanh(C_t)
-    \]
-- The hidden state \( h_t \) is used for predictions or passed to the next time step.
+    $
+- The hidden state $h_t$ is used for predictions or passed to the next time step.
 
 ---
 
@@ -69,18 +71,18 @@ An LSTM consists of a chain of **cells**, each designed to process one time step
 
 LSTMs process sequences step by step, updating the cell state and hidden state at each time step. Here’s the step-by-step process:
 
-1. **Input**: At time step \( t \), the LSTM receives the current input \( x_t \) and the previous hidden state \( h_{t-1} \).
-2. **Forget Gate**: Computes \( f_t \) to decide what to discard from \( C_{t-1} \).
-3. **Input Gate**: Computes \( i_t \) and \( \tilde{C}_t \) to determine what new information to add to the cell state.
-4. **Cell State Update**: Updates \( C_t \) by combining the forget and input gate outputs:
-   \[
+1. **Input**: At time step $t$, the LSTM receives the current input $x_t$ and the previous hidden state $h_{t-1}$.
+2. **Forget Gate**: Computes $f_t$ to decide what to discard from $C_{t-1}$.
+3. **Input Gate**: Computes $i_t$ and $\tilde{C}_t$ to determine what new information to add to the cell state.
+4. **Cell State Update**: Updates $C_t$ by combining the forget and input gate outputs:
+   $
    C_t = f_t \cdot C_{t-1} + i_t \cdot \tilde{C}_t
-   \]
-5. **Output Gate**: Computes \( o_t \) and uses it with the updated cell state to produce the new hidden state \( h_t \):
-   \[
+   $
+5. **Output Gate**: Computes $o_t$ and uses it with the updated cell state to produce the new hidden state $h_t$:
+   $
    h_t = o_t \cdot \tanh(C_t)
-   \]
-6. **Repeat**: The process repeats for the next time step, with \( C_t \) and \( h_t \) passed forward.
+   $
+6. **Repeat**: The process repeats for the next time step, with $C_t$ and $h_t$ passed forward.
 
 ### Example
 Imagine predicting the next word in "The cat sat on the mat." At the step processing "sat":
