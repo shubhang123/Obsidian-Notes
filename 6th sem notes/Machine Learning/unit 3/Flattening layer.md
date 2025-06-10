@@ -23,4 +23,6 @@ The **flattening layer** is a process that transforms the multi-dimensional outp
     - For **binary classification**, the **Sigmoid activation function** is typically used in the output layer.
     - For hidden fully connected layers, the **ReLU activation function** or its variants (like Leaky ReLU) are often recommended.
 
+![[Pasted image 20250610201737.png]]
+
 In essence, the flattening layer serves as a bridge, transforming the spatially organised features from convolutional and pooling operations into a format suitable for the fully connected layers, which then make the final classification or regression decision.
