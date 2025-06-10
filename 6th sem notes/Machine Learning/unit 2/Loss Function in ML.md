@@ -145,32 +145,6 @@ $$
 - **Application**: Addressing class imbalance
 - **Behavior**: Focuses on hard-to-classify examples
 
-## Advanced Loss Functions
-
-### Kullback-Leibler (KL) Divergence
-
-- **Formula**:
-    
-    ```
-    KL(P||Q) = Σ P(x) × log(P(x)/Q(x))
-    ```
-    
-    Where: P = true distribution, Q = predicted distribution
-- **Application**: Measuring distribution differences
-- **Use case**: Variational autoencoders, probabilistic models
-
-### Wasserstein Loss
-
-- **Formula**:
-    
-    ```
-    W = E[D(x)] - E[D(G(z))]
-    ```
-    
-    Where: D = discriminator, G = generator, x = real data, z = noise
-- **Application**: Generative Adversarial Networks (GANs)
-- **Advantage**: More stable training than standard GAN loss
-
 ## Important Considerations
 
 **Function Properties**: Good loss functions should be differentiable to enable gradient-based optimization, convex when possible for guaranteed global optimization, and continuous for stable training.
