@@ -35,6 +35,11 @@ Where:
 - η (eta) = learning rate
 - ∂J/∂w = partial derivative of cost function J with respect to weight w
 
+
+aim - used ot minimize a socst function paramerete by model paramenets
+
+step 1 initalize the weights w randomly
+step 2 calcu
 ## Key Components
 
 ### Learning Rate (η)
