@@ -1,10 +1,10 @@
-Below is a more detailed description of the **pooling layer** in Convolutional Neural Networks (CNNs), including its purpose, working mechanism, types, mathematical formulation, and additional considerations. The content is formatted for Obsidian with LaTeX equations in `$`, and each component is explained for clarity.
+
 
 ---
 
 ## Pooling Layer in CNNs: Detailed Overview
 
-A **pooling layer** is a key component in Convolutional Neural Networks (CNNs) that reduces the spatial dimensions (height and width) of feature maps while preserving the most important information. It helps make the network computationally efficient, reduces the risk of overfitting, and introduces robustness to small translations in the input data.
+A **pooling layer** is a key component in Convolutional Neural Networks (CNNs) that reduces the spatial dimensions (height and width) of feature maps while preserving the most important information. It helps make the network computationally efficient, reduces the risk of overfitting, and introduces robustness to small translations in the input data. Downsampling technique 
 
 ### Purpose of Pooling Layer
 - **Dimensionality Reduction:** Decreases the spatial size of feature maps, reducing the number of parameters and computations in subsequent layers.
