@@ -31,38 +31,38 @@ An LSTM consists of a chain of **cells**, each designed to process one time step
   - $0$ = "forget this completely."
   - $1$ = "keep this fully."
 - **Equation**:
-  $
+  $$
   f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
-  $
+  $$
   where $W_f$ is the weight matrix and $b_f$ is the bias for the forget gate.
 
 ### 3. **Input Gate**
 - The **input gate** decides what new information from the current input should be added to the cell state.
 - It has two sub-components:
   - A **sigmoid layer** that determines which values to update:
-    $
+    $$
     i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)
-    $
+    $$
   - A **tanh layer** that creates a vector of new candidate values ($\tilde{C}_t$):
-    $
+    $$
     \tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C)
-    $
+    $$
 - The cell state is updated by combining the forget and input gates:
-  $
+  $$
   C_t = f_t \cdot C_{t-1} + i_t \cdot \tilde{C}_t
-  $
+  $$
   Here, $f_t \cdot C_{t-1}$ removes irrelevant information, and $i_t \cdot \tilde{C}_t$ adds new relevant information.
 
 ### 4. **Output Gate**
 - The **output gate** determines what information from the updated cell state should be output as the new hidden state ($h_t$).
 - It uses a sigmoid layer to decide which parts of the cell state to output, then applies a **tanh** function to the cell state and multiplies it by the gate’s output:
   - **Equations**:
-    $
+    $$
     o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)
-    $
-    $
+    $$
+    $$
     h_t = o_t \cdot \tanh(C_t)
-    $
+    $$
 - The hidden state $h_t$ is used for predictions or passed to the next time step.
 
 ---
@@ -75,13 +75,9 @@ LSTMs process sequences step by step, updating the cell state and hidden state a
 2. **Forget Gate**: Computes $f_t$ to decide what to discard from $C_{t-1}$.
 3. **Input Gate**: Computes $i_t$ and $\tilde{C}_t$ to determine what new information to add to the cell state.
 4. **Cell State Update**: Updates $C_t$ by combining the forget and input gate outputs:
-   $
-   C_t = f_t \cdot C_{t-1} + i_t \cdot \tilde{C}_t
-   $
+   $C_t = f_t \cdot C_{t-1} + i_t \cdot \tilde{C}_t$
 5. **Output Gate**: Computes $o_t$ and uses it with the updated cell state to produce the new hidden state $h_t$:
-   $
-   h_t = o_t \cdot \tanh(C_t)
-   $
+   $h_t = o_t \cdot \tanh(C_t)$
 6. **Repeat**: The process repeats for the next time step, with $C_t$ and $h_t$ passed forward.
 
 ### Example
