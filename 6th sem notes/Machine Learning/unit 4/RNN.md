@@ -8,24 +8,37 @@ A **Recurrent Neural Network (RNN)** is a type of neural network specifically de
 
 RNNs process sequences step by step, using a **hidden state** to keep track of information from earlier steps. Here’s how they function:
 
-1. **Input Sequence**:  
-   - RNNs take a sequence of inputs (e.g., words in a sentence or time steps in a series) and process them one at a time. Each input at time step \( t \) is denoted \( x_t \).
+Here are the key formulas for Recurrent Neural Networks (RNNs) based on the provided description, formatted with $:
 
-2. **Hidden State**:  
-   - The hidden state \( h_t \) is updated at each time step based on:
-     - The current input \( x_t \).
-     - The previous hidden state \( h_{t-1} \).
-   - A typical update formula is:  
-     \[
-     h_t = \tanh(W_{hh} h_{t-1} + W_{xh} x_t + b_h)
-     \]
-     where \( W_{hh} \) and \( W_{xh} \) are weight matrices, \( b_h \) is a bias, and \( \tanh \) is an activation function.
+1. **Hidden State Update**:  
+   The hidden state at time step $t$, denoted $h_t$, is computed as:
+  
+   $h_t = \tanh(W_{hh} h_{t-1} + W_{xh} x_t + b_h)$
+  
+   where:
+   - $x_t$ is the input at time step $t$.
+   - $h_{t-1}$ is the previous hidden state.
+   - $W_{hh}$ is the weight matrix for the hidden-to-hidden connection.
+   - $W_{xh}$ is the weight matrix for the input-to-hidden connection.
+   - $b_h$ is the bias term.
+   - $\tanh$ is the hyperbolic tangent activation function.
 
-3. **Output**:  
-   - The network can produce an output at each time step (e.g., for word prediction) or only at the end (e.g., for sentiment analysis), depending on the task.
+2. **Output (if applicable)**:  
+   For tasks requiring an output at each time step $t$, the output $y_t$ is typically computed as:
 
-4. **Training**:  
-   - RNNs are trained using **Backpropagation Through Time (BPTT)**, which "unrolls" the network across the sequence and computes gradients for each step to update the weights.
+   $y_t = W_{hy} h_t + b_y$
+ 
+   where:
+   - $W_{hy}$ is the weight matrix for the hidden-to-output connection.
+   - $b_y$ is the output bias term.
+   - An activation function (e.g., softmax for classification) may be applied depending on the task.
+
+3. **Training with Backpropagation Through Time (BPTT)**:  
+   The loss $L$ for a sequence is computed over all time steps (or a subset, depending on the task). For a sequence of length $T$, the total loss is:
+
+   $L = \sum_{t=1}^T L_t$
+
+   where $L_t$ is the loss at time step $t$ (e.g., cross-entropy loss for classification). Gradients are computed by "unrolling" the network and backpropagating errors through each time step to update weights $W_{hh}$, $W_{xh}$, $W_{hy}$, and biases $b_h$, $b_y$.
 
 However, standard RNNs can struggle with **long-term dependencies** due to **vanishing or exploding gradients**, where the influence of early inputs fades or becomes unstable over time. To address this, advanced variants like **Long Short-Term Memory (LSTM)** and **Gated Recurrent Unit (GRU)** networks use gates to better control the flow and retention of information.
 ![[Pasted image 20250610225215.png]]
