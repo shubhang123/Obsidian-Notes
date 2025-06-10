@@ -55,10 +55,12 @@ A loss function is a mathematical function that measures how well (or poorly) a 
 ### Huber Loss
 
 - **Formula**:
-    
-    ```
-    L_δ(y, ŷ) = {  (1/2)(y - ŷ)²           if |y - ŷ| ≤ δ  δ|y - ŷ| - (1/2)δ²      otherwise}
-    ```
+    $$
+L_δ(y, \hat{y}) = \begin{cases} 
+\frac{1}{2}(y - \hat{y})^2 & \text{if } |y - \hat{y}| \leq \delta \\
+\delta|y - \hat{y}| - \frac{1}{2}\delta^2 & \text{otherwise}
+\end{cases}
+$$
     
     Where: δ = threshold parameter
 - **Characteristics**: Combines MSE and MAE benefits
