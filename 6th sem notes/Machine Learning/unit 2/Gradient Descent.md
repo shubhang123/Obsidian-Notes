@@ -20,7 +20,7 @@ Gradient descent is a fundamental optimization algorithm used to train machine l
 2. **Calculate**: Compute the cost function (e.g., Mean Squared Error for linear regression)
 3. **Find Gradient**: Calculate the derivative of the cost function with respect to each parameter
 4. **Update**: Adjust parameters in the opposite direction of the gradient
-5. **Repeat**: Continue until convergence or maximum iterations
+5. **Repeat**: Continue until convergence or maximum iterations( each pass is called an epoch)
 
 ### Parameter Update Formula
 
@@ -35,11 +35,6 @@ Where:
 - η (eta) = learning rate
 - ∂J/∂w = partial derivative of cost function J with respect to weight w
 
-
-aim - used ot minimize a socst function paramerete by model paramenets
-
-step 1 initalize the weights w randomly
-step 2 calcu
 ## Key Components
 
 ### Learning Rate (η)
