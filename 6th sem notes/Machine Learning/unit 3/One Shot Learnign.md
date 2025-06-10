@@ -5,7 +5,8 @@
 One-shot learning is a machine learning approach that enables a model to recognize or classify objects, patterns, or tasks based on a single or very few examples. Inspired by the human ability to learn from minimal exposure, it is particularly valuable in situations where collecting large datasets is impractical or costly. Below, I’ll explain what one-shot learning is, how it works, why it was developed, and its advantages and disadvantages.
 
 ---
-
+![[Pasted image 20250610220853.png]]
+![[Pasted image 20250610220911.png]]
 ## What is One-Shot Learning?
 
 One-shot learning refers to a model's ability to learn from just one example of a new class or task and generalize effectively to recognize or perform similar tasks. Unlike traditional machine learning models that require hundreds or thousands of examples to learn a new concept, one-shot learning achieves this with minimal data—often a single example per class.
