@@ -45,7 +45,7 @@ Gradients are computed and propagated backward:
 ### 3. Iterate
 - Repeat forward and backward passes for multiple epochs or until the loss converges.
 - Training often uses mini-batches, averaging gradients over a subset of data for efficiency.
-
+![[Pasted image 20250610120856.png]]
 ## Challenges of Backpropagation
 
 1. **Vanishing Gradients:**
