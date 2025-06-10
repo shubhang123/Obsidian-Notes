@@ -1,0 +1,1 @@
+when a machine lerning model model the training data well but fails to perforn well in testing data ie was nbot able to predict test data , it is called as overfitting and trhis situation can be dealth with reglaization 
