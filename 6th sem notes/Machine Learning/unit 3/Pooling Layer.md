@@ -21,7 +21,7 @@ A **pooling layer** is a key component in Convolutional Neural Networks (CNNs) t
   ## $H_{\text{out}} = \left\lfloor \frac{H - k}{s} \right\rfloor + 1, \quad W_{\text{out}} = \left\lfloor \frac{W - k}{s} \right\rfloor + 1$
   \]
   - **Explanation:** The formula calculates how many times the window can slide over the input, accounting for the stride and window size. For example, a $4 \times 4$ input with a $2 \times 2$ window and stride 2 produces a $2 \times 2$ output.
-
+![[Pasted image 20250610213916.png]]
 ### Types of Pooling Layers
 Pooling layers apply different functions to summarize regions. The two most common types are:
 
