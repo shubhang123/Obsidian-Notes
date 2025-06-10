@@ -74,7 +74,7 @@ This will give us the final probabilities for each class.
 **Final Result:**
 
 The output of the Softmax function is the probability distribution vector:
-$ \sigma(\mathbf{z}) = [0.659, 0.242, 0.099] $
+$\sigma(\mathbf{z}) = [0.659, 0.242, 0.099]$
 
 We can verify that this is a valid probability distribution by checking if the values sum to 1:
 $ 0.659 + 0.242 + 0.099 = 1.0 $
