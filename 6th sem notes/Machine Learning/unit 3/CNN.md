@@ -92,7 +92,7 @@ A CNN consists of several layer types, each with a specific function in feature 
 ### Typical CNN Architecture
 - Input → [Conv → ReLU → Pool] (repeated) → Flatten → Fully Connected → Output
 - Example: An image of size $28 \times 28 \times 1$ (grayscale) might pass through multiple layers to output probabilities over 10 classes (e.g., digits 0-9).
-
+![[Pasted image 20250610192550.png]]
 ---
 
 ## Training a CNN
