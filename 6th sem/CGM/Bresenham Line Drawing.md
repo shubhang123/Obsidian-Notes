@@ -62,40 +62,44 @@ void Bresenham(int x0, int y0, int x1, int y1) {
         if (e2 < dx) {
             err += dx;
             y0 += sy;
-        }
+        } 
     }
 }
 ```
 
 ```mermaid
 graph TD
-    A[Start] --> B[Input: (x0, y0), (x1, y1)]
-    B --> C[Calculate dx = |x1 - x0|, dy = |y1 - y0|]
-    C --> D[Set sx = sign(x1 - x0), sy = sign(y1 - y0)]
-    D --> E{dy <= dx?}
+    A[Start] --> B[Input x0 y0 x1 y1]
+    B --> C[dx = abs x1 minus x0]
+    C --> D[dy = abs y1 minus y0]
+    D --> E[sx = sign of x1 minus x0]
+    E --> F[sy = sign of y1 minus y0]
+    F --> G{dy <= dx}
 
-    %% Case: Slope <= 1
-    E -->|Yes| F[Initialize: p = 2*dy - dx, x = x0, y = y0]
-    F --> G{x != x1?}
-    G -->|Yes| H[Plot (x, y)]
-    H --> I{p < 0?}
-    I -->|Yes| J[Update: p = p + 2*dy]
-    I -->|No| K[Update: y = y + sy, p = p + 2*dy - 2*dx]
-    J --> L[Update: x = x + sx]
-    K --> L
-    L --> G
-    G -->|No| Z[End]
+    %% Gentle slope branch
+    G -->|Yes| H[Set p = 2 times dy minus dx]
+    H --> I[Set x = x0 and y = y0]
+    I --> J[Loop until x equals x1]
+    J --> K[Plot pixel at x y]
+    K --> L{p negative?}
+    L -->|Yes| M[p = p plus 2 times dy]
+    L -->|No| N[y = y plus sy and p = p plus 2 times dy minus 2 times dx]
+    M --> O[x = x plus sx]
+    N --> O
+    O --> J
+    J -->|Done| Z[End]
 
-    %% Case: Slope > 1
-    E -->|No| M[Initialize: p = 2*dx - dy, x = x0, y = y0]
-    M --> N{y != y1?}
-    N -->|Yes| O[Plot (x, y)]
-    O --> P{p < 0?}
-    P -->|Yes| Q[Update: p = p + 2*dx]
-    P -->|No| R[Update: x = x + sx, p = p + 2*dx - 2*dy]
-    Q --> S[Update: y = y + sy]
-    R --> S
-    S --> N
-    N -->|No| Z
+    %% Steep slope branch
+    G -->|No| P[Set p = 2 times dx minus dy]
+    P --> Q[Set x = x0 and y = y0]
+    Q --> R[Loop until y equals y1]
+    R --> S[Plot pixel at x y]
+    S --> T{p negative?}
+    T -->|Yes| U[p = p plus 2 times dx]
+    T -->|No| V[x = x plus sx and p = p plus 2 times dx minus 2 times dy]
+    U --> W[y = y plus sy]
+    V --> W
+    W --> R
+    R -->|Done| Z
 
 ```
