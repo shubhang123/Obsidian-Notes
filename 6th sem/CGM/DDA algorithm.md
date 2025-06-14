@@ -61,3 +61,77 @@ void DDA(float x0, float y0, float x1, float y1) {
     }
 }
 ```
+
+Absolutely! Here's the **same question and its complete solution** written with **every math expression in `$...$`** so you can directly paste it into **Obsidian Markdown** for perfect rendering.
+
+---
+
+## 📌 **Question**
+
+**Draw a line using the DDA algorithm from point**  
+$(x_0, y_0) = (2, 3)$ **to** $(x_1, y_1) = (10, 8)$  
+Show all intermediate steps and the points plotted.
+
+---
+
+## 🧮 **Step-by-Step Solution**
+
+### 1. **Calculate $\Delta x$ and $\Delta y$**
+
+$\Delta x = x_1 - x_0 = 10 - 2 = 8$  
+$\Delta y = y_1 - y_0 = 8 - 3 = 5$
+
+---
+
+### 2. **Determine number of steps**
+
+$\text{steps} = \max(|\Delta x|, |\Delta y|) = \max(8, 5) = 8$
+
+---
+
+### 3. **Calculate increments**
+
+### $x_{\text{increment}} = \frac{\Delta x}{\text{steps}} = \frac{8}{8} = 1$  
+### $y_{\text{increment}} = \frac{\Delta y}{\text{steps}} = \frac{5}{8} = 0.625$
+
+---
+
+### 4. **Initialize starting point**
+
+$x = x_0 = 2$, $y = y_0 = 3$
+
+---
+
+### 5. **Plot each step**
+
+Loop from $i = 0$ to $i = 8$:
+
+|$i$|$x$ (float)|$y$ (float)|Plotted Point (rounded)|
+|---|---|---|---|
+|$0$|$2.000$|$3.000$|$(2, 3)$|
+|$1$|$3.000$|$3.625$|$(3, 4)$|
+|$2$|$4.000$|$4.250$|$(4, 4)$|
+|$3$|$5.000$|$4.875$|$(5, 5)$|
+|$4$|$6.000$|$5.500$|$(6, 6)$|
+|$5$|$7.000$|$6.125$|$(7, 6)$|
+|$6$|$8.000$|$6.750$|$(8, 7)$|
+|$7$|$9.000$|$7.375$|$(9, 7)$|
+|$8$|$10.000$|$8.000$|$(10, 8)$|
+
+---
+
+## ✅ **Final Output (Points Plotted)**
+
+$(2, 3),\ (3, 4),\ (4, 4),\ (5, 5),\ (6, 6),\ (7, 6),\ (8, 7),\ (9, 7),\ (10, 8)$
+
+---
+
+## 📘 **Conclusion**
+
+The DDA algorithm calculates points using fractional increments:  
+$x$ increases by $1$ and $y$ increases by $0.625$ in each step.  
+The plotted integer coordinates form a smooth approximation of the actual line.
+
+---
+
+Let me know if you want the same example rendered as a LaTeX TikZ plot or graph!
