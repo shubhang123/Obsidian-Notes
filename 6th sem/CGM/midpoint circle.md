@@ -1,4 +1,4 @@
-# Midpoint Circle Drawing Algorithm in Computer Graphics
+ # Midpoint Circle Drawing Algorithm in Computer Graphics
 
 ## Introduction
 
