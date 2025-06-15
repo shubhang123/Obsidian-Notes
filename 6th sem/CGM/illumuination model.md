@@ -42,37 +42,91 @@ Where:
 
 ---
 
-### 🔶 2. **Diffuse Light – Matte Reflection (Lambertian)**
+### 🔶 2.### 🔶 2. **Diffuse Light – Matte Reflection (Lambertian)**
 
 #### 💭 Physical Idea:
 
-Diffuse reflection occurs on **rough surfaces** (like concrete or wood). Light hits, enters microstructures, and scatters **equally in all directions**.
+Diffuse reflection occurs on **rough surfaces** where microscopic irregularities cause incoming light to scatter in **all directions** with equal probability. Examples include:
 
-The **intensity** depends on the **angle** between:
+- **Matte materials**: concrete, unpolished wood, paper, fabric
+- **Porous surfaces**: clay, chalk, rough stone
+- **Surfaces with microscopic bumps**: frosted glass, textured plastic
 
-- Light direction $\vec{L}$
-- Surface normal $\vec{N}$
+**Physical Process:**
 
-If light hits **perpendicularly**, the surface gets **maximum energy**. As the angle increases (oblique light), energy is spread over more area → **less intensity**.
+1. **Light penetration**: Photons enter the surface material
+2. **Multiple scattering**: Light bounces randomly between microscopic particles/structures
+3. **Isotropic emission**: Light exits uniformly in all hemisphere directions above the surface
+4. **Energy conservation**: Total reflected energy equals incident energy (minus absorption)
 
-#### 📐 Math (Lambert's Cosine Law):
+The **key insight** is that the **projected area** of the surface as seen by the light source determines how much energy is received per unit area.
 
-$$I_{\text{diffuse}} = k_d \cdot I_l \cdot \max(0, \vec{N} \cdot \vec{L})$$
+#### 🔍 **Lambert's Cosine Law - Detailed Derivation**
 
-Where:
+**Lambert's Law** states that the radiant intensity of a perfectly diffusing surface varies as the cosine of the angle from the normal.
 
-- $k_d$: diffuse reflection coefficient (material's matte property)
-- $I_l$: light source intensity
-- $\vec{N} \cdot \vec{L} = \cos\theta$: angle between normal and light direction
+**Energy Distribution Analysis:** Consider a surface element of area $dA$ receiving light from direction making angle $\theta$ with the normal:
 
-If $\theta > 90°$, light is behind the surface → no light, hence the $\max(0, …)$.
+- **Projected area** seen by light: $dA_{\text{proj}} = dA \cos\theta$
+- **Energy flux** intercepted: $\Phi = I_l \cdot dA \cos\theta$
+- **Energy per unit actual area**: $\frac{\Phi}{dA} = I_l \cos\theta$
 
-#### ✅ Characteristics:
+**Lambert's Original Law:** For a perfect diffuser, the **radiance** (brightness) appears constant from all viewing angles: $L = L_0 \cos\theta_i$
 
-- **Surface orientation dependent**
-- **Independent** of viewer position
-- Creates **soft, even shading**
+Where $\theta_i$ is the incident angle and $L_0$ is the radiance at normal incidence.
 
+#### 📐 **Mathematical Formulation:**
+
+$I_{\text{diffuse}} = k_d \cdot I_l \cdot \max(0, \vec{N} \cdot \vec{L})$
+
+**Detailed Breakdown:**
+
+- $k_d \in [0,1]$: **Diffuse albedo** - fraction of incident light that's reflected diffusely
+    - $k_d = 0$: Perfect absorber (black surface)
+    - $k_d = 1$: Perfect diffuse reflector (white surface)
+    - Typical values: paper ≈ 0.8, concrete ≈ 0.4, dark wood ≈ 0.1
+- $I_l$: **Incident light intensity** (photons per unit area per unit time)
+- $\vec{N} \cdot \vec{L} = |\vec{N}||\vec{L}|\cos\theta = \cos\theta$ (for unit vectors)
+    - $\theta$: angle between surface normal and light direction
+    - $\cos\theta$: **geometric attenuation factor**
+- $\max(0, \cos\theta)$: **Visibility function**
+    - If $\theta \leq 90°$: surface faces the light → $\cos\theta \geq 0$
+    - If $\theta > 90°$: surface faces away → no illumination
+
+#### 🧮 **Geometric Interpretation:**
+
+The $\cos\theta$ term has **two physical meanings**:
+
+1. **Projected Area Effect**: Light flux spreads over larger area as incident angle increases
+2. **Lambert's Law**: Diffuse surfaces appear dimmer when viewed obliquely
+
+**Energy Balance:** $\text{Reflected Power} = k_d \times \text{Incident Power} \times \cos\theta$
+
+#### ✅ **Key Characteristics:**
+
+- **Surface orientation dependent**: Brighter when facing light source
+- **Independent** of viewer position (isotropic scattering)
+- **Creates soft, even shading** with smooth gradients
+- **Energy conservative**: Total reflected energy ≤ incident energy
+- **View-independent**: Surface looks the same from all viewing angles
+- **No highlights**: Unlike specular reflection, no bright spots
+
+#### 🌍 **Real-World Examples:**
+
+|Material|Approximate $k_d$|Visual Appearance|
+|---|---|---|
+|Fresh snow|0.9|Bright white, soft shadows|
+|White paper|0.8|Matte white surface|
+|Concrete|0.4|Gray, even illumination|
+|Dark wood|0.1|Absorbs most light|
+|Charcoal|0.05|Nearly black|
+
+#### ⚠️ **Limitations of Lambertian Model:**
+
+- **Real surfaces** aren't perfectly Lambertian
+- **Retroreflection**: Some materials reflect more light back toward source
+- **Subsurface scattering**: Ignored in basic model
+- **Wavelength dependence**: Different colors may have different $k_d$ values
 ---
 
 ### 🔶 3. **Specular Light – Mirror-like Highlights**
