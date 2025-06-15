@@ -202,11 +202,11 @@ For example:
 
 The **reflection vector $ \vec{R} $** represents the direction of perfect reflection, calculated as:
 
-$ \vec{R} = 2(\vec{N} \cdot \vec{L})\vec{N} - \vec{L}$
+$\vec{R} = 2(\vec{N} \cdot \vec{L})\vec{N} - \vec{L}$
 
 ### Breaking It Down:
-- $ \vec{N} $: The **surface normal**, a unit vector perpendicular to the surface.
-- $ \vec{L} $: The **light direction vector**, pointing from the surface to the light source (unit vector).
+- $\vec{N}$: The **surface normal**, a unit vector perpendicular to the surface.
+- $ \vec{L}$: The **light direction vector**, pointing from the surface to the light source (unit vector).
 - $ \vec{N} \cdot \vec{L} $: The dot product, showing how aligned the light is with the normal.
 - $ 2(\vec{N} \cdot \vec{L})\vec{N} $: Doubles the projection of $ \vec{L} $ onto $ \vec{N} $.
 - Subtracting $ \vec{L} $: Flips the light direction over the normal to find the reflection.
