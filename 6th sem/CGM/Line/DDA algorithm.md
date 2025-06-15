@@ -8,7 +8,7 @@ The DDA algorithm is based on the linear interpolation of coordinates. For a lin
 
 # $$m = \frac{y_1 - y_0}{x_1 - x_0}$$
 
-Depending on whether the slope is less than or greater than 1, the algorithm iterates over the $x$- or $y$-axis, respectively, to minimize the number of steps and ensure accuracy.
+Depending on whether the slope is less than or greater than 1, the algorithm iterates over the $x$- or $y$-axis, respectively, to minimize the number of steps and ensure accuracy. 
 
 ## Steps of the DDA Algorithm
 
