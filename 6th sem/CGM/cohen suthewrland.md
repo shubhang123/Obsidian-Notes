@@ -1,4 +1,4 @@
-    The Cohen-Sutherland line clipping algorithm clips a line segment to a rectangular window by determining which parts lie inside or outside the window. Here are the steps, followed by the mathematical formulation:
+  The Cohen-Sutherland line clipping algorithm clips a line segment to a rectangular window by determining which parts lie inside or outside the window. Here are the steps, followed by the mathematical formulation:
 
 ### Steps
 1. **Assign Region Codes**:
