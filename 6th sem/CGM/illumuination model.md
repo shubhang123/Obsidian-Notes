@@ -1,7 +1,7 @@
 Absolutely! Let's go **in depth with the theory** behind the **Basic Illumination Model** (Phong model) and explore the **physics-inspired reasoning** behind each component and how they work together.
 
 ---
-
+![[Pasted image 20250616010023.png]]
 ## 🌟 **Goal of an Illumination Model**
 
 The goal is to compute the **intensity or color** $I$ at a **surface point** as seen by the viewer, based on:
