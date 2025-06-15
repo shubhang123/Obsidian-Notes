@@ -10,7 +10,7 @@ The Cohen-Sutherland line clipping algorithm clips a line segment to a rectangul
      - Bit 4 (L): $x < x_{min}$ (1 if true, 0 if false)
    - Compute codes for both endpoints of the line segment, $P_1(x_1, y_1)$ and $P_2(x_2, y_2)$.
 
-2. **Check Trivial Cases**:
+1. **Check Trivial Cases**: 
    - **Accept**: If both endpoints have codes 0000 (logical AND = 0), the line is fully inside.
    - **Reject**: If the logical AND of the codes is non-zero, the line is fully outside (both points share a common out-of-bounds region).
 
