@@ -43,3 +43,5 @@ so therefore we can just find the max element in that array to get out answer.
 
 limitations:
 it is o(n^2) as we will visit again and again the same elements in the array
+
+it is also impossible for the current constraints as we cant make a array for $10^9$ elements ( 1 billion elements )
