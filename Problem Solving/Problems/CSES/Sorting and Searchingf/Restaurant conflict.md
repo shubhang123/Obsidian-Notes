@@ -33,6 +33,8 @@ Output:
 
 # Solutions
 
+![[Pasted image 20250617182112.png]]
+
 # 1) Naive Solution
 the naive solution i thought was create a array of max size which will keep adding score to that time interval everytime it is visited, 
 
