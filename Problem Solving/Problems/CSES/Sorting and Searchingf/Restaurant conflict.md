@@ -33,4 +33,13 @@ Output:
 
 # Solutions
 
-1) Naive Solution
+# 1) Naive Solution
+the naive solution i thought was create a array of max size which will keep adding score to that time interval everytime it is visited, 
+
+one input comes with (arrival, departure)
+so from a loop from arrival to departure will run, incrementing the values for those indexes in the array
+
+so therefore we can just find the max element in that array to get out answer.
+
+limitations:
+it is o(n^2) as we will visit again and again the same elements in the array
