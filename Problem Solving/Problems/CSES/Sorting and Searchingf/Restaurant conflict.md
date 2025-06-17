@@ -2,13 +2,10 @@ You are given the arrival and leaving times of nnn customers in a restaurant.
 
 What was the maximum number of customers in the restaurant at any time?
 
+# Problem Description
 # Input
 
-The first input line has an integer nnn: the number of customers.
-
-After this, there are nnn lines that describe the customers. Each line has two integers aaa and bbb: the arrival and leaving times of a customer.
-
-You may assume that all arrival and leaving times are distinct.
+The first input line has an integer n: the number of customers. After this, there are n lines that describe the customers. Each line has two integers a and b: the arrival and leaving times of a customer. You may assume that all arrival and leaving times are distinct.
 
 # Output
 
@@ -17,10 +14,11 @@ Print one integer: the maximum number of customers.
 # Constraints
 
 - $1≤n≤2.10^5$
-- $1≤a<b≤1091 \le a < b \le 10^91≤a<b≤10^9$
+- $1≤a<b≤10^9$
 
 # Example
 
+```cpp
 Input:
 
 3
@@ -31,3 +29,8 @@ Input:
 Output:
 
 2
+```
+
+# Solutions
+
+1) Naive Solution
