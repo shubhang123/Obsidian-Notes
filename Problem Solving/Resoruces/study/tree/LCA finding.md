@@ -135,7 +135,7 @@ Binary Lifting is an optimization technique for LCA queries. It precomputes the 
 
 Below is the modified code incorporating Binary Lifting to handle LCA queries efficiently.
 
-```x-c++src
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 1e5 + 10;
