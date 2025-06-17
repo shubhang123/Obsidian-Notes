@@ -1,271 +1,292 @@
-You are given the arrival and leaving times of nnn customers in a restaurant.
+Of course! Here is a rewritten and expanded explanation of the solutions for finding the maximum number of customers in a restaurant. This version focuses on building intuition with clearer analogies and more detailed theory for each approach.
 
-What was the maximum number of customers in the restaurant at any time?
+***
 
-# Problem Description
-# Input
+## Problem: Maximum Customers
 
-The first input line has an integer n: the number of customers. After this, there are n lines that describe the customers. Each line has two integers a and b: the arrival and leaving times of a customer. You may assume that all arrival and leaving times are distinct.
+You are given the arrival and departure times for `n` customers. The goal is to find the maximum number of customers that were present in the restaurant at the same time.
 
-# Output
-
-Print one integer: the maximum number of customers.
-
-# Constraints
-
-- $1≤n≤2.10^5$
-- $1≤a<b≤10^9$
-
-# Example
-
-```cpp
-Input:
-
-3
-5 8
-2 4
-3 9
-
-Output:
-
-2
-```
-
-# Solutions
-
+**Constraints:**
+*   $1 \le n \le 2 \cdot 10^5$
+*   $1 \le \text{arrival\_time} < \text{departure\_time} \le 10^9$
+*   All arrival and departure times are distinct.
+* 
 ![[Pasted image 20250617182112.png]]
+### The Naive Approach and Why It Fails
 
-# 1) Naive Solution
-the naive solution i thought was create a array of max size which will keep adding score to that time interval everytime it is visited, 
-
-one input comes with (arrival, departure)
-so from a loop from arrival to departure will run, incrementing the values for those indexes in the array
-
-so therefore we can just find the max element in that array to get out answer.
-
-limitations:
-it is o(n^2) as we will visit again and again the same elements in the array
-
-it is also impossible for the current constraints as we cant make a array for $10^9$ elements ( 1 billion elements )
-
-## 1. Event-list sweep line
-
-### Theory
-
-- Treat every “moment of interest” as an **event**.
-    
-    - **Arrival** → `+1` customer.
-        
-    - **Departure** → `–1` customer.
-        
-- Sort the `2 n` events by time.
-    
-- Walk through the array once, maintaining a running counter `cur` and its maximum `ans`.
-    
-
-Because the list is sorted, we know that all changes that happen at a smaller time are processed before larger ones, which faithfully simulates real time.
-
-_Complexity_ `O(n log n)` for the sort, `O(n)` extra memory (`2 n` pairs).
+A simple first thought might be to simulate time itself. We could create a massive array, where each index represents a moment in time. For each customer `(a, b)`, we would iterate from time `a` to `b` and increment a counter at each of these indices.
 
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
+// Pseudocode for the naive approach
+// DO NOT USE - THIS WILL NOT WORK
+int timeline[1000000001]; // Array of 1 billion integers
+for each customer (a, b):
+  for time t from a to b-1:
+    timeline[t]++;
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    int n;  cin >> n;
-    vector<pair<int,int>> ev;          // (time, delta)
-
-    for (int i = 0; i < n; ++i) {
-        int a, b;  cin >> a >> b;
-        ev.push_back({a, +1});         // arrival
-        ev.push_back({b, -1});         // departure
-    }
-    sort(ev.begin(), ev.end());        // O(2n log 2n)
-
-    long long cur = 0, ans = 0;
-    for (size_t i = 0; i < ev.size(); ++i) {
-        cur += ev[i].second;
-        ans  = max(ans, cur);
-    }
-    cout << ans << '\n';
-}
+int max_customers = 0;
+for time t from 1 to 1000000000:
+  max_customers = max(max_customers, timeline[t]);
 ```
 
-> **Tie-breaking note**  
-> The statement guarantees every timestamp is unique, so we don’t need “arrivals before departures” logic. If ties **were** possible, store the delta as `(time, ±1)` but sort by `time` then by `delta` descending so `+1` is processed before `–1`.
+This approach has two critical flaws given the problem's constraints:
+
+1.  **Memory Limit:** The maximum time can be $10^9$. An array of one billion integers would require approximately 4 GB of memory, which is far beyond the typical memory limit of a programming contest (e.g., 256-512 MB).
+2.  **Time Limit:** For each of the `n` customers, we might iterate up to $10^9$ times. This would be incredibly slow, leading to a "Time Limit Exceeded" error.
+
+The key insight to solve this problem efficiently is that the number of customers **only changes at an arrival or a departure**. We don't need to check every single nanosecond; we only need to examine these specific "event" times. All the following solutions are built on this principle.
 
 ---
 
-## 2. Two-pointer method on two sorted arrays
+### Solution 1: Event-List Sweep Line
 
-### Theory
+This is the most direct and intuitive application of the "event-based" insight.
 
-Instead of one list with tags, keep **two** arrays:
+#### Theory
+Imagine the timeline laid out before you. An arrival is a "+1" event, and a departure is a "-1" event. If we place all these events on the timeline and then "sweep" a line from the beginning to the end, we can keep a running count of the customers.
 
-- `A[]` – arrivals
-    
-- `D[]` – departures
-    
+1.  **Represent Events:** We transform each customer `(a, b)` into two distinct events:
+    *   An arrival event at time `a`, which increases the customer count: `(a, +1)`.
+    *   A departure event at time `b`, which decreases the customer count: `(b, -1)`.
 
-Sort both.  
-Maintain two indices `i` (next arrival) and `j` (next departure):
+2.  **Process Chronologically:** To correctly simulate time, we must process these events in the order they occur. Sorting all `2n` events by their time achieves this.
 
-|Case|Condition|Action|
-|---|---|---|
-|Arrival happens first|`A[i] < D[j]`|`++cur`, `++i`|
-|First departure is earlier|otherwise|`--cur`, `++j`|
+3.  **Sweep and Count:** We iterate through the sorted list of events. We maintain a `current_customers` counter. When we process an `(a, +1)` event, we increment the counter. When we process a `(b, -1)` event, we decrement it. After each event, the counter reflects the number of customers in the restaurant, so we compare it with our `max_customers` variable and update it if needed.
 
-Because times are distinct, `==` can’t occur.  
-Track the maximum at each step.
+**Why it works:** Sorting the events ensures we are simulating the passage of time perfectly. By processing each change in the customer count in chronological order, our running counter will accurately reflect the number of people inside at any given moment an event occurs.
 
-_Complexity_ `O(n log n)` for two sorts, `O(n)` memory.
+_Complexity:_
+*   **Time:** `O(n log n)`. Dominated by sorting the `2n` events. The final sweep is a single `O(n)` pass.
+*   **Space:** `O(n)`. We need to store `2n` events in our list.
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
+    ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;  cin >> n;
-    vector<int> A(n), D(n);
-    for (int i = 0; i < n; ++i) cin >> A[i] >> D[i];
+    int n;
+    cin >> n;
 
-    sort(A.begin(), A.end());
-    sort(D.begin(), D.end());
+    // A list of events: pair of (time, type)
+    // type = +1 for arrival, -1 for departure
+    vector<pair<int, int>> events;
+    for (int i = 0; i < n; ++i) {
+        int arrival, departure;
+        cin >> arrival >> departure;
+        events.push_back({arrival, +1});
+        events.push_back({departure, -1});
+    }
 
-    int i = 0, j = 0;
-    long long cur = 0, ans = 0;
-    while (i < n) {                    // we stop when all arrivals handled
-        if (A[i] < D[j]) {             // arrival
-            ++cur; ++i;
-        } else {                       // earliest departure
-            --cur; ++j;
+    // Sort events chronologically
+    sort(events.begin(), events.end());
+
+    long long current_customers = 0;
+    long long max_customers = 0;
+
+    // Sweep through the events
+    for (const auto& event : events) {
+        current_customers += event.second;
+        max_customers = max(max_customers, current_customers);
+    }
+
+    cout << max_customers << '\n';
+}
+```
+> **Tie-breaking Note:** The problem statement guarantees distinct timestamps. If ties were possible (e.g., a customer arrives at the exact moment another leaves), you would need to decide the order. Typically, you process arrivals *before* departures at the same timestamp. This can be achieved by sorting pairs `(time, type)` where `type` for arrivals (`+1`) is greater than for departures (`-1`). Sorting in descending order of `type` would handle this correctly.
+
+---
+
+### Solution 2: Two-Pointer Method
+
+This is a clever variation that avoids creating a combined event list, sometimes leading to slightly simpler code.
+
+#### Theory
+Instead of mixing arrivals and departures into one list, we can keep them in two separate, sorted lists. The "next event" in time will always be either the next unprocessed arrival or the next unprocessed departure. We can use two pointers, one for each list, to find out which event comes first.
+
+1.  **Separate and Sort:** Create an array `A` for all arrival times and an array `D` for all departure times. Sort both arrays independently.
+2.  **Two Pointers:** Initialize a pointer `i` to the start of the arrivals array `A` and a pointer `j` to the start of the departures array `D`.
+3.  **Compare and Process:** In a loop, compare `A[i]` and `D[j]`:
+    *   If `A[i] < D[j]`: The next event is an arrival. Increment the customer count and advance the arrival pointer (`i++`).
+    *   If `D[j] < A[i]`: The next event is a departure. Decrement the customer count and advance the departure pointer (`j++`).
+4.  **Track Maximum:** After each event is processed, update the `max_customers` variable. The loop continues until all arrivals have been handled.
+
+**Why it works:** By always comparing the next available arrival with the next available departure, we are correctly identifying the next chronological event across both sets. This effectively simulates the sweep-line without merging the lists.
+
+_Complexity:_
+*   **Time:** `O(n log n)`. Dominated by the two initial sorts of size `n`.
+*   **Space:** `O(n)`. We need to store the `n` arrival and `n` departure times.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+
+    vector<int> arrivals(n), departures(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> arrivals[i] >> departures[i];
+    }
+
+    sort(arrivals.begin(), arrivals.end());
+    sort(departures.begin(), departures.end());
+
+    long long current_customers = 0;
+    long long max_customers = 0;
+    int i = 0; // Pointer for arrivals
+    int j = 0; // Pointer for departures
+
+    // We only need to process up to the last arrival
+    while (i < n) {
+        // If the next event is an arrival
+        if (arrivals[i] < departures[j]) {
+            current_customers++;
+            i++;
+        } else { // Otherwise, it's a departure
+            current_customers--;
+            j++;
         }
-        ans = max(ans, cur);
+        max_customers = max(max_customers, current_customers);
     }
-    cout << ans << '\n';
+
+    cout << max_customers << '\n';
 }
 ```
 
 ---
 
-## 3. Min-heap of current departures
+### Solution 3: Min-Heap of Departures
 
-### Theory
+This approach processes customers in order of arrival and uses a min-heap (priority queue) to efficiently manage the customers currently inside.
 
-Process the customers **in order of arrival only** (one sort):
+#### Theory
+Think of yourself as a manager at the door. You have a list of customers sorted by their arrival time. As each new customer arrives, you first need to check if anyone who was already inside has left. A min-heap is the perfect tool to instantly find the customer who will be the *next to leave*.
 
-1. Sort pairs by `arrival`.
-    
-2. Keep a **min-heap** with all departure times of customers who are currently inside.
-    
-3. For each arrival `(a, b)`
-    
-    - Pop from the heap while `heap.top() < a` → those customers have left.
-        
-    - Push the new customer’s `b`.
-        
-    - Heap size =`cur`. Update maximum.
-        
+1.  **Sort by Arrival:** First, sort all customers based on their arrival time.
+2.  **Min-Heap for Departures:** We'll use a min-heap to store the departure times of all customers who are currently in the restaurant. The top of the min-heap will always give us the earliest departure time among all customers currently inside.
+3.  **Process Customers:** Iterate through the customers, sorted by arrival time `(a, b)`:
+    a. **Remove departed customers:** Look at the top of the heap. While the heap is not empty and its earliest departure time is before the current customer's arrival (`heap.top() < a`), it means that customer has already left. Pop them from the heap.
+    b. **Add the new customer:** The new customer `(a, b)` is now inside. Push their departure time `b` onto the heap.
+    c. **Update maximum:** The current number of customers is simply the number of elements in the heap (`heap.size()`). Update `max_customers` with this value.
 
-_When useful_ Streaming / online scenario: you can feed customers one by one and still keep `O(log k)` time per event (`k` = current customers).
+**Why it works:** This method correctly maintains the set of active customers at each arrival event. The min-heap provides an efficient `O(log k)` way to find and remove the earliest departures (`k` being the number of current customers), ensuring the count is accurate when a new customer arrives.
 
-_Complexity_ `O(n log n)` (heap push/pop in total), `O(n)` memory (heap ≤ `n`).
+_Complexity:_
+*   **Time:** `O(n log n)`. Sorting takes `O(n log n)`. Each of the `n` customers is pushed onto the heap once and popped once, with each heap operation taking `O(log n)` time.
+*   **Space:** `O(n)`. For sorting the customers and for the heap, which can hold up to `n` departure times in the worst case.
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
+    ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n;  cin >> n;
-    vector<pair<int,int>> cust(n);
-    for (int i = 0; i < n; ++i) cin >> cust[i].first >> cust[i].second;
+    int n;
+    cin >> n;
 
-    sort(cust.begin(), cust.end());      // by arrival
-
-    priority_queue<
-        int, vector<int>, greater<int>
-    > pq;                                // min-heap of departures
-
-    long long ans = 0;
-    for (auto &c : cust) {
-        int a = c.first, b = c.second;
-        while (!pq.empty() && pq.top() < a) pq.pop();
-        pq.push(b);
-        ans = max<long long>(ans, pq.size());
-    }
-    cout << ans << '\n';
-}
-```
-
----
-
-## 4. Difference map (ordered map of deltas)
-
-### Theory
-
-A `std::map<int,int>` automatically keeps keys ordered.  
-For every interval:
-
-- `diff[a] += 1`
-    
-- `diff[b] -= 1`
-    
-
-Then a single pass (in key order) accumulates the running total.
-
-_Advantages_
-
-- No large arrays even if times are sparse.
-    
-- Handles streaming input: each insertion is `O(log current size)`.
-    
-
-_Complexity_ `O(n log n)` insertions, `O(n)` map nodes.
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    int n;  cin >> n;
-    map<int,int> diff;                   // time → delta
-
+    vector<pair<int, int>> customers(n);
     for (int i = 0; i < n; ++i) {
-        int a, b;  cin >> a >> b;
-        diff[a] += 1;
-        diff[b] -= 1;
+        cin >> customers[i].first >> customers[i].second;
     }
 
-    long long cur = 0, ans = 0;
-    for (map<int,int>::iterator it = diff.begin(); it != diff.end(); ++it) {
-        cur += it->second;
-        ans  = max(ans, cur);
+    // Sort customers by arrival time
+    sort(customers.begin(), customers.end());
+
+    // Min-heap to store departure times of current customers
+    priority_queue<int, vector<int>, greater<int>> departure_times;
+    long long max_customers = 0;
+
+    for (const auto& customer : customers) {
+        int arrival = customer.first;
+        int departure = customer.second;
+
+        // Remove customers who have already left
+        while (!departure_times.empty() && departure_times.top() < arrival) {
+            departure_times.pop();
+        }
+
+        // Add the new customer
+        departure_times.push(departure);
+
+        // The size of the heap is the current number of customers
+        max_customers = max(max_customers, (long long)departure_times.size());
     }
-    cout << ans << '\n';
+
+    cout << max_customers << '\n';
 }
 ```
-
 ---
 
-### Summary
+### Solution 4: Difference Map
 
-|Method|Sorts?|Extra DS|Time|Space|Best when…|
-|---|---|---|---|---|---|
-|Event list|1 (2 n events)|none|`O(n log n)`|`O(n)`|Simple, most common|
-|Two-pointer|2 (A & D)|none|`O(n log n)`|`O(n)`|Slightly less memory inc.|
-|Min-heap|1 (arrivals)|min-heap|`O(n log n)`|`O(n)`|Online / streaming|
-|Diff-map|log-insert|ordered map|`O(n log n)`|`O(n)`|Sparse times, incremental feed|
+This approach is conceptually very similar to the sweep-line method but uses an ordered map data structure to automatically handle sorting and aggregating events.
 
-Pick whichever matches the constraints and coding style you prefer.
+#### Theory
+Instead of a list of events, we can use a map where the key is the `time` and the value is the `change` in the number of customers at that time. A `std::map` in C++ automatically keeps its keys sorted.
+
+1.  **Populate the Map:** Create a map `time_to_delta`. For each customer `(a, b)`:
+    *   `time_to_delta[a] += 1` (one person arrived)
+    *   `time_to_delta[b] -= 1` (one person left)
+    The map automatically handles cases where multiple events happen at the same time by summing the deltas.
+
+2.  **Iterate and Accumulate:** Traverse the map. Since the map is ordered by key (time), this is equivalent to sweeping a line through the sorted events. Maintain a `current_customers` count, add the delta from each map entry, and update the `max_customers` after each step.
+
+**Why it works:** An ordered map naturally stores the event points in chronological order and aggregates all changes (+1s and -1s) at a single point in time. Iterating through the map is therefore a clean way to implement the sweep-line logic.
+
+_Complexity:_
+*   **Time:** `O(n log n)`. Each of the `2n` insertions/updates into the map takes `O(log k)` time, where `k` is the current number of unique timestamps in the map (`k` ≤ `2n`).
+*   **Space:** `O(n)`. The map will store at most `2n` distinct timestamps as keys.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+
+    // Map from time to the change in customer count
+    map<int, int> time_to_delta;
+    for (int i = 0; i < n; ++i) {
+        int arrival, departure;
+        cin >> arrival >> departure;
+        time_to_delta[arrival]++;
+        time_to_delta[departure]--;
+    }
+
+    long long current_customers = 0;
+    long long max_customers = 0;
+
+    // Iterate through the map (which is sorted by time)
+    for (auto const& [time, delta] : time_to_delta) {
+        current_customers += delta;
+        max_customers = max(max_customers, current_customers);
+    }
+
+    cout << max_customers << '\n';
+}
+```
+---
+
+### Summary of Solutions
+
+| Method | Core Idea | Time Complexity | Space Complexity | Best Use Case |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Event List** | Convert `(a, b)` to `(a, +1)` and `(b, -1)`, sort, and sweep. | `O(n log n)` | `O(n)` | General purpose, easy to understand. The most common approach. |
+| **2. Two Pointers** | Sort arrivals and departures separately. Use two pointers to find the next chronological event. | `O(n log n)` | `O(n)` | Clean implementation, avoids pairs. Good alternative to Event List. |
+| **3. Min-Heap** | Sort by arrival. Use a min-heap to track active departures. | `O(n log n)` | `O(n)` | Excellent for "online" scenarios where customers are revealed one by one. |
+| **4. Difference Map** | Use an ordered map `time -> delta`. Let the map handle sorting and aggregation. | `O(n log n)` | `O(n)` | Elegant code, handles sparse time values naturally. |
+
+For most competitive programming contexts, the **Event List** and **Two-Pointer** methods are the most straightforward and reliable choices.
