@@ -2,7 +2,7 @@ In a movie festival n movies will be shown. You know the starting and ending tim
 
 Solution 
 
-Greedy Solution
+# Greedy Solution
 
 ### 🧠 **Key Insight:**
 
