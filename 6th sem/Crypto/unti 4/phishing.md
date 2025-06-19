@@ -310,3 +310,217 @@ Let me know when to proceed to:
 
 Let me know when you’re ready for:  
 👉 **Phishing – Hidden Attacks**.
+
+---
+
+## **Phishing – Hidden Attacks**
+
+---
+
+### **What are Hidden Attacks in Phishing?**
+
+**Hidden attacks** refer to phishing techniques where **malicious content is concealed** within seemingly harmless or legitimate webpages, emails, or applications. The goal is to **trick the user into performing an action** (like clicking a link or entering credentials) **without realizing it**—making these attacks subtle, deceptive, and dangerous.
+
+---
+
+### **Common Hidden Attack Techniques**
+
+1. **Invisible IFrames (Inline Frames)**
+    
+    - An **iFrame** is a small, embedded window in a webpage.
+        
+    - Attackers hide an invisible iFrame that loads a malicious login form from another domain.
+        
+    - The user sees only a part of the interface, not realizing their data is being sent elsewhere.
+        
+2. **Clickjacking**
+    
+    - A **legitimate-looking button** (e.g., “Play” or “Download”) is layered over a **hidden malicious link**.
+        
+    - When the user clicks, they unknowingly perform a different action—such as liking a page, submitting a form, or initiating a file download.
+        
+3. **CSS and JavaScript Obfuscation**
+    
+    - Malicious scripts are **hidden using encoding or complex scripting**.
+        
+    - Users cannot see or understand the attack just by viewing the page source.
+        
+4. **Transparent Elements**
+    
+    - Transparent buttons or input fields are placed over visible content.
+        
+    - Keystrokes or clicks get captured by hidden elements instead of the intended ones.
+        
+5. **Auto-Submitting Forms**
+    
+    - When a user visits a page, a form may **submit automatically** in the background with pre-filled stolen data (e.g., from browser autofill features).
+        
+6. **Fake Login Pop-ups**
+    
+    - Pop-up windows or modals appear like legitimate login prompts.
+        
+    - Users enter credentials, unaware that the box isn't part of the real website.
+        
+
+---
+
+### **Why Hidden Attacks Are Effective**
+
+- They rely on **user trust and inattentiveness**.
+    
+- The malicious components are usually **not visible or interactive** to the naked eye.
+    
+- **Security software** may miss them if the delivery method is clean but the hidden behavior is malicious.
+    
+
+---
+
+### **Protection Against Hidden Phishing Attacks**
+
+- Use browsers with **clickjacking and phishing protection**.
+    
+- Avoid interacting with **pop-ups** or forms unless you're certain of their legitimacy.
+    
+- Turn off **autofill features** for sensitive information.
+    
+- Inspect suspicious pages using browser developer tools to detect hidden elements.
+    
+
+---
+
+Let me know when you’re ready to move on to:  
+👉 **Phishing – Client-side Vulnerabilities**.
+
+Certainly! Here's a comprehensive explanation covering **all the remaining phishing attack types** from your syllabus in a single, cohesive theory-style note:
+
+---
+
+## **Phishing – Remaining Attack Types**
+
+---
+
+### **Client-Side Vulnerabilities**
+
+Phishing attacks often exploit **client-side vulnerabilities**—weaknesses in web browsers, email clients, or user configurations. These flaws allow attackers to execute malicious actions directly in the user's environment without needing system-level access.
+
+Examples include:
+
+- **Outdated browser plugins** (e.g., Flash, Java, PDF readers).
+    
+- **Cross-Origin Resource Sharing (CORS) misconfigurations**, enabling unauthorized data sharing.
+    
+- **Autofill abuse**, where hidden forms capture data.
+    
+- **Script injection**, exploiting JavaScript features like `document.write()` or `eval()` to dynamically create phishing content.
+    
+
+Attackers may exploit these to:
+
+- Display fake login prompts.
+    
+- Bypass same-origin policies.
+    
+- Steal cookies, session tokens, or browser-stored credentials.
+    
+
+---
+
+### **Deceptive Phishing**
+
+This is the **most common type of phishing**. It involves sending fake emails or messages impersonating trusted entities (banks, services, HR departments, etc.), urging the recipient to:
+
+- Click a malicious link.
+    
+- Provide credentials on a spoofed login page.
+    
+- Download an infected attachment.
+    
+
+Deceptive phishing preys on **fear or urgency** (e.g., “Your account will be closed!”) and uses **social engineering** to override a user’s caution.
+
+---
+
+### **Malware-Based Phishing**
+
+Here, the attacker tricks the victim into **downloading malware**, often through:
+
+- Email attachments labeled as invoices, job offers, or reports.
+    
+- Drive-by downloads from fake websites.
+    
+
+The malware may:
+
+- Record keystrokes (keyloggers).
+    
+- Steal files or credentials (Trojans).
+    
+- Open backdoors or install ransomware.
+    
+
+This form of phishing combines **social engineering with technical exploitation**.
+
+---
+
+### **DNS-Based Phishing (Pharming)**
+
+In DNS-based phishing, the attacker **manipulates DNS entries** to redirect users from legitimate websites to **malicious ones**, even if the URL entered is correct.
+
+This can be achieved by:
+
+- **Poisoning the DNS cache** (DNS cache poisoning).
+    
+- **Modifying the host file** on a user’s system.
+    
+- **Compromising a DNS server** to reroute traffic.
+    
+
+Unlike typical phishing, pharming does not require user interaction—**no email or link is needed**. It’s highly dangerous as it breaks the trust of users in **legitimate domains**.
+
+---
+
+### **Content-Injection Phishing**
+
+In this attack, the attacker **modifies a legitimate website’s content** to display **malicious forms or scripts** without altering the original domain.
+
+Techniques include:
+
+- **Compromising websites** to inject phishing forms.
+    
+- **Cross-site scripting (XSS)** to inject code on otherwise safe pages.
+    
+- Using browser extensions or malware to dynamically alter page content.
+    
+
+The user believes they are interacting with the genuine site but are **submitting information to the attacker**.
+
+---
+
+### **Search Engine Phishing**
+
+Attackers **create fake websites optimized for search engines (SEO poisoning)**. These websites may:
+
+- Imitate banking portals, government services, or e-commerce checkouts.
+    
+- Appear in top search results for queries like “download tax form” or “apply for refund”.
+    
+
+Unsuspecting users visit these sites directly via search results and are tricked into entering sensitive information. This technique is often combined with **typosquatting** and **malvertising**.
+
+---
+
+### Summary Table
+
+|**Attack Type**|**Description**|
+|---|---|
+|Client-side Vulnerabilities|Exploits browser or client software weaknesses.|
+|Deceptive Phishing|Fake messages impersonating trusted sources.|
+|Malware-Based Phishing|Tricking users into downloading malware through social engineering.|
+|DNS-Based Phishing (Pharming)|Redirects users to fake sites using DNS manipulation.|
+|Content-Injection Phishing|Injects fake forms/scripts into real websites.|
+|Search Engine Phishing|Fake websites appear in search results to lure victims.|
+
+---
+
+Let me know when you're ready to continue with:  
+👉 **Web Application Security – Secured Authentication Mechanism**.
