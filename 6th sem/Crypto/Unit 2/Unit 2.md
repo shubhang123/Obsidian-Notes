@@ -279,3 +279,104 @@ Code breaking, also known as cryptanalysis, involves techniques to decipher encr
 ---
 
 Let me know if you’d like me to proceed with the next topic, **Cryptanalysis**, or if you have any specific questions about **Code Breaking** before moving forward!
+
+### 2. Cryptanalysis
+Cryptanalysis is the science and practice of analyzing and breaking cryptographic systems to uncover the plaintext, deduce the key, or exploit weaknesses without authorized access. It combines mathematical, statistical, and computational techniques to evaluate and compromise the security of cryptographic algorithms.
+
+- **Definition**: Cryptanalysis involves studying cryptographic algorithms and their implementations to identify vulnerabilities, aiming to recover hidden information or bypass security mechanisms.
+- **Goals**:
+  - Recover the plaintext from ciphertext.
+  - Deduce the encryption key.
+  - Identify structural or implementation flaws in the cryptographic system.
+  - Assess the algorithm’s strength to improve future designs.
+- **Techniques**:
+  - **Mathematical Analysis**: Uses algebraic methods to exploit algorithm weaknesses. For example, solving systems of equations in linear cryptanalysis to approximate cipher behavior.
+  - **Statistical Analysis**: Leverages statistical properties, such as non-random distribution of ciphertext characters. Frequency analysis, for instance, exploits letter frequencies in classical ciphers.
+  - **Computational Attacks**: Employs computational resources to test keyspaces or analyze patterns. Examples include brute-force attacks or using rainbow tables for hash functions.
+  - **Differential Cryptanalysis**: Examines how differences in plaintext pairs affect ciphertext pairs to deduce key bits, effective against block ciphers like DES.
+  - **Linear Cryptanalysis**: Builds linear approximations of the cipher’s operations (e.g., XORs, substitutions) to predict key bits with high probability.
+  - **Side-Channel Analysis**: Targets physical implementation leaks, such as timing differences, power consumption, or electromagnetic radiation, to extract keys.
+  - **Meet-in-the-Middle Attack**: Used against double encryption (e.g., 2DES), where the attacker encrypts plaintext and decrypts ciphertext to find matching intermediate values, reducing keyspace complexity.
+- **Applications**:
+  - Evaluating the security of cryptographic algorithms (e.g., testing AES against differential cryptanalysis).
+  - Breaking historical ciphers, such as the Enigma machine, using known-plaintext attacks and pattern analysis.
+  - Developing countermeasures by identifying weaknesses in proposed systems.
+- **Example**: To cryptanalyze a Vigenère cipher, an attacker uses the Kasiski examination to estimate key length by finding repeated ciphertext sequences, then applies frequency analysis to each key position to recover the key. For ciphertext “KCCPKBGUFDPHQ”, repeated sequences suggest a key length of 3, and analysis reveals the key “KEY” and plaintext “CRYPTOGRAPHY”.
+- **Challenges**:
+  - Modern algorithms like AES and RSA are designed to resist cryptanalysis through large key sizes and complex transformations.
+  - Quantum computing poses future risks, potentially breaking systems like RSA via Shor’s algorithm.
+- **Countermeasures**:
+  - Use algorithms vetted by the cryptographic community (e.g., NIST standards).
+  - Implement constant-time operations to mitigate side-channel attacks.
+  - Regularly update systems to address new cryptanalytic techniques.
+
+---
+
+Let me know if you’d like to proceed with the next topic, **Cryptography Attacks**, or if you have any questions about **Cryptanalysis**!
+
+
+### 3. Cryptography Attacks
+Cryptography attacks are specific methods used by attackers to compromise the security of cryptographic systems, targeting confidentiality, integrity, authenticity, or availability. These attacks exploit weaknesses in algorithms, implementations, or protocols to recover plaintext, keys, or manipulate data.
+
+- **Definition**: Cryptography attacks are deliberate attempts to bypass or undermine cryptographic protections through analytical, computational, or physical means.
+- **Types of Attacks**:
+  - **Ciphertext-Only Attack**: The attacker has access only to the ciphertext and attempts to deduce the plaintext or key. Example: Using frequency analysis to break a substitution cipher, where common ciphertext letters are mapped to frequent English letters like 'E' or 'T'.
+  - **Known-Plaintext Attack**: The attacker possesses pairs of plaintext and corresponding ciphertext, using them to deduce the key. Example: If an attacker knows a standard email header and its encrypted form, they can analyze the key used in a block cipher like DES.
+  - **Chosen-Plaintext Attack**: The attacker can choose plaintexts and obtain their ciphertexts, enabling analysis of the encryption process. Common in public-key systems like RSA, where an attacker might encrypt specific values to infer the private key.
+  - **Chosen-Ciphertext Attack**: The attacker can select ciphertexts and obtain their plaintexts, often targeting adaptive weaknesses. This is effective against certain public-key systems or padding schemes (e.g., RSA with improper padding).
+  - **Man-in-the-Middle (MITM) Attack**: The attacker intercepts communication between parties to eavesdrop, modify data, or impersonate one party. Example: Intercepting a Diffie-Hellman key exchange without authentication to capture the shared secret.
+  - **Side-Channel Attacks**: Exploit physical implementation details rather than the algorithm. Examples include:
+    - **Timing Attacks**: Measuring execution time to deduce key bits (e.g., RSA decryption time variations).
+    - **Power Analysis**: Analyzing power consumption patterns during encryption (e.g., differential power analysis on AES).
+    - **Electromagnetic Attacks**: Capturing electromagnetic emissions to infer cryptographic operations.
+  - **Birthday Attack**: Exploits the birthday paradox to find collisions in hash functions, reducing the effective security of a hash (e.g., a 128-bit hash has only 64-bit collision resistance).
+  - **Replay Attack**: The attacker captures and retransmits valid encrypted messages to trick the system, often targeting authentication protocols.
+- **Applications**:
+  - Breaking insecure systems, such as outdated ciphers (e.g., WEP in Wi-Fi).
+  - Testing the robustness of cryptographic protocols during security audits.
+  - Motivating the development of stronger algorithms and implementations.
+- **Example**: In a chosen-plaintext attack on RSA, an attacker might encrypt a series of numbers (e.g., 2, 3, 4) using the public key (n, e) and analyze the ciphertexts to deduce the private key d, exploiting weak padding or small key sizes.
+- **Challenges**:
+  - Modern algorithms like AES-256 and RSA with large keys resist most direct attacks due to computational infeasibility.
+  - Side-channel attacks require physical access or sophisticated equipment, limiting their practicality.
+- **Countermeasures**:
+  - Use strong, standardized algorithms (e.g., AES, SHA-3) with large key sizes.
+  - Implement secure key exchange protocols with authentication (e.g., TLS with certificates).
+  - Mitigate side-channel attacks using constant-time operations, randomized padding, or noise injection.
+  - Validate inputs to prevent padding oracle or chosen-ciphertext vulnerabilities.
+
+---
+
+Let me know if you’d like to proceed with the next topic, **Brute-Force Attack**, or if you have any questions about **Cryptography Attacks**!
+
+### 4. Brute-Force Attack
+A brute-force attack is a cryptographic attack method that involves systematically trying all possible keys or passwords until the correct one is found. It is a straightforward but computationally intensive approach that relies on exhaustive search to break encryption or gain unauthorized access.
+
+- **Definition**: A brute-force attack tests every possible key in the keyspace to decrypt ciphertext or every possible password to bypass authentication, aiming to find the correct one through trial and error.
+- **Mechanism**:
+  - The attacker enumerates all possible keys or passwords and applies them to the cryptographic system until the correct one produces meaningful plaintext or grants access.
+  - Example: For a 4-digit PIN, the attacker tries all 10,000 combinations (0000 to 9999). For a 56-bit DES key, the attacker tests all 2^56 (approximately 72 quadrillion) possible keys.
+- **Factors Affecting Success**:
+  - **Key Size**: Larger keys exponentially increase the keyspace, making brute-force infeasible. For example, a 128-bit AES key has 2^128 possible values (~340 undecillion), far beyond current computational capabilities.
+  - **Computational Power**: Modern hardware, such as GPUs, ASICs, or distributed systems, can accelerate brute-force attempts, but large keyspaces remain impractical. For instance, cracking a 56-bit DES key took days with specialized hardware in the 1990s.
+  - **Time**: The time required depends on the keyspace size and computing resources. Brute-forcing a 256-bit key would take longer than the universe’s age with today’s technology.
+  - **Algorithm Efficiency**: Some algorithms are slower to compute, increasing the time per key test (e.g., bcrypt for password hashing).
+- **Applications**:
+  - Breaking weak encryption systems with small key sizes (e.g., 40-bit RC4 used in early WEP).
+  - Cracking passwords in authentication systems, especially if they are short or predictable.
+  - Testing the theoretical strength of cryptographic algorithms during security evaluations.
+- **Example**: To brute-force a Caesar cipher (shift cipher), an attacker tries all 25 possible shifts (1 to 25) on the ciphertext “FURDW”. Testing shift 3 yields the plaintext “CRYPTO”, revealing the key. For modern systems like AES-128, brute-forcing 2^128 keys is computationally infeasible.
+- **Challenges**:
+  - Large key sizes (e.g., 256-bit AES) render brute-force attacks impractical due to astronomical time requirements.
+  - Resource constraints, such as power and hardware costs, limit scalability.
+  - Systems with rate-limiting or lockout mechanisms (e.g., login attempts) thwart password brute-forcing.
+- **Countermeasures**:
+  - Use cryptographic algorithms with large key sizes (e.g., AES-256, RSA-2048).
+  - Implement strong, complex passwords or passphrases to increase the effective keyspace.
+  - Apply rate-limiting, account lockouts, or CAPTCHAs to deter brute-force attempts on authentication systems.
+  - Use slow, memory-intensive hashing algorithms (e.g., bcrypt, Argon2) for passwords to increase computation time per guess.
+  - Regularly update keys and monitor for unauthorized access attempts.
+
+---
+
+Let me know if you’d like to proceed with the next topic, **Use of Cryptography**, or if you have any questions about **Brute-Force Attack**!
