@@ -455,8 +455,8 @@ IDS can be classified based on **where they are deployed** (host or network) and
      - Misses host-specific attacks (e.g., file tampering).
      - May struggle with high-speed or high-volume networks.
    - **Use Case**: Monitoring enterprise network perimeters or data centers.
-
-3. **Signature-Based Intrusion Detection System**:
+![[Pasted image 20250619163911.png]]
+1. **Signature-Based Intrusion Detection System**:
    - **Definition**: Detects intrusions by comparing monitored activities against a database of known attack signatures (patterns of malicious behavior).
    - **How It Works**:
      - Matches network traffic or system events to predefined rules (e.g., a specific malware packet structure).
@@ -472,8 +472,8 @@ IDS can be classified based on **where they are deployed** (host or network) and
      - Requires frequent signature updates to stay current.
      - Can be bypassed by attackers modifying attack patterns.
    - **Use Case**: Environments needing fast detection of well-known threats like viruses or exploits.
-
-4. **Anomaly-Based Intrusion Detection System**:
+![[Pasted image 20250619163956.png]]
+1. **Anomaly-Based Intrusion Detection System**:
    - **Definition**: Detects intrusions by identifying deviations from a baseline of normal system or network behavior.
    - **How It Works**:
      - Establishes a baseline of typical activity (e.g., normal traffic volume, user behavior).
