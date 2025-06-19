@@ -730,3 +730,104 @@ Kerberos operates in a client-server model using symmetric key cryptography (typ
 
 ### Next Steps
 Would you like me to proceed with the next topic, **Message Authentication Codes**, or do you have any questions about Kerberos? If you need more details, examples, or clarification, let me know!
+
+### 8. Message Digest Functions
+
+#### Definition
+Message digest functions are cryptographic hash functions that take an input (message) of any length and produce a fixed-length output called a **message digest** or **hash value**. They are used to ensure data integrity and support authentication.
+
+#### Key Properties
+- **Deterministic**: Same input yields same output.
+- **Fixed-Length Output**: Produces a consistent hash size (e.g., 256 bits for SHA-256).
+- **Pre-image Resistance**: Hard to find input from its hash.
+- **Collision Resistance**: Difficult to find two inputs with the same hash.
+- **Second Pre-image Resistance**: Hard to find another input with the same hash as a given input.
+- **Avalanche Effect**: Small input change causes large hash change.
+
+#### How They Work
+- Input message is padded and divided into blocks.
+- Blocks are processed through mathematical operations (e.g., bitwise, modular addition).
+- Final output is a fixed-length digest.
+
+#### Examples
+- **MD5**: 128-bit, insecure due to collision vulnerabilities.
+- **SHA-1**: 160-bit, deprecated for cryptographic use.
+- **SHA-2**: Includes SHA-256, SHA-512, secure and widely used.
+- **SHA-3**: Based on Keccak, flexible and quantum-resistant.
+
+#### Applications
+- **Data Integrity**: Verify files or messages haven’t been altered (e.g., checksums).
+- **Digital Signatures**: Hash messages before signing.
+- **Password Storage**: Store hashed passwords (with salts).
+- **Blockchain**: Hash transactions or blocks.
+
+#### Security Considerations
+- Avoid weak functions (MD5, SHA-1) due to collision attacks.
+- Use SHA-2 or SHA-3 for security-critical applications.
+- Quantum computing may reduce hash function strength; SHA-3 is more resistant.
+
+#### Limitations
+- No authenticity without additional mechanisms (e.g., HMAC).
+- Fast computation makes them unsuitable for password hashing (use bcrypt or Argon2).
+- Vulnerable to length-extension attacks in some cases (e.g., SHA-1, SHA-256).
+
+---
+
+### Next Steps
+Would you like me to proceed with the next topic, **MD5**, or do you have any questions about Message Digest Functions?
+
+### 9. MD5 (Message Digest Algorithm 5)
+
+#### Definition
+MD5 is a cryptographic hash function that takes an input message of arbitrary length and produces a 128-bit (16-byte) fixed-length hash value, known as a message digest. Designed by Ronald Rivest in 1991, it was widely used for data integrity but is now considered insecure for cryptographic purposes.
+
+#### Key Properties
+- **Deterministic**: Same input always produces the same hash.
+- **Fixed Output**: 128-bit (32 hexadecimal characters) digest.
+- **Fast Computation**: Optimized for speed on 32-bit processors.
+- **Avalanche Effect**: Small input changes lead to significant hash changes.
+- **Pre-image Resistance (Weak)**: Hard to find input from hash, but vulnerabilities exist.
+- **Collision Resistance (Broken)**: Easy to find two inputs with the same hash.
+
+#### How It Works
+1. **Padding**: Input is padded with a ‘1’ bit, zeros, and the message length to make it a multiple of 512 bits.
+2. **Block Division**: Message is split into 512-bit blocks.
+3. **Initialization**: Four 32-bit variables (A, B, C, D) are initialized with constant values.
+4. **Processing**: Each block is processed in 64 steps, using bitwise operations (AND, OR, XOR), rotations, and modular additions.
+5. **Output**: Final values of A, B, C, D are concatenated to form the 128-bit hash.
+
+#### Applications
+- **Non-Cryptographic Use**:
+  - File integrity checks (e.g., verifying downloads).
+  - Checksums for data comparison.
+- **Legacy Use**:
+  - Password hashing (insecure, not recommended).
+  - Digital signatures (now deprecated).
+
+#### Security Considerations
+- **Collision Attacks**: Practical attacks demonstrated in 2004; two different inputs can produce the same hash.
+- **Pre-image Attacks**: Not fully broken but weakened; faster than brute-force possible.
+- **Not Quantum-Resistant**: 128-bit output is vulnerable to quantum attacks (e.g., Grover’s algorithm).
+- **Deprecated**: NIST and others recommend avoiding MD5 for cryptographic purposes.
+
+#### Limitations
+- **Insecure**: Easily exploitable in digital signatures, certificates, or authentication.
+- **Short Hash Length**: 128 bits prone to birthday attacks.
+- **Length-Extension Attacks**: Vulnerable unless used with additional protections (e.g., HMAC).
+- **Not Suitable for Passwords**: Fast computation enables brute-force attacks.
+
+#### Alternatives
+- SHA-2 (e.g., SHA-256) for secure hashing.
+- SHA-3 for quantum resistance.
+- Bcrypt or Argon2 for password hashing.
+
+#### Example
+- MD5 hash of “hello”:
+  ```
+  5d41402abc4b2a76b9719d911017c592
+  ```
+
+---
+
+### Next Steps
+Would you like me to proceed with the next topic, **SSL (Secure Sockets Layer)**, or do you have any questions about MD5?
