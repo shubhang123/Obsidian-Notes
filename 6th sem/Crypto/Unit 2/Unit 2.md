@@ -805,3 +805,72 @@ RC4 is a stream cipher designed by Ron Rivest in 1987 for RSA Security. It is a 
 
 Let me know if you’d like to proceed with the next topic, **RC5**, or if you have any questions about **RC4**!
 
+### 12. RC6
+
+RC6 is a symmetric key block cipher designed by Ron Rivest, Matt Robshaw, Ray Sidney, and Yiqun Lisa Yin in 1998 as a candidate for the Advanced Encryption Standard (AES) competition. It is an evolution of RC5, offering improved security and performance with a fixed 128-bit block size and variable key sizes. RC6 uses data-dependent rotations, multiplication, and a more complex structure to enhance resistance to cryptanalysis.
+
+- **Definition**: RC6 is a block cipher that encrypts 128-bit blocks using key sizes of 128, 192, or 256 bits and a configurable number of rounds (typically 20). It builds on RC5 by adding quadratic functions and fixed shifts to increase security.
+- **Parameters**:
+    - **Block Size**: Fixed at 128 bits (four 32-bit words).
+    - **Key Size**: Variable, typically 128, 192, or 256 bits, denoted as $b$ (bytes).
+    - **Rounds**: Number of encryption rounds, denoted as $r$, typically 20 for AES candidacy.
+    - Notation: RC6-$w/r/b$, where $w = 32$ (word size), e.g., RC6-32/20/16 for 128-bit block, 20 rounds, 128-bit key.
+- **How It Works**:
+    - **Key Expansion**:
+        - The user key (length $b$ bytes) is expanded into $2r + 4$ subkeys, stored in an array $S$ of 32-bit words.
+        - Similar to RC5, it uses magic constants (derived from the golden ratio and $e$) and a mixing process to generate subkeys.
+    - **Encryption**:
+        - The 128-bit plaintext block is split into four 32-bit words: $A$, $B$, $C$, $D$.
+        - Initial subkey addition: $$B = B + S[0], \quad D = D + S[1]$$
+        - For each round $i = 1$ to $r$:
+            - Compute quadratic functions: $$t = (B \times (2B + 1)) \ll \log_2 w$$ $$u = (D \times (2D + 1)) \ll \log_2 w$$ where $\times$ is multiplication mod $2^{32}$, and $\ll$ is left rotation by $\log_2 w = 5$ (for $w = 32$).
+            - Update words: $$A = ((A \oplus t) \ll u) + S[2i]$$ $$C = ((C \oplus u) \ll t) + S[2i + 1]$$ $$(A, B, C, D) = (B, C, D, A)$$ where $\oplus$ is XOR, $\ll$ is left rotation, and $+$ is addition mod $2^{32}$.
+        - Final subkey addition: $$A = A + S[2r + 2], \quad C = C + S[2r + 3]$$
+        - Output the ciphertext block $(A, B, C, D)$.
+    - **Decryption**:
+        - Reverses the encryption process, starting with the ciphertext $(A, B, C, D)$.
+        - Final subkey subtraction: $$C = C - S[2r + 3], \quad A = A - S[2r + 2]$$
+        - For each round $i = r$ down to 1:
+            - Rotate words: $(A, B, C, D) = (D, A, B, C)$.
+            - Compute: $$u = (D \times (2D + 1)) \ll \log_2 w$$ $$t = (B \times (2B + 1)) \ll \log_2 w$$
+            - Update: $$C = ((C - S[2i + 1]) \gg t) \oplus u$$ $$A = ((A - S[2i]) \gg u) \oplus t$$ where $-$ is subtraction mod $2^{32}$, and $\gg$ is right rotation.
+        - Initial subkey subtraction: $$D = D - S[1], \quad B = B - S[0]$$
+        - Output the plaintext block $(A, B, C, D)$.
+- **Security Basis**:
+    - Relies on a combination of data-dependent rotations, XOR, modular addition, and multiplication (quadratic function $f(x) = x(2x + 1) \bmod 2^{32}$) to create non-linear transformations.
+    - The 20-round structure and 128-bit block size provide strong resistance to known attacks.
+- **Applications**:
+    - Proposed as an AES candidate, though AES (Rijndael) was selected.
+    - Used in some software applications and experimental systems requiring flexible key sizes.
+    - Suitable for environments needing high-speed encryption with moderate security requirements.
+- **Example**:
+    - For RC6-32/20/16 (128-bit block, 20 rounds, 128-bit key):
+        - Plaintext: 128-bit block, e.g., $(A, B, C, D) = (0\text{x}12345678, 0\text{x}9ABCDEF0, 0\text{x}FEDCBA98, 0\text{x}87654321)$.
+        - Key: 128 bits (16 bytes), expanded into 44 subkeys ($S[0]$ to $S[43]$).
+        - Encryption applies initial subkey addition, 20 rounds of transformations (XOR, rotation, multiplication, addition), and final subkey addition to produce ciphertext.
+        - Decryption reverses the process to recover the plaintext.
+- **Advantages**:
+    - Simple and elegant design, building on RC5 with enhanced security.
+    - Flexible key sizes (128, 192, 256 bits) and fixed 128-bit block size, suitable for modern applications.
+    - Efficient in software, especially on 32-bit processors, due to word-based operations.
+    - Stronger than RC5 due to added multiplication and increased rounds.
+- **Disadvantages**:
+    - **Vulnerabilities**:
+        - Differential cryptanalysis can attack reduced-round versions (e.g., 12 rounds) with significant chosen plaintext.
+        - Requires 20 rounds for adequate security against known attacks.
+        - Less studied than AES, leading to lower confidence in long-term security.
+    - **Not Standardized**: RC6 was not selected as AES, limiting its adoption.
+    - **Patent Issues**: Patented by RSA Security (expired in 2017), which restricted widespread use.
+- **Challenges**:
+    - Balancing performance and security requires careful selection of rounds (20 recommended).
+    - Less community scrutiny compared to AES, increasing risk of undiscovered weaknesses.
+    - Modern ciphers like AES and ChaCha are preferred for their standardization and performance.
+- **Countermeasures**:
+    - Use 20 rounds ($r = 20$) to resist differential and linear cryptanalysis.
+    - Employ large key sizes (e.g., 256 bits) to prevent brute-force attacks.
+    - Use secure modes of operation (e.g., CBC, GCM) to enhance block cipher security.
+    - Prefer AES or other standardized ciphers for new systems due to RC6's limited adoption.
+
+---
+
+Let me know if you'd like to proceed with the next topic, **Blowfish**, or if you have any questions about **RC6**!
