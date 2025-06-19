@@ -7,18 +7,17 @@ b) What are Intruders? With the help of a suitable example explain intrusion det
 a) Misconfiguration attack
 b) Post-attack IDS
 c) Penetration testing
-d) Brute-force attack
-e) Active IDS
+
 3.
-a) Explain non-alphabetic substitution cipher? Also discuss letter frequency attack on mono-alphabetic substitution cipher?
+a) Explain mono-alphabetic substitution cipher? Also discuss letter frequency attack on mono-alphabetic substitution cipher?
 b) Explain how public-key encryption is used to distribute secret key?
 4.
-a) Explain Linear and Differential Cryptanalysis in detail.
-b) How is ski different from block-dance attack?
-c) Describe encryption operation of DES algorithm.
+a) Explain Linear and Differential Cryptanalysis in detail how is it diff from brute force attack
+b) Describe encryption operation of DES algorithm.
 5.
 a) Explain The Ticket Granting Server (TGS) scheme in Kerberos.
-b) What is Steganography? What is the use of that purpose?
+b) What is dual signagure ? what is use of dual signature
+
 3. What do you mean by Digital Certificate? Discuss Digital signature and Certificate Authority.
 4. Explain IP Security (IPSec) along with its applications.
 5. Write short notes on any two of the following:
