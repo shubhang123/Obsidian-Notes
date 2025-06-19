@@ -403,6 +403,7 @@ Would you like me to proceed with the next topic, **Types of Intrusion Detection
 #### **Overview**
 This topic explores the different types of **Intrusion Detection Systems (IDS)**, categorized based on their deployment, monitoring scope, and detection methods. Understanding these types helps in selecting the appropriate IDS for specific security needs.
 
+![[Pasted image 20250619163710.png]]
 ---
 
 #### **Types of Intrusion Detection Systems**
@@ -431,8 +432,8 @@ IDS can be classified based on **where they are deployed** (host or network) and
      - Resource-intensive on the host system.
      - Requires deployment on each device, increasing management overhead.
    - **Use Case**: Protecting critical servers or endpoints with sensitive data.
-
-2. **Network-Based Intrusion Detection System (NIDS)**:
+![[Pasted image 20250619163748.png]]
+1. **Network-Based Intrusion Detection System (NIDS)**:
    - **Definition**: Monitors network traffic to detect suspicious patterns or malicious activities across a network.
    - **What It Monitors**:
      - Network packets (e.g., headers, payloads).
