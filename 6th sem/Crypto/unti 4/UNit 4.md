@@ -435,3 +435,61 @@ The victim often has no idea that their system is being misused as a **stepping 
 
 Let me know when you’d like to continue with:  
 👉 **FTP Trojans**.
+
+---
+
+### **Types of Trojans – FTP Trojans**
+
+An **FTP Trojan** is a type of Trojan horse that installs an **FTP (File Transfer Protocol) server** on the victim’s machine without their knowledge. This creates an **unauthorized entry point** through which the attacker can **access, upload, or download files remotely**, often with full permissions.
+
+---
+
+#### **How They Work**
+
+After infecting a system:
+
+1. The Trojan silently installs an **FTP server application**, often configured to run as a background process or service.
+    
+2. It opens **port 21** (standard for FTP), or another custom port, and listens for incoming FTP connections.
+    
+3. The attacker connects remotely using an FTP client with **predefined credentials** or **no authentication** at all.
+    
+4. Once connected, the attacker can:
+    
+    - Upload malicious files or tools.
+        
+    - Download sensitive files or data.
+        
+    - Modify or delete system and user files.
+        
+    - Create new backdoors or establish persistent access.
+        
+
+---
+
+#### **Key Characteristics**
+
+- Often **disguised as a useful tool** or bundled with pirated software.
+    
+- Frequently used in **targeted attacks** to facilitate silent data exfiltration.
+    
+- May **bypass firewall rules** if disguised to use trusted system ports.
+    
+
+---
+
+#### **Risks**
+
+- **Complete file system exposure** to unauthorized users.
+    
+- **Easy expansion** of the attacker’s control (installing more malware or RATs).
+    
+- **Data theft**, system tampering, and violation of organizational policies.
+    
+- Difficult to detect if no changes to system performance are visible.
+    
+
+---
+
+Let me know when you're ready for:  
+👉 **Security Software Disablers**.
