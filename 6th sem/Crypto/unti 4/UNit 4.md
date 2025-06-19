@@ -212,3 +212,92 @@ RATs also often include **persistence mechanisms**, allowing them to survive reb
 
 Let me know when to continue with:  
 👉 **Data-Sending Trojans**
+
+---
+
+### **Types of Trojans – Data-Sending Trojans**
+
+A **Data-Sending Trojan** is a category of Trojan malware specifically designed to **steal sensitive information** from an infected system and **send it to the attacker** without the user's knowledge. These Trojans do not offer remote control but focus purely on **data exfiltration**.
+
+---
+
+#### **How They Work**
+
+Once installed, a Data-Sending Trojan:
+
+1. **Scans the system** for valuable information such as:
+    
+    - Stored passwords (browser credentials, Wi-Fi keys, FTP logins).
+        
+    - Banking information or credit card numbers.
+        
+    - Personal identification details (like PAN, Aadhaar, SSN).
+        
+    - Cryptocurrency wallet files or keys.
+        
+2. **Logs user activity** such as:
+    
+    - Keystrokes (keyloggers).
+        
+    - Clipboard content.
+        
+    - Screenshots.
+        
+3. **Collects browser or email data**, like cookies or autofill info.
+    
+4. **Packages the data** and transmits it to the attacker, typically using:
+    
+    - HTTP/HTTPS requests.
+        
+    - Email attachments.
+        
+    - FTP uploads.
+        
+    - Command and control channels.
+        
+
+---
+
+#### **Common Techniques Used**
+
+- **Form grabbing**: Capturing data submitted in web forms before it's encrypted by HTTPS.
+    
+- **Keylogging**: Recording every keystroke typed by the user.
+    
+- **Screenshot capture**: Regularly taking screenshots of sensitive applications or transactions.
+    
+- **Clipboard monitoring**: Stealing copied credentials or crypto wallet addresses.
+    
+
+---
+
+#### **Examples**
+
+- **Agent Tesla**: A well-known data-stealing Trojan with capabilities like keylogging, clipboard theft, and webcam access.
+    
+- **LokiBot**: Widely used for credential theft and exfiltration of sensitive files.
+    
+- **RedLine Stealer**: Targets browser-stored passwords, credit cards, and crypto wallets.
+    
+
+---
+
+#### **Impact**
+
+Data-Sending Trojans are commonly used in:
+
+- **Identity theft**.
+    
+- **Financial fraud**.
+    
+- **Corporate espionage**.
+    
+- **Credential stuffing attacks** (reusing stolen passwords elsewhere).
+    
+
+They are **quiet and focused**, often going undetected for long periods and causing significant damage through stolen data.
+
+---
+
+Let me know when to proceed with:  
+👉 **Destructive Trojans**
