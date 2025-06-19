@@ -13,45 +13,14 @@ Trojans do not replicate themselves like viruses or worms. Instead, they rely on
 ### Backdoors
 
 A **Backdoor** is a hidden method used by attackers to bypass normal authentication or security mechanisms of a system. Once installed—often via a Trojan—it allows remote access to the compromised system, enabling the attacker to control the system or extract data.
+### **Overt and Covert Channels**
 
-### Overt and Covert Channels
+In computer security, **communication channels** can be classified into **overt** and **covert** channels based on their visibility and legitimacy.
 
-- **Overt Channel**: A legitimate and intended channel of communication (e.g., HTTP, FTP).
+- An **Overt Channel** is a legitimate, intended, and documented communication path used for normal system operations. For example, sending data over HTTP, HTTPS, FTP, or SMTP protocols are overt channel operations because they follow intended and transparent communication rules.
     
-- **Covert Channel**: An unintended or hidden communication path used to transfer information secretly, often to exfiltrate data or issue commands to malware.
-    
-
----
-
-### Working of Trojans and Backdoors
-
-1. The attacker sends a Trojan to the target disguised as a legitimate file.
-    
-2. The user unknowingly installs the Trojan.
-    
-3. The Trojan installs a backdoor or performs other malicious tasks (e.g., logging keystrokes, stealing credentials).
-    
-4. The attacker gains unauthorized access via the backdoor and executes commands remotely.
+- A **Covert Channel**, in contrast, is an **unauthorized or hidden communication path** that violates the security policy of a system. It is used to transfer information in a way that is not intended for communication, often by exploiting features or flaws in the system. Attackers commonly use covert channels to leak data or send commands between infected systems and control servers without detection.
     
 
----
-
-### Types of Trojans
-
-1. **Remote Access Trojans (RATs)**: Provide the attacker with full control over the victim's system.
-    
-2. **Data-Sending Trojans**: Collect and transmit sensitive data such as passwords, keystrokes, or screenshots.
-    
-3. **Destructive Trojans**: Intentionally destroy files, formats drives, or corrupt data.
-    
-4. **Proxy Trojans**: Turn the victim's system into a proxy server, used to hide the attacker’s identity or carry out further attacks.
-    
-5. **FTP Trojans**: Open port 21 and set up an unauthorized FTP server on the victim's system.
-    
-6. **Security Software Disablers**: Disable antivirus, firewall, or other security tools, allowing further infections or attacks.
-    
-
----
-
-Let me know when you're ready for the **next topic**.
+Covert channels are **dangerous because they are hard to detect** and can be embedded within seemingly legitimate activities. For instance, timing variations in network packet transmission, or manipulating unused bits in protocol headers, can serve as covert communication methods.
 
