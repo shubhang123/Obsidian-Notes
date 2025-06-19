@@ -301,3 +301,137 @@ They are **quiet and focused**, often going undetected for long periods and caus
 
 Let me know when to proceed with:  
 👉 **Destructive Trojans**
+
+---
+
+### **Types of Trojans – Destructive Trojans**
+
+A **Destructive Trojan** is a form of malware specifically created to **damage, corrupt, or destroy data and systems**. Unlike other Trojans that aim to steal data or provide remote access, the sole intention of a destructive Trojan is to **cause harm** to the target system, either immediately or after remaining dormant for a period.
+
+---
+
+#### **How They Work**
+
+Once a destructive Trojan is installed, it may:
+
+- **Delete system or user files** (e.g., documents, configurations).
+    
+- **Corrupt the file system or disk partition**.
+    
+- **Overwrite critical operating system files**, making the system unbootable.
+    
+- **Format the hard drive** or encrypt files without any recovery option (in contrast to ransomware, which demands payment).
+    
+- **Disable or crash services**, often leading to total system failure.
+    
+
+Some Trojans activate their payload **immediately**, while others **remain dormant**, waiting for a trigger such as:
+
+- A specific date/time (logic bombs).
+    
+- Certain user actions.
+    
+- A remote command from the attacker.
+    
+
+---
+
+#### **Motivation Behind Destructive Trojans**
+
+- **Hacktivism**: Causing visible disruption for political or ideological motives.
+    
+- **Sabotage**: Targeting organizations, especially competitors or political targets.
+    
+- **Revenge**: Ex-employees or insiders destroying data before leaving.
+    
+- **Cover-up**: Destroying evidence of other malware or fraud.
+    
+
+---
+
+#### **Examples**
+
+- **MBR Wiper Trojans**: Overwrite the Master Boot Record, making systems unbootable.
+    
+- **KillDisk**: Deletes files and corrupts partitions, used in destructive cyberattacks like NotPetya.
+    
+- **Shamoon**: A destructive Trojan that wiped data on computers in targeted attacks against Middle Eastern oil companies.
+    
+
+---
+
+#### **Consequences**
+
+Destructive Trojans can lead to:
+
+- **Permanent data loss**.
+    
+- **System downtime and operational disruption**.
+    
+- **Financial and reputational damage**.
+    
+- **High recovery costs**, especially without proper backups.
+    
+
+---
+
+Let me know when to continue with:  
+👉 **Proxy Trojans**.
+
+---
+
+### **Types of Trojans – Proxy Trojans**
+
+A **Proxy Trojan** is a type of malware that turns the infected machine into a **proxy server**, allowing the attacker to **anonymously relay traffic through the victim’s system**. This allows cybercriminals to **hide their true location and identity**, making it harder for investigators to trace malicious activities.
+
+---
+
+#### **How They Work**
+
+When a proxy Trojan is installed:
+
+1. It **opens a network port** on the victim’s computer.
+    
+2. The attacker connects to this port and **forwards traffic** through it, making it appear as if the traffic originated from the victim's IP address.
+    
+3. This proxy setup is then used for:
+    
+    - Sending **spam emails**.
+        
+    - Launching **denial-of-service (DoS) attacks**.
+        
+    - **Accessing restricted or illegal content**.
+        
+    - Performing **credential stuffing** or **brute-force attacks**.
+        
+    - Connecting to the dark web or performing **financial fraud** anonymously.
+        
+
+The victim often has no idea that their system is being misused as a **stepping stone** for criminal activity.
+
+---
+
+#### **Types of Proxies Created**
+
+- **HTTP/S Proxy**: Used for browsing or web-based attacks.
+    
+- **SOCKS Proxy**: More flexible, can handle any type of traffic (not just HTTP).
+    
+- **Transparent Proxy**: The victim isn’t even aware their device is being used as a proxy.
+    
+
+---
+
+#### **Risks and Consequences**
+
+- The **victim IP address gets blacklisted** by spam filters and security systems.
+    
+- Legal trouble: authorities may initially trace illegal activity back to the victim.
+    
+- The system becomes part of a **botnet**, increasing the risk of further infection and exploitation.
+    
+
+---
+
+Let me know when you’d like to continue with:  
+👉 **FTP Trojans**.
