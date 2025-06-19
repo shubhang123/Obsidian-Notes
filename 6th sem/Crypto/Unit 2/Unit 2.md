@@ -538,63 +538,167 @@ Public key cryptosystems, also known as asymmetric cryptosystems, are based on t
 
 Let me know if you’d like to proceed with the next topic, **Cryptographic Algorithms RSA**, or if you have any questions about **Principles of Public Key Cryptosystems**!
 
-### 8. Cryptographic Algorithms: RSA
+## 8. Cryptographic Algorithms: RSA
+
 RSA (Rivest-Shamir-Adleman) is a widely used public key cryptographic algorithm that relies on the mathematical difficulty of factoring large composite numbers. It supports encryption, decryption, and digital signatures, making it a cornerstone of modern cryptography for secure communication and authentication.
 
 - **Definition**: RSA is an asymmetric cryptographic algorithm that uses a public key for encryption and signature verification and a private key for decryption and signing. Its security is based on the computational difficulty of factoring the product of two large prime numbers.
+    
 - **How It Works**:
-  - **Key Generation**:
-    1. Choose two large prime numbers, \( p \) and \( q \).
-    2. Compute the modulus \( n = p \times q \), which is part of both public and private keys.
-    3. Calculate the totient \( \phi(n) = (p-1) \times (q-1) \).
-    4. Select a public exponent \( e \) (commonly 65537) such that \( 1 < e < \phi(n) \) and \( e \) is coprime with \( \phi(n) \).
-    5. Compute the private exponent \( d \) such that \( d \times e \equiv 1 \pmod{\phi(n)} \) (using the extended Euclidean algorithm).
-    6. Public key: \( (n, e) \); Private key: \( (n, d) \).
-  - **Encryption**:
-    - A plaintext message \( m \) (represented as a number \( < n \)) is encrypted using the public key: \( c = m^e \mod n \), where \( c \) is the ciphertext.
-  - **Decryption**:
-    - The ciphertext \( c \) is decrypted using the private key: \( m = c^d \mod n \), recovering the original message.
-  - **Digital Signatures**:
-    - To sign a message \( m \), compute the signature \( s = m^d \mod n \) with the private key.
-    - To verify, check if \( s^e \mod n = m \) using the public key.
+    
+    - **Key Generation**:
+        
+        1. Choose two large prime numbers, $p$ and $q$.
+            
+        2. Compute the modulus $n = p \times q$, which is part of both public and private keys.
+            
+        3. Calculate the totient $\phi(n) = (p-1) \times (q-1)$.
+            
+        4. Select a public exponent $e$ (commonly 65537) such that $1 < e < \phi(n)$ and $e$ is coprime with $\phi(n)$.
+            
+        5. Compute the private exponent $d$ such that $d \times e \equiv 1 \pmod{\phi(n)}$ (using the extended Euclidean algorithm).
+            
+        6. Public key: $(n, e)$; Private key: $(n, d)$.
+            
+    - **Encryption**:
+        
+        - A plaintext message $m$ (represented as a number $< n$) is encrypted using the public key: $c = m^e \mod n$, where $c$ is the ciphertext.
+            
+    - **Decryption**:
+        
+        - The ciphertext $c$ is decrypted using the private key: $m = c^d \mod n$, recovering the original message.
+            
+    - **Digital Signatures**:
+        
+        - To sign a message $m$, compute the signature $s = m^d \mod n$ with the private key.
+            
+        - To verify, check if $s^e \mod n = m$ using the public key.
+            
 - **Security Basis**:
-  - Relies on the difficulty of factoring \( n \) into \( p \) and \( q \). For large \( n \) (e.g., 2048 bits), factoring is computationally infeasible with classical computers.
-  - The security also depends on the difficulty of solving the RSA problem: given \( c \), \( e \), and \( n \), find \( m \) without knowing \( d \).
+    
+    - Relies on the difficulty of factoring $n$ into $p$ and $q$. For large $n$ (e.g., 2048 bits), factoring is computationally infeasible with classical computers.
+        
+    - Security also depends on the difficulty of solving the RSA problem: given $c$, $e$, and $n$, find $m$ without knowing $d$.
+        
 - **Applications**:
-  - **TLS/SSL**: Used in HTTPS for key exchange (e.g., encrypting session keys) and server authentication via digital certificates.
-  - **Secure Email**: Employed in PGP and S/MIME for encryption and signing emails.
-  - **Digital Signatures**: Verifying software updates, legal documents, or cryptocurrency transactions (e.g., in PKI).
-  - **VPNs and SSH**: Authenticating users or servers and establishing secure channels.
+    
+    - **TLS/SSL**: Used in HTTPS for key exchange (e.g., encrypting session keys) and server authentication via digital certificates.
+        
+    - **Secure Email**: Employed in PGP and S/MIME for encryption and signing emails.
+        
+    - **Digital Signatures**: Verifying software updates, legal documents, or cryptocurrency transactions (e.g., in PKI).
+        
+    - **VPNs and SSH**: Authenticating users or servers and establishing secure channels.
+        
 - **Example**:
-  - For small primes \( p = 61 \), \( q = 53 \):
-    - \( n = 61 \times 53 = 3233 \).
-    - \( \phi(n) = (61-1) \times (53-1) = 60 \times 52 = 3120 \).
-    - Choose \( e = 17 \) (coprime with 3120).
-    - Compute \( d = 2753 \) (since \( 17 \times 2753 \equiv 1 \pmod{3120} \)).
-    - Public key: \( (3233, 17) \); Private key: \( (3233, 2753) \).
-    - Encrypt \( m = 65 \): \( c = 65^{17} \mod 3233 = 2790 \).
-    - Decrypt \( c = 2790 \): \( m = 2790^{2753} \mod 3233 = 65 \).
+    
+    - For small primes $p = 61$, $q = 53$:
+        
+        - $n = 61 \times 53 = 3233$.
+            
+        - $\phi(n) = (61-1) \times (53-1) = 60 \times 52 = 3120$.
+            
+        - Choose $e = 17$ (coprime with 3120).
+            
+        - Compute $d = 2753$ (since $17 \times 2753 \equiv 1 \pmod{3120}$).
+            
+        - Public key: $(3233, 17)$; Private key: $(3233, 2753)$.
+            
+        - Encrypt $m = 65$: $c = 65^{17} \mod 3233 = 2790$.
+            
+        - Decrypt $c = 2790$: $m = 2790^{2753} \mod 3233 = 65$.
+            
 - **Advantages**:
-  - Provides both encryption and digital signatures.
-  - Eliminates the need for secure key distribution, as public keys can be shared openly.
-  - Widely adopted and standardized (e.g., in TLS, PKI).
+    
+    - Provides both encryption and digital signatures.
+        
+    - Eliminates the need for secure key distribution, as public keys can be shared openly.
+        
+    - Widely adopted and standardized (e.g., in TLS, PKI).
+        
 - **Disadvantages**:
-  - Computationally intensive due to modular exponentiation, making it slower than symmetric algorithms like AES.
-  - Requires large key sizes (e.g., 2048 or 4096 bits) for strong security, increasing computational overhead.
-  - Vulnerable to quantum attacks (e.g., Shor’s algorithm could factor \( n \) efficiently on a quantum computer).
+    
+    - Computationally intensive due to modular exponentiation, making it slower than symmetric algorithms like AES.
+        
+    - Requires large key sizes (e.g., 2048 or 4096 bits) for strong security, increasing computational overhead.
+        
+    - Vulnerable to quantum attacks (e.g., Shor’s algorithm could factor $n$ efficiently on a quantum computer).
+        
 - **Challenges**:
-  - **Key Size**: Larger keys (e.g., 2048 bits) are needed to resist factoring attacks, but they increase computation time.
-  - **Padding**: Improper padding (e.g., textbook RSA) can lead to vulnerabilities, requiring schemes like OAEP (Optimal Asymmetric Encryption Padding).
-  - **Key Management**: Private keys must be securely stored, and public keys need trusted distribution (e.g., via PKI).
+    
+    - **Key Size**: Larger keys (e.g., 2048 bits) are needed to resist factoring attacks, but they increase computation time.
+        
+    - **Padding**: Improper padding (e.g., textbook RSA) can lead to vulnerabilities, requiring schemes like OAEP (Optimal Asymmetric Encryption Padding).
+        
+    - **Key Management**: Private keys must be securely stored, and public keys need trusted distribution (e.g., via PKI).
+        
 - **Countermeasures**:
-  - Use secure padding schemes like OAEP to prevent chosen-ciphertext attacks.
-  - Employ hybrid encryption: RSA for key exchange, symmetric algorithms (e.g., AES) for bulk data encryption.
-  - Transition to post-quantum cryptography (e.g., lattice-based systems) to mitigate quantum threats.
-  - Use hardware security modules (HSMs) to protect private keys.
-  - Regularly update key sizes (e.g., move to 4096-bit RSA) as computational power increases.
+    
+    - Use secure padding schemes like OAEP to prevent chosen-ciphertext attacks.
+        
+    - Employ hybrid encryption: RSA for key exchange, symmetric algorithms (e.g., AES) for bulk data encryption.
+        
+    - Transition to post-quantum cryptography (e.g., lattice-based systems) to mitigate quantum threats.
+        
+    - Use hardware security modules (HSMs) to protect private keys.
+        
+    - Regularly update key sizes (e.g., move to 4096-bit RSA) as computational power increases.
+        
 
 ---
 
 Let me know if you’d like to proceed with the next topic, **Data Encryption Standard (DES)**, or if you have any questions about **RSA**!
 
+
+### 9. Data Encryption Standard (DES)
+The Data Encryption Standard (DES) is a symmetric key cryptographic algorithm developed in the 1970s by IBM and standardized by NIST. It is a block cipher that encrypts data in 64-bit blocks using a 56-bit key, widely used historically but now considered insecure due to its small key size.
+
+- **Definition**: DES is a symmetric block cipher that uses the same 56-bit key for both encryption and decryption, transforming 64-bit plaintext blocks into 64-bit ciphertext blocks through a series of mathematical operations.
+- **How It Works**:
+  - **Key Generation**:
+    - A 64-bit key is input, but only 56 bits are used (8 bits are parity bits).
+    - The key is processed through a key schedule to generate 16 subkeys (48 bits each) for use in 16 rounds of encryption.
+  - **Encryption Process**:
+    1. **Initial Permutation (IP)**: The 64-bit plaintext is permuted (rearranged) according to a fixed table.
+    2. **16 Rounds of Feistel Structure**:
+       - Each round splits the 64-bit block into two 32-bit halves (left and right).
+       - The right half is expanded to 48 bits, XORed with a subkey, and processed through 8 S-boxes (substitution boxes) to produce a 32-bit output.
+       - The output is permuted and XORed with the left half, and the halves are swapped.
+    3. **Final Permutation (FP)**: The output of the 16th round is permuted inversely to the initial permutation to produce the 64-bit ciphertext.
+  - **Decryption**: Uses the same algorithm but applies the subkeys in reverse order.
+- **Security Basis**:
+  - Relies on the complexity of the Feistel network, S-boxes, and key-dependent transformations.
+  - The 56-bit key provides 2^56 possible keys, but this is now insufficient due to advances in computational power.
+- **Applications**:
+  - Historically used in banking (e.g., ATM encryption), secure communications, and early network protocols.
+  - Still found in legacy systems or as part of Triple DES (3DES), which applies DES three times with different keys for enhanced security.
+- **Example**:
+  - Plaintext: 64-bit block (e.g., 0x1234567890ABCDEF).
+  - Key: 56-bit key (e.g., 0x133457799BBCDFF1, ignoring parity bits).
+  - After initial permutation, 16 rounds of Feistel transformations with subkeys, and final permutation, the ciphertext is produced.
+  - Decryption reverses the process to recover the plaintext.
+- **Advantages**:
+  - Fast and efficient for hardware implementations in its time.
+  - Well-studied and standardized, providing a foundation for modern ciphers.
+  - Triple DES (3DES) extends its usability with increased security.
+- **Disadvantages**:
+  - **Small Key Size**: 56-bit keys are vulnerable to brute-force attacks (2^56 combinations can be cracked in hours with modern hardware).
+  - **Block Size**: 64-bit blocks are small, making it susceptible to birthday attacks in certain modes (e.g., ECB).
+  - **Outdated**: Replaced by AES due to security concerns.
+- **Vulnerabilities**:
+  - **Brute-Force Attacks**: In 1998, the EFF built a DES cracker (Deep Crack) that broke a DES key in days.
+  - **Differential Cryptanalysis**: DES is vulnerable if not implemented carefully, though it requires large amounts of chosen plaintext.
+  - **Linear Cryptanalysis**: Can reduce the effective key strength with sufficient computational resources.
+- **Countermeasures**:
+  - Use Triple DES (3DES), which applies DES three times with two or three keys, increasing the effective key size to 112 or 168 bits.
+  - Transition to modern ciphers like AES, which offers larger key sizes (128, 192, or 256 bits) and stronger security.
+  - Use secure modes of operation (e.g., CBC or CTR) to mitigate block cipher weaknesses.
+  - Avoid DES in new systems due to its obsolescence.
+- **Historical Context**:
+  - Standardized by NIST in 1977, DES was widely used until the late 1990s when its weaknesses became apparent.
+  - Replaced by the Advanced Encryption Standard (AES) in 2001 after a NIST competition.
+
+---
+
+Let me know if you’d like to proceed with the next topic, **RC4**, or if you have any questions about **Data Encryption Standard (DES)**!
 
