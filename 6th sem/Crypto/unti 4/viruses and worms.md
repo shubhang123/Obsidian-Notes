@@ -129,3 +129,155 @@ A **worm** differs from a virus in that it is self-contained and designed to pro
 
 Let me know when to continue with:  
 👉 **Infection Phase**.
+
+---
+
+## **Viruses and Worms – Infection Phase**
+
+---
+
+### **Infection Phase**
+
+The **infection phase** is the **initial stage** of a virus or worm’s lifecycle, where the malicious software establishes itself on a system or within a network. This phase involves preparing for replication and future payload execution.
+
+---
+
+### **In Virus Lifecycle**
+
+1. **Entry Point**:  
+    A virus enters a system via:
+    
+    - Infected files (executables, documents with macros).
+        
+    - USB drives or portable storage.
+        
+    - Email attachments or downloads.
+        
+    - Exploits in vulnerable software.
+        
+2. **Attachment**:  
+    The virus attaches itself to host programs, boot sectors, or system files, often modifying them slightly to embed its code.
+    
+3. **Activation**:  
+    The virus remains dormant until the host program is executed. Upon activation:
+    
+    - It loads into memory.
+        
+    - Begins scanning for more files to infect.
+        
+    - May use system calls or direct memory access for stealth.
+        
+
+---
+
+### **In Worm Lifecycle**
+
+1. **Execution**:  
+    A worm may be introduced through:
+    
+    - Opening a malicious attachment or link.
+        
+    - Exploiting a network vulnerability (e.g., open SMB shares, unpatched software).
+        
+    - Drive-by downloads from compromised websites.
+        
+2. **System Penetration**:  
+    Unlike viruses, worms don’t need a host file. Once executed, they:
+    
+    - Copy themselves to multiple directories.
+        
+    - Modify registry entries for persistence.
+        
+    - Start scanning for vulnerable targets on the network.
+        
+3. **Self-replication Initiation**:  
+    The worm begins automated replication—sending copies of itself via email, P2P networks, or direct connections.
+    
+
+---
+
+#### **Goal of the Infection Phase**
+
+The objective is to **establish a foothold**, remain **undetected**, and prepare for either:
+
+- **Propagation** (spreading to other systems), or
+    
+- **Payload execution** (damaging the system, stealing data, etc.)
+    
+
+---
+
+Let me know when you're ready to proceed to:  
+👉 **Attack Phase**.
+
+---
+
+## **Viruses and Worms – Attack Phase**
+
+---
+
+### **Attack Phase**
+
+The **attack phase** is the stage during which a virus or worm **executes its intended malicious payload**. This phase may begin immediately after infection or remain dormant until a specific condition is met—such as a date, number of infections, or user activity. The goal is to **damage the system**, **steal data**, or **create disruption**.
+
+---
+
+### **In the Case of Viruses**
+
+After successfully infecting host files and replicating:
+
+- The virus **activates its payload**, which could be:
+    
+    - **Data destruction**: Deleting or overwriting files.
+        
+    - **System disruption**: Slowing down the computer, causing application crashes.
+        
+    - **Visual effects**: Displaying pop-ups or screens.
+        
+    - **File corruption**: Making files unusable or modifying their contents.
+        
+    - **Privilege escalation**: Gaining deeper access to the system.
+        
+- Some viruses execute a **logic bomb**, triggering the payload under certain conditions (e.g., on April 1st or after the 10th execution).
+    
+
+---
+
+### **In the Case of Worms**
+
+Worms, after replicating across systems, may:
+
+- **Deliver secondary malware** like ransomware, spyware, or backdoors.
+    
+- **Use the host machine in a botnet** to:
+    
+    - Launch DDoS attacks.
+        
+    - Send spam emails.
+        
+    - Spread more worms or viruses.
+        
+- **Steal confidential data** and forward it to a remote server.
+    
+- **Sabotage critical services**, including servers, databases, or entire networks.
+    
+
+Even worms without a destructive payload can cause harm by:
+
+- **Exhausting bandwidth** and server resources.
+    
+- **Overloading networks**, resulting in downtime or latency.
+    
+- **Disrupting business operations**, especially in large-scale attacks.
+    
+
+---
+
+### Summary
+
+The **attack phase** determines the **impact and intent** of the virus or worm—ranging from mild annoyance to catastrophic system or data loss. In some cases, the malware simply opens the door for future attacks or maintains stealth to conduct prolonged surveillance or exploitation.
+
+---
+
+Let me know when to proceed to:  
+👉 **Sniffers – Definition**.
