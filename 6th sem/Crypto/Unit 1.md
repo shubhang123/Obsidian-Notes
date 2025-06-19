@@ -489,8 +489,8 @@ IDS can be classified based on **where they are deployed** (host or network) and
      - Requires time to establish an accurate baseline.
      - Complex to configure and tune.
    - **Use Case**: Environments with dynamic threats or need for detecting novel attacks.
-
-5. **Hybrid Intrusion Detection System**:
+![[Pasted image 20250619164115.png]]
+1. **Hybrid Intrusion Detection System**:
    - **Definition**: Combines multiple IDS approaches (e.g., HIDS and NIDS, signature-based and anomaly-based) for comprehensive monitoring.
    - **How It Works**:
      - Integrates host and network data, using both signature and anomaly detection methods.
@@ -506,7 +506,7 @@ IDS can be classified based on **where they are deployed** (host or network) and
      - Higher cost and resource requirements.
      - May still produce false positives/negatives.
    - **Use Case**: Large organizations needing robust, multi-layered security monitoring.
-
+![[Pasted image 20250619164156.png]]
 #### **Comparison of IDS Types**
 
 | **Type**          | **Scope**            | **Detection Method** | **Strengths**                     | **Weaknesses**                     |
@@ -525,3 +525,4 @@ IDS can be classified based on **where they are deployed** (host or network) and
 ---
 
 Would you like me to proceed with the next topic, **System Integrity Verifiers (SIVS)**, or do you have any questions about **Types of Intrusion Detection Systems**?
+
