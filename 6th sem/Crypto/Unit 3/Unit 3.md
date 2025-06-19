@@ -79,3 +79,5 @@ A one-way hash function is a type of hash function designed to be computationall
 ### Next Steps
 Would you like me to proceed with the next topic, **SHA (Secure Hash Algorithm)**, or do you have any questions about One-way Hash Functions?
 
+
+
