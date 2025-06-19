@@ -805,6 +805,73 @@ RC4 is a stream cipher designed by Ron Rivest in 1987 for RSA Security. It is a 
 
 Let me know if you’d like to proceed with the next topic, **RC5**, or if you have any questions about **RC4**!
 
+Thank you for the clarification. I'll use `$` for inline LaTeX and `$$` for display LaTeX in my explanations where mathematical notation is needed. Let's proceed with the next topic, **RC5**, and I'll incorporate LaTeX as appropriate.
+
+---
+
+### 11. RC5
+
+RC5 is a symmetric key block cipher designed by Ron Rivest in 1994. It is known for its simplicity, flexibility, and efficiency, with a variable block size, key size, and number of rounds. RC5 uses data-dependent rotations, making it adaptable for various security and performance needs, though it is less commonly used today due to advances in cryptanalysis.
+
+- **Definition**: RC5 is a block cipher that encrypts data in blocks of variable size (32, 64, or 128 bits) using a variable key size (0 to 2040 bits) and a configurable number of rounds (0 to 255). It employs addition, XOR, and data-dependent rotations for encryption and decryption.
+- **Parameters**:
+    - **Block Size**: Typically 64 bits (two 32-bit words), but can be 32 or 128 bits, denoted as $w$ (word size in bits, where block size = $2w$).
+    - **Key Size**: Variable, from 0 to 2040 bits, denoted as $b$ (bytes).
+    - **Rounds**: Number of encryption rounds, denoted as $r$, typically 12 or 20 for security.
+    - Notation: RC5-$w/r/b$ (e.g., RC5-32/12/16 for 64-bit blocks, 12 rounds, 128-bit key).
+- **How It Works**:
+    - **Key Expansion**:
+        - The user-provided key (length $b$ bytes) is expanded into $2r+2$ subkeys, stored as an array $S$ of words (size $w$).
+        - A mixing process combines the key with magic constants (based on the golden ratio) to initialize $S$.
+    - **Encryption**:
+        - The plaintext block is split into two words, $A$ and $B$ (e.g., for 64-bit block, $A$ and $B$ are 32-bit).
+        - Initial subkey addition: $$A = A + S[0], \quad B = B + S[1]$$
+        - For each round $i = 1$ to $r$: $$A = ((A \oplus B) \ll B) + S[2i]$$ $$B = ((B \oplus A) \ll A) + S[2i+1]$$ where $\oplus$ is XOR, $\ll$ is left rotation (by the number of bits specified by the second operand), and $+$ is modular addition (mod $2^w$).
+        - The result is the ciphertext block $(A, B)$.
+    - **Decryption**:
+        - Reverses the encryption process, starting with the final values of $A$ and $B$.
+        - For each round $i = r$ down to 1: $$B = ((B - S[2i+1]) \gg A) \oplus A$$ $$A = ((A - S[2i]) \gg B) \oplus B$$ where $-$ is modular subtraction, $\gg$ is right rotation, and $\oplus$ is XOR.
+        - Final subkey subtraction: $$A = A - S[0], \quad B = B - S[1]$$
+        - Outputs the plaintext block $(A, B)$.
+- **Security Basis**:
+    - Relies on the strength of data-dependent rotations, XOR, and modular addition, which create non-linear transformations.
+    - Security increases with more rounds ($r$) and larger key sizes ($b$).
+- **Applications**:
+    - Used in software implementations due to its simplicity and speed, particularly in resource-constrained environments.
+    - Considered for protocols like SSL/TLS and VPNs in the 1990s, but largely replaced by AES.
+    - Suitable for applications needing customizable block and key sizes (e.g., embedded systems).
+- **Example**:
+    - For RC5-32/12/16 (64-bit block, 12 rounds, 128-bit key):
+        - Plaintext: Two 32-bit words, e.g., $A = 0\text{x}12345678$, $B = 0\text{x}9ABCDEF0$.
+        - Key: 128 bits (16 bytes), expanded into 26 subkeys ($S[0]$ to $S[25]$).
+        - Encryption applies initial subkey addition, 12 rounds of XOR, rotation, and addition, producing ciphertext.
+        - Decryption reverses the process to recover the plaintext.
+- **Advantages**:
+    - Highly flexible with variable block size, key size, and rounds.
+    - Simple design, easy to implement in software and hardware.
+    - Fast, especially with fewer rounds or smaller word sizes.
+    - Data-dependent rotations provide resistance to early cryptanalytic techniques.
+- **Disadvantages**:
+    - **Vulnerabilities**:
+        - Differential cryptanalysis can break RC5 with fewer rounds (e.g., 5–6 rounds for RC5-32) using large amounts of chosen plaintext.
+        - For 64-bit blocks, 12 rounds are minimally secure, but 20 rounds are recommended for stronger protection.
+        - Small block sizes (e.g., 32 bits) are vulnerable to birthday attacks in certain modes.
+    - **Key Size Concerns**: Short keys (e.g., 40 bits) are insecure due to brute-force feasibility.
+    - **Obsolescence**: Outdated compared to modern ciphers like AES, which offers better security and performance.
+- **Challenges**:
+    - Choosing appropriate parameters ($w$, $r$, $b$) is critical for security; insufficient rounds or small keys weaken the cipher.
+    - Cryptanalysis advancements have reduced confidence in RC5 for high-security applications.
+    - Patent restrictions (until 2015) limited its adoption compared to unpatented ciphers like AES.
+- **Countermeasures**:
+    - Use at least 20 rounds ($r = 20$) for strong security against differential cryptanalysis.
+    - Select large key sizes (e.g., 128 or 256 bits) to resist brute-force attacks.
+    - Use secure modes of operation (e.g., CBC, CTR) to mitigate block cipher weaknesses.
+    - Prefer AES or other modern ciphers for new systems due to RC5's vulnerabilities and obsolescence.
+
+---
+
+Let me know if you'd like to proceed with the next topic, **RC6**, or if you have any questions about **RC5**!
+
 ### 12. RC6
 
 RC6 is a symmetric key block cipher designed by Ron Rivest, Matt Robshaw, Ray Sidney, and Yiqun Lisa Yin in 1998 as a candidate for the Advanced Encryption Standard (AES) competition. It is an evolution of RC5, offering improved security and performance with a fixed 128-bit block size and variable key sizes. RC6 uses data-dependent rotations, multiplication, and a more complex structure to enhance resistance to cryptanalysis.
@@ -874,3 +941,68 @@ RC6 is a symmetric key block cipher designed by Ron Rivest, Matt Robshaw, Ray Si
 ---
 
 Let me know if you'd like to proceed with the next topic, **Blowfish**, or if you have any questions about **RC6**!
+
+### 13. Blowfish
+Blowfish is a symmetric key block cipher designed by Bruce Schneier in 1993 as a fast, free alternative to existing ciphers like DES. It is known for its efficiency in software implementations and flexibility with variable key sizes, making it suitable for a wide range of applications, though it has largely been superseded by AES for modern systems.
+
+- **Definition**: Blowfish is a block cipher that encrypts data in 64-bit blocks using a variable key size of 32 to 448 bits. It employs a Feistel network structure with key-dependent substitution boxes (S-boxes) and a complex key schedule for strong security.
+- **How It Works**:
+  - **Key Schedule**:
+    - The key (32 to 448 bits) is expanded into 18 subkeys (P-array, $P_0$ to $P_{17}$, each 32 bits) and four 256-entry S-boxes (32 bits each).
+    - The key initializes the P-array and S-boxes, which are then modified using a key-dependent process involving the Blowfish algorithm itself and a constant (digits of $\pi$).
+  - **Encryption**:
+    - The 64-bit plaintext is split into two 32-bit halves: $L$ (left) and $R$ (right).
+    - For 16 rounds ($i = 0$ to 15):
+      - Compute the round function:
+        $$ F(L) = ((S_1[L \gg 24] + S_2[(L \gg 16) \& 0xFF]) \oplus S_3[(L \gg 8) \& 0xFF]) + S_4[L \& 0xFF] $$
+        where $S_1, S_2, S_3, S_4$ are the S-boxes, $\gg$ is right shift, $\&$ is bitwise AND, $+$ is addition mod $2^{32}$, and $\oplus$ is XOR.
+      - Update:
+        $$ L = L \oplus P_i, \quad R = R \oplus F(L) $$
+        - Swap $L$ and $R$.
+    - Undo the final swap.
+    - Final subkey addition:
+      $$ L = L \oplus P_{16}, \quad R = R \oplus P_{17} $$
+    - Output the 64-bit ciphertext $(L, R)$.
+  - **Decryption**:
+    - Uses the same algorithm but applies the P-array subkeys in reverse order ($P_{17}$ to $P_0$).
+    - The Feistel structure ensures decryption mirrors encryption with reversed subkeys.
+- **Security Basis**:
+  - Relies on the complexity of the Feistel network, key-dependent S-boxes, and a large key space (up to $2^{448}$ for 448-bit keys).
+  - The 16-round structure and dynamic S-boxes provide strong resistance to early cryptanalytic attacks.
+- **Applications**:
+  - Used in software for file encryption, disk encryption, and password hashing (e.g., bcrypt, which uses Blowfish).
+  - Employed in protocols like SSH, OpenVPN, and some VPN implementations.
+  - Suitable for resource-constrained environments due to its efficiency on 32-bit processors.
+- **Example**:
+  - For a 64-bit plaintext (e.g., $L = 0x12345678$, $R = 0x9ABCDEF0$) and a 128-bit key:
+    - The key initializes the P-array and S-boxes.
+    - Encryption applies 16 rounds of XOR, S-box lookups, and swaps, followed by final subkey addition to produce ciphertext.
+    - Decryption reverses the process using the same key to recover the plaintext.
+- **Advantages**:
+  - Fast and efficient in software, especially on 32-bit systems.
+  - Flexible key sizes (32–448 bits) allow tailoring to security needs.
+  - Freely available (unpatented), encouraging widespread adoption.
+  - Strong security for its time, with no practical breaks for the full 16-round version.
+- **Disadvantages**:
+  - **Small Block Size**: The 64-bit block is vulnerable to birthday attacks in modes like ECB or CBC when encrypting large datasets (collision risk after ~$2^{32}$ blocks).
+  - **Key Schedule**: The key setup is computationally expensive, slowing down frequent key changes.
+  - **Obsolescence**: Replaced by AES (128-bit blocks, stronger security) in most modern applications.
+  - **Vulnerabilities**:
+    - Reduced-round versions (e.g., 4–8 rounds) are susceptible to differential cryptanalysis.
+    - Weak keys (rare) can produce less secure S-boxes, though practical impact is minimal.
+- **Challenges**:
+  - The 64-bit block size limits security for large data volumes, requiring careful mode selection (e.g., CTR or GCM).
+  - Slower key setup makes Blowfish less suitable for applications requiring frequent key changes.
+  - Less community scrutiny compared to AES, reducing confidence in long-term security.
+- **Countermeasures**:
+  - Use secure modes of operation (e.g., CBC, CTR) to mitigate block size limitations.
+  - Prefer AES for new systems due to its larger block size (128 bits) and standardization.
+  - Limit key reuse and use strong, random keys to avoid weak key issues.
+  - For password hashing, use Blowfish-based bcrypt with a high work factor to resist brute-force attacks.
+- **Historical Context**:
+  - Designed as a DES replacement, Blowfish was widely adopted in the 1990s and 2000s.
+  - Remains relevant in specific applications like bcrypt, but AES is preferred for general-purpose encryption.
+
+---
+
+Let me know if you’d like to proceed with the next topic, **Key Management**, or if you have any questions about **Blowfish**!
