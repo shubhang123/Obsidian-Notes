@@ -150,3 +150,65 @@ In essence, **Trojans are the vehicle**, and **backdoors are the control panel**
 
 Let me know when to proceed with:  
 👉 **Types of Trojans – Remote Access Trojans (RATs)**.
+
+---
+
+### **Types of Trojans – Remote Access Trojans (RATs)**
+
+A **Remote Access Trojan (RAT)** is a type of Trojan malware that enables an attacker to **remotely control** an infected computer over a network or the Internet. Once installed, the RAT provides the attacker with **administrative privileges**, allowing them to manipulate the system as if they were physically present.
+
+---
+
+#### **Functionality**
+
+RATs are often disguised as legitimate software or embedded in seemingly harmless files (like PDFs, images, or installers). After installation, they **operate silently in the background**, establishing a **connection to the attacker’s command and control (C2) server**.
+
+RATs typically allow attackers to:
+
+- Access and control files and applications.
+    
+- Browse and copy confidential documents.
+    
+- Record keystrokes (**keylogging**).
+    
+- Capture screenshots or webcam video.
+    
+- Install additional malware.
+    
+- Use the infected system in a botnet.
+    
+
+---
+
+#### **Examples of Common RATs**
+
+- **njRAT**: Known for its wide usage and capabilities like keylogging, screen capture, and webcam control.
+    
+- **DarkComet**: A powerful RAT that allows full remote surveillance.
+    
+- **QuasarRAT**: An open-source .NET-based RAT with advanced spying capabilities.
+    
+- **NanoCore**: Known for its modular plugins that expand spying features.
+    
+
+---
+
+#### **Why RATs are Dangerous**
+
+RATs are **stealthy, powerful, and versatile**. They are often used in:
+
+- **Targeted espionage** against organizations or individuals.
+    
+- **Corporate data theft**.
+    
+- **State-sponsored surveillance** operations.
+    
+- **Creating botnets** for DDoS attacks or mass spamming.
+    
+
+RATs also often include **persistence mechanisms**, allowing them to survive reboots and system updates.
+
+---
+
+Let me know when to continue with:  
+👉 **Data-Sending Trojans**
