@@ -1006,3 +1006,140 @@ Blowfish is a symmetric key block cipher designed by Bruce Schneier in 1993 as a
 ---
 
 Let me know if you’d like to proceed with the next topic, **Key Management**, or if you have any questions about **Blowfish**!
+
+### 14. Key Management
+Key management refers to the processes and practices for generating, distributing, storing, using, updating, and destroying cryptographic keys in a secure manner. Effective key management is critical to ensuring the security of cryptographic systems, as compromised keys can undermine even the strongest algorithms.
+
+- **Definition**: Key management encompasses the lifecycle of cryptographic keys, ensuring their confidentiality, integrity, and availability while minimizing risks of unauthorized access or misuse. It applies to both symmetric (e.g., AES) and asymmetric (e.g., RSA) keys.
+- **Key Components**:
+  - **Key Generation**:
+    - Keys must be created using cryptographically secure random number generators (CSPRNGs) to ensure unpredictability.
+    - For asymmetric systems, key pairs are generated based on mathematical problems (e.g., factoring for RSA, elliptic curves for ECC).
+    - Example: For AES, a 256-bit key is generated as a random bit string; for RSA, primes $p$ and $q$ are chosen to compute $n = p \times q$.
+  - **Key Distribution**:
+    - Securely sharing keys with authorized parties, especially challenging for symmetric keys.
+    - Asymmetric systems use public key infrastructure (PKI) to distribute public keys via trusted certificate authorities (CAs).
+    - Symmetric keys may be exchanged using protocols like Diffie-Hellman or wrapped (encrypted) with a key encryption key (KEK).
+    - Example: In TLS, a session key is encrypted with the server’s public key and sent to the server.
+  - **Key Storage**:
+    - Keys must be stored securely to prevent unauthorized access.
+    - Methods include hardware security modules (HSMs), trusted platform modules (TPMs), or encrypted key vaults.
+    - Private keys in asymmetric systems are particularly sensitive and require strong protection.
+    - Example: Storing an RSA private key in an HSM to prevent extraction.
+  - **Key Usage**:
+    - Keys should be used only for their intended purpose (e.g., encryption, signing) and within defined policies.
+    - Access controls ensure only authorized entities use keys.
+    - Example: Using separate keys for encryption and digital signatures in a PKI system.
+  - **Key Rotation**:
+    - Periodically replacing keys to limit exposure and mitigate risks from compromised keys.
+    - Rotation frequency depends on key type, usage, and security requirements.
+    - Example: Rotating AES keys every 90 days in a cloud storage system.
+  - **Key Revocation**:
+    - Invalidating compromised or expired keys to prevent misuse.
+    - In PKI, revoked public keys are listed in certificate revocation lists (CRLs) or checked via OCSP (Online Certificate Status Protocol).
+    - Example: Revoking a compromised TLS certificate after a server breach.
+  - **Key Destruction**:
+    - Securely deleting keys when no longer needed to prevent recovery.
+    - Methods include cryptographic erasure (overwriting with random data) or physical destruction of hardware.
+    - Example: Zeroizing an HSM to erase all stored keys.
+- **Applications**:
+  - Securing communication protocols (e.g., TLS, SSH) by managing session and certificate keys.
+  - Protecting data at rest (e.g., disk encryption with AES keys in BitLocker).
+  - Enabling secure authentication (e.g., managing private keys for digital signatures in PKI).
+  - Supporting cryptocurrencies (e.g., managing private keys for Bitcoin wallets).
+  - Ensuring compliance with standards like PCI DSS or GDPR, which mandate secure key management.
+- **Examples**:
+  - In a TLS handshake, the client and server use Diffie-Hellman to establish a shared symmetric key, managed securely for the session duration.
+  - In a corporate PKI, a CA issues and manages digital certificates, revoking them if an employee’s private key is compromised.
+  - In AWS Key Management Service (KMS), users generate and rotate encryption keys stored in HSMs for cloud data protection.
+- **Advantages**:
+  - Enhances security by protecting keys, the critical component of cryptographic systems.
+  - Enables scalability in large systems through automated key management solutions.
+  - Supports compliance with regulatory requirements for data protection.
+- **Disadvantages**:
+  - Complex and resource-intensive, requiring expertise and infrastructure.
+  - Poor key management (e.g., weak storage or distribution) can lead to system-wide vulnerabilities.
+  - Key recovery or loss can disrupt operations (e.g., losing a private key prevents decryption).
+- **Challenges**:
+  - **Scalability**: Managing thousands of keys in large systems (e.g., IoT devices) is complex.
+  - **Interoperability**: Ensuring key formats and protocols work across different systems.
+  - **Human Error**: Weak passwords or misconfigured systems can expose keys.
+  - **Quantum Threats**: Future quantum computers may require new key management strategies for post-quantum cryptography.
+- **Countermeasures**:
+  - Use standardized protocols (e.g., PKCS, X.509) for key generation and management.
+  - Implement HSMs or TPMs to store and process keys securely.
+  - Automate key rotation and revocation using key management systems (e.g., AWS KMS, HashiCorp Vault).
+  - Enforce strong access controls and audit key usage to detect misuse.
+  - Plan for quantum-resistant algorithms by adopting flexible key management frameworks.
+- **Best Practices**:
+  - Generate keys with high entropy using CSPRNGs.
+  - Minimize key exposure by using key wrapping or secure channels for distribution.
+  - Regularly audit and monitor key usage to detect anomalies.
+  - Backup keys securely (e.g., split keys in multi-party systems) to prevent loss.
+
+---
+
+Let me know if you’d like to proceed with the next topic, **Diffie-Hellman Key Exchange**, or if you have any questions about **Key Management**!
+
+### 15. Diffie-Hellman Key Exchange
+The Diffie-Hellman (DH) key exchange is a cryptographic protocol that allows two parties to establish a shared secret key over an insecure channel. Introduced by Whitfield Diffie and Martin Hellman in 1976, it is a foundational technique in public key cryptography, enabling secure communication without prior key sharing.
+
+- **Definition**: Diffie-Hellman is a method for two parties to jointly compute a shared secret key using their respective public and private keys, based on the mathematical difficulty of the discrete logarithm problem. The shared key can then be used for symmetric encryption (e.g., AES).
+- **How It Works**:
+  - **Setup**:
+    - Two parties (e.g., Alice and Bob) agree on public parameters:
+      - A large prime number $p$ (modulus).
+      - A generator $g$, where $1 < g < p$, typically a small integer (e.g., 2 or 5).
+  - **Key Generation**:
+    - Alice chooses a private key $a$ (a random integer, $1 < a < p-1$).
+    - Bob chooses a private key $b$ (a random integer, $1 < b < p-1$).
+    - Alice computes her public key: $A = g^a \mod p$.
+    - Bob computes his public key: $B = g^b \mod p$.
+  - **Key Exchange**:
+    - Alice sends $A$ to Bob, and Bob sends $B$ to Alice over the insecure channel.
+  - **Shared Secret Computation**:
+    - Alice computes the shared secret: $S = B^a \mod p = (g^b)^a \mod p$.
+    - Bob computes the shared secret: $S = A^b \mod p = (g^a)^b \mod p$.
+    - Due to the commutative property of modular exponentiation, $(g^b)^a \mod p = (g^a)^b \mod p = g^{ab} \mod p$, so both compute the same secret $S$.
+  - **Usage**:
+    - The shared secret $S$ is used (often hashed) as a symmetric key for encryption (e.g., AES) or authentication (e.g., HMAC).
+- **Security Basis**:
+  - Relies on the **discrete logarithm problem**: Given $g$, $p$, and $g^a \mod p$, it is computationally infeasible to compute $a$ for large $p$.
+  - The security depends on the size of $p$ (e.g., 2048 bits) and the randomness of $a$ and $b$.
+- **Applications**:
+  - Used in protocols like TLS/SSL to establish session keys for secure web browsing (e.g., HTTPS).
+  - Employed in VPNs, SSH, and IPsec for secure key exchange.
+  - Forms the basis for secure messaging protocols (e.g., Signal’s Double Ratchet uses DH variants).
+- **Example**:
+  - Parameters: $p = 23$, $g = 5$.
+  - Alice picks $a = 6$, computes $A = g^a \mod p = 5^6 \mod 23 = 8$, and sends $A = 8$ to Bob.
+  - Bob picks $b = 15$, computes $B = g^b \mod p = 5^{15} \mod 23 = 19$, and sends $B = 19$ to Alice.
+  - Alice computes $S = B^a \mod p = 19^6 \mod 23 = 2$.
+  - Bob computes $S = A^b \mod p = 8^{15} \mod 23 = 2$.
+  - Both share the secret $S = 2$, which can be used as a symmetric key.
+- **Advantages**:
+  - Enables secure key exchange over insecure channels without pre-shared secrets.
+  - Provides forward secrecy if ephemeral keys are used (new keys per session).
+  - Simple and efficient for establishing symmetric keys.
+- **Disadvantages**:
+  - **Man-in-the-Middle (MITM) Attack**: Without authentication, an attacker can intercept and replace public keys ($A$, $B$), requiring digital signatures or certificates (e.g., PKI in TLS).
+  - **Computational Cost**: Modular exponentiation is slower than symmetric operations, though less intensive than RSA for large data.
+  - **Quantum Vulnerability**: Shor’s algorithm could solve the discrete logarithm problem on a quantum computer, breaking DH.
+- **Challenges**:
+  - Requires large prime $p$ (e.g., 2048 or 4096 bits) to resist classical attacks.
+  - Vulnerable to MITM attacks if not paired with authentication mechanisms.
+  - Parameter choice (e.g., safe primes, secure $g$) is critical to avoid weak implementations.
+- **Countermeasures**:
+  - Use authenticated Diffie-Hellman (e.g., signed public keys in TLS or ECDSA in secure protocols).
+  - Employ large, safe primes (where $(p-1)/2$ is prime) to resist attacks like Pohlig-Hellman.
+  - Implement ephemeral DH (DHE) for forward secrecy, generating new keys per session.
+  - Transition to post-quantum key exchange protocols (e.g., lattice-based) for quantum resistance.
+  - Use standardized parameter sets (e.g., RFC 7919 groups) to ensure security.
+- **Variants**:
+  - **Elliptic Curve Diffie-Hellman (ECDH)**: Uses elliptic curves for smaller keys and faster computation with equivalent security (e.g., 256-bit ECDH vs. 2048-bit DH).
+  - **Station-to-Station (STS) Protocol**: Adds authentication to prevent MITM attacks.
+
+---
+
+Let me know if you’d like to proceed with the next topic, **Elliptic Curve Cryptography**, or if you have any questions about **Diffie-Hellman Key Exchange**!
+
