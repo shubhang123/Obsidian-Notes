@@ -34,7 +34,6 @@ From Page 1:
 a) What is Intrusion Detection System (IDS)? Explain different classification of IDS.
 b) What is Penetration Testing? Explain different stages used in penetration testing.
 2. Describe with examples what are the two problems associated with the one-time pad?
-a) Discuss the different types of ATAC KDAWN.
 b) Explain about HILL Cipher.
 3. Write the steps of RSA algorithm.
 a) Write down the steps of RSA encryption and decryption using the RSA (Rivest-Shamir-Adleman) algorithm, p=5, q=11, e=3 and m=9.
