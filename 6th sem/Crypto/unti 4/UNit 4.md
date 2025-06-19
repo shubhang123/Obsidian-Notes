@@ -24,3 +24,129 @@ In computer security, **communication channels** can be classified into **overt*
 
 Covert channels are **dangerous because they are hard to detect** and can be embedded within seemingly legitimate activities. For instance, timing variations in network packet transmission, or manipulating unused bits in protocol headers, can serve as covert communication methods.
 
+Certainly! Here's a **detailed explanation** of the **Working of Trojans and Backdoors**:
+
+---
+
+### **Working of Trojans and Backdoors** (Detailed)
+
+The operation of Trojans and backdoors involves **multiple coordinated steps**, including delivery, execution, persistence, and communication. These malicious tools are engineered to **trick users, evade security, and give long-term control** to an attacker.
+
+---
+
+#### 1. **Delivery Mechanism**
+
+Trojans typically arrive disguised as:
+
+- Legitimate software (games, tools, cracked apps).
+    
+- Email attachments (documents, PDFs, executables).
+    
+- Embedded content in web downloads or advertisements (malvertising).
+    
+- Links in phishing emails or messages.
+    
+
+Users are tricked into **voluntarily downloading and executing** the Trojan without realizing it.
+
+---
+
+#### 2. **Execution and Installation**
+
+Once executed:
+
+- The Trojan **installs itself silently**, often without any visible sign.
+    
+- It may copy itself to **system directories** or **hidden folders**, and modify registry entries or startup scripts to achieve **persistence**.
+    
+- It might also **disable firewalls, antivirus software, or OS security features** to avoid detection.
+    
+
+During this phase, the Trojan may install a **backdoor component**—a program that listens for commands or connections from a remote server.
+
+---
+
+#### 3. **Backdoor Activation**
+
+The backdoor allows attackers to:
+
+- **Remotely access** the infected system (via command-line interface or GUI).
+    
+- **Download/upload files**, run arbitrary commands, or **execute other malware**.
+    
+- Use the victim machine as a **bot** in a larger botnet.
+    
+- Turn on microphones, webcams, or keyloggers for surveillance.
+    
+
+This communication often happens via:
+
+- Custom network protocols.
+    
+- HTTP/HTTPS traffic (to blend in with normal web traffic).
+    
+- Peer-to-peer connections.
+    
+
+---
+
+#### 4. **Persistence and Evasion**
+
+To remain active:
+
+- The malware may create **multiple redundant backdoors**.
+    
+- Use **rootkits** to hide files, processes, or registry keys.
+    
+- **Encrypt communication** with the attacker to avoid detection by IDS (Intrusion Detection Systems).
+    
+- Delay execution or stay dormant until triggered remotely or by a condition (e.g., date/time, system reboot).
+    
+
+---
+
+#### 5. **Payload Execution**
+
+Depending on the Trojan’s type and intent, it can:
+
+- **Exfiltrate sensitive data** (passwords, documents).
+    
+- **Corrupt or delete files**.
+    
+- **Spread to other devices** on the network.
+    
+- **Launch DoS attacks** or open the system for ransomware deployment.
+    
+
+---
+
+#### 6. **Command & Control (C2)**
+
+Backdoors connect to an attacker-controlled server known as a **Command and Control (C2) server**, which sends instructions and receives stolen data. These connections can be:
+
+- Direct IP-based.
+    
+- Domain-generated.
+    
+- Obfuscated using DNS tunneling or encrypted proxies.
+    
+
+---
+
+#### Summary
+
+In essence, **Trojans are the vehicle**, and **backdoors are the control panel**. Together, they allow attackers to:
+
+- **Bypass security**
+    
+- **Maintain persistent access**
+    
+- **Control the system remotely**
+    
+- **Steal data or cause harm**, often without being noticed.
+    
+
+---
+
+Let me know when to proceed with:  
+👉 **Types of Trojans – Remote Access Trojans (RATs)**.
