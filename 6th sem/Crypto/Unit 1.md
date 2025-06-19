@@ -111,3 +111,77 @@ These principles guide the design and implementation of secure systems, often re
 ---
 
 Would you like me to proceed with the next topic, **Security Threats**, or do you have any questions about **Security Terminologies and Principles**?
+
+### **3. Security Threats**
+
+#### **Overview**
+A **security threat** is any potential danger that could exploit a vulnerability to compromise the confidentiality, integrity, or availability of an asset. This topic explores the various types of threats that endanger network, computer, and cyber security, providing a foundation for understanding attacks and countermeasures.
+
+#### **What is a Security Threat?**
+- A threat is a possible event or action that can cause harm to systems, data, or operations.
+- Threats can be **intentional** (e.g., hacking by a malicious actor) or **unintentional** (e.g., accidental data deletion by an employee).
+- Threats exploit vulnerabilities, such as unpatched software, weak passwords, or lack of user awareness.
+
+#### **Categories of Security Threats**
+Security threats can be classified based on their source, intent, or impact. Below are the main categories:
+
+1. **Human Threats**:
+   - **Malicious Actors**: Hackers, insiders, or cybercriminals with intent to harm.
+     - **Example**: A hacker stealing credit card data via phishing.
+   - **Unintentional Errors**: Mistakes by employees or users.
+     - **Example**: An employee accidentally sharing sensitive data.
+   - **Social Engineering**: Manipulating people to bypass security controls.
+     - **Example**: Tricking a user into revealing their password through a fake login page.
+
+2. **Technical Threats**:
+   - **Malware**: Malicious software like viruses, worms, ransomware, spyware, or trojans.
+     - **Example**: Ransomware encrypting files and demanding payment.
+   - **Exploits**: Code or techniques targeting specific vulnerabilities.
+     - **Example**: Exploiting a buffer overflow in software to gain unauthorized access.
+   - **Denial-of-Service (DoS)**: Overwhelming a system to disrupt availability.
+     - **Example**: Flooding a website with traffic to make it inaccessible.
+
+3. **Environmental Threats**:
+   - **Natural Disasters**: Floods, earthquakes, or fires damaging infrastructure.
+     - **Example**: A flood destroying a data center.
+   - **Power Failures**: Electrical outages disrupting system availability.
+     - **Example**: A server shutting down due to a power surge.
+
+4. **Physical Threats**:
+   - **Theft or Vandalism**: Stealing or damaging hardware.
+     - **Example**: Stealing a laptop containing sensitive data.
+   - **Unauthorized Physical Access**: Gaining access to restricted areas.
+     - **Example**: Entering a server room without permission.
+
+5. **Network-Based Threats**:
+   - **Man-in-the-Middle (MitM)**: Intercepting communication between two parties.
+     - **Example**: Eavesdropping on unencrypted Wi-Fi traffic.
+   - **Packet Sniffing**: Capturing data packets to steal information.
+     - **Example**: Using tools like Wireshark to capture login credentials.
+   - **Session Hijacking**: Taking over an active user session.
+     - **Example**: Stealing a session cookie to access a user’s account.
+
+6. **Advanced Persistent Threats (APTs)**:
+   - Sophisticated, targeted attacks that remain undetected for long periods.
+   - **Example**: A state-sponsored attack infiltrating a government network to steal classified data.
+
+#### **Key Characteristics of Threats**
+- **Source**: Internal (e.g., disgruntled employee) or external (e.g., remote hacker).
+- **Intent**: Malicious (e.g., stealing data) or accidental (e.g., misconfiguration).
+- **Impact**: Can affect confidentiality (data leaks), integrity (data tampering), or availability (system downtime).
+- **Likelihood**: Depends on the threat’s complexity and the system’s vulnerabilities.
+
+#### **Examples of Real-World Threats**
+- **Phishing Attacks**: Emails pretending to be from trusted sources to steal credentials.
+- **Ransomware**: Malware like WannaCry that locks files until a ransom is paid.
+- **SQL Injection**: Exploiting web application vulnerabilities to manipulate databases.
+- **Insider Threats**: Employees leaking sensitive data, intentionally or accidentally.
+
+#### **Why It Matters**
+- Understanding threats helps organizations identify risks and prioritize defenses.
+- Threats evolve constantly, requiring proactive measures like patching, monitoring, and user training.
+- Recognizing the source and nature of threats is critical for designing effective security policies.
+
+---
+
+Would you like me to proceed with the next topic, **Types of Attacks (Operating System, Application Level, Shrink Wrap Code, Misconfiguration Attacks, etc.)**, or do you have any questions about **Security Threats**?
