@@ -543,3 +543,238 @@ Spoofing and hijacking are often used **together**:
 Let me know when you're ready to continue with:  
 👉 **TCP/IP Hijacking**.
 
+---
+
+## **TCP/IP Hijacking**
+
+---
+
+### **What is TCP/IP Hijacking?**
+
+**TCP/IP Hijacking** is an advanced attack technique where an attacker **takes control of an existing TCP session** between two communicating parties. By intercepting and manipulating packets at the **network layer**, the attacker can **silently take over the session**, inject malicious data, or terminate the connection—**without either party being aware**.
+
+This form of hijacking is especially dangerous in **unencrypted or poorly secured networks**, such as public Wi-Fi.
+
+---
+
+### **How TCP/IP Hijacking Works**
+
+The attack exploits the **TCP three-way handshake** and the predictability of **sequence and acknowledgment numbers**:
+
+1. **Connection Establishment**
+    
+    - Two legitimate parties (Client ↔ Server) establish a TCP connection using a three-way handshake.
+        
+2. **Attacker Interception**
+    
+    - The attacker monitors the communication channel (using sniffing or MITM techniques).
+        
+    - If the attacker learns the **sequence number** being used, they can **predict future packet sequences**.
+        
+3. **Packet Injection or Session Takeover**
+    
+    - The attacker forges TCP packets using:
+        
+        - The legitimate source IP.
+            
+        - The correct sequence number.
+            
+    - They send these spoofed packets to the server.
+        
+    - If accepted, the attacker can **send data as if they were the client**.
+        
+    - The real client may be **desynchronized** or disconnected.
+        
+
+---
+
+### **Types of TCP/IP Hijacking**
+
+1. **Active Hijacking**
+    
+    - Attacker injects commands/data into the session.
+        
+    - Used for data theft, privilege escalation, or installing malware.
+        
+2. **Blind Hijacking**
+    
+    - Attacker cannot see the response from the victim or server.
+        
+    - They send spoofed packets based on prediction of sequence numbers.
+        
+3. **Man-in-the-Middle Hijacking**
+    
+    - The attacker positions themselves between the client and server (e.g., using ARP spoofing).
+        
+    - Can intercept, modify, or forward packets between both parties.
+        
+
+---
+
+### **Potential Consequences**
+
+- **Credential theft** during login sessions.
+    
+- **Sensitive data exfiltration**.
+    
+- **Command injection** on remote machines.
+    
+- **Session manipulation** (changing settings, transactions, etc.).
+    
+- **Disruption of communication** (DoS).
+    
+
+---
+
+### **Prevention Techniques**
+
+1. **Encrypt Network Traffic**
+    
+    - Use **TLS/SSL** for all data transmissions (HTTPS, FTPS, SSH).
+        
+    - Encrypted tunnels prevent interception and manipulation.
+        
+2. **Use Random Initial Sequence Numbers**
+    
+    - Makes sequence number prediction very difficult.
+        
+3. **IPSec (Internet Protocol Security)**
+    
+    - Adds **authentication and encryption** at the IP layer.
+        
+4. **Firewalls and IDS/IPS**
+    
+    - Detect and block abnormal packet sequences or spoofed traffic.
+        
+5. **Avoid Public Wi-Fi for Sensitive Operations**
+    
+    - Especially on unencrypted connections.
+        
+
+---
+
+### Real-World Example
+
+In early TCP implementations, sequence numbers were predictable. Attackers could observe a few packets and inject their own—**spoofing a trusted user**, issuing dangerous commands on a telnet or rlogin session.
+
+---
+
+Let me know when you're ready for the **final topic**:  
+👉 **CAPTCHA Protection**.
+
+---
+
+## **CAPTCHA Protection**
+
+---
+
+### **What is CAPTCHA?**
+
+**CAPTCHA** stands for **Completely Automated Public Turing test to tell Computers and Humans Apart**. It is a **security mechanism** used to determine whether the user interacting with a system is a **human or a bot**. CAPTCHAs help **prevent automated attacks** such as credential stuffing, brute-force login attempts, spam submissions, and account enumeration.
+
+---
+
+### **Why CAPTCHA is Important**
+
+Web applications are frequently targeted by **automated scripts (bots)** designed to:
+
+- Harvest email addresses.
+    
+- Launch brute-force attacks.
+    
+- Submit spam via forms.
+    
+- Create fake accounts.
+    
+
+CAPTCHAs act as a **human verification barrier**, making it difficult for bots to interact with critical parts of the application.
+
+---
+
+### **Types of CAPTCHA**
+
+1. **Text-based CAPTCHA**
+    
+    - Distorted or obscured alphanumeric characters.
+        
+    - The user must type the correct text.
+        
+    - Effective but sometimes difficult for humans to solve.
+        
+2. **Image-based CAPTCHA**
+    
+    - The user is asked to select images matching a pattern (e.g., all traffic lights).
+        
+    - Harder for bots to solve, easier for users.
+        
+3. **Audio CAPTCHA**
+    
+    - Useful for visually impaired users.
+        
+    - Requires the user to enter numbers or words heard in distorted audio.
+        
+4. **reCAPTCHA (Google)**
+    
+    - **reCAPTCHA v2**: “I’m not a robot” checkbox + additional challenges.
+        
+    - **reCAPTCHA v3**: Invisible scoring-based CAPTCHA—scores user interactions without interrupting UX.
+        
+5. **Math or Logic CAPTCHA**
+    
+    - Simple challenges like "What is 4 + 3?" or "Which word is different?".
+        
+
+---
+
+### **How CAPTCHA Prevents Attacks**
+
+|**Attack Type**|**How CAPTCHA Helps**|
+|---|---|
+|Brute-force login|Blocks automated credential attempts.|
+|Spam submissions|Prevents bots from submitting fake messages or ads.|
+|Fake account creation|Ensures only real users can register.|
+|Web scraping|Limits bots collecting content from websites.|
+|Denial-of-service prep|Slows down bot attempts to overload resources.|
+
+---
+
+### **Limitations and Bypass Techniques**
+
+Despite being effective, CAPTCHAs can be:
+
+- **Inconvenient** for users if overused or too difficult.
+    
+- **Bypassed** by:
+    
+    - CAPTCHA-solving bots (using OCR or AI).
+        
+    - CAPTCHA farms (humans solving for small fees).
+        
+    - Malware that automates browser behavior.
+        
+
+---
+
+### **Best Practices for CAPTCHA Integration**
+
+- Use CAPTCHA **only when needed** (e.g., after multiple failed logins).
+    
+- Combine with **rate limiting**, **IP blacklisting**, and **behavioral analysis**.
+    
+- Choose CAPTCHAs that are **accessible and user-friendly** (e.g., reCAPTCHA v3).
+    
+- **Test for usability** on mobile and assistive devices.
+    
+
+---
+
+### Conclusion
+
+CAPTCHA is a **simple yet powerful security tool** that protects against a wide range of automated attacks. While not foolproof on its own, when **combined with other security layers**, it significantly strengthens the **resilience of web applications**.
+
+---
+
+✅ That completes your syllabus on **Cryptography and Network Security – Attack Vectors & Web Security** topics!
+
+Let me know if you'd like a **PDF export**, **revision summary**, or move on to **another unit** like cryptographic algorithms.
+
