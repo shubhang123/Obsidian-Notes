@@ -493,3 +493,77 @@ After infecting a system:
 
 Let me know when you're ready for:  
 👉 **Security Software Disablers**.
+
+---
+
+### **Types of Trojans – Security Software Disablers**
+
+**Security Software Disablers** are a class of Trojan programs specifically designed to **disable or bypass system protection mechanisms**, such as antivirus software, firewalls, intrusion detection systems (IDS), and operating system security features. Their goal is to create an unprotected environment where **other malware can operate freely** without being detected or removed.
+
+---
+
+#### **How They Work**
+
+Once executed, these Trojans typically:
+
+1. **Scan the system** for known security software or processes.
+    
+2. Use **Windows API calls**, **registry edits**, or **direct process termination** to:
+    
+    - **Kill antivirus or firewall services**.
+        
+    - **Delete or corrupt antivirus definitions or update files**.
+        
+    - **Block access to security update servers** (e.g., Microsoft, AV vendors).
+        
+    - Modify **Group Policy** or **Security Center settings** to suppress warnings.
+        
+3. Prevent the user from reinstalling or updating security tools by:
+    
+    - **Blocking installation wizards**.
+        
+    - **Redirecting update URLs**.
+        
+    - **Disabling Safe Mode or Task Manager** to make removal harder.
+        
+
+---
+
+#### **Common Targets**
+
+- Antivirus engines (e.g., Windows Defender, Kaspersky, Norton, etc.)
+    
+- Real-time protection components
+    
+- Built-in Windows security services (e.g., Security Center, Firewall)
+    
+- Update mechanisms like Windows Update or AV signature downloads
+    
+
+---
+
+#### **Why They Are Used**
+
+- As **precursors to larger attacks**, making the system vulnerable.
+    
+- To **ensure the success of spyware, ransomware, or backdoors**.
+    
+- To **hinder detection and analysis**, especially in targeted or persistent attacks.
+    
+
+---
+
+#### **Impact**
+
+- The system becomes highly vulnerable to **further infections**.
+    
+- Users may remain **unaware** that their protection has been compromised.
+    
+- Difficult for standard tools to detect or remediate infections.
+    
+
+---
+
+This concludes the **Types of Trojans** section. Let me know when you're ready to move on to:
+
+👉 **Viruses and Worms: Characteristics**.
