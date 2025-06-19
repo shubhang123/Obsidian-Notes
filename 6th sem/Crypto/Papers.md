@@ -17,14 +17,16 @@ b) Describe encryption operation of DES algorithm.
 5.
 a) Explain The Ticket Granting Server (TGS) scheme in Kerberos.
 b) What is dual signagure ? what is use of dual signature
-
-3. What do you mean by Digital Certificate? Discuss Digital signature and Certificate Authority.
-4. Explain IP Security (IPSec) along with its applications.
-5. Write short notes on any two of the following:
+6 what do you mean by trojans? define remote access trojans, data sending trojans and destructive trojans
+7 a) explain ip security secnario along with its applications
+b) explain 
+	biometric authentitcation
+	security and privacy issues with RFIDs
+8)
 a) Phishing attack
 b) Black and White hat hackers
 c) E-mail Spikes
-d) Botnets
+
 
 Here are the extracted questions from the provided images, which appear to be a question paper:
 From Page 1:
