@@ -1291,3 +1291,101 @@ A digital signature is a cryptographic technique that uses asymmetric cryptograp
 
 ### Next Steps
 Would you like me to proceed with the next topic, **Algorithm: Signature Generation/Verification**, or do you have any questions about Digital Signatures?
+
+### 16. Algorithm: Signature Generation/Verification
+
+#### Definition
+Signature generation and verification are the core processes of creating and validating a **digital signature** using asymmetric cryptography. These algorithms ensure the **authenticity**, **integrity**, and **non-repudiation** of a message or document by leveraging a public/private key pair and a cryptographic hash function.
+
+---
+
+#### Signature Generation
+The process of creating a digital signature involves the following steps:
+
+1. **Input**:
+   - **Message**: The data to be signed (e.g., document, transaction).
+   - **Private Key**: The signer’s secret key, used to create the signature.
+   - **Hash Function**: A cryptographic hash function (e.g., SHA-256).
+
+2. **Steps**:
+   - **Hash the Message**: Compute a fixed-length digest of the message using a hash function to ensure integrity.
+     - Example: `Digest = SHA-256(Message)`.
+   - **Sign the Hash**: Encrypt the digest with the signer’s private key using an asymmetric algorithm (e.g., RSA, ECDSA).
+     - Example: `Signature = RSA_Encrypt(Digest, PrivateKey)` or `Signature = ECDSA_Sign(Digest, PrivateKey)`.
+   - **Output**: Attach the signature to the message or send it separately.
+
+3. **Key Algorithms**:
+   - **RSA**: Encrypts the hash using the private key, based on integer factorization.
+   - **ECDSA (Elliptic Curve Digital Signature Algorithm)**: Uses elliptic curve cryptography for smaller, faster signatures.
+   - **DSA (Digital Signature Algorithm)**: Based on discrete logarithm problem, less common.
+
+4. **Example**:
+   - Message: “Contract”.
+   - Hash: `SHA-256("Contract") = 2cf24dba...`.
+   - Signature: `RSA_Encrypt(2cf24dba..., PrivateKey) = Signature`.
+
+5. **Considerations**:
+   - Use a secure hash function (e.g., SHA-256, SHA-3) to avoid collision attacks.
+   - Ensure the private key is securely stored (e.g., in an HSM).
+   - Use secure padding schemes (e.g., PSS for RSA) to prevent attacks.
+
+---
+
+#### Signature Verification
+The process of validating a digital signature to confirm the message’s authenticity and integrity:
+
+1. **Input**:
+   - **Message**: The received message.
+   - **Signature**: The digital signature provided by the signer.
+   - **Public Key**: The signer’s public key, often obtained from a digital certificate.
+   - **Hash Function**: The same hash function used during signing.
+
+2. **Steps**:
+   - **Hash the Received Message**: Compute the digest of the received message using the same hash function.
+     - Example: `Computed_Digest = SHA-256(Message)`.
+   - **Decrypt the Signature**: Use the signer’s public key to decrypt the signature and recover the original hash.
+     - Example: `Recovered_Digest = RSA_Decrypt(Signature, PublicKey)`.
+   - **Compare Hashes**: If `Computed_Digest == Recovered_Digest`, the signature is valid, confirming authenticity and integrity.
+   - **Certificate Validation**: Verify the public key’s certificate (e.g., check CA signature, expiration, revocation status).
+
+3. **Key Algorithms**:
+   - **RSA**: Decrypts the signature with the public key to recover the hash.
+   - **ECDSA**: Verifies the signature using elliptic curve mathematics.
+   - **DSA**: Uses modular arithmetic for verification.
+
+4. **Example**:
+   - Received Message: “Contract”.
+   - Computed Hash: `SHA-256("Contract") = 2cf24dba...`.
+   - Decrypt Signature: `RSA_Decrypt(Signature, PublicKey) = 2cf24dba...`.
+   - Compare: If hashes match, the signature is valid.
+
+5. **Considerations**:
+   - Verify the certificate chain to ensure the public key is trusted.
+   - Check for certificate revocation using CRLs or OCSP.
+   - Use constant-time comparisons to avoid timing attacks.
+
+---
+
+#### Security Considerations
+- **Key Security**: Protect private keys from theft or exposure.
+- **Hash Function**: Use collision-resistant functions (e.g., SHA-256, avoid MD5/SHA-1).
+- **Algorithm Strength**: RSA requires 2048-bit or larger keys; ECDSA uses 256-bit keys for equivalent security.
+- **Quantum Threats**: RSA, DSA, and ECDSA are vulnerable to Shor’s algorithm; transition to post-quantum algorithms (e.g., Dilithium) in the future.
+- **Implementation**: Use trusted libraries (e.g., OpenSSL) to avoid errors like weak random number generation.
+
+#### Applications
+- **Software Signing**: Verify software authenticity (e.g., Windows updates).
+- **Secure Email**: Authenticate emails (e.g., S/MIME).
+- **Blockchain**: Sign transactions (e.g., Bitcoin uses ECDSA).
+- **Legal Documents**: Sign e-contracts for non-repudiation.
+
+#### Limitations
+- **Computational Cost**: Slower than symmetric cryptography (e.g., MACs).
+- **Key Management**: Requires secure storage and distribution of keys.
+- **Certificate Dependency**: Relies on trusted CAs and revocation mechanisms.
+- **Expiration**: Signatures tied to certificates become invalid if certificates expire.
+
+---
+
+### Next Steps
+Would you like me to proceed with the next topic, **ECDSA (Elliptic Curve Digital Signature Algorithm)**, or do you have any questions about Signature Generation/Verification?
