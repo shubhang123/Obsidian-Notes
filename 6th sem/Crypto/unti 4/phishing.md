@@ -224,3 +224,89 @@ A user connects to a public Wi-Fi at a café. The attacker, controlling the acce
 
 Let me know when to proceed to:  
 👉 **Phishing – URL Obfuscation Attacks**.
+
+---
+
+## **Phishing – URL Obfuscation Attacks**
+
+---
+
+### **What is a URL Obfuscation Attack?**
+
+**URL Obfuscation** is a phishing technique in which the attacker disguises or manipulates a web address (URL) to **trick users into visiting a malicious site** that appears to be legitimate. The goal is to **bypass the user’s judgment** and make the malicious URL appear trustworthy—often mimicking the look and structure of well-known websites.
+
+---
+
+### **Techniques Used in URL Obfuscation**
+
+1. **Misspelled Domains (Typosquatting)**
+    
+    - Example: `www.gooogle.com` instead of `www.google.com`
+        
+    - Relies on **user typing mistakes** or **visual similarity**.
+        
+2. **Subdomain Spoofing**
+    
+    - Example: `www.paypal.com.secure-login.com`
+        
+    - The real domain is `secure-login.com`, not `paypal.com`.
+        
+    - Designed to **look legitimate** at a glance.
+        
+3. **Hex/Decimal IP Encoding**
+    
+    - Using numeric or hexadecimal IP addresses instead of readable domain names.
+        
+    - Example: `http://0xA9FEA0C0` might point to a malicious server.
+        
+    - Hard for users to recognize.
+        
+4. **Homograph Attacks (Unicode Spoofing)**
+    
+    - Replace Latin characters with **lookalike Unicode characters**.
+        
+    - Example: `аmazon.com` (Cyrillic "а") vs `amazon.com` (Latin "a").
+        
+5. **Long URLs with Legitimate Words**
+    
+    - Include real brand names in paths to look credible.
+        
+    - Example: `http://maliciousdomain.com/secure/update/paypal/account/login.html`
+        
+6. **URL Shorteners**
+    
+    - Use services like `bit.ly`, `tinyurl`, or `goo.gl` to hide actual destination.
+        
+    - Users cannot see where they’re being redirected.
+        
+
+---
+
+### **Why It Works**
+
+- Users often **skim URLs quickly**, focusing on familiar brand names.
+    
+- Mobile users may see only **partial URLs**, increasing risk.
+    
+- Attackers use **SSL certificates** and padlock icons to falsely signal legitimacy.
+    
+
+---
+
+### **How to Prevent URL Obfuscation Attacks**
+
+- Always **hover over links** to preview the real URL.
+    
+- Look for **unexpected subdomains** or misspelled domain names.
+    
+- Use **trusted bookmarks** or manually type URLs.
+    
+- Rely on **browser-based anti-phishing filters** and **security extensions**.
+    
+- Educate users on how to **read URLs carefully**.
+    
+
+---
+
+Let me know when you’re ready for:  
+👉 **Phishing – Hidden Attacks**.
