@@ -27,7 +27,46 @@ IPSec offers four core security services to ensure the safety of IP communicatio
    - Example: Comparable to a one-time passcode that changes with each use.
 
 ---
+### Encapsulating Security Payload (ESP) in IPSec
 
+#### Definition
+**ESP** is an IPSec protocol that provides **confidentiality**, **data integrity**, **authentication**, and **anti-replay protection** for IP packets (RFC 4303). It encrypts data and is widely used in VPNs.
+
+#### Services
+1. **Confidentiality**: Encrypts payload (e.g., AES).
+2. **Integrity**: Ensures data isn’t altered (e.g., HMAC-SHA256).
+3. **Authentication**: Verifies sender identity.
+4. **Anti-Replay**: Uses sequence numbers to block reused packets.
+
+#### How ESP Works
+- **Structure**: 
+  - **ESP Header**: Security Parameters Index (SPI), Sequence Number.
+  - **Payload**: Encrypted data.
+  - **Trailer**: Padding, Pad Length, Next Header.
+  - **ICV**: Integrity Check Value (optional).
+- **Process**:
+  - Sender: Encrypts payload, adds padding, computes ICV, sends packet.
+  - Receiver: Verifies SPI/sequence number/ICV, decrypts payload.
+
+#### Modes
+1. **Transport Mode**:
+   - Encrypts/authenticates payload only.
+   - Structure: [IP Header | ESP Header | Payload (Encrypted) | ESP Trailer | ICV]
+   - Use: Host-to-host.
+2. **Tunnel Mode**:
+   - Encrypts/authenticates entire packet, adds new IP header.
+   - Structure: [New IP Header | ESP Header | Original IP Packet (Encrypted) | ESP Trailer | ICV]
+   - Use: VPNs.
+
+#### Algorithms
+- **Encryption**: AES (128/256-bit), ChaCha20.
+- **Integrity**: SHA-256, HMAC-SHA256.
+- **Key Exchange**: Diffie-Hellman, ECDH.
+
+---
+
+### Next Steps
+Would you like me to proceed with the next topic, **Digital Certificates**, or do you have questions about ESP in IPSec?
 ## Authentication Header (AH)
 The **Authentication Header (AH)** is one of the two main protocols in IPSec (the other being Encapsulating Security Payload, or ESP). AH focuses on providing specific security services without encrypting the data.
 
