@@ -702,3 +702,106 @@ The Data Encryption Standard (DES) is a symmetric key cryptographic algorithm de
 
 Let me know if you’d like to proceed with the next topic, **RC4**, or if you have any questions about **Data Encryption Standard (DES)**!
 
+## 10. RC4
+
+RC4 is a stream cipher designed by Ron Rivest in 1987 for RSA Security. It is a symmetric key cryptographic algorithm that generates a pseudorandom keystream to encrypt data by XORing it with the plaintext. While simple and fast, RC4 has significant vulnerabilities and is no longer recommended for secure applications[1](https://www.okta.com/identity-101/rc4-stream-cipher/)[2](https://en.wikipedia.org/wiki/RC4)[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm).
+
+- **Definition**: RC4 is a variable-key-size stream cipher that produces a keystream from a secret key (typically 40–256 bits) to encrypt data one byte at a time, suitable for applications requiring high-speed encryption[2](https://en.wikipedia.org/wiki/RC4)[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm)[7](https://xilinx.github.io/Vitis_Libraries/security/2020.1/guide_L1/internals/rc4.html).
+    
+- **How It Works**:
+    
+    - **Key Scheduling Algorithm (KSA)**:
+        
+        - Initializes a 256-byte state array ($S$) with values $0$ to $255$.
+            
+        - Uses the secret key to shuffle the array through a series of swaps, creating a permuted state based on the key[2](https://en.wikipedia.org/wiki/RC4)[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm)[6](http://www.cs.sjsu.edu/~stamp/CS265/SecurityEngineering/chapter5_SE/RC4.html).
+            
+    - **Pseudo-Random Generation Algorithm (PRGA)**:
+        
+        - Generates a keystream by continuously swapping elements in the state array and producing output bytes.
+            
+        - For each byte, two indices ($i$ and $j$) are updated, a swap is performed, and a keystream byte is computed as $S[(S[i] + S[j]) \bmod 256]$[2](https://en.wikipedia.org/wiki/RC4)[6](http://www.cs.sjsu.edu/~stamp/CS265/SecurityEngineering/chapter5_SE/RC4.html).
+            
+    - **Encryption**:
+        
+        - The plaintext is XORed with the keystream to produce ciphertext: $C = P \oplus K$, where $P$ is the plaintext and $K$ is the keystream[2](https://en.wikipedia.org/wiki/RC4)[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm)[6](http://www.cs.sjsu.edu/~stamp/CS265/SecurityEngineering/chapter5_SE/RC4.html).
+            
+    - **Decryption**:
+        
+        - Identical to encryption, as XORing the ciphertext with the same keystream recovers the plaintext: $P = C \oplus K$[2](https://en.wikipedia.org/wiki/RC4)[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm).
+            
+- **Security Basis**:
+    
+    - Relies on the unpredictability of the keystream generated from the key and the state array’s permutations.
+        
+    - The internal state (256 bytes) and key-dependent shuffling aim to produce a random-like keystream[2](https://en.wikipedia.org/wiki/RC4)[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm).
+        
+- **Applications**:
+    
+    - Historically used in protocols like WEP (Wireless Equivalent Privacy) for Wi-Fi encryption.
+        
+    - Employed in early versions of SSL/TLS for securing web traffic.
+        
+    - Used in applications requiring lightweight, fast encryption, such as streaming data or real-time communications[1](https://www.okta.com/identity-101/rc4-stream-cipher/)[5](https://www.educative.io/answers/how-does-an-rc4-encryption-algorithm-work).
+        
+- **Example**:
+    
+    - For a key “KEY” (ASCII: 75, 69, 89), KSA shuffles the state array.
+        
+    - PRGA generates a keystream (e.g., $0x3A$, $0xB2$, …).
+        
+    - Plaintext “HI” (ASCII: 72, 73) is XORed with the keystream: $72 \oplus 0x3A = 98$, $73 \oplus 0xB2 = 35$, producing ciphertext $(98, 35)$.
+        
+    - Decryption XORs the ciphertext with the same keystream to recover “HI”[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm)[6](http://www.cs.sjsu.edu/~stamp/CS265/SecurityEngineering/chapter5_SE/RC4.html).
+        
+- **Advantages**:
+    
+    - Extremely fast and simple, ideal for resource-constrained devices or real-time applications.
+        
+    - Variable key length (up to 256 bits) provides flexibility.
+        
+    - Efficient in software implementations due to byte-oriented operations[1](https://www.okta.com/identity-101/rc4-stream-cipher/)[7](https://xilinx.github.io/Vitis_Libraries/security/2020.1/guide_L1/internals/rc4.html)[8](https://people.computing.clemson.edu/~jmarty/courses/commonCourseContent/AdvancedModule-SecurityConceptsAndApplicationToLinux/RC4ALGORITHM-Stallings.pdf).
+        
+- **Disadvantages**:
+    
+    - **Vulnerabilities**:
+        
+        - **Biased Keystream**: RC4’s keystream has statistical biases, especially in the first few bytes, allowing attacks like the Fluhrer-Mantin-Shamir (FMS) attack in WEP[2](https://en.wikipedia.org/wiki/RC4)[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm).
+            
+        - **Key Recovery**: Weak key scheduling (e.g., related keys or short keys) enables key recovery with sufficient ciphertext[2](https://en.wikipedia.org/wiki/RC4)[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm).
+            
+        - **WEP Flaws**: RC4’s use in WEP was broken due to poor key management and IV reuse, exposing encrypted data[2](https://en.wikipedia.org/wiki/RC4)[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm).
+            
+    - **Small State**: The 256-byte state limits long-term security, as patterns may emerge over large data streams[2](https://en.wikipedia.org/wiki/RC4)[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm).
+        
+    - **Not Quantum-Resistant**: While symmetric, RC4’s weaknesses are exploitable with classical computing.
+        
+- **Challenges**:
+    
+    - **Keystream Reuse**: Reusing the same keystream (e.g., due to identical keys or IVs) allows attackers to XOR ciphertexts and recover plaintext[2](https://en.wikipedia.org/wiki/RC4)[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm).
+        
+    - **Implementation Errors**: Improper discarding of initial keystream bytes (recommended to drop the first 256–3072 bytes) exposes biases[6](http://www.cs.sjsu.edu/~stamp/CS265/SecurityEngineering/chapter5_SE/RC4.html).
+        
+    - **Obsolescence**: RC4 is deprecated in modern protocols (e.g., banned in TLS since 2015) due to security flaws[1](https://www.okta.com/identity-101/rc4-stream-cipher/)[2](https://en.wikipedia.org/wiki/RC4).
+        
+- **Countermeasures**:
+    
+    - Avoid RC4 in new systems; use modern stream ciphers like ChaCha or block ciphers like AES in GCM mode.
+        
+    - If RC4 must be used, discard the first 3072 bytes of the keystream to reduce biases[6](http://www.cs.sjsu.edu/~stamp/CS265/SecurityEngineering/chapter5_SE/RC4.html).
+        
+    - Use unique, strong keys and initialization vectors (IVs) to prevent keystream reuse.
+        
+    - Transition to secure protocols like TLS 1.3, which excludes RC4[1](https://www.okta.com/identity-101/rc4-stream-cipher/).
+        
+- **Historical Context**:
+    
+    - RC4 was widely used in the 1990s and early 2000s due to its speed and simplicity.
+        
+    - Its vulnerabilities, exposed in attacks on WEP and TLS, led to its deprecation in favor of stronger ciphers[2](https://en.wikipedia.org/wiki/RC4)[3](https://www.tutorialspoint.com/cryptography/cryptography_rc4_algorithm.htm).
+        
+
+---
+
+Let me know if you’d like to proceed with the next topic, **RC5**, or if you have any questions about **RC4**!
+
