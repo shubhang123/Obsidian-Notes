@@ -278,3 +278,77 @@ The `useCallback` hook is essential for optimizing React applications by ensurin
 [9] https://coderpad.io/blog/development/a-guide-to-using-reacts-usecallback-hook/
 
 
+
+# UseEffect 
+The **useEffect hook** in React lets you perform side effects in functional components, such as fetching data, updating the DOM, or setting up subscriptions.[1][2][4][5][6]
+
+- **Syntax and Usage:**
+  ```javascript
+  useEffect(() => {
+    // side effect logic
+    return () => {
+      // cleanup logic (optional)
+    };
+  }, [dependencies]); // dependencies array (optional)
+  ```
+  - The first argument is a function containing the side effect code.
+  - The second argument is an optional array of dependencies; the effect runs whenever a value in this array changes. If empty, it runs only after the initial render.[4][5][1]
+
+- **Behavior:**
+  - Without dependencies, useEffect runs after every render.
+  - With an empty dependency array (`[]`), it only runs after the initial render.
+  - If you include specific variables in the array, it runs whenever those change.[5][1][4]
+
+- **Lifecycle Replacement:**
+  - It replaces class component lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`.[3][6][5]
+  - The optional return function in useEffect acts as a cleanup, similar to `componentWillUnmount`.
+
+- **Common Use Cases:**
+  - Data fetching from APIs.
+  - Setting up event listeners.
+  - Managing timers.
+  - Cleaning up resources when the component unmounts.[6][4][5]
+
+- **Example:**
+  ```javascript
+  import React, { useState, useEffect } from 'react';
+
+  function Example() {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+      document.title = `You clicked ${count} times`;
+    }, [count]);
+
+    return (
+      
+        You clicked {count} times
+         setCount(count + 1)}>Click me
+      
+    );
+  }
+  ```
+  In this example, the document title updates whenever `count` changes.[3]
+
+- **Cleanup Example:**
+  ```javascript
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // perform action
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+  ```
+  This cleans up the timer when the component unmounts or before rerunning the effect.[4][5]
+
+The useEffect hook is a core part of modern React development and allows for centralized management of side effects within function components, improving readability and maintainability.[5]
+
+[1] https://www.w3schools.com/react/react_useeffect.asp
+[2] https://react.dev/reference/react/useEffect
+[3] https://legacy.reactjs.org/docs/hooks-effect.html
+[4] https://www.geeksforgeeks.org/reactjs/reactjs-useeffect-hook/
+[5] https://hygraph.com/blog/react-useeffect-a-complete-guide
+[6] https://www.freecodecamp.org/news/react-hooks-useeffect-usestate-and-usecontext/
+[7] https://www.youtube.com/watch?v=-4XpG5_Lj_o
+[8] https://radixweb.com/blog/guide-to-useeffect-hook-in-react
+[9] https://react.dev/reference/react/hooks
