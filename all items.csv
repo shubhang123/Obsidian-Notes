@@ -1,0 +1,23 @@
+﻿ID,Work Item Type,Title,Assigned To,State,Tags
+"318332","User Story","Pharmacy | Raise  Exceptional Reimbursement for STAN C customers | FE | mweb/dweb | Enhance customer experience","Shubhang Chakrawarty <shubhang.chakrawarty@bfhl.in>","Active","Pharmacy"
+"324980","User Story","HP & HP+: Document Upload Journey || Implement Utilization API to give a verdict on uploaded documents || HPAY BE (P2)","Shubhang Chakrawarty <shubhang.chakrawarty@bfhl.in>","Resolved",
+"334326","Bug","plan member no auto selected when changing member","Anushka Jain <anushka.jain@bfhl.in>","Closed",
+"342177","Bug","Snackbar Not Displayed on API Error – Cancellation Button (Order Details Page)","Rohit Choulwar <rohit.choulwar@bfhl.in>","Closed","25_7A_Release; FE"
+"344429","Bug","Authenticate Payload Missing in orders-history-v2 API Leading to 4xx","Rohit Choulwar <rohit.choulwar@bfhl.in>","Closed","25_7C_Release; 4xx; API Failure; elk; TCNA"
+"344580","User Story","Pharmacy | Invoice Cum payment receipt Creation and storage for orders in DB - FE| For billing clients","Rohit Choulwar <rohit.choulwar@bfhl.in>","Closed","DRN_25Sprint8A"
+"344585","User Story","Pharmacy | HRx to display invalid checks result real time | FE","Rohit Choulwar <rohit.choulwar@bfhl.in>","Closed","DRN_25Sprint8A; Pharmacy"
+"345191","User Story","Pharmacy | Restrict and inform user to retry payment only after 10 minutes – with GA tracking | User Experience","Rohit Choulwar <rohit.choulwar@bfhl.in>","Closed","adhoc; Pharmacy"
+"346521","Task","Pharmacy | Display Delivery charges info to users in both journeys while placing order","Rohit Choulwar <rohit.choulwar@bfhl.in>","UAT Tested","ad hoc"
+"347856","Bug","VHC-portal-Pharmacy: whitelabelling removes for a second","Smita Solunke <smita.solunke@bfhl.in>","Closed","VHC_Portal"
+"348604","Bug","Upload Document text issue","Anushka Jain <anushka.jain@bfhl.in>","Closed",
+"349084","Task","Pharmacy  : To Update hrx-layout and hrx-common versions for Galaxy Hi Back Navigation Issue","Shubhang Chakrawarty <shubhang.chakrawarty@bfhl.in>","Closed","galaxy-hi-new-app"
+"350396","Task","Pharmacy  : To Update hrx-request and hrx-common versions","Shubhang Chakrawarty <shubhang.chakrawarty@bfhl.in>","Closed","galaxy-hi-new-app"
+"350858","User Story","Pharmacy | GA events revamp HRx","Chhavi Arora <chhavi.arora@bfhl.in>","RFT","Pharmacy"
+"351041","User Story","Document Storage Service: Use get upload url api of doc storage service to get the put SAS url for file upload","Rupali Jadhav <rupali.jadhav1@bfhl.in>","New","TBDL"
+"351142","User Story","Pharmacy | ABP | FMCG wallet product handling for  TATA AIG - FE","Shubhang Chakrawarty <shubhang.chakrawarty@bfhl.in>","New","Pharmacy"
+"351156","User Story","ABP Pharmacy handling of Partial stock handling on cart","Anushka Jain <anushka.jain@bfhl.in>","UAT Tested",
+"351864","User Story","Pharmacy | ABP | GA events to be added","Chhavi Arora <chhavi.arora@bfhl.in>","RFT","ad hoc; Pharmacy"
+"352388","User Story","Pharmacy  : To Update hrx-layout and hrx-common versions","Shubhang Chakrawarty <shubhang.chakrawarty@bfhl.in>","Closed","galaxy-hi-new-app"
+"352701","User Story","ABP | replace & to and in address fields for post api calls","Anushka Jain <anushka.jain@bfhl.in>","UAT Tested","adhoc"
+"352744","User Story","Pharmacy | replace & to and in address fields for post api calls - Pharmacy HRx","Anushka Jain <anushka.jain@bfhl.in>","UAT Tested","adhoc"
+"352905","User Story","Send what's app on Cart - Enable on ABP","Shubhang Chakrawarty <shubhang.chakrawarty@bfhl.in>","New",
