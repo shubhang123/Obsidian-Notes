@@ -15,3 +15,5 @@ AICTE	Develop computer programs (in any language, preferably Python) to identify
 Ministry of Tribal Affairs(MoTA)	Development of AI-powered FRA Atlas and WebGIS-based Decision Support System (DSS) for Integrated Monitoring of Forest Rights Act (FRA) Implementation. (States to be concentrated: Madhya Pradesh, Tripura , Odisha, Telangana)	Software	SIH12508
 
 
+Designing and development of an application for on spot assessment of Roof Top Rain water harvesting and artificial recharge potential and size of the RTRWH and AR.	Software	SIH25065
+
