@@ -1,0 +1,1 @@
+- the pharmacy homepage stepper is not being rendered correctly
