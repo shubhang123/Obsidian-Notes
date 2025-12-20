@@ -139,3 +139,8 @@ also it can be done using AI agents or copilot but it takes time.
 this can be just a vector db search and results will be shwown
 
 on save the new functions can be added to index or the changes can be added to the index using the git changes when commited.
+
+
+i want to create a website which is a vs code fork but it is very lightweight it should have retro nerd font and lazyvim like ui config and should have a input and output tab in vertical spacing which can be used for competitive programming inputs and outputs correctly, also it should have a file explorer for saving multiple files and it should have github connection access so that i can directly make changes in my repo using it
+
+make it very beautiful yet retro add retro elements and all that stuff while having retro animations as well 
