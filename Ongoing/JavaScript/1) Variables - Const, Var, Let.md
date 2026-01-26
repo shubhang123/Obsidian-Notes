@@ -1,6 +1,9 @@
 
-
 ## `const` in JavaScript — Quick Notes
+When we use `const`, we **cannot reassign the variable to a new memory address**.  
+For **primitive types** (like numbers, strings, booleans), this means the value cannot be changed.  
+For **objects, arrays, or maps**, the variable still points to the same address, so we **can modify the contents** inside the object, but we **cannot assign the variable to a new object**.
+## in depth:
 
 1. **Meaning:**  
     `const` creates a variable whose **reference cannot be reassigned**.
@@ -40,8 +43,4 @@
         
 5. **Optional:**  
     To make objects fully immutable, use `Object.freeze()`.
-    
 
----
-
-If you want, I can make an **even snappier one-line version** for easy memorization. Do you want me to do that?
