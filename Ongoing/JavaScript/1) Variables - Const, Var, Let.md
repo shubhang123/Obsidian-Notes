@@ -98,7 +98,3 @@ console.log(y); // ❌ Error (TDZ)
 |Redeclarable|✅ Yes|❌ No|
 |Scope|Function|Block|
 |Hoisting|✅ Yes, init undefined|✅ Yes, not initialized|
-
----
-
-If you want, I can **combine `var`, `let`, `const` in one super-short, exam-ready table** that covers all rules in a glance. Do you want me to do that?
