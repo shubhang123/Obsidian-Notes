@@ -44,3 +44,61 @@ For **objects, arrays, or maps**, the variable still points to the same address,
 5. **Optional:**  
     To make objects fully immutable, use `Object.freeze()`.
 
+Here’s a **quick but detailed version** of notes for `var` and `let`:
+
+---
+
+## **`var`**
+
+- **Reassignable & Redeclarable:** You can change its value and declare it again in the same scope.
+    
+- **Scope:** Function-scoped (or global if outside a function).
+    
+- **Hoisting:** Yes, but initialized as `undefined`.
+    
+
+```js
+var a = 10;
+a = 20;       // ✅ Allowed
+var a = 30;   // ✅ Allowed
+console.log(b); // undefined (hoisted)
+```
+
+- **Use case:** Older JavaScript; avoid in modern code due to redeclaration and scope issues.
+    
+
+---
+
+## **`let`**
+
+- **Reassignable but NOT Redeclarable:** You can change its value, but cannot declare again in the same block.
+    
+- **Scope:** Block-scoped `{ }`.
+    
+- **Hoisting:** Yes, but **not initialized**; accessing before declaration causes an error (Temporal Dead Zone).
+    
+
+```js
+let x = 10;
+x = 20;       // ✅ Allowed
+let x = 30;   // ❌ Error
+console.log(y); // ❌ Error (TDZ)
+```
+
+- **Use case:** Modern JS for variables that can change, safer than `var`.
+    
+
+---
+
+✅ **Quick Comparison:**
+
+|Feature|var|let|
+|---|---|---|
+|Reassignable|✅ Yes|✅ Yes|
+|Redeclarable|✅ Yes|❌ No|
+|Scope|Function|Block|
+|Hoisting|✅ Yes, init undefined|✅ Yes, not initialized|
+
+---
+
+If you want, I can **combine `var`, `let`, `const` in one super-short, exam-ready table** that covers all rules in a glance. Do you want me to do that?
