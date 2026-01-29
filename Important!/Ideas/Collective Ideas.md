@@ -7,4 +7,7 @@ voice bot , dynamic and customizeable
 ai PII protector (encrypting and decrypting)
 document categorization
 vivavoice podcasts - post it on places
-make a book learning platform where we can use it to give learninggs about books in 5- 10 mins and also using AI vivavoice for audiobooks.
+
+make a book learning platform where we can use it to give learninggs about books in 5- 10 mins and also using AI vivavoice for audiobooks. or reels.
+
+mahabharat stories reels using AI
