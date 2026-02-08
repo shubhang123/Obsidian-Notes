@@ -1,0 +1,1 @@
+state is a shared data structure that holds the current infotmation and context of the entire application
