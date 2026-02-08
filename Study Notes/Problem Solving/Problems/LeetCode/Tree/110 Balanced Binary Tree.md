@@ -17,9 +17,7 @@ This is the "Brute Force" or intuitive approach. You calculate the height of the
 
 ### Code Analysis
 
-C++
-
-```
+```cpp
 class Solution {
 public:
     bool isBalanced(TreeNode* root) {
@@ -79,9 +77,7 @@ Instead of calling `height()` separately, we can check the balance **while** cal
 
 ### Optimized Code ($O(N)$)
 
-C++
-
-```
+```cpp
 class Solution {
 public:
     bool isBalanced(TreeNode* root) {
