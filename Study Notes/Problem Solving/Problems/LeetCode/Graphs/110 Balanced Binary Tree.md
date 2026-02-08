@@ -4,4 +4,5 @@ a balanced binary tree is a tree where the left subtree and the right subtree ha
 
 ## approach:
 
-### 1) just use dfs on left and right subtree and
+1) just use dfs on left and right subtree and keep the track of height of each and then check at the last 
+2) 
