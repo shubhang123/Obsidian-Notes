@@ -13,3 +13,12 @@ make a book learning platform where we can use it to give learninggs about books
 mahabharat stories reels using AI
 district like app for temples - special darshan and everything - (e darshan) also add the mesh communication in temple areas with less networks
 
+**Certificate Verifier**
+
+- Verify authenticity of educational certificates
+    
+- Blockchain-based verification
+    
+- Bulk verification for HRs
+    
+- **Market:** Hiring managers, universities
