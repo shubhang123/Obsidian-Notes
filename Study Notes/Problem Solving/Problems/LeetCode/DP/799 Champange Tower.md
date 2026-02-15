@@ -6,7 +6,7 @@ This approach directly simulates the "pouring" process. It is generally preferre
 
 C++
 
-```
+```cpp
 #include <iostream>
 #include <vector>
 #include <algorithm> // for min
@@ -58,7 +58,7 @@ This approaches the problem by asking: "How much came from my parents?" This str
 
 C++
 
-```
+```cpp
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -128,3 +128,6 @@ public:
 ### Which one should you use?
 
 For an interview, **Code #1 (Iterative)** is safer. It is standard Dynamic Programming, easier to debug, and you don't have to write a helper function or manage a cache manually.
+
+
+₹₹
