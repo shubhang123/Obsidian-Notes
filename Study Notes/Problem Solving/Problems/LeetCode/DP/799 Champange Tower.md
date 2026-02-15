@@ -129,5 +129,58 @@ public:
 
 For an interview, **Code #1 (Iterative)** is safer. It is standard Dynamic Programming, easier to debug, and you don't have to write a helper function or manage a cache manually.
 
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
-₹₹
+using namespace std;
+
+class Solution {
+public:
+    double champagneTower(int poured, int query_row, int query_glass) {
+        // Create a 1D vector large enough to hold the target row.
+        // We initialize it with 0.0.
+        // Size is query_row + 2 to safely handle index i+1 updates.
+        vector<double> A(query_row + 2, 0.0);
+        
+        // Initial state: Top glass has all the champagne
+        A[0] = (double)poured;
+
+        // Process row by row
+        // We run 'query_row' times to transform row 0 -> row 1 -> ... -> target
+        for (int r = 0; r < query_row; r++) {
+            
+            // Iterate BACKWARDS from the current row width down to 0
+            for (int i = r; i >= 0; i--) {
+                
+                // Calculate the spill from the current glass A[i]
+                double excess = (A[i] - 1.0) / 2.0;
+                
+                if (excess > 0) {
+                    // Send half to right child (index i+1)
+                    // We use += because the right child might have already received 
+                    // liquid from its other parent (at index i+1 of the previous row iteration)
+                    A[i+1] += excess;
+                    
+                    // Send half to left child (index i)
+                    // We use = (overwrite) because A[i] in the NEW row is the 
+                    // left child of A[i] in the OLD row. 
+                    // Since we are going backwards, this overwrites the old parent 
+                    // value which we no longer need.
+                    A[i] = excess;
+                } else {
+                    // If no spill, the glass below gets nothing from this parent
+                    // The right child (i+1) is untouched (keeps existing accumulation)
+                    // The left child (i) is set to 0 (overwriting old parent)
+                    A[i+1] += 0; // effectively does nothing
+                    A[i] = 0;
+                }
+            }
+        }
+
+        // Return the value in the target glass (capped at 1)
+        return min(1.0, A[query_glass]);
+    }
+};
+```
