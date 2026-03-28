@@ -1,7 +1,6 @@
 ---
 title: "CSES Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "cses"
@@ -11,9 +10,8 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/cses"
-  - "topic/cses-home"
   - "status/evergreen"
 ---
 
@@ -33,12 +31,3 @@ Hub note for this folder.
 
 - [[CSES , Meet in the middle]]
 - [[Tower of Hanoi]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Problem Solving/Problems/CSES")
-SORT updated DESC
-```

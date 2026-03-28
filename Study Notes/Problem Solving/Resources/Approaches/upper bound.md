@@ -1,19 +1,17 @@
 ---
 title: "upper bound"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "approaches"
   - "upper-bound"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/approaches"
-  - "topic/upper-bound"
 ---
 
 #binarysearch

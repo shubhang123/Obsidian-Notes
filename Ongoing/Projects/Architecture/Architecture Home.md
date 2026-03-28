@@ -1,7 +1,6 @@
 ---
 title: "Architecture Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "projects"
 topic:
   - "architecture"
@@ -11,9 +10,8 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/projects"
-  - "type/moc"
+  - "type/hub"
   - "topic/architecture"
-  - "topic/architecture-home"
   - "status/evergreen"
 ---
 
@@ -31,12 +29,3 @@ Hub note for this folder.
 
 - [[vault-complete-rationale]]
 - [[vault-notes-architecture]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Ongoing/Projects/Architecture")
-SORT updated DESC
-```

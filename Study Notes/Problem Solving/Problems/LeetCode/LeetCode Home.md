@@ -1,7 +1,6 @@
 ---
 title: "LeetCode Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "leetcode"
@@ -11,9 +10,8 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/leetcode"
-  - "topic/leetcode-home"
   - "status/evergreen"
 ---
 
@@ -37,12 +35,3 @@ Hub note for this folder.
 - [[Make array zero]]
 - [[Push Dominoes]]
 - [[String to integer]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Problem Solving/Problems/LeetCode")
-SORT updated DESC
-```

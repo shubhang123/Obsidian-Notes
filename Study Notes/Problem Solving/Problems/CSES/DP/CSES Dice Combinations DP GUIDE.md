@@ -1,21 +1,17 @@
 ---
 title: "CSES Dice Combinations DP GUIDE"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "cses"
   - "dp"
-  - "cses-dice-combinations-dp-guide"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/cses"
-  - "topic/dp"
-  - "topic/cses-dice-combinations-dp-guide"
 ---
 
 #cses #dp #recursion

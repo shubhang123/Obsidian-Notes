@@ -1,19 +1,17 @@
 ---
 title: "Trees"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "approaches"
   - "trees"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/approaches"
-  - "topic/trees"
 ---
 
 Below is a comprehensive learning document on trees in C++. This guide covers the fundamental concepts, various tree representations, common operations and traversals, and several detailed example problems inspired by challenges from platforms like LeetCode and Codeforces.

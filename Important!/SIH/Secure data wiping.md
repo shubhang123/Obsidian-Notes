@@ -1,6 +1,5 @@
 ---
 title: "Secure data wiping"
-aliases: []
 type: "project"
 area: "projects"
 topic:
@@ -13,7 +12,6 @@ tags:
   - "area/projects"
   - "type/project"
   - "topic/sih"
-  - "topic/secure-data-wiping"
   - "status/active"
 ---
 

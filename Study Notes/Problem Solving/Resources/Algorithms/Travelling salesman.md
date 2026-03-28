@@ -1,19 +1,17 @@
 ---
 title: "Travelling salesman"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "algorithms"
   - "travelling-salesman"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/algorithms"
-  - "topic/travelling-salesman"
 ---
 
 Below is a “zoom-out → zoom-in” tour of the Travelling Salesman Problem (TSP).  

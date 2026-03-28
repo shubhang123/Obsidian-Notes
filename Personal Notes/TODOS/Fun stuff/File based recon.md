@@ -1,7 +1,6 @@
 ---
 title: "File based recon"
-aliases: []
-type: "plan"
+type: "project"
 area: "personal"
 topic:
   - "file-based-recon"
@@ -10,8 +9,7 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/personal"
-  - "type/plan"
+  - "type/project"
   - "topic/file-based-recon"
   - "status/active"
 ---
-

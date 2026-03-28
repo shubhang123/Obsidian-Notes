@@ -1,21 +1,17 @@
 ---
 title: "missing coin sum"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "cses"
   - "sorting-and-searching"
-  - "missing-coin-sum"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/cses"
-  - "topic/sorting-and-searching"
-  - "topic/missing-coin-sum"
 ---
 
 You have nnn coins with positive integer values. What is the smallest sum you cannot create using a subset of the coins?

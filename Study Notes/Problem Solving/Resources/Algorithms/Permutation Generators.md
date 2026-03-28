@@ -1,19 +1,17 @@
 ---
 title: "Permutation Generators"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "algorithms"
   - "permutation-generators"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/algorithms"
-  - "topic/permutation-generators"
 ---
 
 #recursion 

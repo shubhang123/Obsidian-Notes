@@ -1,6 +1,5 @@
 ---
 title: "LOX"
-aliases: []
 type: "project"
 area: "personal"
 topic:

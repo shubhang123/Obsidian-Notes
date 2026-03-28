@@ -1,6 +1,5 @@
 ---
 title: "SIH Problem Statements"
-aliases: []
 type: "project"
 area: "projects"
 topic:
@@ -13,7 +12,6 @@ tags:
   - "area/projects"
   - "type/project"
   - "topic/sih"
-  - "topic/sih-problem-statements"
   - "status/active"
 ---
 
@@ -35,4 +33,3 @@ Ministry of Tribal Affairs(MoTA)	Development of AI-powered FRA Atlas and WebGIS-
 
 
 Designing and development of an application for on spot assessment of Roof Top Rain water harvesting and artificial recharge potential and size of the RTRWH and AR.	Software	SIH25065
-

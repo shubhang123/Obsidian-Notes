@@ -1,21 +1,17 @@
 ---
 title: "Agile Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "6th-sem"
   - "software-engineering"
-  - "agile"
 status: "evergreen"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/6th-sem"
-  - "topic/software-engineering"
-  - "topic/agile"
   - "status/evergreen"
 ---
 
@@ -32,12 +28,3 @@ Hub note for this folder.
 ## Notes
 
 - [[Untitled]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/College Notes/6th sem/software engineering/Agile")
-SORT updated DESC
-```

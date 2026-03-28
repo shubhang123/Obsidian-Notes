@@ -1,7 +1,6 @@
 ---
 title: "Misc Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "personal"
 topic:
   - "misc-home"
@@ -10,7 +9,7 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/personal"
-  - "type/moc"
+  - "type/hub"
   - "topic/misc-home"
   - "status/evergreen"
 ---
@@ -31,12 +30,3 @@ Hub note for this folder.
 - [[Java from C++]]
 - [[New Venture Planning Paper Solutions]]
 - [[key]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Personal Notes/Misc")
-SORT updated DESC
-```

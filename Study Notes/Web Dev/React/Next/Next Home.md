@@ -1,21 +1,17 @@
 ---
 title: "Next Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "web-dev"
   - "react"
-  - "next"
 status: "evergreen"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/web-dev"
-  - "topic/react"
-  - "topic/next"
   - "status/evergreen"
 ---
 
@@ -33,12 +29,3 @@ Hub note for this folder.
 
 - [[Next js important topics]]
 - [[important topics details]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Web Dev/React/Next")
-SORT updated DESC
-```

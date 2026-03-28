@@ -1,6 +1,5 @@
 ---
 title: "small ideas"
-aliases: []
 type: "note"
 area: "research"
 topic:

@@ -1,21 +1,17 @@
 ---
 title: "strategies"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "6th-sem"
   - "software-engineering"
-  - "software-testing"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/6th-sem"
-  - "topic/software-engineering"
-  - "topic/software-testing"
 ---
 
 Software testing strategies provide a crucial roadmap for effective software development, outlining the steps, timing, effort, and resources required for testing. This process is essential for uncovering errors and ensuring the quality of the software.

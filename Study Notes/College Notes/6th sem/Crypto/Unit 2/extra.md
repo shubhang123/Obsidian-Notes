@@ -1,21 +1,17 @@
 ---
 title: "extra"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "6th-sem"
   - "crypto"
-  - "unit-2"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/6th-sem"
-  - "topic/crypto"
-  - "topic/unit-2"
 ---
 
 ### One-Time Pad (OTP)

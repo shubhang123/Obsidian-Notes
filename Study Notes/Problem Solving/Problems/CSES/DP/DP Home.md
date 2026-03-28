@@ -1,21 +1,17 @@
 ---
 title: "DP Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "cses"
   - "dp"
-  - "dp-home"
 status: "evergreen"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/cses"
-  - "topic/dp"
-  - "topic/dp-home"
   - "status/evergreen"
 ---
 
@@ -38,12 +34,3 @@ Hub note for this folder.
 - [[Grid Ways 1]]
 - [[KnapSack]]
 - [[Minimize coins , Coin Change]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Problem Solving/Problems/CSES/DP")
-SORT updated DESC
-```

@@ -1,21 +1,17 @@
 ---
 title: "1) Graph Representations"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "study"
   - "graph"
-  - "1-representations"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/study"
-  - "topic/graph"
-  - "topic/1-representations"
 ---
 
 #graph

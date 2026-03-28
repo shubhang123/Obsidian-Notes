@@ -1,11 +1,10 @@
 ---
 title: "HTML Crash Course"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "html-crash-course"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:

@@ -1,21 +1,17 @@
 ---
 title: "Apartments"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "cses"
   - "sorting-and-searching"
-  - "apartments"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/cses"
-  - "topic/sorting-and-searching"
-  - "topic/apartments"
 ---
 
 # Apartment Allocation Algorithm - Study Notes

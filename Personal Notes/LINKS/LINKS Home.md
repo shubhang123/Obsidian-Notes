@@ -1,7 +1,6 @@
 ---
 title: "LINKS Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "personal"
 topic:
   - "links-home"
@@ -10,7 +9,7 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/personal"
-  - "type/moc"
+  - "type/hub"
   - "topic/links-home"
   - "status/evergreen"
 ---
@@ -28,12 +27,3 @@ Hub note for this folder.
 ## Notes
 
 - [[Links storage]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Personal Notes/LINKS")
-SORT updated DESC
-```

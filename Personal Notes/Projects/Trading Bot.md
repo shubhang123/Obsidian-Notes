@@ -1,6 +1,5 @@
 ---
 title: "Trading Bot"
-aliases: []
 type: "project"
 area: "personal"
 topic:

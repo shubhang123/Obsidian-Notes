@@ -1,21 +1,17 @@
 ---
 title: "(Dp)Minimize the difference of sum of subsets"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "leetcode"
   - "dp"
-  - "dp-minimize-the-difference-of-sum-of-subsets"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/leetcode"
-  - "topic/dp"
-  - "topic/dp-minimize-the-difference-of-sum-of-subsets"
 ---
 
 #dp #recursion #leetcode
@@ -140,4 +136,3 @@ int main() {
 
 **Time Complexity**: O(n * totalSum)  
 **Space Complexity**: O(n * totalSum)
-

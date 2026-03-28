@@ -1,7 +1,6 @@
 ---
 title: "Crash Courses Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "crash-courses-home"
@@ -10,7 +9,7 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/crash-courses-home"
   - "status/evergreen"
 ---
@@ -31,12 +30,3 @@ Hub note for this folder.
 - [[HTML Crash Course]]
 - [[Linux Commands]]
 - [[Shell Scripting]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Crash Courses")
-SORT updated DESC
-```

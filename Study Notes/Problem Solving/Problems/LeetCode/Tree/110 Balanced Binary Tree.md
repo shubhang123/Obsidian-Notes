@@ -1,21 +1,17 @@
 ---
 title: "110 Balanced Binary Tree"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "leetcode"
   - "tree"
-  - "110-balanced-binary-tree"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/leetcode"
-  - "topic/tree"
-  - "topic/110-balanced-binary-tree"
 ---
 
 #graph #dfs 

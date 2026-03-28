@@ -1,7 +1,6 @@
 ---
 title: "Study Notes Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "study-notes-home"
@@ -10,7 +9,7 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/study-notes-home"
   - "status/evergreen"
 ---
@@ -33,12 +32,3 @@ Hub note for this folder.
 ## Notes
 
 - None yet.
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes")
-SORT updated DESC
-```

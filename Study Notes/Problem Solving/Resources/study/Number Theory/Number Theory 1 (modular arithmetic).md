@@ -1,21 +1,17 @@
 ---
 title: "Number Theory 1 (modular arithmetic)"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "study"
   - "number-theory"
-  - "number-theory-1-modular-arithmetic"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/study"
-  - "topic/number-theory"
-  - "topic/number-theory-1-modular-arithmetic"
 ---
 
 # Math for Competitive Programming

@@ -1,21 +1,17 @@
 ---
 title: "software design Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "6th-sem"
   - "software-engineering"
-  - "software-design"
 status: "evergreen"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/6th-sem"
-  - "topic/software-engineering"
-  - "topic/software-design"
   - "status/evergreen"
 ---
 
@@ -38,12 +34,3 @@ Hub note for this folder.
 - [[Estimation Models]]
 - [[MISC]]
 - [[cyclomatic complexity]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/College Notes/6th sem/software engineering/software design")
-SORT updated DESC
-```

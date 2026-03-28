@@ -1,11 +1,10 @@
 ---
 title: "Links storage"
-aliases: []
 type: "note"
 area: "personal"
 topic:
   - "links-storage"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:

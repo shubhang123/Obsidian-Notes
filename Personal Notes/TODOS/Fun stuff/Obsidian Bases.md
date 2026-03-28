@@ -1,7 +1,6 @@
 ---
 title: "Obsidian Bases"
-aliases: []
-type: "plan"
+type: "project"
 area: "personal"
 topic:
   - "obsidian-bases"
@@ -10,7 +9,7 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/personal"
-  - "type/plan"
+  - "type/project"
   - "topic/obsidian-bases"
   - "status/active"
 ---

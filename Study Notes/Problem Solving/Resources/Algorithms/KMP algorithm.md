@@ -1,19 +1,17 @@
 ---
 title: "KMP algorithm"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "algorithms"
   - "kmp-algorithm"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/algorithms"
-  - "topic/kmp-algorithm"
 ---
 
 ## Understanding the Knuth-Morris-Pratt (KMP) Algorithm

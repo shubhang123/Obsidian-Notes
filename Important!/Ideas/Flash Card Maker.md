@@ -1,6 +1,5 @@
 ---
 title: "Flash Card Maker"
-aliases: []
 type: "note"
 area: "research"
 topic:
@@ -35,5 +34,3 @@ create flashcards from scratch option, and variants
 Non Functioanl Requirements
 
 convert prompt to chinese and also get the response in chinese to save tokens
-
-

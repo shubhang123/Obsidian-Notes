@@ -1,19 +1,17 @@
 ---
 title: "Tower of Hanoi"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "cses"
   - "tower-of-hanoi"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/cses"
-  - "topic/tower-of-hanoi"
 ---
 
 ### 1 Seeing the sub-problem hiding inside the big problem

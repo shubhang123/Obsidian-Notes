@@ -1,21 +1,18 @@
 ---
 title: "Rabin Karp Algorithm"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "algorithms"
   - "rabin-karp-algorithm"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/algorithms"
-  - "topic/rabin-karp-algorithm"
 ---
-
 
 ## 1) **Single Hashing Method:-**
 		worse case time O(mn)

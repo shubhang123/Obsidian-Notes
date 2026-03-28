@@ -1,7 +1,6 @@
 ---
 title: "Ongoing Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "projects"
 topic:
   - "ongoing-home"
@@ -10,7 +9,7 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/projects"
-  - "type/moc"
+  - "type/hub"
   - "topic/ongoing-home"
   - "status/evergreen"
 ---
@@ -29,12 +28,3 @@ Hub note for this folder.
 ## Notes
 
 - None yet.
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Ongoing")
-SORT updated DESC
-```

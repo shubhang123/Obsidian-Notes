@@ -1,7 +1,6 @@
 ---
 title: "vault-complete-rationale"
-aliases: []
-type: "architecture"
+type: "project"
 area: "projects"
 topic:
   - "architecture"
@@ -11,9 +10,8 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/projects"
-  - "type/architecture"
+  - "type/project"
   - "topic/architecture"
-  - "topic/vault-complete-rationale"
   - "status/active"
 ---
 

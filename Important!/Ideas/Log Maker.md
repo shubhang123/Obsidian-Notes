@@ -1,6 +1,5 @@
 ---
 title: "Log Maker"
-aliases: []
 type: "note"
 area: "research"
 topic:

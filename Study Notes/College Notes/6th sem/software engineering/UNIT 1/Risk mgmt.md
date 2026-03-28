@@ -1,23 +1,18 @@
 ---
 title: "Risk mgmt"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "6th-sem"
   - "software-engineering"
-  - "unit-1"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/6th-sem"
-  - "topic/software-engineering"
-  - "topic/unit-1"
 ---
-
 
 ## 🛡️ Safety and Risk Assessment in Software Engineering
 

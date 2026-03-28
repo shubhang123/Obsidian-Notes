@@ -1,6 +1,5 @@
 ---
 title: "Kochi rail"
-aliases: []
 type: "project"
 area: "projects"
 topic:
@@ -13,7 +12,6 @@ tags:
   - "area/projects"
   - "type/project"
   - "topic/sih"
-  - "topic/kochi-rail"
   - "status/active"
 ---
 

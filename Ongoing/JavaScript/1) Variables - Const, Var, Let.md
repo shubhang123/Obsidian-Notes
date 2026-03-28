@@ -1,21 +1,18 @@
 ---
 title: "1) Variables - Const, Var, Let"
-aliases: []
 type: "note"
 area: "projects"
 topic:
   - "javascript"
   - "1-variables-const-var-let"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/projects"
   - "type/note"
   - "topic/javascript"
-  - "topic/1-variables-const-var-let"
 ---
-
 
 ## `const` in JavaScript — Quick Notes
 When we use `const`, we **cannot reassign the variable to a new memory address**.  

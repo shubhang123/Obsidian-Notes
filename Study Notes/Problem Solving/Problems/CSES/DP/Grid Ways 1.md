@@ -1,21 +1,17 @@
 ---
 title: "Grid Ways 1"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "cses"
   - "dp"
-  - "grid-ways-1"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/cses"
-  - "topic/dp"
-  - "topic/grid-ways-1"
 ---
 
 #dp #cses

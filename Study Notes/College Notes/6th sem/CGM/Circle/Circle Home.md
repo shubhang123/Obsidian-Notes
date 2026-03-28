@@ -1,21 +1,17 @@
 ---
 title: "Circle Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "6th-sem"
   - "cgm"
-  - "circle"
 status: "evergreen"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/6th-sem"
-  - "topic/cgm"
-  - "topic/circle"
   - "status/evergreen"
 ---
 
@@ -35,12 +31,3 @@ Hub note for this folder.
 - [[Circle Drawing General Method]]
 - [[General dda method for circle]]
 - [[midpoint circle]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/College Notes/6th sem/CGM/Circle")
-SORT updated DESC
-```

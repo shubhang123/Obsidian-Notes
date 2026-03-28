@@ -1,21 +1,17 @@
 ---
 title: "imp"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "6th-sem"
   - "software-engineering"
-  - "imp"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/6th-sem"
-  - "topic/software-engineering"
-  - "topic/imp"
 ---
 
 # RGPV Software Engineering - Most Repeated Questions Study Guide

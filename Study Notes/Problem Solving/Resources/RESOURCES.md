@@ -1,11 +1,10 @@
 ---
 title: "RESOURCES"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "general"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
@@ -19,5 +18,3 @@ Questions on certain topics - https://codeforces.com/blog/-Morass-
 Sum over subsets DP - https://codeforces.com/blog/entry/45223
 
 Trie - https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/tutorial/
-
-

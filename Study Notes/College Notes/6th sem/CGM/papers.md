@@ -1,21 +1,17 @@
 ---
 title: "papers"
-aliases: []
 type: "reference"
 area: "study"
 topic:
   - "6th-sem"
   - "cgm"
-  - "papers"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/reference"
   - "topic/6th-sem"
-  - "topic/cgm"
-  - "topic/papers"
 ---
 
 # Important Questions Analysis - IT-601 Computer Graphics & Multimedia

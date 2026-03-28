@@ -1,21 +1,17 @@
 ---
 title: "web application security"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "crypto"
   - "unit-4"
-  - "web-application-security"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/crypto"
-  - "topic/unit-4"
-  - "topic/web-application-security"
 ---
 
 ---

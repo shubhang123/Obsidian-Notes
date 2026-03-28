@@ -1,7 +1,6 @@
 ---
 title: "Problem Solving Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "problem-solving-home"
@@ -10,7 +9,7 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/problem-solving-home"
   - "status/evergreen"
 ---
@@ -30,12 +29,3 @@ Hub note for this folder.
 ## Notes
 
 - [[IMPORTANT OBVSERVATIONS(dp)]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Problem Solving")
-SORT updated DESC
-```

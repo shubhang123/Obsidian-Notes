@@ -1,7 +1,6 @@
 ---
 title: "study Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "study"
@@ -11,9 +10,8 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/study"
-  - "topic/study-home"
   - "status/evergreen"
 ---
 
@@ -32,12 +30,3 @@ Hub note for this folder.
 ## Notes
 
 - [[Subset sum bitset]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Problem Solving/Resources/study")
-SORT updated DESC
-```

@@ -1,7 +1,6 @@
 ---
 title: "Basics Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "basics"
@@ -11,9 +10,8 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/basics"
-  - "topic/basics-home"
   - "status/evergreen"
 ---
 
@@ -30,12 +28,3 @@ Hub note for this folder.
 ## Notes
 
 - None yet.
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Problem Solving/Basics")
-SORT updated DESC
-```

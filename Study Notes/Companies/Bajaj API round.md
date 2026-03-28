@@ -1,19 +1,17 @@
 ---
 title: "Bajaj API round"
-aliases: []
 type: "reference"
 area: "study"
 topic:
   - "companies"
   - "bajaj-api-round"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/reference"
   - "topic/companies"
-  - "topic/bajaj-api-round"
 ---
 
 Here’s a clear breakdown of how to solve the **Bajaj Finserv Programming Challenge** using Python:

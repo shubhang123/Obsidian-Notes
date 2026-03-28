@@ -1,23 +1,18 @@
 ---
 title: "Unit 1"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "6th-sem"
   - "crypto"
-  - "unit-1"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/6th-sem"
-  - "topic/crypto"
-  - "topic/unit-1"
 ---
-
 
 ### **1. Introduction to Network Security, Computer Security, and Cyber Security**
 

@@ -1,19 +1,17 @@
 ---
 title: "Kadanes algo"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "algorithms"
   - "kadanes-algo"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/algorithms"
-  - "topic/kadanes-algo"
 ---
 
 # Kadane's Algorithm - Detailed Notes

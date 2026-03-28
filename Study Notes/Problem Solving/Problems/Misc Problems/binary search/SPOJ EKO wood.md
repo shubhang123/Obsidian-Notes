@@ -1,21 +1,17 @@
 ---
 title: "SPOJ EKO wood"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "misc-problems"
   - "binary-search"
-  - "spoj-eko-wood"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/misc-problems"
-  - "topic/binary-search"
-  - "topic/spoj-eko-wood"
 ---
 
 #binarysearch #SPOJ

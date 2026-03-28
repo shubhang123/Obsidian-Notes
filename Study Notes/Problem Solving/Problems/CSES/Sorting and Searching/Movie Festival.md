@@ -1,21 +1,17 @@
 ---
 title: "Movie Festival"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "cses"
   - "sorting-and-searching"
-  - "movie-festival"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/cses"
-  - "topic/sorting-and-searching"
-  - "topic/movie-festival"
 ---
 
 In a movie festival n movies will be shown. You know the starting and ending time of each movie. What is the maximum number of movies you can watch entirely?

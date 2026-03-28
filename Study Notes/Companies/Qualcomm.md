@@ -1,19 +1,17 @@
 ---
 title: "Qualcomm"
-aliases: []
 type: "reference"
 area: "study"
 topic:
   - "companies"
   - "qualcomm"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/reference"
   - "topic/companies"
-  - "topic/qualcomm"
 ---
 
 | ID   | Title                            | Acceptance | Difficulty | Frequency            | Leetcode Question Link                                         |

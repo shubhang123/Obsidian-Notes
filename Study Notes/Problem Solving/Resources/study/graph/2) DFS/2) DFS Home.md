@@ -1,21 +1,17 @@
 ---
 title: "2) DFS Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "study"
   - "graph"
-  - "2-dfs"
 status: "evergreen"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/study"
-  - "topic/graph"
-  - "topic/2-dfs"
   - "status/evergreen"
 ---
 
@@ -34,12 +30,3 @@ Hub note for this folder.
 - [[1 DFS Traversal]]
 - [[2 connected components in a graph]]
 - [[3 cycle detection]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Problem Solving/Resources/study/graph/2) DFS")
-SORT updated DESC
-```

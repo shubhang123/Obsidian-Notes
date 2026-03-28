@@ -1,21 +1,17 @@
 ---
 title: "Graphs Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "leetcode"
   - "graphs"
-  - "graphs-home"
 status: "evergreen"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/leetcode"
-  - "topic/graphs"
-  - "topic/graphs-home"
   - "status/evergreen"
 ---
 
@@ -35,12 +31,3 @@ Hub note for this folder.
 - [[695 max fill area]]
 - [[733 flood fill]]
 - [[79 word search]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Problem Solving/Problems/LeetCode/Graphs")
-SORT updated DESC
-```

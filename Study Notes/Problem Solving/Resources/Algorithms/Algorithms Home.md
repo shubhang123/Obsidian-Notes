@@ -1,7 +1,6 @@
 ---
 title: "Algorithms Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "algorithms"
@@ -11,9 +10,8 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/algorithms"
-  - "topic/algorithms-home"
   - "status/evergreen"
 ---
 
@@ -35,12 +33,3 @@ Hub note for this folder.
 - [[Permutation Generators]]
 - [[Rabin Karp Algorithm]]
 - [[Travelling salesman]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Problem Solving/Resources/Algorithms")
-SORT updated DESC
-```

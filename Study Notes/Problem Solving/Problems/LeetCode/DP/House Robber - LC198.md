@@ -1,21 +1,17 @@
 ---
 title: "House Robber - LC198"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "leetcode"
   - "dp"
-  - "house-robber-lc198"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/leetcode"
-  - "topic/dp"
-  - "topic/house-robber-lc198"
 ---
 
 #dp #recursion #leetcode

@@ -1,21 +1,17 @@
 ---
 title: "Denial of service"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "6th-sem"
   - "crypto"
-  - "unit-4"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/6th-sem"
-  - "topic/crypto"
-  - "topic/unit-4"
 ---
 
 Absolutely! Here is a **more detailed explanation** of the **Denial-of-Service (DoS) attacks** with a deeper dive into each type:
@@ -797,4 +793,3 @@ CAPTCHA is a **simple yet powerful security tool** that protects against a wide 
 ✅ That completes your syllabus on **Cryptography and Network Security – Attack Vectors & Web Security** topics!
 
 Let me know if you'd like a **PDF export**, **revision summary**, or move on to **another unit** like cryptographic algorithms.
-

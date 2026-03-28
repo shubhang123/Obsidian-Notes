@@ -1,7 +1,6 @@
 ---
 title: "Web Dev Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "web-dev"
@@ -11,9 +10,8 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/web-dev"
-  - "topic/web-dev-home"
   - "status/evergreen"
 ---
 
@@ -32,12 +30,3 @@ Hub note for this folder.
 ## Notes
 
 - None yet.
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Web Dev")
-SORT updated DESC
-```

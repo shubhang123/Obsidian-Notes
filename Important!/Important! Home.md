@@ -1,7 +1,6 @@
 ---
 title: "Important! Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "research"
 topic:
   - "important-home"
@@ -10,7 +9,7 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/research"
-  - "type/moc"
+  - "type/hub"
   - "topic/important-home"
   - "status/evergreen"
 ---
@@ -29,12 +28,3 @@ Hub note for this folder.
 ## Notes
 
 - None yet.
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Important!")
-SORT updated DESC
-```

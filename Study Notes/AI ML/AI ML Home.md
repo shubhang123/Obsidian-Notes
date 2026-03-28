@@ -1,7 +1,6 @@
 ---
 title: "AI ML Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "ai-ml-home"
@@ -10,7 +9,7 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/ai-ml-home"
   - "status/evergreen"
 ---
@@ -28,12 +27,3 @@ Hub note for this folder.
 ## Notes
 
 - None yet.
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/AI ML")
-SORT updated DESC
-```

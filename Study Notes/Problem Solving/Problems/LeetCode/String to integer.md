@@ -1,19 +1,17 @@
 ---
 title: "String to integer"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "leetcode"
   - "string-to-integer"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/leetcode"
-  - "topic/string-to-integer"
 ---
 
 #leetcode
@@ -69,4 +67,3 @@ int main() {
 - **Variable Names**: The variable names remain unchanged as they are already descriptive. 
 
 This should provide clarity on how the function works while maintaining good coding practices.
-

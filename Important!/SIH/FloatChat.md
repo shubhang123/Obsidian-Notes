@@ -1,6 +1,5 @@
 ---
 title: "FloatChat"
-aliases: []
 type: "project"
 area: "projects"
 topic:
@@ -13,7 +12,6 @@ tags:
   - "area/projects"
   - "type/project"
   - "topic/sih"
-  - "topic/floatchat"
   - "status/active"
 ---
 

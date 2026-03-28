@@ -1,7 +1,6 @@
 ---
 title: "JavaScript Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "projects"
 topic:
   - "javascript"
@@ -11,9 +10,8 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/projects"
-  - "type/moc"
+  - "type/hub"
   - "topic/javascript"
-  - "topic/javascript-home"
   - "status/evergreen"
 ---
 
@@ -30,12 +28,3 @@ Hub note for this folder.
 ## Notes
 
 - [[1) Variables - Const, Var, Let]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Ongoing/JavaScript")
-SORT updated DESC
-```

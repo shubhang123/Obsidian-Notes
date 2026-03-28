@@ -1,21 +1,17 @@
 ---
 title: "number theory 2 (prime)"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "study"
   - "number-theory"
-  - "number-theory-2-prime"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/study"
-  - "topic/number-theory"
-  - "topic/number-theory-2-prime"
 ---
 
 # Prime Numbers and Related Concepts

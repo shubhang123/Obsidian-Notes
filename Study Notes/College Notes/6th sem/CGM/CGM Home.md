@@ -1,21 +1,17 @@
 ---
 title: "CGM Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "6th-sem"
   - "cgm"
-  - "cgm-home"
 status: "evergreen"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/6th-sem"
-  - "topic/cgm"
-  - "topic/cgm-home"
   - "status/evergreen"
 ---
 
@@ -34,12 +30,3 @@ Hub note for this folder.
 ## Notes
 
 - [[papers]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/College Notes/6th sem/CGM")
-SORT updated DESC
-```

@@ -1,7 +1,6 @@
 ---
 title: "Approaches Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "approaches"
@@ -11,9 +10,8 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/approaches"
-  - "topic/approaches-home"
   - "status/evergreen"
 ---
 
@@ -36,12 +34,3 @@ Hub note for this folder.
 - [[Recursion]]
 - [[Trees]]
 - [[upper bound]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/Problem Solving/Resources/Approaches")
-SORT updated DESC
-```

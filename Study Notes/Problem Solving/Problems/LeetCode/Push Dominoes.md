@@ -1,19 +1,17 @@
 ---
 title: "Push Dominoes"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "leetcode"
   - "push-dominoes"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/leetcode"
-  - "topic/push-dominoes"
 ---
 
 Sure! Let's go through your **original approach**, understand the **intuition** behind it, what it tries to do, and where it has problems. #leetcode
@@ -281,5 +279,3 @@ To do that, you need to:
 I already provided that fix [here](https://chat.openai.com/share/ef7b7cbf-178f-4f28-a469-67c33e29c1cc) in your own format.
 
 Would you like me to insert that fix _into this exact code structure_ while preserving variable names like `left[]`, `right[]`, `i`, `j`?
-
-

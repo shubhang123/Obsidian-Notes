@@ -1,7 +1,6 @@
 ---
 title: "Vault Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "personal"
 topic:
   - "vault-home"
@@ -10,7 +9,7 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/personal"
-  - "type/moc"
+  - "type/hub"
   - "topic/vault-home"
   - "status/evergreen"
 ---
@@ -31,12 +30,3 @@ Hub note for this folder.
 ## Notes
 
 - [[README]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "")
-SORT updated DESC
-```

@@ -1,23 +1,18 @@
 ---
 title: "Unit 2"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "6th-sem"
   - "crypto"
-  - "unit-2"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/6th-sem"
-  - "topic/crypto"
-  - "topic/unit-2"
 ---
-
 
 ### Cryptography
 **Definition**: Cryptography is the science of securing communication and data by transforming information into an unreadable format (encryption) to ensure confidentiality, integrity, authenticity, and non-repudiation, and then converting it back to readable form (decryption) for authorized parties.

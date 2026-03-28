@@ -1,21 +1,17 @@
 ---
 title: "Everything about js"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "web-dev"
   - "js"
-  - "everything-about-js"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/web-dev"
-  - "topic/js"
-  - "topic/everything-about-js"
 ---
 
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
@@ -420,4 +416,3 @@ The JavaScript engine ecosystem continues advancing through ongoing research in 
 [^75]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/89bc63c3043aa86b38b7ed8f8bc1d78a/87a59c81-a683-4d6d-a119-f6dfa43e51c8/c1b76764.txt
 
 [^76]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/89bc63c3043aa86b38b7ed8f8bc1d78a/87a59c81-a683-4d6d-a119-f6dfa43e51c8/05cb4cd2.txt
-

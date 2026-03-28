@@ -1,21 +1,17 @@
 ---
 title: "Next js important topics"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "web-dev"
   - "react"
-  - "next"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/web-dev"
-  - "topic/react"
-  - "topic/next"
 ---
 
 #nextjs 

@@ -1,7 +1,6 @@
 ---
 title: "LangGraph Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "study"
 topic:
   - "langgraph"
@@ -11,9 +10,8 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
-  - "type/moc"
+  - "type/hub"
   - "topic/langgraph"
-  - "topic/langgraph-home"
   - "status/evergreen"
 ---
 
@@ -30,12 +28,3 @@ Hub note for this folder.
 ## Notes
 
 - [[State]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Study Notes/AI ML/LangGraph")
-SORT updated DESC
-```

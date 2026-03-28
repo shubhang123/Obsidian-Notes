@@ -1,19 +1,17 @@
 ---
 title: "DocuSign"
-aliases: []
 type: "reference"
 area: "study"
 topic:
   - "companies"
   - "docusign"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/reference"
   - "topic/companies"
-  - "topic/docusign"
 ---
 
 Here's the formatted markdown table with LeetCode problems:

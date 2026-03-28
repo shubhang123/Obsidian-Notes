@@ -1,21 +1,17 @@
 ---
 title: "paper 1 sol"
-aliases: []
 type: "reference"
 area: "study"
 topic:
   - "6th-sem"
   - "crypto"
-  - "paper-1-sol"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/reference"
   - "topic/6th-sem"
-  - "topic/crypto"
-  - "topic/paper-1-sol"
 ---
 
 Below is a comprehensive solution to the question paper, addressing each part systematically with detailed explanations and artifacts where applicable. Each question is worth 14 marks, so I’ll ensure clarity, depth, and relevance to maximize understanding while adhering to the artifact generation guidelines for specific technical content.

@@ -1,6 +1,5 @@
 ---
 title: "Collective Ideas"
-aliases: []
 type: "note"
 area: "research"
 topic:

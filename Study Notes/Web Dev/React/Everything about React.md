@@ -1,21 +1,17 @@
 ---
 title: "Everything about React"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "web-dev"
   - "react"
-  - "everything-about-react"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/web-dev"
-  - "topic/react"
-  - "topic/everything-about-react"
 ---
 
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
@@ -504,4 +500,3 @@ As React continues evolving with features like Server Components and compiler op
 [^71]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/bb3cd8fe6c3414e50d32d48a7984b71d/10eaaa1d-d3a1-4745-84cf-d5db4df8c124/8810957c.txt
 
 [^72]: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/bb3cd8fe6c3414e50d32d48a7984b71d/10eaaa1d-d3a1-4745-84cf-d5db4df8c124/d5bd5e62.txt
-

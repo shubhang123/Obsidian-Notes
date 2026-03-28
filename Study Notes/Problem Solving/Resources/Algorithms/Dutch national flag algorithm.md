@@ -1,19 +1,17 @@
 ---
 title: "Dutch national flag algorithm"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "algorithms"
   - "dutch-national-flag-algorithm"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/algorithms"
-  - "topic/dutch-national-flag-algorithm"
 ---
 
 ### Key Points

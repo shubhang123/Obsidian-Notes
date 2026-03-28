@@ -1,21 +1,17 @@
 ---
 title: "dfs tree subqueries"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "study"
   - "tree"
-  - "dfs-tree-subqueries"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/study"
-  - "topic/tree"
-  - "topic/dfs-tree-subqueries"
 ---
 
 # DFS Tree Traversal with Subtree Computations - Complete Guide

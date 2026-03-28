@@ -1,21 +1,17 @@
 ---
 title: "79 word search"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "leetcode"
   - "graphs"
-  - "79-word-search"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/leetcode"
-  - "topic/graphs"
-  - "topic/79-word-search"
 ---
 
 ## Word Search Problem - Notes & Explanation

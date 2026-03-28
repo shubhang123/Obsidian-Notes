@@ -1,21 +1,17 @@
 ---
 title: "NestJs"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "web-dev"
   - "nest-js"
-  - "nestjs"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/web-dev"
-  - "topic/nest-js"
-  - "topic/nestjs"
 ---
 
 Now I have gathered comprehensive information about NestJS. Let me create a detailed, in-depth guide covering everything about NestJS for backend development.

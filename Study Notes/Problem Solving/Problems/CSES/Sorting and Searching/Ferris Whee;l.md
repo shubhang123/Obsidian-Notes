@@ -1,21 +1,17 @@
 ---
 title: "Ferris Whee;l"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "cses"
   - "sorting-and-searching"
-  - "ferris-whee-l"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/cses"
-  - "topic/sorting-and-searching"
-  - "topic/ferris-whee-l"
 ---
 
 Here are clean and structured notes for the **"Ferris Wheel"** problem from CSES, written in a format suitable for revision and understanding.

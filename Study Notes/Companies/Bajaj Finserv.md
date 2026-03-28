@@ -1,19 +1,17 @@
 ---
 title: "Bajaj Finserv"
-aliases: []
 type: "reference"
 area: "study"
 topic:
   - "companies"
   - "bajaj-finserv"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/reference"
   - "topic/companies"
-  - "topic/bajaj-finserv"
 ---
 
 Perfect. I’ll gather a detailed breakdown of the Bajaj Finserv full-time campus placement drive for software development roles. This will include:

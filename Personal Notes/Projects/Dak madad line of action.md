@@ -1,6 +1,5 @@
 ---
 title: "Dak madad line of action"
-aliases: []
 type: "project"
 area: "personal"
 topic:

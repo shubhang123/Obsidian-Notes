@@ -1,19 +1,17 @@
 ---
 title: "Subset sum bitset"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "study"
   - "subset-sum-bitset"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/study"
-  - "topic/subset-sum-bitset"
 ---
 
 ```cpp
@@ -227,4 +225,3 @@ You need fast performance.
 If you're preparing for interviews or competitions, mastering this technique can be a big time saver.
 
 Let me know if you'd like a comparison with traditional DP, or need help modifying this to print the subset itself.
-

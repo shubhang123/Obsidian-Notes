@@ -1,21 +1,17 @@
 ---
 title: "200 Number of islands"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "leetcode"
   - "graphs"
-  - "200-number-of-islands"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/leetcode"
-  - "topic/graphs"
-  - "topic/200-number-of-islands"
 ---
 
 Certainly! Here's a clean, well-structured explanation (as **code comments or notes**) of your **DFS-based solution to the “Number of Islands” problem**:

@@ -1,21 +1,17 @@
 ---
 title: "LCA finding"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "study"
   - "tree"
-  - "lca-finding"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/study"
-  - "topic/tree"
-  - "topic/lca-finding"
 ---
 
 Below is a detailed explanation of the provided C++ code for finding the Lowest Common Ancestor (LCA) in a tree, followed by an enhancement using the Binary Lifting method for improved efficiency, especially for multiple queries.

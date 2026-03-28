@@ -1,7 +1,6 @@
 ---
 title: "SIH Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "projects"
 topic:
   - "sih"
@@ -11,9 +10,8 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/projects"
-  - "type/moc"
+  - "type/hub"
   - "topic/sih"
-  - "topic/sih-home"
   - "status/evergreen"
 ---
 
@@ -33,12 +31,3 @@ Hub note for this folder.
 - [[Kochi rail]]
 - [[SIH Problem Statements]]
 - [[Secure data wiping]]
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Important!/SIH")
-SORT updated DESC
-```

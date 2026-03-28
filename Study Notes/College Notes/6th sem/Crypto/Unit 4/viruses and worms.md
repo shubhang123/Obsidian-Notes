@@ -1,21 +1,17 @@
 ---
 title: "viruses and worms"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "crypto"
   - "unit-4"
-  - "viruses-and-worms"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/crypto"
-  - "topic/unit-4"
-  - "topic/viruses-and-worms"
 ---
 
 ---

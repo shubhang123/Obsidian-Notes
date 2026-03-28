@@ -1,21 +1,17 @@
 ---
 title: "2 connected components in a graph"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "study"
   - "graph"
-  - "2-dfs"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/study"
-  - "topic/graph"
-  - "topic/2-dfs"
 ---
 
 #dfs

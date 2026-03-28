@@ -1,21 +1,17 @@
 ---
 title: "Restaurant conflict"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "cses"
   - "sorting-and-searching"
-  - "restaurant-conflict"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/cses"
-  - "topic/sorting-and-searching"
-  - "topic/restaurant-conflict"
 ---
 
 Of course! Here is a rewritten and expanded explanation of the solutions for finding the maximum number of customers in a restaurant. This version focuses on building intuition with clearer analogies and more detailed theory for each approach.

@@ -1,21 +1,17 @@
 ---
 title: "Tree Bacics"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "basics"
   - "trees"
-  - "tree-bacics"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/basics"
-  - "topic/trees"
-  - "topic/tree-bacics"
 ---
 
 # Height of Tree
@@ -26,5 +22,3 @@ The height formula is: $$
 \text{height}(node) = 1 + \max\bigl(\text{height}(node.left),\ \text{height}(node.right)\bigr)
 }
 $$
-
-

@@ -1,11 +1,10 @@
 ---
 title: "New Venture Planning Paper Solutions"
-aliases: []
 type: "reference"
 area: "personal"
 topic:
   - "new-venture-planning-paper-solutions"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:

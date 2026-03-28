@@ -1,21 +1,17 @@
 ---
 title: "1240 tiling rectangle with fewest squares"
-aliases: []
 type: "problem"
 area: "study"
 topic:
   - "leetcode"
   - "recursion-backtracking"
-  - "1240-tiling-rectangle-with-fewest-squares"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/problem"
   - "topic/leetcode"
-  - "topic/recursion-backtracking"
-  - "topic/1240-tiling-rectangle-with-fewest-squares"
 ---
 
 Of course! Let's break down this fascinating problem, starting from the most intuitive idea and building up to the correct, optimal solution. This problem is a classic example of why a "greedy" choice isn't always the best one and how dynamic programming can help us find a global optimum.

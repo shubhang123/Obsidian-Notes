@@ -1,21 +1,17 @@
 ---
 title: "papers"
-aliases: []
 type: "reference"
 area: "study"
 topic:
   - "6th-sem"
   - "software-engineering"
-  - "papers"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/reference"
   - "topic/6th-sem"
-  - "topic/software-engineering"
-  - "topic/papers"
 ---
 
 # RGPV Software Engineering Past Papers (2014-2020)

@@ -1,23 +1,18 @@
 ---
 title: "Diameter of tree"
-aliases: []
 type: "note"
 area: "study"
 topic:
   - "study"
   - "tree"
-  - "diameter-of-tree"
-status: "seed"
+status: "draft"
 created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/study"
   - "type/note"
   - "topic/study"
-  - "topic/tree"
-  - "topic/diameter-of-tree"
 ---
-
 
 ---
 ### **Part 1: The Theory - Finding the Diameter of a Tree**

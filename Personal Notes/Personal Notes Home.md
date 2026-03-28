@@ -1,7 +1,6 @@
 ---
 title: "Personal Notes Home"
-aliases: []
-type: "moc"
+type: "hub"
 area: "personal"
 topic:
   - "personal-notes-home"
@@ -10,7 +9,7 @@ created: 2026-03-28
 updated: 2026-03-28
 tags:
   - "area/personal"
-  - "type/moc"
+  - "type/hub"
   - "topic/personal-notes-home"
   - "status/evergreen"
 ---
@@ -31,12 +30,3 @@ Hub note for this folder.
 ## Notes
 
 - None yet.
-
-## Dataview
-
-```dataview
-TABLE type, updated
-FROM ""
-WHERE contains(file.folder, "Personal Notes")
-SORT updated DESC
-```
