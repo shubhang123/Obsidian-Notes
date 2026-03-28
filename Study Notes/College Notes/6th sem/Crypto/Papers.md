@@ -1,3 +1,23 @@
+---
+title: "Papers"
+aliases: []
+type: "reference"
+area: "study"
+topic:
+  - "6th-sem"
+  - "crypto"
+  - "papers"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/reference"
+  - "topic/6th-sem"
+  - "topic/crypto"
+  - "topic/papers"
+---
+
 Here are the extracted questions from the provided images, assuming they are a question paper:
 From Page 1:
 1.

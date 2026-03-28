@@ -1,3 +1,20 @@
+---
+title: "Collective Ideas"
+aliases: []
+type: "note"
+area: "research"
+topic:
+  - "collective-ideas"
+status: "evergreen"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/research"
+  - "type/note"
+  - "topic/collective-ideas"
+  - "status/evergreen"
+---
+
 AI for explaination pages
 ai se instgram page karna
 ai se influencer banana - using higgsfield , kling or anything like that

@@ -1,3 +1,22 @@
+---
+title: "vault-complete-rationale"
+aliases: []
+type: "architecture"
+area: "projects"
+topic:
+  - "architecture"
+  - "vault-complete-rationale"
+status: "active"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/projects"
+  - "type/architecture"
+  - "topic/architecture"
+  - "topic/vault-complete-rationale"
+  - "status/active"
+---
+
 # VAULT NOTES APP — COMPLETE ARCHITECTURE DEEP DIVE
 ## Full Technical Rationale & Implementation Guide (1M Users, 100M Documents)
 

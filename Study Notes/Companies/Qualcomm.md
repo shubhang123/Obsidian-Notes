@@ -1,3 +1,21 @@
+---
+title: "Qualcomm"
+aliases: []
+type: "reference"
+area: "study"
+topic:
+  - "companies"
+  - "qualcomm"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/reference"
+  - "topic/companies"
+  - "topic/qualcomm"
+---
+
 | ID   | Title                            | Acceptance | Difficulty | Frequency            | Leetcode Question Link                                         |
 | :--- | :------------------------------- | :--------- | :--------- | :------------------- | :------------------------------------------------------------- |
 | 160  | Intersection of Two Linked Lists | 40.6%      | Easy       | 0.06134946801354206  | https://leetcode.com/problems/intersection-of-two-linked-lists |

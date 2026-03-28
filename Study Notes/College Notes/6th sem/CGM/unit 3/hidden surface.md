@@ -1,3 +1,23 @@
+---
+title: "hidden surface"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "cgm"
+  - "unit-3"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/cgm"
+  - "topic/unit-3"
+---
+
 # Introduction to Hidden Surface Elimination
 
 Hidden Surface Elimination (HSE), also known as **hidden surface removal** or **visible surface determination**, is a fundamental process in 3D computer graphics used to determine which surfaces of a 3D scene are visible from a given viewpoint and which are occluded (hidden) by other surfaces. This ensures that only the visible parts of objects are rendered, producing a realistic 2D projection of a 3D scene on the screen. Below is a detailed introduction to hidden surface elimination, covering its purpose, challenges, approaches, and basic concepts, with mathematical formulations presented in LaTeX within dollar signs ($).

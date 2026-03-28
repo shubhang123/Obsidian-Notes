@@ -1,3 +1,23 @@
+---
+title: "Imp"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "crypto"
+  - "imp"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/crypto"
+  - "topic/imp"
+---
+
 Based on analyzing all three question papers, here are the topics ranked by their frequency of occurrence:
 
 ## High Priority Topics (Appear in all 3 papers)

@@ -1,3 +1,23 @@
+---
+title: "Everything about React"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "web-dev"
+  - "react"
+  - "everything-about-react"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/web-dev"
+  - "topic/react"
+  - "topic/everything-about-react"
+---
+
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
 
 # React Internal Architecture \& Implementation Mechanics - Ultimate Deep Dive

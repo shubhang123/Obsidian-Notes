@@ -1,3 +1,23 @@
+---
+title: "UNIT 2"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "software-engineering"
+  - "unit-2"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/software-engineering"
+  - "topic/unit-2"
+---
+
 # Unit II: Software Metrics, Estimation, and Tracking (Detailed Concepts)
 
 ## 1. Measures, Metrics, and Indicators

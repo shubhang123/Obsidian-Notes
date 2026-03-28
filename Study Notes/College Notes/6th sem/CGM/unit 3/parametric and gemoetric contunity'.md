@@ -1,3 +1,23 @@
+---
+title: "parametric and gemoetric contunity'"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "cgm"
+  - "unit-3"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/cgm"
+  - "topic/unit-3"
+---
+
 # Parametric and Geometric Continuity Notes
 
 Parametric and geometric continuity are concepts used in computer graphics, CAD, and curve/surface design to describe how smoothly two curve segments (or surfaces) connect at their common endpoint. They are critical in ensuring aesthetically pleasing and functionally sound designs, such as in animation, automotive design, or spline modeling. Below, both concepts are explained concisely, highlighting their differences and significance.

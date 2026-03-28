@@ -1,3 +1,20 @@
+---
+title: "Flash Card Maker"
+aliases: []
+type: "note"
+area: "research"
+topic:
+  - "flash-card-maker"
+status: "evergreen"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/research"
+  - "type/note"
+  - "topic/flash-card-maker"
+  - "status/evergreen"
+---
+
 crate flashcards with proper subtitles / chapters / topics wise 
 
 the flashcards should be swipeable and should change the card

@@ -1,3 +1,23 @@
+---
+title: "Hoisting"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "web-dev"
+  - "js"
+  - "hoisting"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/web-dev"
+  - "topic/js"
+  - "topic/hoisting"
+---
+
 # In-Depth Knowledge: Hoisting in JavaScript
 
 ## 1. What is Hoisting?

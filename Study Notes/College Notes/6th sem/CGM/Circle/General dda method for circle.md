@@ -1,3 +1,23 @@
+---
+title: "General dda method for circle"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "cgm"
+  - "circle"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/cgm"
+  - "topic/circle"
+---
+
 Here’s the DDA‐style circle drawing algorithm laid out as a clear sequence of steps:
 
 1. **Inputs**

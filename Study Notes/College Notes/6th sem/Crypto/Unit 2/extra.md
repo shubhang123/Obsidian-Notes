@@ -1,3 +1,23 @@
+---
+title: "extra"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "crypto"
+  - "unit-2"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/crypto"
+  - "topic/unit-2"
+---
+
 ### One-Time Pad (OTP)
 
 The One-Time Pad (OTP) is a symmetric encryption technique that provides perfect secrecy when used correctly. Developed by Gilbert Vernam in 1917 and later proven secure by Claude Shannon in 1949, it remains the only cryptographic system proven to be theoretically unbreakable. However, its practical limitations make it rarely used in modern applications.

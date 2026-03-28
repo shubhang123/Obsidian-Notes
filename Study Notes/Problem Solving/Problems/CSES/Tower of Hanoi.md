@@ -1,3 +1,21 @@
+---
+title: "Tower of Hanoi"
+aliases: []
+type: "problem"
+area: "study"
+topic:
+  - "cses"
+  - "tower-of-hanoi"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/problem"
+  - "topic/cses"
+  - "topic/tower-of-hanoi"
+---
+
 ### 1 Seeing the sub-problem hiding inside the big problem
 
 Look at the biggest (nth) disk.

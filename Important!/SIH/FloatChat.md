@@ -1,3 +1,22 @@
+---
+title: "FloatChat"
+aliases: []
+type: "project"
+area: "projects"
+topic:
+  - "sih"
+  - "floatchat"
+status: "active"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/projects"
+  - "type/project"
+  - "topic/sih"
+  - "topic/floatchat"
+  - "status/active"
+---
+
 A standout solution should emphasize three pillars: **interoperability**, **trust**, and **explainability**, implemented with modern data/standards (Zarr, STAC, OGC APIs), rigorous QA/QC (Argo QC + QARTOD), and MCP-driven, provenance-rich RAG for auditable answers and actions.[1][2][3][4][5][6][7]
 
 ## Interoperable data layer  

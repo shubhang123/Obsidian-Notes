@@ -1,3 +1,22 @@
+---
+title: "SIH Problem Statements"
+aliases: []
+type: "project"
+area: "projects"
+topic:
+  - "sih"
+  - "sih-problem-statements"
+status: "active"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/projects"
+  - "type/project"
+  - "topic/sih"
+  - "topic/sih-problem-statements"
+  - "status/active"
+---
+
 Real-Time Public Transport Tracking for Small Cities	Software	SIH25013
 
 Maximizing Section Throughput Using Al-Powered Precise Train Traffic Control	Software	SIH25022

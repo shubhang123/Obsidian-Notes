@@ -1,3 +1,23 @@
+---
+title: "React Hooks"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "web-dev"
+  - "react"
+  - "react-hooks"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/web-dev"
+  - "topic/react"
+  - "topic/react-hooks"
+---
+
 # useMemo Hook?
 
 The **useMemo** hook is a built-in React hook that helps optimize performance by **memoizing** (caching) the result of a computation and reusing it unless its dependencies change. This prevents expensive computations from being re-executed unnecessarily during component re-renders.[1][2]

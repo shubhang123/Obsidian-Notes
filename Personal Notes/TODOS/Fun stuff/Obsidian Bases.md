@@ -1,3 +1,20 @@
+---
+title: "Obsidian Bases"
+aliases: []
+type: "plan"
+area: "personal"
+topic:
+  - "obsidian-bases"
+status: "active"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/personal"
+  - "type/plan"
+  - "topic/obsidian-bases"
+  - "status/active"
+---
+
 What's new in v1.9.12
 
 Other versions

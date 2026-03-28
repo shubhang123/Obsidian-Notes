@@ -1,3 +1,19 @@
+---
+title: "IMPORTANT OBVSERVATIONS(dp)"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "important-obvservations-dp"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/important-obvservations-dp"
+---
+
 wherever we want all permutations we will keep the thing we want combination of inside the first loop like in case of this
 
 ```cpp

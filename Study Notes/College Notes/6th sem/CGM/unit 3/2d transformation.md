@@ -1,3 +1,23 @@
+---
+title: "2d transformation"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "cgm"
+  - "unit-3"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/cgm"
+  - "topic/unit-3"
+---
+
 # Transformations in 2D: A Detailed Explanation
 
 Transformations in 2D are operations that change the position, orientation, size, or shape of objects in a two-dimensional plane. They are widely used in fields like computer graphics, animation, CAD (Computer-Aided Design), and robotics to manipulate objects efficiently. In this explanation, we'll explore each type of transformation, provide their mathematical formulations using matrices, and discuss their practical applications.

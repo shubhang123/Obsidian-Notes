@@ -1,3 +1,23 @@
+---
+title: "799 Champange Tower"
+aliases: []
+type: "problem"
+area: "study"
+topic:
+  - "leetcode"
+  - "dp"
+  - "799-champange-tower"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/problem"
+  - "topic/leetcode"
+  - "topic/dp"
+  - "topic/799-champange-tower"
+---
+
 Here is the C++ code for both approaches.
 
 ### 1. Iterative Simulation (Forward DP) - **Recommended**

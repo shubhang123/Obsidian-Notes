@@ -1,3 +1,19 @@
+---
+title: "Java from C++"
+aliases: []
+type: "note"
+area: "personal"
+topic:
+  - "java-from-cpp"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/personal"
+  - "type/note"
+  - "topic/java-from-cpp"
+---
+
 Got it! I’ll prepare a Java-focused DSA prep guide that covers:
 
 - Key differences from C++

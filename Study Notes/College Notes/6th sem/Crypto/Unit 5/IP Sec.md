@@ -1,3 +1,23 @@
+---
+title: "IP Sec"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "crypto"
+  - "unit-5"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/crypto"
+  - "topic/unit-5"
+---
+
 ![[Pasted image 20250620004511.png]]Here’s a detailed explanation of **IPSec**, covering its services, Authentication Header (AH), transport and tunnel modes, and processes.
 
 ---

@@ -1,3 +1,23 @@
+---
+title: "733 flood fill"
+aliases: []
+type: "problem"
+area: "study"
+topic:
+  - "leetcode"
+  - "graphs"
+  - "733-flood-fill"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/problem"
+  - "topic/leetcode"
+  - "topic/graphs"
+  - "topic/733-flood-fill"
+---
+
 Here are well-structured notes for your DFS-based **Flood Fill** implementation in C++:
 
 ---

@@ -1,3 +1,23 @@
+---
+title: "LIS"
+aliases: []
+type: "problem"
+area: "study"
+topic:
+  - "leetcode"
+  - "dp"
+  - "lis"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/problem"
+  - "topic/leetcode"
+  - "topic/dp"
+  - "topic/lis"
+---
+
 #dp #leetcode
 Here's a detailed explanation of solving the Longest Increasing Subsequence (LIS) problem using Dynamic Programming (DP) with O(n²) time complexity in C++.
 

@@ -1,3 +1,19 @@
+---
+title: "Shell Scripting"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "shell-scripting"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/shell-scripting"
+---
+
 ## 1. Introduction to Shell Scripting
 
 - **What Is a Shell?**  

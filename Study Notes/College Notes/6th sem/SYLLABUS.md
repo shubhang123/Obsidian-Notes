@@ -1,3 +1,21 @@
+---
+title: "SYLLABUS"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "syllabus"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/syllabus"
+---
+
 # Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal
 
 ## New Scheme Based On AICTE Flexible Curricula

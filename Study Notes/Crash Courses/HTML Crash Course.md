@@ -1,3 +1,19 @@
+---
+title: "HTML Crash Course"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "html-crash-course"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/html-crash-course"
+---
+
 ## 1  Essentials: What HTML _is_
 
 |Concept|Key Points|

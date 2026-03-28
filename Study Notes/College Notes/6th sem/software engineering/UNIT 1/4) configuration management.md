@@ -1,3 +1,23 @@
+---
+title: "4) configuration management"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "software-engineering"
+  - "unit-1"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/software-engineering"
+  - "topic/unit-1"
+---
+
 Okay, let's break down **Configuration Management (CM)** in software engineering.
 
 It's a critical discipline for controlling the evolution of complex systems, especially software, throughout their lifecycle.

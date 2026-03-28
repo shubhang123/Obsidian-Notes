@@ -1,3 +1,21 @@
+---
+title: "MISC"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "software-engineering"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/software-engineering"
+---
+
 ## Umbrella activities
 are a crucial set of software engineering actions that **complement** the generic process framework activities. They are distinguished by their **pervasive application**; rather than being confined to specific phases, they are **applied throughout a software project**.
 

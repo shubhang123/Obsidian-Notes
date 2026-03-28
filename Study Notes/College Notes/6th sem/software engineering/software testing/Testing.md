@@ -1,3 +1,23 @@
+---
+title: "Testing"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "software-engineering"
+  - "software-testing"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/software-engineering"
+  - "topic/software-testing"
+---
+
 Here are comprehensive notes on unit testing, integration testing, and system testing, drawing upon the provided sources:
 
 ## Software Testing Strategy: An Overview

@@ -1,3 +1,22 @@
+---
+title: "Kochi rail"
+aliases: []
+type: "project"
+area: "projects"
+topic:
+  - "sih"
+  - "kochi-rail"
+status: "active"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/projects"
+  - "type/project"
+  - "topic/sih"
+  - "topic/kochi-rail"
+  - "status/active"
+---
+
 Since its first commercial run in 2017, KMRL has grown into a complex, multidisciplinary enterprise that stretches far beyond train operations. 
 
 Every business day the organization generates and receives thousands of pages of material: engineering drawings, maintenance job cards, incident reports, vendor invoices, purchase-order correspondence, regulatory directives, environmental-impact studies, safety circulars, HR policies, legal opinions, and board-meeting minutes. These arrive through e-mail, Maximo exports, SharePoint repositories, WhatsApp PDFs, hard-copy scans, and ad-hoc cloud links—often in both English and Malayalam, sometimes in bilingual hybrids, frequently with embedded tables, photos, or signatures. 

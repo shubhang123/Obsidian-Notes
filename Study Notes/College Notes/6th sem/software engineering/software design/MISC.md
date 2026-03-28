@@ -1,3 +1,23 @@
+---
+title: "MISC"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "software-engineering"
+  - "software-design"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/software-engineering"
+  - "topic/software-design"
+---
+
 Software design is a **pivotal activity** within software engineering, serving as the technical core regardless of the chosen software process model. It commences after software requirements have been thoroughly analysed and modelled, setting the stage for subsequent code generation and testing. The essence of design lies in **creating a representation or model of the software**, which can be assessed for quality and refined prior to coding.
 
 ### Software Design Objectives

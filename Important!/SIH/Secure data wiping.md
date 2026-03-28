@@ -1,3 +1,22 @@
+---
+title: "Secure data wiping"
+aliases: []
+type: "project"
+area: "projects"
+topic:
+  - "sih"
+  - "secure-data-wiping"
+status: "active"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/projects"
+  - "type/project"
+  - "topic/sih"
+  - "topic/secure-data-wiping"
+  - "status/active"
+---
+
 # Military-Grade Software Data Wiping Algorithms for E-Waste Security
 
 For India's e-waste crisis requiring **software-only solutions**, military-grade data wiping algorithms provide the highest level of security for ensuring data cannot be recovered from devices. These algorithms are designed to meet stringent security standards while being implementable in cross-platform software applications.

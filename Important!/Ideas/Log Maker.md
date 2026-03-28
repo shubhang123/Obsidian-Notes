@@ -1,3 +1,20 @@
+---
+title: "Log Maker"
+aliases: []
+type: "note"
+area: "research"
+topic:
+  - "log-maker"
+status: "evergreen"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/research"
+  - "type/note"
+  - "topic/log-maker"
+  - "status/evergreen"
+---
+
 create logs for your daily tasks / work / study use zetelskannsesn method of learning 
 
 there should be daily logs, weekly logs  , monthly logs , and yearly logs

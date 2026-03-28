@@ -1,3 +1,21 @@
+---
+title: "Make array zero"
+aliases: []
+type: "problem"
+area: "study"
+topic:
+  - "leetcode"
+  - "make-array-zero"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/problem"
+  - "topic/leetcode"
+  - "topic/make-array-zero"
+---
+
 #leetcode
 ### 0. The problem in one sentence
 

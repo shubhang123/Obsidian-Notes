@@ -1,3 +1,19 @@
+---
+title: "New Venture Planning Paper Solutions"
+aliases: []
+type: "reference"
+area: "personal"
+topic:
+  - "new-venture-planning-paper-solutions"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/personal"
+  - "type/reference"
+  - "topic/new-venture-planning-paper-solutions"
+---
+
 Below is an expanded, academic‐style treatment of Questions 1–5, each structured and detailed to match the depth expected of a 15-mark answer in a Fourth-Semester BBA “New Venture Planning” paper. Each answer uses standard BBA frameworks, theory, and concrete examples.
 
 ---

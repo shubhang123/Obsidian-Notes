@@ -1,3 +1,23 @@
+---
+title: "UseEffect Cleanup"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "web-dev"
+  - "react"
+  - "debug-tips"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/web-dev"
+  - "topic/react"
+  - "topic/debug-tips"
+---
+
 The issue occurs because of a fundamental difference in **how React's useEffect cleanup function works** versus calling a regular function. In your first code, `useEffect` properly handles the cleanup lifecycle, but in your second attempt, you're not returning the cleanup function correctly from the effect.
 
 ## Why the First Approach Works

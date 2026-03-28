@@ -1,3 +1,23 @@
+---
+title: "Next js important topics"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "web-dev"
+  - "react"
+  - "next"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/web-dev"
+  - "topic/react"
+  - "topic/next"
+---
+
 #nextjs 
 In a Next.js PWA application, you might see special files like _document.js and _app.js (or their TypeScript equivalents, _document.tsx and _app.tsx). These files play crucial roles in customizing and enhancing your Next.js app. The underscore (_) prefix is a Next.js convention that indicates these files are special components used to override or extend the default behavior of the framework.
 

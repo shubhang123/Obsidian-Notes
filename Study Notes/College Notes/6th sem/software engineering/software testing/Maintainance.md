@@ -1,3 +1,23 @@
+---
+title: "Maintainance"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "software-engineering"
+  - "software-testing"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/software-engineering"
+  - "topic/software-testing"
+---
+
 **Software maintenance** refers to the **ongoing activities that begin almost immediately after software is released to end users**. It is considered a critical aspect of an application's life cycle and is often **the most costly activity**, with organisations sometimes expending as much as 60 to 70 per cent of all resources on it. Maintenance continues throughout the entire life cycle of an application.
 
 ### Categories of Maintenance Activities

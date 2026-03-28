@@ -1,3 +1,19 @@
+---
+title: "FastAPI"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "fastapi"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/fastapi"
+---
+
 # FastAPI Crash Course – In-Depth Guide
 
 This crash course covers everything from installation through advanced features of FastAPI. You’ll learn how to build, validate, secure, test, and deploy production-ready APIs.

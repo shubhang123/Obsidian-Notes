@@ -1,3 +1,23 @@
+---
+title: "2024 paper and solutions"
+aliases: []
+type: "reference"
+area: "study"
+topic:
+  - "6th-sem"
+  - "software-engineering"
+  - "2024-paper-and-solutions"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/reference"
+  - "topic/6th-sem"
+  - "topic/software-engineering"
+  - "topic/2024-paper-and-solutions"
+---
+
 # RGPV Software Engineering & Agile - May 2024 Complete Solutions
 
 **Course:** CI-601 (CSIT) | **Program:** B.Tech. VI Semester | **Max Marks:** 70

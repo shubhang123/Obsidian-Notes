@@ -1,3 +1,23 @@
+---
+title: "important topics details"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "web-dev"
+  - "react"
+  - "next"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/web-dev"
+  - "topic/react"
+  - "topic/next"
+---
+
 #nextjs
 Understanding _app.js and _document.js in Next.js
 

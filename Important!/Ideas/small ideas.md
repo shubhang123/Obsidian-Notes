@@ -1,3 +1,20 @@
+---
+title: "small ideas"
+aliases: []
+type: "note"
+area: "research"
+topic:
+  - "small-ideas"
+status: "evergreen"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/research"
+  - "type/note"
+  - "topic/small-ideas"
+  - "status/evergreen"
+---
+
 Based on the research, here are high-traffic service app opportunities that follow the iLovePDF success formula:
 
 ## Why iLovePDF Gets 216M+ Monthly Visits

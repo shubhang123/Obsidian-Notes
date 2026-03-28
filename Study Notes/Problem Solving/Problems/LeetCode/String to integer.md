@@ -1,3 +1,21 @@
+---
+title: "String to integer"
+aliases: []
+type: "problem"
+area: "study"
+topic:
+  - "leetcode"
+  - "string-to-integer"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/problem"
+  - "topic/leetcode"
+  - "topic/string-to-integer"
+---
+
 #leetcode
 ```cpp
 #include <iostream>

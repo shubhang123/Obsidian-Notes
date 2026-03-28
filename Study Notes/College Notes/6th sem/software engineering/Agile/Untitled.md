@@ -1,3 +1,23 @@
+---
+title: "Untitled"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "software-engineering"
+  - "agile"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/software-engineering"
+  - "topic/agile"
+---
+
 Here are detailed notes on Agile versus Traditional SDLC Models, the phases of Agile Models, and the principles of the Agile Model, drawing on the provided sources:
 
 ### Agile vs. Traditional SDLC Models

@@ -1,3 +1,23 @@
+---
+title: "Dice Combinations"
+aliases: []
+type: "problem"
+area: "study"
+topic:
+  - "cses"
+  - "dp"
+  - "dice-combinations"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/problem"
+  - "topic/cses"
+  - "topic/dp"
+  - "topic/dice-combinations"
+---
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;

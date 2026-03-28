@@ -1,3 +1,23 @@
+---
+title: "Unit 3"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "crypto"
+  - "unit-3"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/crypto"
+  - "topic/unit-3"
+---
+
 I’ll provide concise, structured notes for each topic in Unit III of your Cryptography and Network Security syllabus. The notes will be clear, focused, and suitable for quick understanding and revision. I’ll cover each topic one by one, starting with **Hash Functions**. Let’s begin!
 
 ---

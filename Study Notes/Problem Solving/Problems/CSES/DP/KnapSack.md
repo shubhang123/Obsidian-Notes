@@ -1,3 +1,23 @@
+---
+title: "KnapSack"
+aliases: []
+type: "problem"
+area: "study"
+topic:
+  - "cses"
+  - "dp"
+  - "knapsack"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/problem"
+  - "topic/cses"
+  - "topic/dp"
+  - "topic/knapsack"
+---
+
 Here’s your code again with **inline comments and theory explanations** for each section. The problem it's solving is the classic **0/1 Knapsack** using both **brute force** and **memoization (top-down DP)**.
 
 ---

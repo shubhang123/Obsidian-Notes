@@ -1,3 +1,20 @@
+---
+title: "LOX"
+aliases: []
+type: "project"
+area: "personal"
+topic:
+  - "lox"
+status: "active"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/personal"
+  - "type/project"
+  - "topic/lox"
+  - "status/active"
+---
+
 Below is an example Markdown document that explains the code in detail:
 
 ---

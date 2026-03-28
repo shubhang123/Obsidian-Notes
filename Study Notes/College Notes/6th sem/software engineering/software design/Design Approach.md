@@ -1,3 +1,23 @@
+---
+title: "Design Approach"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "software-engineering"
+  - "software-design"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/software-engineering"
+  - "topic/software-design"
+---
+
 Here’s a **detailed comparison and explanation** of the **Top-Down** and **Bottom-Up** approaches in Software Engineering, including their definitions, workflows, advantages, disadvantages, use cases, and key differences.
 
 ---

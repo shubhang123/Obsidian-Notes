@@ -1,3 +1,23 @@
+---
+title: "Merge two sorted lists"
+aliases: []
+type: "problem"
+area: "study"
+topic:
+  - "leetcode"
+  - "linked-list"
+  - "merge-two-sorted-lists"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/problem"
+  - "topic/leetcode"
+  - "topic/linked-list"
+  - "topic/merge-two-sorted-lists"
+---
+
 #linkedlist #leetcode
 ```cpp
 Node* mergeTwoLists(Node* l1, Node* l2) {

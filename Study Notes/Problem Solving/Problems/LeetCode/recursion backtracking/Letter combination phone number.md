@@ -1,3 +1,23 @@
+---
+title: "Letter combination phone number"
+aliases: []
+type: "problem"
+area: "study"
+topic:
+  - "leetcode"
+  - "recursion-backtracking"
+  - "letter-combination-phone-number"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/problem"
+  - "topic/leetcode"
+  - "topic/recursion-backtracking"
+  - "topic/letter-combination-phone-number"
+---
+
 #recursion #leetcode
 Let’s break down the **solution and approach** for generating all possible letter combinations from a string of digits (like `"23"`) on a **phone keypad**, using **backtracking**.
 

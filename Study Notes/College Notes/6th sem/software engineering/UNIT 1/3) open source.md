@@ -1,3 +1,23 @@
+---
+title: "3) open source"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "software-engineering"
+  - "unit-1"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/software-engineering"
+  - "topic/unit-1"
+---
+
 Okay, let's dive into Open Source Development in detail, covering its definition, advantages, disadvantages, and the crucial aspect of licensing, all from a software engineering perspective.
 
 ---

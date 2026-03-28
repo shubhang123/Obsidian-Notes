@@ -1,3 +1,23 @@
+---
+title: "cyclomatic complexity"
+aliases: []
+type: "note"
+area: "study"
+topic:
+  - "6th-sem"
+  - "software-engineering"
+  - "software-design"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/note"
+  - "topic/6th-sem"
+  - "topic/software-engineering"
+  - "topic/software-design"
+---
+
  Here are **comprehensive and detailed notes on Cyclomatic Complexity** — a key software metric for analyzing the **complexity and testability** of software programs.
 
 ---

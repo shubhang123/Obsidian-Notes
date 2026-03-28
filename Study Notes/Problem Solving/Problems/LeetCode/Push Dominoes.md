@@ -1,3 +1,21 @@
+---
+title: "Push Dominoes"
+aliases: []
+type: "problem"
+area: "study"
+topic:
+  - "leetcode"
+  - "push-dominoes"
+status: "seed"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/study"
+  - "type/problem"
+  - "topic/leetcode"
+  - "topic/push-dominoes"
+---
+
 Sure! Let's go through your **original approach**, understand the **intuition** behind it, what it tries to do, and where it has problems. #leetcode
 
 ---

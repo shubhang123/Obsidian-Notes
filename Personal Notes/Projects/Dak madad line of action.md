@@ -1,3 +1,20 @@
+---
+title: "Dak madad line of action"
+aliases: []
+type: "project"
+area: "personal"
+topic:
+  - "dak-madad-line-of-action"
+status: "active"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/personal"
+  - "type/project"
+  - "topic/dak-madad-line-of-action"
+  - "status/active"
+---
+
 ## Dak Madad — Line of Action Report
 
 _(Prepared 15 May 2025)_

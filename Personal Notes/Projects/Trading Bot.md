@@ -1,3 +1,20 @@
+---
+title: "Trading Bot"
+aliases: []
+type: "project"
+area: "personal"
+topic:
+  - "trading-bot"
+status: "active"
+created: 2026-03-28
+updated: 2026-03-28
+tags:
+  - "area/personal"
+  - "type/project"
+  - "topic/trading-bot"
+  - "status/active"
+---
+
 # Documentation: NIFTY 500 AI Trading Signal Bot
 
   
