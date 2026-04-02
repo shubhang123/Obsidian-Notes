@@ -29,3 +29,14 @@ black chole
 rajma
 chawla
 
+
+aloo paratha
+paneer paratha
+methi paratha
+batla paratha 
+corn paratha
+cheese paratha
+
+pulav 
+chole bhature
+pudi
