@@ -21,4 +21,11 @@ palak paneer
 capsicum paneer
 shahi paneer
 paneer tikka masala
+paneer bhurji
+butter paneer masala
+
+chole
+black chole
+rajma
+chawla
 
