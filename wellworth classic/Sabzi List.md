@@ -1,7 +1,24 @@
 besan gatte
+sev tamatar
+
 bhindi ( kurkuri, bharma, sliced, tukde )
+
 aloo jeeara
 aloo fried
 aloo matar
 aloo rasa wale
 aloo capsicum
+aloo bhindi
+aloo methi
+
+gilki 
+loki
+turai
+
+palak 
+
+palak paneer
+capsicum paneer
+shahi paneer
+paneer tikka masala
+
